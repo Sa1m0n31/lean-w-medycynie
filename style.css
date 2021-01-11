@@ -20,6 +20,11 @@
 html, body, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    color: var(--text);
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 :root {
@@ -104,6 +109,9 @@ html {
 .menuItem a {
     color: inherit;
     text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .menuItemOrdinary::after {
@@ -547,6 +555,10 @@ circle {
     align-items: center;
 }
 
+.wierzymy {
+    position: relative;
+}
+
 .wierzymyLeft {
     width: 692px;
     height: 417px;
@@ -565,6 +577,18 @@ circle {
 .landingButton2 {
     width: 261px;
     text-align: center;
+}
+
+/* Image */
+
+.imgToRight {
+    box-sizing: content-box;
+    display: block;
+    position: relative;
+    width: 1234px;
+    height: 550px;
+    margin: 100px 0;
+    transform: translateX(calc(1700px * 0.4));
 }
 
 /* Oferta */
@@ -843,6 +867,7 @@ circle {
     width: 25%;
     position: relative;
     height: 320px;
+    color: #fff;
 }
 
 .footer h4 {
@@ -937,8 +962,14 @@ circle {
 
 .pageHeader {
     width: 100%;
-    height: 296px;
+    height: 300px;
     position: relative;
+    overflow: hidden;
+}
+
+.naszaMisjaHeader {
+    background: url("./img/hero_image_podstrona_misja.jpg");
+    background-position: 10% 30%;
 }
 
 .pageHeaderImg {
@@ -946,7 +977,7 @@ circle {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(1700px / 2.94);
     z-index: 2;
 }
 
@@ -970,6 +1001,10 @@ circle {
     margin-top: 50px;
     color: var(--text);
     padding: 0 calc((100vw - 1700px) / 2);
+}
+
+.wierzymyPage {
+    flex-wrap: wrap;
 }
 
 .misjaFirst .bigHeader, .eksperci .bigHeader {
@@ -1092,16 +1127,16 @@ circle {
     margin-bottom: calc((1650px * 0.02));
 }
 
-.dlaczegoMyImg {
-    width: 70px;
-    height: 70px;
-}
-
 .dlaczegoMyText {
     font-size: .45rem;
 }
 
 /* NASI EKSPERCI */
+
+.pageEksperciHeader {
+    background: url("./img/hero_image_podstrona_eksperci.jpg");
+    background-position: 80% 20%;
+}
 
 .eksperci {
     margin-bottom: 70px;
@@ -1170,22 +1205,54 @@ circle {
     margin-right: 40px;
     transition: .4s all;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .eksperciKontaktItem:hover {
-    color: #fff;
     background: var(--lean-main);
 }
 
+.eksperciKontaktItem:hover .eksperciKontaktDane {
+    color: #fff;
+}
+
+.eksperciKontaktItem:hover .eksperciKontaktIcon {
+    display: none;
+    opacity: 0;
+}
+
+.eksperciKontaktItem:hover .eksperciKontaktIconHover {
+    display: block !important;
+    opacity: 1;
+}
+
 .eksperciKontaktIcon {
-    width: 50px;
-    height: 50px;
+    width: 24px;
+    height: 24px;
     margin-right: 20px;
+    transition: .4s all;
+}
+
+.iconMargin {
+    margin-bottom: -8px;
+}
+
+.eksperciKontaktIconHover {
+    display: none;
+    opacity: 0;
+    transition: .4s all;
 }
 
 .eksperciKontaktDane {
     font-size: .45rem;
     font-weight: 700;
+}
+
+/* DOFINANSOWANIA */
+
+.pageDofinansowaniaHeader {
+    background: url("./img/hero_image_podstrona_dofinansowania.jpg");
+    background-position: 30% 10%;
 }
 
 /* DOFINANSOWANIA */
@@ -1201,7 +1268,7 @@ circle {
     display: flex;
     justify-content: space-between;
     color: var(--text);
-    margin: 50px 0 200px;
+    margin: 90px 0 200px;
     width: 100%;
 }
 
@@ -1212,7 +1279,8 @@ circle {
 
 .smallHeader {
     font-size: .6rem;
-    font-weight: 600;
+    font-weight: 400;
+    margin-top: 30px;
 }
 
 .dofinansowaniaLeftInfo {
@@ -1299,6 +1367,11 @@ circle {
     height: 200px;
     align-items: center;
     position: relative;
+    width: 40%;
+}
+
+.frame .framePart:first-child {
+    width: 25%;
 }
 
 .frame .framePart:first-child::after,
@@ -1316,16 +1389,6 @@ circle {
 .frame .icon {
     transform: scale(1.5);
     margin: 0 20px;
-}
-
-.frame .icon-1 {
-    width: 44px;
-    height: 49px;
-}
-
-.frame .icon-2 {
-    width: 34px;
-    height: 44px;
 }
 
 .frame .framePercent {
@@ -1383,6 +1446,7 @@ circle {
 }
 
 .faqAnswer {
+    margin: 0 !important;
     font-size: .5rem;
     font-weight: 400;
     display: none;
@@ -1408,15 +1472,14 @@ circle {
 }
 
 .faqImg {
-    width: 100%;
-    height: 100%;
+    width: 504px;
+    height: 400px;
     border-radius: 10px;
 }
 
 /* Steps */
 
 .steps {
-    width: 85%;
     display: flex;
     align-items: center;
 }
@@ -1426,10 +1489,11 @@ circle {
 }
 
 .steps .etap {
+    position: relative;
     border: 1px solid var(--grey-main);
     border-radius: 10px;
     height: 170px;
-    width: 380px;
+    width: 420px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -1449,6 +1513,7 @@ circle {
 .etapDescription {
     font-size: .45rem !important;
     font-weight: 400;
+    width: 60%;
 }
 
 .steps i {
@@ -1456,28 +1521,15 @@ circle {
     font-size: 30px;
 }
 
-/* Hints */
-
-.hints {
-    width: 85%;
-    margin: 50px 0;
-}
-
-.hints h4 {
-    font-size: .6rem;
-    font-weight: 400;
-}
-
-.hints h3 {
-    font-size: .85rem;
-    margin: 40px 0;
-    font-weight: 700;
+.etapyArrow {
+    width: 50px;
+    height: 70px;
 }
 
 /* Wizytowki */
 
 .wizytowki {
-    margin-bottom: 100px;
+    margin: 100px 0;
     width: 100%;
     display: flex;
 }
@@ -1502,8 +1554,37 @@ circle {
 .person .personFunction {
     font-size: 18px;
     margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.personContact a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 25px;
+    background: transparent;
+    cursor: pointer;
 }
 
 .person .personContact {
+    position: relative;
     font-size: 20px;
+    font-weight: 400;
+    transition: .4s all;
+    cursor: pointer;
+}
+
+.personContact:hover {
+    color: var(--lean-main);
+}
+
+.etapyImg {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }

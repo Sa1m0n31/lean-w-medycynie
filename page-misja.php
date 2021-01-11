@@ -3,9 +3,9 @@ get_header();
 ?>
 
     <!-- PAGE HEADER -->
-    <header class="pageHeader">
-        <img class="pageHeaderImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/oferta-3.jpg'; ?>" alt="nasza-misja" />
-        <h1 class="pageHeaderHeader">
+    <header class="pageHeader naszaMisjaHeader">
+        <!--<img class="pageHeaderImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/hero_image_podstrona_misja.jpg'; ?>" alt="nasza-misja" />
+        --><h1 class="pageHeaderHeader">
             Nasza misja
         </h1>
     </header>
@@ -21,7 +21,7 @@ get_header();
 
         <div class="misjaBoxes">
             <div class="misjaBoxItem">
-                <img class="misjaBoxImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-transformacje" />
+                <img class="misjaBoxImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/transformacje.svg'; ?>" alt="lean-transformacje" />
 
                 <h2 class="misjaBoxHeader">
                     Lean transformacje
@@ -33,7 +33,7 @@ get_header();
             </div>
 
             <div class="misjaBoxItem">
-                <img class="misjaBoxImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="diagnoza-potencjalu" />
+                <img class="misjaBoxImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/potencjal.svg'; ?>" alt="diagnoza-potencjalu" />
 
                 <h2 class="misjaBoxHeader">
                     Diagnoza potencjału
@@ -45,14 +45,14 @@ get_header();
             </div>
 
             <div class="misjaBoxItem">
-                <img class="misjaBoxImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="zarzadzanie-biznesem" />
+                <img class="misjaBoxImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/rozwoj.svg'; ?>" alt="rozwoj-zespolow" />
 
                 <h2 class="misjaBoxHeader">
-                    Zarządzanie biznesem
+                    Rozwój zespołów
                 </h2>
 
                 <p class="misjaBoxText">
-                    Kierowanie organizacją w roli Interim Managera, realizując wyznaczone cele strategiczne w całej organizacji.
+                    Autorski program rozwoju kompetencji zespołów oparty o wiedzę, doświadczenie i realne wyniki uczestników.
                 </p>
             </div>
         </div>
@@ -156,6 +156,9 @@ get_header();
             </div>
         </div>
     </section>
+
+    <!-- IMAGE -->
+    <img class="imgToRight" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/nasza_misja.jpg'; ?>" alt="lean-w-medycynie" />
 
     <!-- LICZBY I MY -->
     <section class="liczbyIMy">
@@ -288,7 +291,7 @@ get_header();
 
         <div class="dlaczegoMyInner">
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/wspolpraca.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Współpracując z nami zyskują Państwo partnera, który dba o rozwój całej Państwa organizacji.
@@ -296,7 +299,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/doswiadczenie.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Posiadamy doświadczenie w branży medycznej oparte na współpracy z wieloma różnymi podmiotami medycznymi.
@@ -304,7 +307,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/konsultanci.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Każdy z naszych konsultantów jest aktywnie zaangażowany w prowadzony projekt i odpowiedzialny za efekty utrzymania wprowadzonych działań. Dzięki temu macie Państwo gwarancję skuteczności i realizacji wyznaczonych zadań.
@@ -312,7 +315,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/organizacja.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Budowanie nowej świadomej kultury ciągłego doskonalenia w organizacji – w czasie współpracy pomagamy aby każdy pracownik zaangażował się w realizację celów strategicznych Państwa organizacji.
@@ -320,7 +323,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/projekt.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Określenie odpowiedzialność w projekcie i podziału zadań oraz ich monitorowanie pozwala Państwu śledzić wpływ zmian na organizację.
@@ -328,7 +331,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/system.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Jako liderzy we wdrażaniu Lean Healthcare w Polsce projektujemy z Państwem system ciągłego doskonalenia odpowiedni do zespołu, zasobów i specyfiki działania.
@@ -336,7 +339,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/profesjonalizm.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Profesjonalizm i wiarygodność to nasze najważniejsze wartości, które również przekładają się na nasze stawki. Nawiązując z nami współpracę maja Państwo pewność, iż nasze wynagrodzenie przekłada się na Państwa zysk.
@@ -344,7 +347,7 @@ get_header();
             </div>
 
             <div class="dlaczegoMyItem">
-                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="lean-dlaczego-my-1" />
+                <img class="dlaczegoMyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/sms.svg'; ?>" alt="lean-dlaczego-my-1" />
 
                 <p class="dlaczegoMyText">
                     Nasze wieloletnie doświadczenie pozwoliło nam zbudować autorską metodę pracy i budowania kultury ciągłego doskonalenia – Podejście SMS in Healthcare to sprawdzona strategia we wdrażaniu lean w podmiotach medycznych.

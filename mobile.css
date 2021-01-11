@@ -30,6 +30,21 @@
 
 }
 
+@media(max-width: 1400px) {
+    /* EKSPERCI */
+    .eksperciKontakt {
+        flex-direction: column;
+    }
+
+    .eksperciKontakt .eksperciKontaktItem {
+        margin-bottom: 25px;
+    }
+
+    .eksperciItemRight {
+        margin-right: 40px;
+    }
+}
+
 @media(max-width: 1300px) {
     /* Oferta */
     .misjaLeft {

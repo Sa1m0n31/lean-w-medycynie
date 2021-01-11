@@ -3,10 +3,9 @@ get_header();
 ?>
 
     <!-- PAGE HEADER -->
-    <header class="pageHeader">
-        <img class="pageHeaderImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/oferta-3.jpg'; ?>" alt="nasza-misja" />
+    <header class="pageHeader pageEksperciHeader">
         <h1 class="pageHeaderHeader">
-            Nasza misja
+            Nasi eksperci
         </h1>
     </header>
 
@@ -20,7 +19,7 @@ get_header();
         </h1>
 
         <div class="eksperciItem">
-            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/oferta-3.jpg'; ?>" alt="grzegorz-koczor" />
+            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/grzegorz_koczor.jpg'; ?>" alt="grzegorz-koczor" />
 
             <div class="eksperciItemRight">
                 <h2 class="eksperciItemName">
@@ -36,11 +35,13 @@ get_header();
 
                 <div class="eksperciKontakt">
                     <div class="eksperciKontaktItem">
-                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
                         <h4 class="eksperciKontaktDane">+48 663 089 550</h4>
                     </div>
                     <div class="eksperciKontaktItem">
-                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
+                        <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
                         <h4 class="eksperciKontaktDane">g.koczor@leanwmedycnie.pl</h4>
                     </div>
                 </div>
@@ -48,7 +49,7 @@ get_header();
         </div>
 
         <div class="eksperciItem">
-            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/oferta-3.jpg'; ?>" alt="grzegorz-koczor" />
+            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/jakub_napierala.png'; ?>" alt="jakub-napierala" />
 
             <div class="eksperciItemRight">
                 <h2 class="eksperciItemName">
@@ -64,11 +65,13 @@ get_header();
 
                 <div class="eksperciKontakt">
                     <div class="eksperciKontaktItem">
-                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
                         <h4 class="eksperciKontaktDane">+48 602 509 538</h4>
                     </div>
                     <div class="eksperciKontaktItem">
-                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
+                        <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
                         <h4 class="eksperciKontaktDane">jakub.napierala@leanwmedycnie.pl</h4>
                     </div>
                 </div>
