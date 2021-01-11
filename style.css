@@ -1,0 +1,1509 @@
+/*!
+	Theme Name: Lean w Medycynie
+	Author: Szymon Burak
+	Author URI: https://skylo.pl
+	Description: Strona internetowa Lean w Medycynie
+	Version: 1.0.0
+	Tested up to: 5.4
+	Requires PHP: 5.6
+*/
+
+
+/* GLOBAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colors: */
+    --text: #3D4543;
+    --white-bg: #FFFFFF;
+    --lean-main: #6E8A37;
+    --lean-main-110-: #2A312F;
+    --lean-main-2f3634: #2F3634;
+    --grey-main: #EDEDED;
+    --light-gray: #F8F8F8;
+    --button-activ: #7F9F42;
+    --button-area: #D4DEC0;
+    --grey-dark: #BABDBC;
+    --grey-text: #898989;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1700px;
+}
+
+button, button:focus, button:active {
+    outline: none;
+    border: none;
+}
+
+/* Wielkosci fontow */
+
+html {
+    font-size: 36px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+@media(max-width: 1400px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+/*@media(max-width: 900px) {
+    html {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 600px) {
+    html {
+        font-size: 24px;
+    }
+} */
+
+/* Main menu */
+
+.topMenu {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+}
+
+.menuItem {
+    color: var(--text);
+    font-size: .5rem;
+    text-transform: uppercase;
+    height: 55px;
+    width: fit-content;
+    padding: 15px;
+    margin: 0 13px;
+    font-weight: 600;
+    transition: .4s all;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.menuItem a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menuItemOrdinary::after {
+    content: "";
+    opacity: 0;
+    transition: .4s all;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--lean-main);
+    display: block;
+}
+
+.menuItemOrdinary:hover {
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--lean-main);
+    color: var(--lean-main);
+}
+
+.menuItemOrdinary:hover::after {
+    /*opacity: 1;*/
+}
+
+.menuItemBordered:hover {
+    background: var(--lean-main);
+    color: #fff;
+}
+
+.menuItemBordered {
+    border: 2px solid var(--grey-main);
+    font-size: calc(.5rem - 1px);
+}
+
+.logoImg {
+    width: 200px;
+    height: 60px;
+    margin-right: 50px;
+}
+
+.socialMediaIcons {
+    display: flex;
+}
+
+.socialMediaIcons a {
+
+}
+
+.socialMediaIcons .socialMediaImg {
+    width: 20px;
+    height: 20px;
+    margin: 0 15px;
+}
+
+.menuFooterItem a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Landing */
+
+.landing {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.sliderPhoto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landingLeft {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 100px;
+    top: 110px;
+    z-index: 2;
+    width: 540px;
+}
+
+.landingTitle {
+    position: relative;
+    font-size: calc(1rem + 6px);
+    color: var(--lean-main);
+    font-weight: 900;
+    user-select: none;
+}
+
+.landingTitle .big {
+    display: block;
+    font-size: 120px;
+    color: var(--text);
+    font-weight: 900;
+    transform: translateY(-30px);
+}
+
+.landingTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    height: 5px;
+    width: 32px;
+    background: var(--lean-main);
+}
+
+.landingText {
+    font-size: .5rem;
+    color: var(--grey-text);
+    font-weight: 400;
+}
+
+.landingButton {
+    border: none;
+    outline: none;
+    background: var(--lean-main);
+    color: #fff;
+    font-weight: 600;
+    font-size: .45rem;
+    width: 196px;
+    height: 48px;
+    border-radius: 4px;
+    margin-top: 30px;
+    transform-origin: 0;
+    transition: .4s all;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.landingButtonText {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+}
+
+/*.landingButtonArrow {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    z-index: 3;
+}
+
+.landingButton:hover {
+    width: 220px;
+}
+
+.landingButton:hover .landingArrow {
+    width: 25px;
+} */
+
+.landingButton::after {
+    content: url("./img/next-small.svg");
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    display: flex;
+    align-items: center;
+    background: var(--lean-main);
+    transform: translateX(95%);
+    transition: .4s width ease-in-out;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.landingButton:hover::after {
+    transform: translateX(95%);
+    width: 40px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
+    display: flex;
+    z-index: 2;
+}
+
+.dots .dotOuter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    background: transparent;
+    border: 4px solid var(--lean-main);
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.dots .dotInner {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: var(--lean-main);
+    border-radius: 50%;
+}
+
+#slider2 {
+    display: none;
+}
+
+svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+circle {
+    display: block;
+}
+
+.nextSlide {
+    background: transparent;
+    cursor: pointer;
+}
+
+.landingArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.landingArrow:hover {
+    transform: translate(10px, -50%);
+}
+
+#circleI1, #circleI2, #circleI3, #circleI4 {
+    cursor: pointer;
+}
+
+/* Nasza misja */
+
+.naszaMisja {
+    margin: 100px auto 200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.misjaLeft {
+    width: 528px;
+    height: 480px;
+    border-radius: 8px;
+}
+
+.misjaRight {
+    color: var(--text);
+    width: 570px;
+}
+
+.firstHeader {
+    position: relative;
+    font-size: 13px;
+    text-transform: uppercase;
+    transform: translateX(20px);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.firstHeader::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    height: 2px;
+    width: 16px;
+    background: var(--lean-main);
+}
+
+.bigHeader {
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+.misjaText {
+    font-weight: 400;
+    font-size: .5rem;
+    margin: 20px 0;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.statsItem {
+    position: relative;
+    width: 45%;
+    display: flex;
+    height: 52px;
+    margin: 15px 0;
+}
+
+.statsItemLeft {
+    font-size: .4rem;
+    width: 60%;
+    height: 55px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--grey-main);
+}
+
+.statsItemRight {
+    width: 40%;
+    font-size: 1rem;
+    color: var(--lean-main);
+    font-weight: 700;
+    border-bottom: 4px solid var(--lean-main);
+    position: absolute;
+    right: 0;
+    height: 55px;
+    text-align: center;
+}
+
+/* Three boxes */
+
+.threeBoxes {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.progressBar {
+    position: absolute;
+    left: 50%;
+    top: calc(90px + 0.8rem);
+    transform: translate(-50%, -50%);
+    width: calc(1750px * 0.9 - 370px);
+    height: 2px;
+    background: var(--light-gray);
+    z-index: 3;
+    overflow: hidden;
+}
+
+.progressGreen {
+    height: 100%;
+    background: var(--lean-main);
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.boxItem {
+    width: 370px;
+    height: 345px;
+    border: 1px solid var(--grey-main);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    transition: .4s all;
+    border-radius: 8px;
+}
+
+.boxItem:hover {
+    border: 1px solid var(--lean-main);
+}
+
+.boxItem:hover .circleInner {
+    transform: scale(1.05);
+    background-color: var(--lean-main);
+}
+
+.boxItem:hover .circleOuter {
+    transform: scale(1.15);
+    background-color: var(--button-area);
+}
+
+.boxHeader {
+    font-size: .8rem;
+}
+
+.circleOuter {
+    margin: 30px 0;
+    width: 45px;
+    height: 45px;
+    background: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 6;
+    transition: .4s all;
+}
+
+.circleInner {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--grey-dark);
+    position: relative;
+    z-index: 6;
+    transition: .4s all;
+}
+
+.boxText {
+    font-size: .45rem;
+    text-align: center;
+}
+
+/* Wierzymy */
+
+.wierzymy, .oferta, .szpitalPlus, .referencje {
+    display: flex;
+    justify-content: space-between;
+    margin: 150px auto;
+    width: 90%;
+    color: var(--text);
+    align-items: center;
+}
+
+.wierzymyLeft {
+    width: 692px;
+    height: 417px;
+}
+
+.wierzymyRight {
+    width: 750px;
+}
+
+.bigHeader2 {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.landingButton2 {
+    width: 261px;
+    text-align: center;
+}
+
+/* Oferta */
+
+.oferta {
+    position: relative;
+    align-items: flex-start;
+}
+
+.ofertaLeft, .ofertaRight {
+    width: 45%;
+}
+
+.ofertaLeft {
+    position: sticky;
+    top: 50px;
+}
+
+.ofertaItem {
+    padding: 40px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border: 1px solid var(--grey-main);
+    margin-bottom: 30px;
+}
+
+.ofertaItem:hover .ofertaBackground {
+    opacity: .1;
+}
+
+.ofertaItem:hover .ofertaRightLeft {
+    background: var(--lean-main);
+    transform: translateX(0);
+}
+
+.ofertaNextHover {
+    opacity: 0;
+    display: none;
+}
+
+.ofertaItem:hover .ofertaNextHover {
+    opacity: 1;
+    display: block;
+}
+
+.ofertaItem:hover .ofertaNext {
+    opacity: 0;
+    display: none;
+}
+
+.ofertaBackground {
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s all;
+}
+
+.ofertaNumber {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.ofertaTitle {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ofertaTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background: var(--lean-main);
+}
+
+.ofertaText {
+    width: 75%;
+    font-size: .4rem;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.ofertaRightRight {
+    transform: translateX(50px);
+}
+
+.ofertaRightLeft {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s all;
+    transform: translateX(-30px);
+}
+
+.ofertaNext {
+    display: block;
+}
+
+.ofertaNext, .ofertaNextHover {
+    width: 35px;
+    height: 35px;
+    transition: .4s all;
+}
+
+/* Szpital plus */
+
+.szpitalPlusLeft {
+    width: 689px;
+    height: 438px;
+}
+
+.szpitalPlusRight {
+    width: 40%;
+}
+
+.szpitalPlusLogo {
+    margin: 30px 0;
+}
+
+/* Referencje */
+
+.referencje {
+    position: relative;
+}
+
+.referencje .bigHeader {
+    position: relative;
+    width: 100%;
+}
+
+.referencje .bigHeader::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: var(--lean-main);
+    bottom: -15px;
+    left: 0;
+}
+
+.referencje .ofertaText {
+    margin: 40px 0;
+}
+
+.referencjeButtons {
+    display: flex;
+    transform: translateX(10px);
+}
+
+.referencjeButtons > * {
+    transition: .4s all ease-in-out;
+    cursor: pointer;
+}
+
+.referencjeButtons .ofertaRightLeft {
+    transform: translateX(0);
+}
+
+.referencjeLeftBtn {
+    margin-right: 30px;
+}
+
+.referencjeLeftBtn:hover {
+    transform: translateX(-10px);
+}
+
+.referencjeRightBtn:hover {
+    transform: translateX(10px);
+}
+
+.referencjeLeftBtn .ofertaNext {
+    transform: rotate(180deg);
+}
+
+.referencjeRight {
+    width: 60%;
+}
+
+.referencjeItem {
+    height: 320px;
+    display: flex;
+    border: 1px solid var(--grey-main);
+    position: relative;
+}
+
+.referencjeImg {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--grey-main);
+}
+
+.referencjeImgImg {
+    width: 80%;
+    height: auto;
+}
+
+.referencjeText {
+    font-size: .5rem;
+    padding: 50px 25px 25px;
+    width: 70%;
+}
+
+.referencjeAuthor {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
+
+.authorName {
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+.authorFunction {
+    font-size: .4rem;
+    font-weight: 400;
+}
+
+.referencjeDots {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    display: flex;
+}
+
+.referencjeDot {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--grey-main);
+    margin-right: 5px;
+}
+
+.activeDot {
+    background: var(--lean-main);
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    background: var(--text);
+    padding: 3% 80px;
+    color: #fff;
+    font-size: .4rem;
+}
+
+.footerFirst {
+    display: flex;
+    width: 100%;
+}
+
+.footerCol {
+    padding-top: 40px;
+    width: 25%;
+    position: relative;
+    height: 320px;
+}
+
+.footer h4 {
+    font-weight: 400;
+}
+
+.footerCol::after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90%;
+    width: 2px;
+    background: var(--lean-main-110-);
+}
+
+.footerCol:last-child::after {
+    display: none;
+}
+
+.footerColTitle {
+    font-size: .5rem;
+    color: var(--lean-main);
+    margin-bottom: 30px;
+}
+
+.footerCol img {
+    width: 217px;
+    height: 65px;
+}
+
+.addMargin {
+    margin-bottom: 20px;
+}
+
+.contact {
+    margin-bottom: 15px;
+    transition: .4s all;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.footerMenu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.footerMenuItem {
+    width: 50%;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: .4s all;
+    cursor: pointer;
+}
+
+.footerMenuItem a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footerMenuItem:hover, .contact:hover {
+    color: var(--lean-main);
+    transform: translateX(15px);
+}
+
+.footerSecond {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    border: 2px solid var(--lean-main-110-);
+    border-left: none;
+    border-right: none;
+    height: 60px;
+}
+
+.footerSecondRight {
+    display: flex;
+}
+
+.footerSecondRight h5 {
+    margin: 0 40px;
+}
+
+.footerThird {
+    padding-top: 20px;
+}
+
+/* PAGE MISJA */
+
+.pageHeader {
+    width: 100%;
+    height: 296px;
+    position: relative;
+}
+
+.pageHeaderImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.pageHeaderHeader {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: var(--lean-main);
+    text-transform: uppercase;
+    font-weight: 700;
+    z-index: 3;
+}
+
+/* Misja first section */
+
+.misjaFirst, .wierzymyPage, .naszeWartosci, .liczbyIMy, .dlaczegoMy,
+.eksperciItem
+{
+    margin-top: 50px;
+    color: var(--text);
+    padding: 0 calc((100vw - 1700px) / 2);
+}
+
+.misjaFirst .bigHeader, .eksperci .bigHeader {
+    max-width: 500px;
+}
+
+.misjaBoxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.misjaBoxItem {
+    width: 30%;
+    padding: 30px;
+    border: 1px solid #EDEDED;
+    display: flex;
+    flex-direction: column;
+}
+
+.misjaBoxImg {
+    width: 70px;
+    height: 70px;
+}
+
+.misjaBoxHeader {
+    font-size: .8rem;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.misjaBoxText {
+    font-size: .45rem;
+}
+
+/* Wierzymy */
+
+.wierzymyPage .wierzymyLeft {
+    width: 500px;
+    height: 301px;
+}
+
+.wierzymyPage .bigHeader {
+    font-size: .9rem;
+}
+
+/* Nasze wartosci */
+
+.naszeWartosci {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.naszeWartosciLeft {
+    width: 40%;
+}
+
+.naszeWartosciRight {
+    width: 50%;
+}
+
+.naszeWartosciItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.naszeWartosciNumber {
+    font-size: 120px;
+    font-weight: 700;
+    color: #F8F8F8;
+    border-bottom: 2px solid var(--lean-main);
+    margin-right: 20px;
+}
+
+.naszeWartosciText {
+    font-size: .45rem;
+    font-weight: 400;
+}
+
+/* Liczby i my */
+
+.liczbyIMyInner {
+    width: 100%;
+    display: flex;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.liczbyIMy .statsItem {
+    width: 30%;
+    margin-right: 3%;
+}
+
+.liczbyIMy .statsItemRight {
+    width: 30%;
+    text-align: center;
+}
+
+.liczbyIMy .statsItemLeft {
+    width: 70%;
+    border-bottom: 1px solid var(--grey-main);
+}
+
+/* Dlaczego my */
+
+.dlaczegoMyInner {
+    margin: 40px 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dlaczegoMyItem {
+    border: 1px solid var(--grey-main);
+    display: flex;
+    align-items: center;
+    width: 49%;
+    padding: 20px;
+    margin-bottom: calc((1650px * 0.02));
+}
+
+.dlaczegoMyImg {
+    width: 70px;
+    height: 70px;
+}
+
+.dlaczegoMyText {
+    font-size: .45rem;
+}
+
+/* NASI EKSPERCI */
+
+.eksperci {
+    margin-bottom: 70px;
+}
+
+.eksperci .firstHeader {
+    margin-top: 60px;
+}
+
+.eksperci .bigHeader {
+    margin-bottom: 50px;
+}
+
+.eksperciItem {
+    display: flex;
+    margin-top: 150px;
+}
+
+.eksperciImg {
+    width: 477px;
+    height: 616px;
+    border-radius: 8px;
+}
+
+.eksperciItemRight {
+    margin-left: 130px;
+}
+
+.eksperciItemName {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.eksperciItemFunction {
+    color: var(--lean-main);
+    font-size: .5rem;
+    position: relative;
+    font-weight: 700;
+}
+
+.eksperciItemFunction::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    background: var(--grey-main);
+    width: 32px;
+    height: 4px;
+    left: 0;
+}
+
+.eksperciItemText {
+    font-size: .45rem;
+    margin-top: 50px;
+}
+
+.eksperciKontakt {
+    display: flex;
+    margin-top: 30px;
+}
+
+.eksperciKontaktItem {
+    border: 1px solid var(--grey-main);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    transition: .4s all;
+    cursor: pointer;
+}
+
+.eksperciKontaktItem:hover {
+    color: #fff;
+    background: var(--lean-main);
+}
+
+.eksperciKontaktIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.eksperciKontaktDane {
+    font-size: .45rem;
+    font-weight: 700;
+}
+
+/* DOFINANSOWANIA */
+
+.dofinansowaniaContainer {
+    padding: 0 50px;
+    color: var(--text) !important;
+}
+
+/* Dofinansowania first */
+
+.dofinansowaniaFirst {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+    margin: 50px 0 200px;
+    width: 100%;
+}
+
+.dofinansowaniaLeft, .dofinansowaniaRight {
+    width: 45%;
+    position: relative;
+}
+
+.smallHeader {
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+.dofinansowaniaLeftInfo {
+    margin-top: 40px;
+}
+
+.dofinansowaniaGreen {
+    font-size: .85rem;
+    color: var(--lean-main);
+    font-weight: 700;
+}
+
+.dofinansowaniaBold {
+    font-size: .45rem;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.dofinansowaniaText {
+    font-weight: 400;
+    font-size: .45rem;
+}
+
+.dofinansowaniaTopImg {
+    width: 687px;
+    height: 440px;
+}
+
+.dofinansowaniaAbsoluteBox {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 510px;
+    height: auto;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--grey-dark);
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.absoluteBoxPercent {
+    font-size: 1rem;
+    color: var(--lean-main);
+    font-weight: 700;
+}
+
+.absoluteBoxText {
+    font-size: .45rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+/* Frame */
+
+.frame {
+    margin: 30px 0 50px 0;
+    width: 100%;
+    border: 1px solid var(--grey-main);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: var(--text);
+}
+
+.font18 {
+    font-size: 18px !important;
+}
+
+.frame .procentDofinansowania {
+    font-size: 22px !important;
+}
+
+.frame .framePart {
+    display: flex;
+    margin-right: 60px;
+    height: 200px;
+    align-items: center;
+    position: relative;
+}
+
+.frame .framePart:first-child::after,
+.frame .framePart:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background: #6E8A37;
+}
+
+.frame .icon {
+    transform: scale(1.5);
+    margin: 0 20px;
+}
+
+.frame .icon-1 {
+    width: 44px;
+    height: 49px;
+}
+
+.frame .icon-2 {
+    width: 34px;
+    height: 44px;
+}
+
+.frame .framePercent {
+    font-size: 1rem !important;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.frame .framePart h3 {
+    font-size: .45rem;
+}
+
+.green {
+    color: var(--lean-main) !important;
+}
+
+/* FAQ */
+
+.dofFaq {
+    color: var(--text);
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dofFaq .left {
+    width: 65%;
+}
+
+.dofFaq .right {
+    width: 30%;
+}
+
+.faqItem {
+    border: 1px solid var(--grey-main);
+    border-radius: 10%;
+    width: 100%;
+    height: 120px;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.faqItem .arrow {
+    width: 50px;
+    height: 50px;
+    margin-right: 80px;
+}
+
+.faqQuestion {
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+.faqAnswer {
+    font-size: .5rem;
+    font-weight: 400;
+    display: none;
+    opacity: 0;
+    transition: .4s all;
+}
+
+.faqItem .arrow {
+    transition: .4s all;
+}
+
+.faqItem:hover .faqAnswer {
+    opacity: 1;
+    display: block;
+}
+
+.faqItem:hover .arrow {
+    transform: rotate(90deg);
+}
+
+.dofFaq .right {
+    padding: 50px 0;
+}
+
+.faqImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Steps */
+
+.steps {
+    width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.steps > * {
+    margin: 0 30px;
+}
+
+.steps .etap {
+    border: 1px solid var(--grey-main);
+    border-radius: 10px;
+    height: 170px;
+    width: 380px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.steps .etap:first-child {
+    margin-left: 0;
+}
+
+.etapHeader {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.etapDescription {
+    font-size: .45rem !important;
+    font-weight: 400;
+}
+
+.steps i {
+    color: #6E8A37 !important;
+    font-size: 30px;
+}
+
+/* Hints */
+
+.hints {
+    width: 85%;
+    margin: 50px 0;
+}
+
+.hints h4 {
+    font-size: .6rem;
+    font-weight: 400;
+}
+
+.hints h3 {
+    font-size: .85rem;
+    margin: 40px 0;
+    font-weight: 700;
+}
+
+/* Wizytowki */
+
+.wizytowki {
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+}
+
+.wizytowki .person {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.person .personImg {
+    width: 190px;
+    height: 257px;
+    margin-right: 30px;
+}
+
+.person .personName {
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.person .personFunction {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.person .personContact {
+    font-size: 20px;
+}
