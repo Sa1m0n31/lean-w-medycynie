@@ -11,12 +11,16 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$USER_HOME$/Downloads/wordpress-5.6 (1)/wordpress" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mcUaKKsBgUkmI57sxeQjmeJH8w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,12 +52,23 @@
       <workItem from="1609792437381" duration="54000" />
       <workItem from="1609875444984" duration="13000" />
       <workItem from="1610318106558" duration="58000" />
-      <workItem from="1610318196286" duration="8173000" />
+      <workItem from="1610318196286" duration="8746000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
