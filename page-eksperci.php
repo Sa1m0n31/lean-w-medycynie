@@ -35,14 +35,20 @@ get_header();
 
                 <div class="eksperciKontakt">
                     <div class="eksperciKontaktItem">
+                        <a href="tel:+48663089550"></a>
                         <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
                         <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
-                        <h4 class="eksperciKontaktDane">+48 663 089 550</h4>
+                        <h4 class="eksperciKontaktDane">
+                                +48 663 089 550
+                        </h4>
                     </div>
                     <div class="eksperciKontaktItem">
+                        <a href="mailto:g.koczor@leanwmedycnie.pl"></a>
                         <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
                         <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
-                        <h4 class="eksperciKontaktDane">g.koczor@leanwmedycnie.pl</h4>
+                        <h4 class="eksperciKontaktDane">
+                                g.koczor@leanwmedycnie.pl
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -65,14 +71,20 @@ get_header();
 
                 <div class="eksperciKontakt">
                     <div class="eksperciKontaktItem">
+                        <a href="tel:+48602509538"></a>
                         <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
                         <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
-                        <h4 class="eksperciKontaktDane">+48 602 509 538</h4>
+                        <h4 class="eksperciKontaktDane">
+                                +48 602 509 538
+                        </h4>
                     </div>
                     <div class="eksperciKontaktItem">
+                        <a href="mailto:jakub.napierala@leanwmedycnie.pl"></a>
                         <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
                         <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
-                        <h4 class="eksperciKontaktDane">jakub.napierala@leanwmedycnie.pl</h4>
+                        <h4 class="eksperciKontaktDane">
+                                jakub.napierala@leanwmedycnie.pl
+                        </h4>
                     </div>
                 </div>
             </div>

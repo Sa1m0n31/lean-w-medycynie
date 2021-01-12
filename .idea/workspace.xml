@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a1b282-3991-4a4f-a285-2d22951564a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/agnieszka_zdeba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/akcept.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/arrow-green.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/corpo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/dofinansowania_01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/dofinansowania_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/doswiadczenie.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/grzegorz_koczor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hero_image_podstrona_dofinansowania.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hero_image_podstrona_eksperci.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hero_image_podstrona_kontakt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/hero_image_podstrona_misja.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/jakub_napierala.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/konsultanci.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/letter-hover.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/letter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/nasza_misja.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/organizacja.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/phone-call-hover.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/phone-call.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/potencjal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/profesjonalizm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/projekt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/realizacja.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/rozwoj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/sms.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/system.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/transformacje.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/umowa.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/wspolpraca.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/zespol.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-dofinansowania.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-kontakt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-lean-nawigator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page-eksperci.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-eksperci.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-misja.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-misja.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +61,8 @@
       <workItem from="1609875444984" duration="13000" />
       <workItem from="1610318106558" duration="58000" />
       <workItem from="1610318196286" duration="9242000" />
-      <workItem from="1610399946574" duration="7868000" />
+      <workItem from="1610399946574" duration="8113000" />
+      <workItem from="1610463843591" duration="8514000" />
     </task>
     <servers />
   </component>

@@ -222,7 +222,7 @@ get_header();
             </div>
 
             <div class="ofertaItem" id="oferta2">
-                <img class="ofertaBackground" src=src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-2.jpg"; ?> alt="oferta-2" />
+                <img class="ofertaBackground" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-2.jpg"; ?>" alt="oferta-2" />
 
                 <h3 class="ofertaNumber">02</h3>
 

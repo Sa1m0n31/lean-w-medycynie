@@ -965,6 +965,7 @@ circle {
     height: 300px;
     position: relative;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .naszaMisjaHeader {
@@ -1206,6 +1207,7 @@ circle {
     transition: .4s all;
     cursor: pointer;
     border-radius: 8px;
+    position: relative;
 }
 
 .eksperciKontaktItem:hover {
@@ -1224,6 +1226,16 @@ circle {
 .eksperciKontaktItem:hover .eksperciKontaktIconHover {
     display: block !important;
     opacity: 1;
+}
+
+.eksperciKontaktItem a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .eksperciKontaktIcon {
@@ -1587,4 +1599,148 @@ circle {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/* KONTAKT */
+
+.pageKontaktHeader {
+    background: url("./img/hero_image_podstrona_kontakt.jpg");
+    background-position: 90% 30%;
+}
+
+.kontaktContainer {
+    margin: 50px auto;
+    width: 1600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kontaktLeft, .kontaktRight {
+    width: 45%;
+}
+
+.podstronaKontakt {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 60px 0;
+}
+
+.podstronaKontaktItem {
+    width: 45%;
+    margin: 50px 5% 0 0;
+}
+
+.podstronaKontaktItemHeader {
+    font-size: .55rem;
+    font-weight: 400;
+}
+
+/* Form */
+
+.wpcf7-form p {
+    display: block !important;
+    width: 100%;
+}
+
+.kontaktForm, .hf-fields-wrap {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-top: 150px !important;
+    justify-content: space-between !important;
+}
+
+.label {
+    height: 35px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.label-100 {
+    width: 100%;
+}
+
+.label-50 {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.input, .textArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--grey-dark);
+    padding: 5px 10px;
+    font-size: .5rem;
+    color: var(--text);
+    width: 100%;
+    height: 100%;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+}
+
+.input:focus, .textArea:focus {
+    border-bottom: 2px solid var(--text) !important;
+}
+
+.input:focus::placeholder, .textArea:focus::placeholder {
+    color: var(--text);
+}
+
+.input::placeholder, .textArea::placeholder {
+    color: var(--grey-dark);
+    font-size: .5rem;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.textAreaLabel {
+    height: 170px;
+}
+
+.textArea {
+    resize: none;
+}
+
+.submitButton {
+    cursor: pointer;
+    border: 2px solid var(--grey-dark);
+    color: var(--grey-dark);
+    width: 184px;
+    height: 48px;
+    padding: 7px;
+    font-size: .5rem;
+    border-radius: 8px;
+    background: transparent;
+    justify-self: flex-end;
+    transition: .4s all;
+    margin: 30px 0;
+}
+
+.submitButton:hover {
+    background: var(--lean-main);
+    color: #fff;
+    border: none;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxText {
+    font-weight: 300;
+    font-size: .38rem;
+}
+
+.checkbox {
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--grey-dark);
+    margin-right: 8px;
 }

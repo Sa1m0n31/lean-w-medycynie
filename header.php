@@ -11,7 +11,7 @@
     <!-- MENU -->
     <header class="topMenu">
         <div class="logo">
-            <a href=".">
+            <a href="<?php echo home_url(); ?>">
                 <img class="logoImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/Lean_w_medycynie_logo_01.svg'; ?>" alt="lean-w-medycynie-logo" />
             </a>
         </div>
@@ -20,7 +20,7 @@
             <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eskperci</a></li>
             <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
             <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
-            <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+            <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
             <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
             <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'konferencja' )->ID ); ?>">Konferencja</a></li>
             <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
