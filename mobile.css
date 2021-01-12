@@ -21,6 +21,25 @@
     .wierzymyRight {
         padding-left: 40px;
     }
+
+    .wierzymyPage .wierzymyRight {
+        padding-left: 40px !important;
+    }
+
+    /* MISJA */
+    .naszaMisjaHeader {
+        background-position-x: 80%;
+    }
+
+    /* img to right */
+    .imgToRight {
+        transform: translateX(calc(90vw * 0.4));
+    }
+
+    /* KONTAKT */
+    .kontaktContainer {
+        width: 100%;
+    }
 }
 
 @media(max-width: 1700px) {
@@ -58,6 +77,12 @@
 
     .eksperciItemRight {
         margin-right: 40px;
+    }
+
+    /* Wierzymy */
+    .wierzymyRight {
+        padding-left: 0;
+        margin-top: 30px;
     }
 }
 
@@ -109,6 +134,10 @@
     .wierzymyRight .bigHeader {
         font-size: 25px;
     }
+
+    .imgToRight {
+        display: none;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -133,6 +162,24 @@
     /* MISJA - nasze wartosci */
     .naszeWartosciItem {
         margin-bottom: 30px;
+    }
+
+    /* EKSPERCI */
+    .eksperciItemRight {
+        margin-left: 40px;
+    }
+
+    /* KONTAKT */
+    .kontaktContainer {
+        flex-direction: column;
+    }
+
+    .kontaktContainer > * {
+        width: 100%;
+    }
+
+    .wpcf7-form {
+        margin-top: 0 !important;
     }
 }
 
@@ -176,6 +223,12 @@
         width: 45%;
         margin-right: 5%;
     }
+
+    /* EKSPERCI */
+    .eksperciImg {
+        width: 350px;
+        height: 455px;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -212,6 +265,23 @@
 
     .dlaczegoMyItem {
         width: 80%;
+    }
+}
+
+@media(max-width: 900px) {
+    /* EKSPERCI */
+    .eksperciItem {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .eksperciImg {
+        margin-bottom: 25px;
+    }
+
+    .eksperciItemRight {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
@@ -407,6 +477,21 @@
         width: 100%;
         margin-right: 0;
     }
+
+    /* MISJA - dlaczego my */
+    .dlaczegoMyItem {
+        width: 100%;
+    }
+
+    /* MISJA - nasze wartosci */
+    .naszeWartosciItem {
+        flex-direction: column;
+    }
+
+    .naszeWartosciItem .naszeWartosciText {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -427,5 +512,22 @@
 
     .statsItemRight {
         font-size: 20px;
+    }
+
+    /* KONTAKT */
+    .podstronaKontaktItem {
+        width: 100%;
+    }
+
+    .podstronaKontakt {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+@media(max-width: 400px) {
+    .eksperciImg {
+        width: 100%;
+        height: auto;
     }
 }

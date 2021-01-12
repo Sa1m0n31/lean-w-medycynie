@@ -708,7 +708,7 @@ circle {
     width: 1234px;
     height: 550px;
     margin: 100px 0;
-    transform: translateX(calc(1700px * 0.4));
+    transform: translateX(calc((1700px - ((100vw - 1700px) / 2)) * 0.43));
 }
 
 /* Oferta */
