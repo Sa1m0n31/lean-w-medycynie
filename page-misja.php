@@ -70,7 +70,9 @@ get_header();
                 Każdego można zainspirować do zbudowania organizacji dającej maksymalną wartość dodaną jej Klientom.
             </h1>
             <button class="landingButton landingButton2">
-                Porozmawiajmy o współpracy
+                <a href="<?php echo get_page_link(get_page_by_title('Kontakt')->ID); ?>">
+                    Porozmawiajmy o współpracy
+                </a>
             </button>
         </div>
     </section>

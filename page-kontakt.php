@@ -96,6 +96,24 @@ get_header();
                 Wyślij wiadomość
             </button> -->
 
+            <!-- ZAWARTOSC FORMMULARZA DLA WTYCZKI CONTACT FORM 7:
+            <label class="label label-100">
+                [text* your-name class:input placeholder "Imie i nazwisko"] </label>
+
+            <label class="label label-50">
+                [email* your-email class:input placeholder "Adres email"] </label>
+
+            <label class="label label-50">
+                [text* your-subject class:input placeholder "Numer telefonu"] </label>
+
+            <label class="label label-100  textAreaLabel">
+                [textarea your-message class:textArea placeholder "Tekst wiadomości"] </label>
+
+            [acceptance acceptance-155 class:checkboxLabel] Wyrażam zgodę na przetwarzanie moich danych osobowych [/acceptance]
+
+            [submit class:submitButton "Wyślij"]
+            -->
+
             <?php
                 the_content();
             ?>

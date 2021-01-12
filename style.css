@@ -251,6 +251,20 @@ html {
     cursor: pointer;
 }
 
+.landingButton a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
 .landingButtonText {
     display: block;
     width: 100%;
@@ -872,6 +886,12 @@ circle {
 
 .footer h4 {
     font-weight: 400;
+    color: #fff;
+}
+
+.footer h4 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .footerCol::after {
@@ -1638,12 +1658,17 @@ circle {
 
 /* Form */
 
-.wpcf7-form p {
-    display: block !important;
-    width: 100%;
+.wpcf7, .wpcf7-form {
+    width: 100% !important;
 }
 
-.kontaktForm, .hf-fields-wrap {
+.wpcf7-form p {
+    display: flex !important;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.kontaktForm, .wpcf7-form {
     width: 100% !important;
     display: flex !important;
     flex-wrap: wrap !important;
@@ -1651,19 +1676,39 @@ circle {
     justify-content: space-between !important;
 }
 
+.wpcf7-form-control-wrap {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .label {
+    display: block !important;
     height: 35px;
-    margin: 30px 0;
     position: relative;
+    width: 100%;
 }
 
 .label-100 {
     width: 100%;
 }
 
-.label-50 {
+/*.label-50 {
     width: 45%;
     margin-right: 5%;
+}*/
+
+.wpcf7-form p:nth-child(3), .wpcf7-form p:nth-child(6) {
+    width: 47%;
+    margin-right: 6%;
+}
+
+.wpcf7-form p:nth-child(4), .wpcf7-form p:nth-child(7) {
+    width: 47%;
+}
+
+.wpcf7-form p:nth-child(6) {
+    justify-content: flex-start;
 }
 
 .input, .textArea {
@@ -1705,6 +1750,8 @@ circle {
 
 .textArea {
     resize: none;
+    display: block;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .submitButton {
@@ -1719,7 +1766,7 @@ circle {
     background: transparent;
     justify-self: flex-end;
     transition: .4s all;
-    margin: 30px 0;
+    outline: none;
 }
 
 .submitButton:hover {
@@ -1731,6 +1778,7 @@ circle {
 .checkboxLabel {
     display: flex;
     align-items: center;
+    margin-right: 15px !important;
 }
 
 .checkboxText {
@@ -1743,4 +1791,21 @@ circle {
     height: 12px;
     border: 1px solid var(--grey-dark);
     margin-right: 8px;
+}
+
+.wpcf7-list-item-label {
+    font-size: 12px !important;
+}
+
+.wpcf7-list-item label {
+    display: flex !important;
+    align-items: center;
+}
+
+span.wpcf7-list-item {
+    margin: 0 !important;
+}
+
+.ajax-loader {
+    width: 1px !important;
 }

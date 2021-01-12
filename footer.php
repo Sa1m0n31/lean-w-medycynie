@@ -36,10 +36,14 @@
             </h3>
 
             <h4 class="contact">
-                T: +48 573 171 137
+                <a href="tel:+48573171137">
+                    T: +48 573 171 137
+                </a>
             </h4>
             <h4 class="contact">
-                M: biuro@leanwmedycynie.pl
+                <a href="mailto:biuro@leanwmedycynie.pl">
+                    M: biuro@leanwmedycynie.pl
+                </a>
             </h4>
         </div>
 
