@@ -1,3 +1,17 @@
+/* Hamburger menu */
+
+const openMenu = () => {
+    document.querySelector(".mobileMenuContainer").style.display = "block";
+    document.querySelector("body").style.height = "100vh";
+    document.querySelector("body").style.overflowY = "hidden";
+}
+
+const closeMenu = () => {
+    document.querySelector(".mobileMenuContainer").style.display = "none";
+    document.querySelector("body").style.height = "auto";
+    document.querySelector("body").style.overflowY = "scroll";
+}
+
 /* Slider - progress circle */
 let circle1 = document.querySelector('#circle1');
 let circle2 = document.querySelector('#circle2');
@@ -9,20 +23,24 @@ let inner2 = document.querySelector('#circleI2');
 let inner3 = document.querySelector('#circleI3');
 let inner4 = document.querySelector('#circleI4');
 
-let radius = circle1.r.baseVal.value;
-let circumference = radius * 2 * Math.PI;
+let radius, circumference;
 
-circle1.style.strokeDasharray = `${circumference} ${circumference}`;
-circle1.style.strokeDashoffset = "0";
+if(circle1 !== null) {
+    radius = circle1.r.baseVal.value;
+    circumference = radius * 2 * Math.PI;
 
-circle2.style.strokeDasharray = `${circumference} ${circumference}`;
-circle2.style.strokeDashoffset = "0";
+    circle1.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle1.style.strokeDashoffset = "0";
 
-circle3.style.strokeDasharray = `${circumference} ${circumference}`;
-circle3.style.strokeDashoffset = "0";
+    circle2.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle2.style.strokeDashoffset = "0";
 
-circle4.style.strokeDasharray = `${circumference} ${circumference}`;
-circle4.style.strokeDashoffset = "0";
+    circle3.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle3.style.strokeDashoffset = "0";
+
+    circle4.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle4.style.strokeDashoffset = "0";
+}
 
 const circles = [circle1, circle2, circle3, circle4];
 const inners = [inner1, inner2, inner3, inner4];

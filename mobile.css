@@ -7,6 +7,11 @@
         width: 100% !important;
     }
 
+    /* Top menu */
+    .menuItem {
+        margin: 0 3px;
+    }
+
     /* Three boxes */
     .progressBar {
         width: calc(90vw - 370px);
@@ -15,6 +20,17 @@
     /* Wierzymy */
     .wierzymyRight {
         padding-left: 40px;
+    }
+}
+
+@media(max-width: 1700px) {
+    /* Top menu */
+    .socialMediaIcons {
+        display: none;
+    }
+
+    .menu {
+        justify-content: space-between;
     }
 }
 
@@ -46,6 +62,43 @@
 }
 
 @media(max-width: 1300px) {
+    /* Hamburger menu */
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 52px;
+        height: 36px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .hamburgerLine {
+        width: 52px;
+        height: 2px;
+        background: var(--text);
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .topMenu {
+        justify-content: space-between;
+    }
+
+    /* Landing */
+    .dots {
+        bottom: 180px;
+    }
+
+    /* Three boxes */
+    .boxItem {
+        width: 30%;
+        height: auto;
+    }
+
     /* Oferta */
     .misjaLeft {
         width: 400px;
@@ -68,6 +121,15 @@
         margin-bottom: 40px;
     }
 
+    /* Footer */
+    .footer .footerCol:last-child {
+        display: none;
+    }
+
+    .footer .footerCol {
+        width: 33%;
+    }
+
     /* MISJA - nasze wartosci */
     .naszeWartosciItem {
         margin-bottom: 30px;
@@ -75,6 +137,40 @@
 }
 
 @media(max-width: 1100px) {
+    /* Landing */
+    .sliderPhoto, .dots {
+        position: relative;
+    }
+
+    .dots {
+        bottom: 0;
+        left: 50%;
+        transform: translateY(-20%);
+    }
+
+    .landingLeft {
+        position: relative;
+        left: 0;
+        top: 40px;
+    }
+
+    .landing {
+        height: auto;
+    }
+
+    /* Oferta */
+    .oferta {
+        flex-direction: column;
+    }
+
+    .ofertaLeft, .ofertaRight {
+        width: 100%;
+    }
+
+    .ofertaLeft {
+        margin-bottom: 40px;
+    }
+
     /* MISJA - Stats */
     .liczbyIMy .statsItem {
         width: 45%;
@@ -83,6 +179,31 @@
 }
 
 @media(max-width: 1000px) {
+    /* Nasza misja */
+    .naszaMisja {
+        margin-bottom: 90px;
+    }
+
+    /* Referencje */
+    .referencje {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .referencjeLeft, .referencjeRight {
+        width: 100%;
+    }
+
+    .referencjeLeft {
+        margin-bottom: 40px;
+    }
+
+    /* Footer */
+    .footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     /* MISJA - Dlaczego my */
     .dlaczegoMyInner {
         flex-direction: column;
@@ -95,6 +216,60 @@
 }
 
 @media(max-width: 800px) {
+    /* Landing */
+    .big {
+        font-size: 80px !important;
+        margin: 30px 0;
+    }
+
+    /* Three boxes */
+    .threeBoxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progressBar {
+        display: none;
+    }
+
+    .boxItem {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    /* Wierzymy */
+    .wierzymyRight {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* Footer */
+    .footerFirst, .footerSecond {
+        flex-direction: column;
+    }
+
+    .footerCol {
+        margin-bottom: 30px;
+        height: auto;
+        width: 100% !important;
+    }
+
+    .footerCol::after {
+        display: none;
+    }
+
+    .footerSecond, .footerThird {
+        border: none;
+    }
+
+    .footerSecond {
+        align-items: flex-start;
+    }
+
+    .footerSecondRight h5 {
+        margin: 0 30px 0 0;
+    }
+
     /* MISJA - Misja first */
     .misjaBoxes {
         flex-direction: column;
@@ -125,9 +300,67 @@
     .statsItemRight {
         font-size: .8rem;
     }
+
+    /* Referencje */
+    .referencjeLeftBtn:hover, .referencjeRightBtn:hover {
+        transform: translateX(0);
+    }
 }
 
 @media(max-width: 700px) {
+    /* Landing */
+    .landingLeft {
+        width: 100%;
+    }
+
+    /* Nasza misja */
+    .misjaRight {
+        width: 100%;
+    }
+
+    /* Wierzymy */
+    .wierzymy {
+        margin-top: 90px;
+    }
+
+    .wierzymyLeft {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Oferta */
+    .ofertaTitle, .ofertaText {
+        width: 55%;
+    }
+
+    .ofertaItem {
+        padding: 0;
+    }
+
+    .oferta .ofertaRightLeft {
+        background: var(--lean-main);
+        transform: translateX(-40px);
+    }
+
+    .oferta .ofertaItem:hover .ofertaRightLeft {
+        transform: translateX(-40px);
+    }
+
+    .ofertaBackground {
+        opacity: .1;
+        display: block;
+        height: 100%;
+    }
+
+    .ofertaNextHover {
+        opacity: 1;
+        display: block;
+    }
+
+    .oferta .ofertaNext {
+        display: none;
+    }
+
     /* MISJA - wierzymy */
     .wierzymyPage .wierzymyLeft {
         width: 70vw;
@@ -145,6 +378,25 @@
 }
 
 @media(max-width: 600px) {
+    /* Three boxes */
+    .boxItem {
+        width: 100%;
+    }
+
+    /* Referencje */
+    .referencjeItem {
+        flex-direction: column;
+    }
+
+    .referencjeImg {
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    .referencjeText {
+        width: 90%;
+    }
+
     /* MISJA - stats */
     .liczbyIMyInner {
         width: 90%;
@@ -154,5 +406,26 @@
     .liczbyIMy .statsItem {
         width: 100%;
         margin-right: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    /* Landing */
+    .landing .landingButton {
+        width: 170px;
+    }
+
+    .dots {
+        left: 200px;
+    }
+
+    /* Nasza misja */
+    .misjaLeft {
+        width: 90%;
+        height: auto;
+    }
+
+    .statsItemRight {
+        font-size: 20px;
     }
 }

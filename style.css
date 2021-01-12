@@ -80,6 +80,7 @@ html {
 /* Main menu */
 
 .topMenu {
+    width: 100%;
     display: flex;
     align-items: center;
     height: 120px;
@@ -89,6 +90,102 @@ html {
     width: 100%;
     display: flex;
     list-style-type: none;
+}
+
+.mobileMenuContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: var(--text);
+}
+
+.mobileMenu {
+    width: 100%;
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 70%;
+}
+
+.mobileMenuItem {
+    text-align: center;
+    width: 100%;
+    height: calc(70vh / 8);
+    border-top: 1px solid #2A312F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobileMenuItem:last-child {
+    border-bottom: 1px solid #2A312F;
+}
+
+.mobileMenuItem a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+.mobileMenuTop {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.mobileMenuItem a {
+    color: #fff;
+}
+
+.mobileMenuGreen a {
+    color: var(--lean-main);
+}
+
+.exit {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.mobileMenuBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+
+.mobileMenuBottomText {
+    color: #fff;
+    font-size: .5rem;
+    font-weight: 400;
+    margin-right: 25px;
 }
 
 .menuItem {
@@ -147,6 +244,10 @@ html {
     font-size: calc(.5rem - 1px);
 }
 
+.logo {
+    width: 200px;
+}
+
 .logoImg {
     width: 200px;
     height: 60px;
@@ -157,11 +258,14 @@ html {
     display: flex;
 }
 
-.socialMediaIcons a {
-
+.hamburgerMenu {
+    display: none;
+    background: transparent;
+    border: none;
+    outline: none;
 }
 
-.socialMediaIcons .socialMediaImg {
+.socialMediaImg {
     width: 20px;
     height: 20px;
     margin: 0 15px;
@@ -178,6 +282,8 @@ html {
     width: 100%;
     height: 800px;
     position: relative;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .sliderPhoto {
@@ -185,7 +291,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 1;
 }
 
@@ -800,8 +906,10 @@ circle {
 }
 
 .referencjeItem {
-    height: 320px;
+    height: auto;
+    padding-bottom: 100px;
     display: flex;
+    align-items: center;
     border: 1px solid var(--grey-main);
     position: relative;
 }
@@ -813,6 +921,7 @@ circle {
     align-items: center;
     justify-content: center;
     border-right: 1px solid var(--grey-main);
+    transform: translateY(50px);
 }
 
 .referencjeImgImg {
@@ -976,6 +1085,11 @@ circle {
 
 .footerThird {
     padding-top: 20px;
+}
+
+.footer h5 {
+    color: #fff;
+    font-weight: 400;
 }
 
 /* PAGE MISJA */

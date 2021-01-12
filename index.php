@@ -8,6 +8,8 @@ get_header();
             <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next.svg'; ?>" alt="next" />
         </button>
 
+        <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+        <img class="sliderPhoto" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing2.jpg'; ?>" alt="landingPhoto" />
 
         <div class="landingLeft">
             <h1 class="landingTitle">
@@ -21,9 +23,6 @@ get_header();
                 <span class="landingButtonText">Dowiedz się więcej</span>
             </button>
         </div>
-
-        <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
-        <img class="sliderPhoto" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing2.jpg'; ?>" alt="landingPhoto" />
 
         <div class="dots">
             <svg height="50" width="50">
