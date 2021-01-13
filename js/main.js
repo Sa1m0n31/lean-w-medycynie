@@ -3,13 +3,16 @@
 const openMenu = () => {
     document.querySelector(".mobileMenuContainer").style.display = "block";
     document.querySelector("body").style.height = "100vh";
+    document.querySelector(".mobileMenuContainer").style.height = "100vh";
     document.querySelector("body").style.overflowY = "hidden";
+    document.querySelector(".container").style.width = "100%";
 }
 
 const closeMenu = () => {
     document.querySelector(".mobileMenuContainer").style.display = "none";
     document.querySelector("body").style.height = "auto";
     document.querySelector("body").style.overflowY = "scroll";
+    document.querySelector(".container").style.width = "90%";
 }
 
 /* Slider - progress circle */

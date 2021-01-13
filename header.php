@@ -32,9 +32,12 @@
                 </button>
             </div>
             <ul class="mobileMenu">
-                <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+                <li class="mobileMenuItem mobileMenuGreen">
+                    <a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">
+                        Lean Nawigator
+                    </a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
-                <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'konferencja' )->ID ); ?>">Konferencja</a></li>
+                <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
@@ -65,14 +68,54 @@
 
 
         <ul class="menu">
-            <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
-            <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
-            <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
-            <li class="menuItem menuItemOrdinary"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
-            <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
-            <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
-            <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'konferencja' )->ID ); ?>">Konferencja</a></li>
-            <li class="menuItem menuItemBordered"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
+            <li class="menuItem menuItemOrdinary">
+                <a class="<?php
+                    if(is_page('misja')) {
+                        echo 'green';
+                    }
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">
+                    Misja
+                </a>
+            </li>
+            <li class="menuItem menuItemOrdinary">
+                <a class="<?php
+                if(is_page('eksperci')) {
+                    echo 'green';
+                }
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">
+                    Eksperci
+                </a></li>
+            <li class="menuItem menuItemOrdinary">
+                <a class="<?php
+                if(is_page('sklep')) {
+                    echo 'green';
+                }
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
+            <li class="menuItem menuItemOrdinary"><a class="<?php
+                if(is_page('kontakt')) {
+                    echo 'green';
+                }
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('lean nawigator')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('akademia')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('konferencje')) {
+                echo 'greenBackground';
+            }
+            ?>" ><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('dofinansowania')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
         </ul>
         <ul class="socialMediaIcons">
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
