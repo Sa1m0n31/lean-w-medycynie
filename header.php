@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lean w medycynie</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,
+maximum-scale=1.0, user-scalable=no" />
 
     <?php wp_head(); ?>
 </head>
@@ -26,9 +27,11 @@
 
         <div class="mobileMenuContainer">
             <div class="mobileMenuTop">
-                <img class="logoImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/Lean_w_medycynie_logo_01.svg'; ?>" alt="lean-w-medycynie-logo" />
+                <a href="<?php echo home_url(); ?>">
+                    <img class="logoImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_logo_kontra.svg'; ?>" alt="lean-w-medycynie-logo" />
+                </a>
                 <button class="exit" onclick="closeMenu()">
-                    <img class="close" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/close.svg'; ?>" alt="exit" />
+                <img class="close" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/close.svg'; ?>" alt="exit" />
                 </button>
             </div>
             <ul class="mobileMenu">

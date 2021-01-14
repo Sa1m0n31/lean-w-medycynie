@@ -113,11 +113,39 @@ function lean_scripts() {
 	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css', array(), _S_VERSION);
 
 	wp_enqueue_script( 'lean-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true);
+	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js', array('gsap'), _S_VERSION, true);
+
+    wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js', null, null, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'lean_scripts' );
+
+// Add Konferencja post type
+function lean_add_konferencje_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Konferencje'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-calendar-alt'
+    );
+
+    register_post_type("Konferencje", $args);
+}
+
+add_action("init", "lean_add_konferencje_post_type");
 

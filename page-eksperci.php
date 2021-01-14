@@ -82,8 +82,55 @@ get_header();
                         <a href="mailto:jakub.napierala@leanwmedycnie.pl"></a>
                         <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
                         <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
-                        <h4 class="eksperciKontaktDane">
+                        <h4 class="eksperciKontaktDane smallFont">
                                 jakub.napierala@leanwmedycnie.pl
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="eksperciItem">
+            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/magda.jpg'; ?>" alt="magdalena-gałwa-gruszka" />
+
+            <div class="eksperciItemRight">
+                <h2 class="eksperciItemName">
+                    Magdalena Gałwa-Gruszka
+                </h2>
+                <h3 class="eksperciItemFunction">
+                    Lean Healthcare Expert
+                </h3>
+
+                <p class="eksperciItemText">
+                    <ul class="eksperciItemTextList">
+                      <li>Ekspertka w zakresie budowania zespołów, coach.</li>
+                        <li>Ekspertka w zakresie transformacji Lean w medycynie oraz usługach,</li>
+                        <li>Współprowadząca warsztaty z definiowania procesów, celów i wskaźników w branży medycznej i usługowej,</li>
+                        <li>Odpowiedzialna za wdrażanie Lean w przychodniach i szpitalach, call center, administracji,</li>
+                        <li>Prowadzi szkolenia w zakresie zarządzania i optymalizacji procesowej oraz Lean Management,</li>
+                        <li>Wielokrotnie podczas grup solving udało mi się wypracować z grupą rozwiązanie problemów “nigdy wcześniej nie rozwiązywalnych”,</li>
+                        <li>Potrafię pracować z managerami i ich pracownikami tak aby zawsze osiągnąć założone wcześniej cele.</li>
+                        <li>Szybko identyfikuję marnotrastwa i wraz z grupą wypracowuję skuteczne zmiany w procesach aby je wyeliminować.</li>
+                        <li>Absolwentka Politechniki Wrocławskiej - kierunek Inżynieria Biomedyczna oraz absolwentka studiów podyplomowych na Uniwersytecie Ekonomicznym we Wrocławiu - Zarządzanie firmą w gospodarce rynkowej</li>
+                        <li>Obecnie w trakcie MBA Zarządzanie w służbie zdrowia.</li>
+                    </ul>
+                </p>
+
+                <div class="eksperciKontakt">
+                    <div class="eksperciKontaktItem">
+                        <a href="tel:+48606750960"></a>
+                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
+                        <h4 class="eksperciKontaktDane">
+                            +48 606 750 960
+                        </h4>
+                    </div>
+                    <div class="eksperciKontaktItem">
+                        <a href="mailto:magda.galwagruszka@leanwmedycynie.pl"></a>
+                        <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
+                        <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
+                        <h4 class="eksperciKontaktDane smallFont2">
+                            magda.galwagruszka@leanwmedycynie.pl
                         </h4>
                     </div>
                 </div>

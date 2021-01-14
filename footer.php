@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="footerFirst">
         <div class="footerCol">
-            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/Lean_w_medycynie_logo_01.svg'; ?>" alt="lean-logo" />
+            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_logo_kontra.svg'; ?>" alt="lean-logo" />
         </div>
 
         <div class="footerCol">
@@ -50,7 +50,7 @@
         <div class="footerCol">
             <ul class="footerMenu">
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eskperci</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>

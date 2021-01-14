@@ -17,10 +17,20 @@
     box-sizing: border-box;
 }
 
-html, body, h1, h2, h3, h4, h5, h6 {
+html, body, .container, h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
     color: var(--text);
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -95,6 +105,7 @@ html {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    margin-left: 50px;
 }
 
 .mobileMenuContainer {
@@ -107,7 +118,7 @@ html {
     height: 0;
     background: var(--text);
     transition: .5s all;
-    transform-origin: top;
+    transform: translateX(-5vw);
 }
 
 .mobileMenu {
@@ -115,17 +126,22 @@ html {
     list-style-type: none;
     margin: 0 !important;
     padding: 0 !important;
-    height: 70%;
+    height: 50%;
+    opacity: 0;
 }
 
 .mobileMenuItem {
     text-align: center;
     width: 100%;
-    height: calc(70vh / 8);
+    height: calc(50vh / 8);
     border-top: 1px solid #2A312F;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mobileMenuItem:active {
+    background: #2A312F;
 }
 
 .mobileMenuItem:last-child {
@@ -151,6 +167,11 @@ html {
     justify-content: space-between;
     align-items: center;
     height: 20%;
+    opacity: 0;
+}
+
+.mobileMenuTop .logoImg {
+    transform: scale(2.5);
 }
 
 .mobileMenuItem a {
@@ -186,6 +207,7 @@ html {
     align-items: center;
     justify-content: center;
     height: 10%;
+    opacity: 0;
 }
 
 .mobileMenuBottomText {
@@ -346,7 +368,7 @@ html {
 }
 
 .landingText {
-    font-size: .5rem;
+    font-size: 17px;
     color: var(--grey-text);
     font-weight: 400;
 }
@@ -391,21 +413,13 @@ html {
     font-weight: 600;
 }
 
-/*.landingButtonArrow {
-    display: block;
-    width: 25px;
-    height: 25px;
-    position: relative;
-    z-index: 3;
+.landingSlide {
+    opacity: 0;
 }
 
-.landingButton:hover {
-    width: 220px;
+.landingActive {
+    opacity: 1;
 }
-
-.landingButton:hover .landingArrow {
-    width: 25px;
-} */
 
 .landingButton::after {
     content: url("./img/next-small.svg");
@@ -437,6 +451,10 @@ html {
     left: 100px;
     display: flex;
     z-index: 2;
+}
+
+.dotsMobile {
+    display: none;
 }
 
 .dots .dotOuter {
@@ -474,6 +492,7 @@ circle {
 }
 
 .nextSlide {
+    display: none;
     background: transparent;
     cursor: pointer;
 }
@@ -540,15 +559,15 @@ circle {
 }
 
 .bigHeader {
-    width: 80%;
-    font-size: 1.2rem;
+    width: 95%;
+    font-size: 52px;
     line-height: 1.5rem;
     font-weight: 700;
 }
 
 .misjaText {
     font-weight: 400;
-    font-size: .5rem;
+    font-size: 17px;
     margin: 20px 0;
 }
 
@@ -556,6 +575,11 @@ circle {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+
+.naszaMisja .stats {
+    margin-top: 25px;
 }
 
 .statsItem {
@@ -626,7 +650,7 @@ circle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
+    padding: 25px 35px;
     transition: .4s all;
     border-radius: 8px;
 }
@@ -816,7 +840,7 @@ circle {
 
 .ofertaText {
     width: 75%;
-    font-size: .4rem;
+    font-size: 17px;
     font-weight: 400;
     margin-top: 30px;
 }
@@ -871,6 +895,7 @@ circle {
 .referencje .bigHeader {
     position: relative;
     width: 100%;
+    font-size: 37px;
 }
 
 .referencje .bigHeader::after {
@@ -946,7 +971,7 @@ circle {
 }
 
 .referencjeText {
-    font-size: .5rem;
+    font-size: 17px;
     padding: 50px 25px 25px;
     width: 70%;
 }
@@ -1043,6 +1068,7 @@ circle {
 .footerCol img {
     width: 217px;
     height: 65px;
+    transform: scale(2.5);
 }
 
 .addMargin {
@@ -1068,6 +1094,7 @@ circle {
     font-weight: 600;
     transition: .4s all;
     cursor: pointer;
+    color: #fff;
 }
 
 .footerMenuItem a {
@@ -1325,7 +1352,8 @@ circle {
     color: var(--lean-main);
     font-size: .5rem;
     position: relative;
-    font-weight: 700;
+    font-weight: 400;
+    margin: 15px 0;
 }
 
 .eksperciItemFunction::after {
@@ -1341,6 +1369,22 @@ circle {
 .eksperciItemText {
     font-size: .45rem;
     margin-top: 50px;
+}
+
+.eksperciItemTextList {
+    font-size: 17px;
+    font-weight: 400;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.eksperciItemTextList li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--grey-main); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 .eksperciKontakt {
@@ -2011,3 +2055,160 @@ span.wpcf7-list-item {
 .konferencjeItem:hover .ofertaRightLeft {
     background: var(--lean-main);
 }
+
+/* SINGLE KONFERENCJA */
+
+.konferencjaContainer {
+    width: 1650px;
+    margin: 50px auto;
+}
+
+.konferencjaInner {
+    display: flex;
+    position: relative;
+    margin-top: 60px;
+}
+
+.konferencjaMenu {
+    display: block;
+    list-style-type: none;
+    width: 500px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 20px;
+    height: fit-content;
+    height: -moz-max-content;
+}
+
+.konferencjaContent section {
+    margin: 30px 0;
+}
+
+.konferencjaMenu .active {
+    color: var(--text) !important;
+    font-weight: 700;
+}
+
+.konferencjaMenuItem {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #BABDBC;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .4s all;
+    width: fit-content;
+    width: -moz-max-content;
+}
+
+.konferencjaMenuItem:hover {
+    color: var(--text);
+}
+
+.konferencjaContent {
+    width: 1100px;
+}
+
+#oKonferencji {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#oKonferencji p {
+    display: block;
+    font-size: 17px;
+    width: 48%;
+}
+
+.konferencjaItemHeader {
+    color: var(--lean-main);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 40px 0 30px;
+    padding-top: 30px;
+}
+
+.agendaInner {
+    width: 100%;
+    list-style-type: none;
+}
+
+.agendaInnerItem {
+    display: flex;
+    font-size: 17px;
+    font-weight: 400;
+    border-bottom: 1px solid #EDEDED;
+    padding: 30px 0;
+}
+
+.agendaInnerItem .godziny {
+    width: 140px;
+}
+
+.prelegenciInnerItem {
+    display: flex;
+    margin: 40px 0;
+}
+
+.prelegenciImage {
+    display: flex;
+    align-items: center;
+}
+
+.prelegenciImage img {
+    width: 182px;
+    height: 196px;
+    border-radius: 4px;
+}
+
+.prelegenciInfo {
+    margin-left: 40px;
+}
+
+.prelegenciName {
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.prelegenciText {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.galeriaInner {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.galeriaItemContainer {
+    width: 352px;
+    height: 352px;
+    overflow: hidden;
+}
+
+.galeriaItemContainer img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    border-radius: 8px;
+}
+
+#partnerzy {
+    margin-top: 80px;
+}
+
+.konferencjaItemHeaderCenter {
+    text-align: center;
+}
+
+.partnerzyInner {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

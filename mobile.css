@@ -66,6 +66,28 @@
         width: 100%;
         height: auto;
     }
+
+    /* SINGLE KONFERENCJA */
+    .konferencjaContainer {
+        width: 100%;
+    }
+
+    .konferencjaInner {
+        justify-content: space-between;
+    }
+
+    .konferencjaMenu {
+        width: 25%;
+    }
+
+    .konferencjaContent {
+        width: 70%;
+    }
+
+    .galeriaItemContainer {
+        width: 252px;
+        height: 252px;
+    }
 }
 
 @media(max-width: 1700px) {
@@ -91,6 +113,10 @@
 
     .framePart:first-child {
         width: 20% !important;
+    }
+
+    .bigHeader {
+        font-size: 1rem !important;
     }
 }
 
@@ -128,6 +154,7 @@
 
     .eksperciKontakt .eksperciKontaktItem {
         margin-bottom: 25px;
+        height: 50px;
     }
 
     .eksperciItemRight {
@@ -250,6 +277,15 @@
         width: 100%;
         margin-bottom: 30px;
     }
+
+    /* SINGLE KONFERENCJA */
+    .konferencjaMenu {
+        width: 20%;
+    }
+
+    .konferencjaContent {
+        width: 78%;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -335,6 +371,18 @@
     .etapyArrow {
         width: 30px;
         height: 45px;
+    }
+
+    /* SINGLE KONFERENCJA */
+    .galeriaInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeriaItemContainer {
+        width: 50vw;
+        height: 50vw;
+        margin: 30px 0;
     }
 }
 
@@ -478,6 +526,15 @@
         width: 50px !important;
         height: 70px !important;
     }
+
+    /* SINGLE KONFERENCJA */
+    .konferencjaMenu {
+        display: none;
+    }
+
+    .konferencjaContent {
+        width: 100%;
+    }
 }
 
 @media(max-width: 800px) {
@@ -542,7 +599,7 @@
     }
 
     .misjaBoxItem {
-        width: 80%;
+        width: 100%;
         margin: 20px 0;
     }
 
@@ -554,11 +611,12 @@
     /* MISJA - nasze wartosci */
     .naszeWartosci {
         flex-direction: column;
-        align-items: center;
     }
 
     .naszeWartosciLeft, .naszeWartosciRight {
-        width: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     /* MISJA - stats */
@@ -570,12 +628,93 @@
     .referencjeLeftBtn:hover, .referencjeRightBtn:hover {
         transform: translateX(0);
     }
+
+    .wierzymyPage .wierzymyRight {
+        padding-left: 0 !important;
+    }
+
+    .wierzymyPage .wierzymyLeft {
+        width: 100%;
+        height: calc(90vw / (500/301));
+    }
+
+    .dlaczegoMyItem {
+        padding-left: 0 !important;
+    }
 }
 
 @media(max-width: 700px) {
+    /* Top menu */
+    .topMenu {
+        height: 80px;
+    }
+
+    .topMenu .logo {
+        width: 140px;
+        position: absolute;
+        top: 10px;
+        left: -2px;
+    }
+
+    .logo a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .topMenu .hamburgerMenu {
+        position: absolute;
+        right: 0;
+        top: 20px;
+    }
+
     /* Landing */
     .landingLeft {
         width: 100%;
+        top: 10px;
+    }
+
+    .landingTitle {
+        font-size: 30px;
+    }
+
+    .landingTitle .big {
+        font-size: 42px !important;
+        margin-bottom: 10px;
+    }
+
+    .nextSlide {
+        display: none;
+    }
+
+    .landingText {
+        margin: 0 !important;
+        font-size: 12px;
+    }
+
+    .landing .landingButton {
+        width: 140px;
+        font-weight: 600;
+    }
+
+    .landingButtonText {
+        font-size: 12px !important;
+    }
+
+    .dots {
+        transform: translateY(-90%) !important;
+        left: 160px !important;
+    }
+
+    .dotsDesktop {
+        display: none;
+    }
+
+    .dotsMobile {
+        display: flex;
     }
 
     /* Nasza misja */
@@ -627,10 +766,6 @@
     }
 
     /* MISJA - wierzymy */
-    .wierzymyPage .wierzymyLeft {
-        width: 70vw;
-        height: calc(70vw / (500/301));
-    }
 
     .wierzymyRight .bigHeader {
         font-size: 20px;
@@ -669,6 +804,11 @@
 
     .etap {
         margin-right: 0 !important;
+    }
+
+    /* Global */
+    .bigHeader {
+        width: 100% !important;
     }
 }
 
@@ -730,14 +870,45 @@
     .personData {
         margin-top: 15px;
     }
+
+    /* SINGLE KONFERENCJA */
+    #oKonferencji {
+        flex-direction: column;
+    }
+
+    #oKonferencji p {
+        width: 100%;
+    }
+
+    .prelegenciInnerItem {
+        flex-direction: column;
+    }
+
+    .prelegenciInfo {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    .galeriaInner {
+        align-items: flex-start;
+    }
+
+    .galeriaItemContainer {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .konferencjaInner {
+        margin-top: 25px;
+    }
+
+    .konferencjaContent section {
+        margin: 0;
+    }
 }
 
 @media(max-width: 500px) {
     /* Landing */
-    .landing .landingButton {
-        width: 170px;
-    }
-
     .dots {
         left: 200px;
     }
@@ -793,6 +964,15 @@
     /* Logo */
     .logoImg {
         transform: translateX(-20px);
+    }
+
+    /* EKSPERCI */
+    .smallFont {
+        font-size: 12px !important;
+    }
+
+    .smallFont2 {
+        font-size: 10px !important;
     }
 }
 

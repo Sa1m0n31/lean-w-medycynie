@@ -8,38 +8,111 @@ get_header();
             <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next.svg'; ?>" alt="next" />
         </button>
 
-        <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
-        <img class="sliderPhoto" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/landing2.jpg'; ?>" alt="landingPhoto" />
+        <!-- SLIDER -->
+        <div class="landingSlide landingActive" id="landing1">
+            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
 
-        <div class="landingLeft">
-            <h1 class="landingTitle">
-                Lean Healthcare
-                <span class="big">Academy</span>
-            </h1>
-            <p class="landingText">
-                Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
-            </p>
-            <button class="landingButton">
-                <span class="landingButtonText">Dowiedz się więcej</span>
-            </button>
+            <div class="landingLeft">
+                <h1 class="landingTitle">
+                    Lean Healthcare
+                    <span class="big">Academy</span>
+                </h1>
+                <p class="landingText">
+                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                </p>
+                <button class="landingButton">
+                    <span class="landingButtonText">Dowiedz się więcej</span>
+                </button>
+            </div>
         </div>
 
-        <div class="dots">
+        <div class="landingSlide" id="landing2">
+            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+
+            <div class="landingLeft">
+                <h1 class="landingTitle">
+                    Slide numer
+                    <span class="big">Dwa</span>
+                </h1>
+                <p class="landingText">
+                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                </p>
+                <button class="landingButton">
+                    <span class="landingButtonText">Button 2</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="landingSlide" id="landing3">
+            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+
+            <div class="landingLeft">
+                <h1 class="landingTitle">
+                    Lean Healthcare
+                    <span class="big">Academy</span>
+                </h1>
+                <p class="landingText">
+                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                </p>
+                <button class="landingButton">
+                    <span class="landingButtonText">Dowiedz się więcej</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="landingSlide" id="landing4">
+            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+
+            <div class="landingLeft">
+                <h1 class="landingTitle">
+                    Lean Healthcare
+                    <span class="big">Academy</span>
+                </h1>
+                <p class="landingText">
+                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                </p>
+                <button class="landingButton">
+                    <span class="landingButtonText">Dowiedz się więcej</span>
+                </button>
+            </div>
+        </div>
+        <!-- END OF SLIDER -->
+
+        <div class="dots dotsMobile">
+            <svg height="30" width="30">
+                <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+            </svg>
+            <svg height="30" width="30">
+                <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+            </svg>
+            <svg height="30" width="30">
+                <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+            </svg>
+            <svg height="30" width="30">
+                <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+            </svg>
+        </div>
+
+        <div class="dots dotsDesktop">
             <svg height="50" width="50">
                 <circle id="circle1" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(0)" id="circleI1" cx="25" cy="25" r="5" fill="#6E8A37" />
+                <circle onclick="nextSlide(0)" id="circleI1" cx="25" cy="25" r="8" fill="#6E8A37" />
             </svg>
             <svg height="50" width="50">
                 <circle id="circle2" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(1)" id="circleI2" cx="25" cy="25" r="5" fill="#cdcdcd" />
+                <circle onclick="nextSlide(1)" id="circleI2" cx="25" cy="25" r="8" fill="#cdcdcd" />
             </svg>
             <svg height="50" width="50">
                 <circle id="circle3" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(2)" id="circleI3" cx="25" cy="25" r="5" fill="#cdcdcd" />
+                <circle onclick="nextSlide(2)" id="circleI3" cx="25" cy="25" r="8" fill="#cdcdcd" />
             </svg>
             <svg height="50" width="50">
                 <circle id="circle4" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(3)" id="circleI4" cx="25" cy="25" r="5" fill="#cdcdcd" />
+                <circle onclick="nextSlide(3)" id="circleI4" cx="25" cy="25" r="8" fill="#cdcdcd" />
             </svg>
         </div>
     </main>

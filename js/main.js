@@ -3,16 +3,56 @@
 const openMenu = () => {
     document.querySelector(".mobileMenuContainer").style.display = "block";
     document.querySelector("body").style.height = "100vh";
-    document.querySelector(".mobileMenuContainer").style.height = "100vh";
     document.querySelector("body").style.overflowY = "hidden";
-    document.querySelector(".container").style.width = "100%";
+
+    let tl = gsap.timeline();
+
+    tl.to(".mobileMenuContainer", { height: window.screen.height, duration: .5, ease: Power3.easeOut })
+        .to(".mobileMenuTop", { opacity: 1, duration: .2 })
+        .to(".mobileMenu", { opacity: 1, duration: .2 })
+        .to(".mobileMenuBottom", { opacity: 1, duration: .2 });
 }
 
 const closeMenu = () => {
-    document.querySelector(".mobileMenuContainer").style.display = "none";
-    document.querySelector("body").style.height = "auto";
-    document.querySelector("body").style.overflowY = "scroll";
-    document.querySelector(".container").style.width = "90%";
+    let tl = gsap.timeline();
+
+    tl.to(".mobileMenuBottom", { opacity: 0, duration: .2 })
+        .to(".mobileMenu", { opacity: 0, duration: .2 })
+        .to(".mobileMenuTop", { opacity: 0, duration: .2 })
+        .to(".mobileMenuContainer", { height: 0, duration: .5, ease: Power3.easeOut })
+        .then(() => {
+            setTimeout(() => {
+                document.querySelector("body").style.height = "auto";
+                document.querySelector("body").style.overflowY = "visible";
+                document.querySelector(".mobileMenuContainer").style.display = "none";
+            }, 500);
+        });
+}
+
+const konferencja = (n) => {
+    let el;
+    switch(n) {
+        case 1:
+            el = document.querySelector("#oKonferencji");
+            break;
+        case 2:
+            el = document.querySelector("#agenda");
+            break;
+        case 3:
+            el = document.querySelector("#pregegenci");
+            break;
+        case 4:
+            el = document.querySelector("#galeria");
+            break;
+        default:
+            el = document.querySelector("#partnerzy");
+            break;
+    }
+
+    el.scrollIntoView({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
 /* Slider - progress circle */
@@ -21,16 +61,37 @@ let circle2 = document.querySelector('#circle2');
 let circle3 = document.querySelector('#circle3');
 let circle4 = document.querySelector('#circle4');
 
+let circle1M = document.querySelector('#circle1M');
+let circle2M = document.querySelector('#circle2M');
+let circle3M = document.querySelector('#circle3M');
+let circle4M = document.querySelector('#circle4M');
+
 let inner1 = document.querySelector('#circleI1');
 let inner2 = document.querySelector('#circleI2');
 let inner3 = document.querySelector('#circleI3');
 let inner4 = document.querySelector('#circleI4');
 
+let inner1M = document.querySelector('#circleI1M');
+let inner2M = document.querySelector('#circleI2M');
+let inner3M = document.querySelector('#circleI3M');
+let inner4M = document.querySelector('#circleI4M');
+
+let slide1 = document.querySelector("#landing1");
+let slide2 = document.querySelector("#landing2");
+let slide3 = document.querySelector("#landing3");
+let slide4 = document.querySelector("#landing4");
+
 let radius, circumference;
 
-if(circle1 !== null) {
-    radius = circle1.r.baseVal.value;
-    circumference = radius * 2 * Math.PI;
+if((circle1 !== null)||(circle1M !== null)) {
+    if(window.innerWidth > 700) {
+        radius = circle1.r.baseVal.value;
+        circumference = radius * 2 * Math.PI;
+    }
+    else {
+        radius = circle1M.r.baseVal.value;
+        circumference = radius * 2 * Math.PI;
+    }
 
     circle1.style.strokeDasharray = `${circumference} ${circumference}`;
     circle1.style.strokeDashoffset = "0";
@@ -48,27 +109,42 @@ if(circle1 !== null) {
 const circles = [circle1, circle2, circle3, circle4];
 const inners = [inner1, inner2, inner3, inner4];
 
+const circlesM = [circle1M, circle2M, circle3M, circle4M];
+const innersM = [inner1M, inner2M, inner3M, inner4M];
+
+const slides = [slide1, slide2, slide3, slide4];
+
 const setProgress = (circle, percent) => {
-    const offset = circumference - percent / 100 * circumference;
+    const offset = circumference - percent / 300 * circumference;
     circles[circle].style.strokeDashoffset = offset.toString();
+}
+
+const setMobileProgress = (circle, percent) => {
+    const offset = circumference - percent / 100 * circumference;
+    circlesM[circle].style.strokeDashoffset = offset.toString();
 }
 
 let slide = 0;
 let stopSlider = false;
 
 const goSlider = (n) => {
-    let i = 0, circle = n;
+    let i = 0, circle = n, tmp;
+    let tl = gsap.timeline();
     circles[n].style.stroke = "#6E8A37";
     inners[n].style.fill = "#6E8A37";
+
+    gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
+    gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+
     let sliderInterval = setInterval(() => {
         if(i === 2) {
             circles[circle].style.stroke = "#6E8A37";
         }
 
-        if(i <= 100) {
+        if(i <= 300) {
             if(stopSlider) {
                 stopSlider = false;
-                resetCircles();
+                resetCircles(slide); /* Wysylamy slide, ktory bedzie naszym nowym slidem */
                 clearInterval(sliderInterval);
             }
             setProgress(circle, i);
@@ -82,15 +158,23 @@ const goSlider = (n) => {
             if(circle === 4) circle = 0;
             inners[circle].style.fill = "#6E8A37";
             i = 0;
+
+            if(circle === 0) tmp = 3;
+            else tmp = circle - 1;
+
+            gsap.fromTo(slides[tmp], { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
+            gsap.fromTo(slides[circle], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+
         }
     }, 30);
 }
 
-const resetCircles = () => {
+const resetCircles = (slide) => {
     for(let i=0; i<4; i++) {
         inners[i].style.fill = "#cdcdcd";
         circles[i].style.stroke = "none";
     }
+    inners[slide].style.fill = "#6E8A37";
 }
 
 const nextSlide = (n = -1) => {
@@ -101,7 +185,58 @@ const nextSlide = (n = -1) => {
     goSlider(slide);
 }
 
-goSlider(0);
+const goSliderMobile = (n) => {
+    console.log("go mobile");
+    let i = 0, circle = n;
+    circlesM[n].style.stroke = "#6E8A37";
+    innersM[n].style.fill = "#6E8A37";
+    let sliderInterval = setInterval(() => {
+        if(i === 2) {
+            circlesM[circle].style.stroke = "#6E8A37";
+        }
+
+        if(i <= 100) {
+            if(stopSlider) {
+                stopSlider = false;
+                resetMobileCircles();
+                clearInterval(sliderInterval);
+            }
+            setMobileProgress(circle, i);
+            i++;
+        }
+        else {
+            slide++;
+            innersM[circle].style.fill = "#cdcdcd";
+            circlesM[circle].style.stroke = "none";
+            circle++;
+            if(circle === 4) circle = 0;
+            innersM[circle].style.fill = "#6E8A37";
+            i = 0;
+        }
+    }, 30);
+}
+
+const resetMobileCircles = () => {
+    for(let i=0; i<4; i++) {
+        innersM[i].style.fill = "#cdcdcd";
+        circlesM[i].style.stroke = "none";
+    }
+}
+
+const nextMobileSlide = (n = -1) => {
+    if(n === -1) slide++;
+    else slide = n;
+    if(slide === 4) slide = 0;
+    stopSlider = true;
+    goSliderMobile(slide);
+}
+
+if(window.innerWidth > 700) {
+    goSlider(0);
+}
+else {
+    goSliderMobile(0);
+}
 
 /* Licznik */
 const c1 = document.querySelector("#count1");
