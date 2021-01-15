@@ -1,3 +1,10 @@
+@media(min-width: 2000px) {
+    .misjaFirst, .wierzymyPage, .naszeWartosci, .liczbyIMy, .dlaczegoMy,
+    .eksperciItem {
+        padding: 0 50px;
+    }
+}
+
 @media(max-width: 1800px) {
     .container {
         width: 90%;

@@ -747,7 +747,7 @@ circle {
     width: 1234px;
     height: 550px;
     margin: 100px 0;
-    transform: translateX(calc((1700px - ((100vw - 1700px) / 2)) * 0.43));
+    transform: translateX(calc((3400px - 100vw) * 0.473));
 }
 
 /* Oferta */
@@ -1309,6 +1309,11 @@ circle {
     font-size: .45rem;
 }
 
+.dlaczegoMyImg {
+    width: 150px;
+    height: 150px;
+}
+
 /* NASI EKSPERCI */
 
 .pageEksperciHeader {
@@ -1594,6 +1599,8 @@ circle {
 }
 
 .frame .icon {
+    width: 150px;
+    height: 150px;
     transform: scale(1.5);
     margin: 0 20px;
 }
