@@ -23,6 +23,25 @@ get_header();
                 <button class="landingButton">
                     <span class="landingButtonText">Dowiedz się więcej</span>
                 </button>
+
+                <div class="dots dotsMobile">
+                    <svg height="30" width="30">
+                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                </div>
             </div>
         </div>
 
@@ -35,11 +54,30 @@ get_header();
                     <span class="big">Dwa</span>
                 </h1>
                 <p class="landingText">
-                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                    Tekst 2. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
                 </p>
                 <button class="landingButton">
                     <span class="landingButtonText">Button 2</span>
                 </button>
+
+                <div class="dots dotsMobile">
+                    <svg height="30" width="30">
+                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                </div>
             </div>
         </div>
 
@@ -48,15 +86,34 @@ get_header();
 
             <div class="landingLeft">
                 <h1 class="landingTitle">
-                    Lean Healthcare
-                    <span class="big">Academy</span>
+                    Slidzik
+                    <span class="big">Trzeci</span>
                 </h1>
                 <p class="landingText">
-                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                    Tekst 3. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
                 </p>
                 <button class="landingButton">
-                    <span class="landingButtonText">Dowiedz się więcej</span>
+                    <span class="landingButtonText">Inny button</span>
                 </button>
+
+                <div class="dots dotsMobile">
+                    <svg height="30" width="30">
+                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                </div>
             </div>
         </div>
 
@@ -66,36 +123,36 @@ get_header();
             <div class="landingLeft">
                 <h1 class="landingTitle">
                     Lean Healthcare
-                    <span class="big">Academy</span>
+                    <span class="big">Cztery</span>
                 </h1>
                 <p class="landingText">
-                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                    Tekst 4. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
                 </p>
                 <button class="landingButton">
-                    <span class="landingButtonText">Dowiedz się więcej</span>
+                    <span class="landingButtonText">Dowiedz się</span>
                 </button>
+
+                <div class="dots dotsMobile">
+                    <svg height="30" width="30">
+                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                    <svg height="30" width="30">
+                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                    </svg>
+                </div>
             </div>
         </div>
         <!-- END OF SLIDER -->
-
-        <div class="dots dotsMobile">
-            <svg height="30" width="30">
-                <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
-            </svg>
-            <svg height="30" width="30">
-                <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-            </svg>
-            <svg height="30" width="30">
-                <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-            </svg>
-            <svg height="30" width="30">
-                <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-            </svg>
-        </div>
 
         <div class="dots dotsDesktop">
             <svg height="50" width="50">
@@ -398,7 +455,7 @@ get_header();
         </div>
 
         <div class="referencjeRight">
-            <div class="referencjeItem">
+            <div class="referencjeItem refActive" id="ref1">
                 <div class="referencjeImg">
                     <img class="referencjeImgImg"
                          src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
@@ -412,6 +469,69 @@ get_header();
                 <div class="referencjeAuthor">
                     <h4 class="authorName">
                         Adam Niedzielski
+                    </h4>
+                    <h5 class="authorFunction">
+                        Prezes NFZ
+                    </h5>
+                </div>
+            </div>
+
+            <div class="referencjeItem" id="ref2">
+                <div class="referencjeImg">
+                    <img class="referencjeImgImg"
+                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
+                         alt="company" />
+                </div>
+
+                <div class="referencjeText">
+                    Lorem ipsum dolor sit amet. W realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
+                </div>
+
+                <div class="referencjeAuthor">
+                    <h4 class="authorName">
+                        Adam Kowalski
+                    </h4>
+                    <h5 class="authorFunction">
+                        Minister zdrowia
+                    </h5>
+                </div>
+            </div>
+
+            <div class="referencjeItem" id="ref3">
+                <div class="referencjeImg">
+                    <img class="referencjeImgImg"
+                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
+                         alt="company" />
+                </div>
+
+                <div class="referencjeText">
+                    Opinia numer trzy. Zaangażowanie zespołu w realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
+                </div>
+
+                <div class="referencjeAuthor">
+                    <h4 class="authorName">
+                        Adam Niedzielski
+                    </h4>
+                    <h5 class="authorFunction">
+                        Prezes NFZ
+                    </h5>
+                </div>
+            </div>
+
+            <div class="referencjeItem" id="ref4">
+                <div class="referencjeImg">
+                    <img class="referencjeImgImg"
+                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
+                         alt="company" />
+                </div>
+
+                <div class="referencjeText">
+                    Ostatnia referencja. Zaangażowanie zespołu w realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
+                </div>
+
+                <div class="referencjeAuthor">
+                    <h4 class="authorName">
+                        Paweł Nowak
                     </h4>
                     <h5 class="authorFunction">
                         Prezes NFZ

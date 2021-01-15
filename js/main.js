@@ -111,58 +111,59 @@ let circle2 = document.querySelector('#circle2');
 let circle3 = document.querySelector('#circle3');
 let circle4 = document.querySelector('#circle4');
 
-let circle1M = document.querySelector('#circle1M');
-let circle2M = document.querySelector('#circle2M');
-let circle3M = document.querySelector('#circle3M');
-let circle4M = document.querySelector('#circle4M');
+let circle1M = document.querySelectorAll('#circle1M');
+let circle2M = document.querySelectorAll('#circle2M');
+let circle3M = document.querySelectorAll('#circle3M');
+let circle4M = document.querySelectorAll('#circle4M');
 
 let inner1 = document.querySelector('#circleI1');
 let inner2 = document.querySelector('#circleI2');
 let inner3 = document.querySelector('#circleI3');
 let inner4 = document.querySelector('#circleI4');
 
-let inner1M = document.querySelector('#circleI1M');
-let inner2M = document.querySelector('#circleI2M');
-let inner3M = document.querySelector('#circleI3M');
-let inner4M = document.querySelector('#circleI4M');
+let inner1M = document.querySelectorAll('#circleI1M');
+let inner2M = document.querySelectorAll('#circleI2M');
+let inner3M = document.querySelectorAll('#circleI3M');
+let inner4M = document.querySelectorAll('#circleI4M');
 
 let slide1 = document.querySelector("#landing1");
 let slide2 = document.querySelector("#landing2");
 let slide3 = document.querySelector("#landing3");
 let slide4 = document.querySelector("#landing4");
 
-let radius, circumference;
-
-if((circle1 !== null)||(circle1M !== null)) {
-    if(window.innerWidth > 700) {
-        radius = circle1.r.baseVal.value;
-        circumference = radius * 2 * Math.PI;
-    }
-    else {
-        radius = circle1M.r.baseVal.value;
-        circumference = radius * 2 * Math.PI;
-    }
-
-    circle1.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle1.style.strokeDashoffset = "0";
-
-    circle2.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle2.style.strokeDashoffset = "0";
-
-    circle3.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle3.style.strokeDashoffset = "0";
-
-    circle4.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle4.style.strokeDashoffset = "0";
-}
-
 const circles = [circle1, circle2, circle3, circle4];
 const inners = [inner1, inner2, inner3, inner4];
 
+/* Array od arrays */
 const circlesM = [circle1M, circle2M, circle3M, circle4M];
 const innersM = [inner1M, inner2M, inner3M, inner4M];
 
 const slides = [slide1, slide2, slide3, slide4];
+
+let radius, circumference;
+
+if((circle1 !== null)||(circle1M !== null)) {
+    if(window.innerWidth > 1300) {
+        radius = circle1.r.baseVal.value;
+        circumference = radius * 2 * Math.PI;
+
+        for(let i=0; i<4; i++) {
+            circles[i].style.strokeDasharray = `${circumference} ${circumference}`;
+            circles[i].style.strokeDashoffset = "0";
+        }
+    }
+    else {
+        radius = circle1M[0].r.baseVal.value;
+        circumference = radius * 2 * Math.PI;
+
+        for(let i=0; i<4; i++) {
+            circlesM[i].forEach(item => {
+                item.style.strokeDasharray = `${circumference} ${circumference}`;
+                item.style.strokeDashoffset = "0";
+            });
+        }
+    }
+}
 
 const setProgress = (circle, percent) => {
     const offset = circumference - percent / 300 * circumference;
@@ -170,8 +171,10 @@ const setProgress = (circle, percent) => {
 }
 
 const setMobileProgress = (circle, percent) => {
-    const offset = circumference - percent / 100 * circumference;
-    circlesM[circle].style.strokeDashoffset = offset.toString();
+    const offset = circumference - percent / 300 * circumference;
+    circlesM[circle].forEach((item) => {
+        item.style.strokeDashoffset = offset.toString();
+    });
 }
 
 let slide = 0;
@@ -179,7 +182,6 @@ let stopSlider = false;
 
 const goSlider = (n) => {
     let i = 0, circle = n, tmp;
-    let tl = gsap.timeline();
     circles[n].style.stroke = "#6E8A37";
     inners[n].style.fill = "#6E8A37";
 
@@ -235,20 +237,31 @@ const nextSlide = (n = -1) => {
     goSlider(slide);
 }
 
+/* Slider - mobile */
 const goSliderMobile = (n) => {
     console.log("go mobile");
-    let i = 0, circle = n;
-    circlesM[n].style.stroke = "#6E8A37";
-    innersM[n].style.fill = "#6E8A37";
+    let i = 0, circle = n, tmp;
+    circlesM[n].forEach(item => {
+        item.style.stroke = "#6E8A37";
+    });
+    innersM[n].forEach(item => {
+        item.style.fill = "#6E8A37";
+    });
+
+    gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
+    gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+
     let sliderInterval = setInterval(() => {
         if(i === 2) {
-            circlesM[circle].style.stroke = "#6E8A37";
+            circlesM[circle].forEach(item => {
+                item.style.stroke = "#6E8A37";
+            });
         }
 
-        if(i <= 100) {
+        if(i <= 300) {
             if(stopSlider) {
                 stopSlider = false;
-                resetMobileCircles();
+                resetMobileCircles(slide);
                 clearInterval(sliderInterval);
             }
             setMobileProgress(circle, i);
@@ -256,21 +269,40 @@ const goSliderMobile = (n) => {
         }
         else {
             slide++;
-            innersM[circle].style.fill = "#cdcdcd";
-            circlesM[circle].style.stroke = "none";
+            innersM[circle].forEach(item => {
+                item.style.fill = "#cdcdcd";
+            });
+            circlesM[circle].forEach(item => {
+                item.style.stroke = "none";
+            });
             circle++;
             if(circle === 4) circle = 0;
-            innersM[circle].style.fill = "#6E8A37";
+            innersM[circle].forEach(item => {
+                item.style.fill = "#6E8A37";
+            });
             i = 0;
+
+            if(circle === 0) tmp = 3;
+            else tmp = circle - 1;
+
+            gsap.fromTo(slides[tmp], { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
+            gsap.fromTo(slides[circle], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
         }
     }, 30);
 }
 
 const resetMobileCircles = () => {
     for(let i=0; i<4; i++) {
-        innersM[i].style.fill = "#cdcdcd";
-        circlesM[i].style.stroke = "none";
+        innersM[i].forEach(item => {
+            item.style.fill = "#cdcdcd";
+        });
+        circlesM[i].forEach(item => {
+            item.style.stroke = "none";
+        });
     }
+    innersM[slide].forEach(item => {
+        item.style.fill = "#6E8A37";
+    });
 }
 
 const nextMobileSlide = (n = -1) => {
@@ -281,7 +313,7 @@ const nextMobileSlide = (n = -1) => {
     goSliderMobile(slide);
 }
 
-if(window.innerWidth > 700) {
+if(window.innerWidth > 1300) {
     goSlider(0);
 }
 else {
@@ -420,18 +452,42 @@ const refDot2 = document.querySelector("#refDot2");
 const refDot3 = document.querySelector("#refDot3");
 const refDot4 = document.querySelector("#refDot4");
 
+const ref1 = document.querySelector("#ref1");
+const ref2 = document.querySelector("#ref2");
+const ref3 = document.querySelector("#ref3");
+const ref4 = document.querySelector("#ref4");
+
+const refs = [ref1, ref2, ref3, ref4];
 const dotArr = [refDot1, refDot2, refDot3, refDot4];
 
 const refLeftClick = () => {
+    let previousSlide;
+
     dotArr[refActive].style.background = "#F8F8F8";
+    previousSlide = refActive;
     refActive--;
     if(refActive<0) refActive = 3;
     dotArr[refActive].style.background = "#6E8A37";
+
+    changeSlide(previousSlide, refActive);
 }
 
 const refRightClick = () => {
+    let previousSlide = refActive;
+
     dotArr[refActive].style.background = "#F8F8F8";
     refActive++;
     if(refActive > 3) refActive = 0;
     dotArr[refActive].style.background = "#6E8A37";
+
+    changeSlide(previousSlide, refActive);
+}
+
+const changeSlide = (prev, next) => {
+    let tl = gsap.timeline();
+
+    tl.to(refs[prev], { opacity: 0, duration: .5 })
+        .set(refs[prev], { display: "none" })
+        .set(refs[next], { display: "flex" })
+        .to(refs[next], { opacity: 1, duration: .5 })
 }
