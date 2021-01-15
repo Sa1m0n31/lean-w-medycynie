@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-misja.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-misja.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,7 @@
       <workItem from="1610567891483" duration="5097000" />
       <workItem from="1610625007183" duration="15028000" />
       <workItem from="1610660438964" duration="14800000" />
-      <workItem from="1610720217636" duration="5170000" />
+      <workItem from="1610720217636" duration="11598000" />
     </task>
     <servers />
   </component>

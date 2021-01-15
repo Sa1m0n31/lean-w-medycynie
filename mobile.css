@@ -496,6 +496,7 @@
     .referencje {
         flex-direction: column;
         margin-top: 50px;
+        height: auto;
     }
 
     .referencjeLeft, .referencjeRight {
@@ -503,7 +504,18 @@
     }
 
     .referencjeLeft {
-        margin-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .referencjeButtons {
+        display: none;
+    }
+
+    .referencjeButtonsMobile {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: -65px;
     }
 
     /* Footer */
@@ -523,7 +535,68 @@
     }
 }
 
+/* Test */
+@media(min-width: 900px) {
+    /* Landing */
+    .landing {
+        overflow: hidden;
+    }
+}
+
 @media(max-width: 900px) {
+    /* Landing */
+    .landing {
+        min-height: 80vh;
+    }
+
+    .landingLeft {
+        width: 100%;
+        top: 10px;
+    }
+
+    .big {
+        font-size: 71px !important;
+        margin: 30px 0;
+    }
+
+    .sliderPhoto {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .landingLeft {
+        height: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .landingButton, .dotsMobile {
+        z-index: 5;
+    }
+
+    .landingTitle {
+        font-size: 24px;
+    }
+
+    .landingTitle .big {
+        font-size: 71px;
+    }
+
+    .landingText {
+        font-size: 12px;
+    }
+
+    .landingTitle::after {
+        bottom: 50px;
+    }
+
+    .landingText {
+        margin-top: -10px;
+    }
+
     /* EKSPERCI */
     .eksperciItem {
         flex-direction: column;
@@ -586,12 +659,6 @@
 }
 
 @media(max-width: 800px) {
-    /* Landing */
-    .big {
-        font-size: 80px !important;
-        margin: 30px 0;
-    }
-
     /* Three boxes */
     .threeBoxes {
         flex-direction: column;
@@ -720,26 +787,12 @@
     }
 
     /* Landing */
-    .landingLeft {
-        width: 100%;
-        top: 10px;
-    }
-
-    .landingTitle {
-        font-size: 30px;
-    }
-
-    .landingTitle .big {
-        font-size: 42px !important;
-        margin-bottom: 10px;
-    }
-
     .nextSlide {
         display: none;
     }
 
     .landingText {
-        margin: 0 !important;
+        margin: -20px 0 0 !important;
         font-size: 12px;
     }
 
@@ -753,16 +806,7 @@
     }
 
     .dots {
-        transform: translateY(-90%) !important;
         left: 160px !important;
-    }
-
-    .dotsDesktop {
-        display: none;
-    }
-
-    .dotsMobile {
-        display: flex;
     }
 
     /* Nasza misja */
@@ -770,23 +814,66 @@
         width: 100%;
     }
 
+    .misjaText, .statsItemLeft {
+        font-size: 12px;
+    }
+
+    .extraMargin {
+        margin-top: 90px;
+    }
+
     /* Wierzymy */
     .wierzymy {
-        margin-top: 90px;
+        margin-top: 50px;
+        margin-bottom: 15px;
     }
 
     .wierzymyLeft {
         width: 100%;
         height: auto;
+        margin-bottom: 5px;
+    }
+
+    .wierzymy .bigHeader2 {
+        font-size: 25px !important;
+    }
+
+    .landingButton a {
+        font-size: 12px;
     }
 
     /* Oferta */
+    .oferta {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
     .ofertaTitle, .ofertaText {
         width: 55%;
+        font-size: 20px;
     }
 
     .ofertaItem {
         padding: 0;
+        height: 200px;
+    }
+
+    .oferta .misjaText {
+        margin-bottom: 40px;
+    }
+
+    .ofertaText {
+        font-size: 12px;
+    }
+
+    .ofertaNumber {
+        left: 10px;
+        top: 10px;
+    }
+
+    .ofertaRightRight {
+        transform: translateX(65px);
+        width: calc(100% - 65px);
     }
 
     .oferta .ofertaRightLeft {
@@ -804,9 +891,16 @@
         height: 100%;
     }
 
+    .ofertaRightLeft {
+        width: 40px;
+        height: 40px;
+    }
+
     .oferta .ofertaNextHover {
         opacity: 1;
         display: block;
+        width: 20px;
+        height: 20px;
     }
 
     .oferta .ofertaNext {
@@ -857,6 +951,7 @@
     /* Global */
     .bigHeader {
         width: 100% !important;
+        font-size: 32px;
     }
 }
 

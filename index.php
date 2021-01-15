@@ -25,21 +25,21 @@ get_header();
                 </button>
 
                 <div class="dots dotsMobile">
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
                         <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
                         <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
                         <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
                         <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
                 </div>
             </div>
@@ -61,21 +61,21 @@ get_header();
                 </button>
 
                 <div class="dots dotsMobile">
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
                         <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
                         <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
                         <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
                         <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
                 </div>
             </div>
@@ -97,21 +97,21 @@ get_header();
                 </button>
 
                 <div class="dots dotsMobile">
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
                         <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
                         <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
                         <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
                         <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
                 </div>
             </div>
@@ -133,21 +133,21 @@ get_header();
                 </button>
 
                 <div class="dots dotsMobile">
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
                         <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(0)" id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
                         <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(1)" id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
                         <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(2)" id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30">
+                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
                         <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle onclick="nextMobileSlide(3)" id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
                 </div>
             </div>
@@ -545,6 +545,15 @@ get_header();
             <span class="referencjeDot" id="refDot2"></span>
             <span class="referencjeDot" id="refDot3"></span>
             <span class="referencjeDot" id="refDot4"></span>
+        </div>
+
+        <div class="referencjeButtons referencjeButtonsMobile">
+            <button class="ofertaRightLeft referencjeLeftBtn" onclick="refLeftClick()">
+                <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
+            </button>
+            <button class="ofertaRightLeft referencjeRightBtn" onclick="refRightClick()">
+                <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
+            </button>
         </div>
     </section>
     </div>

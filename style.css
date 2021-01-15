@@ -184,6 +184,13 @@ html {
     opacity: 0;
 }
 
+.mobileMenuTop a {
+    display: block;
+    width: 250px;
+    height: 69px;
+    overflow: hidden !important;
+}
+
 .mobileMenuTop .logoImg {
     transform: scale(2.5);
 }
@@ -206,6 +213,7 @@ html {
     width: 25px;
     height: 25px;
     position: relative;
+    margin-top: -20px;
 }
 
 .close {
@@ -332,7 +340,6 @@ html {
     width: 100%;
     height: 800px;
     position: relative;
-    overflow: hidden;
     border-radius: 8px;
 }
 
@@ -933,6 +940,10 @@ circle {
 .referencjeButtons {
     display: flex;
     transform: translateX(10px);
+}
+
+.referencjeButtonsMobile {
+    display: none;
 }
 
 .referencjeButtons > * {

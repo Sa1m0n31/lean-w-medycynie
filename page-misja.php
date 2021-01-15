@@ -78,7 +78,7 @@ get_header();
     </section>
 
     <!-- NASZE WARTOSCI -->
-    <section class="naszeWartosci">
+    <section class="naszeWartosci extraMargin">
         <div class="naszeWartosciLeft">
             <h2 class="firstHeader">
                 Lean w medycynie

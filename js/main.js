@@ -238,8 +238,7 @@ const nextSlide = (n = -1) => {
 }
 
 /* Slider - mobile */
-const goSliderMobile = (n) => {
-    console.log("go mobile");
+const goSliderMobile = (n, different = false) => {
     let i = 0, circle = n, tmp;
     circlesM[n].forEach(item => {
         item.style.stroke = "#6E8A37";
@@ -248,8 +247,14 @@ const goSliderMobile = (n) => {
         item.style.fill = "#6E8A37";
     });
 
-    gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-    gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+    if(different) {
+        gsap.fromTo(slides, { x: 0 }, { x: -2000, opacity: 0, duration: 1 });
+        gsap.fromTo(slides[n], { x: 2000 }, { x: 0, opacity: 1, duration: 1 });
+    }
+    else {
+        gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
+        gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+    }
 
     let sliderInterval = setInterval(() => {
         if(i === 2) {
@@ -305,12 +310,12 @@ const resetMobileCircles = () => {
     });
 }
 
-const nextMobileSlide = (n = -1) => {
+const nextMobileSlide = (n = -1, different = true) => {
     if(n === -1) slide++;
     else slide = n;
     if(slide === 4) slide = 0;
     stopSlider = true;
-    goSliderMobile(slide);
+    goSliderMobile(slide, different);
 }
 
 if(window.innerWidth > 1300) {
@@ -318,6 +323,44 @@ if(window.innerWidth > 1300) {
 }
 else {
     goSliderMobile(0);
+}
+
+/* Slider on mobile - swipe */
+
+document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, false);
+document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, false);
+var xDown = null;
+var yDown = null;
+
+function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+}
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        if ( xDiff > 0 ) {
+            if(slide === 3) slide = 0;
+            else slide++;
+            nextMobileSlide(slide);
+        } else {
+            if(slide === 0) slide = 3;
+            else slide--;
+            nextMobileSlide(slide, false);
+        }
+    }
+
+    /* reset values */
+    xDown = null;
+    yDown = null;
 }
 
 /* Licznik */
