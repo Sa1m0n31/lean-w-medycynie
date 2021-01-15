@@ -69,6 +69,12 @@
         <div class="footerSecondRight">
             <h5>Polityka Prywatności</h5>
             <h5>Śledź nas:</h5>
+            <div class="socialMediaIcons">
+                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/facebook-black.svg'; ?>" alt="facebook" />
+                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/youtube-black.svg'; ?>" alt="youtube" />
+                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/linkedin-black.svg'; ?>" alt="linkedin" />
+                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter-black.svg'; ?>" alt="twitter" />
+            </div>
         </div>
     </div>
 

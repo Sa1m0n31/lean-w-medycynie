@@ -23,6 +23,10 @@ html, body, .container, h1, h2, h3, h4, h5, h6, ul {
     color: var(--text);
 }
 
+a {
+    text-decoration: none;
+}
+
 * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -31,6 +35,16 @@ html, body, .container, h1, h2, h3, h4, h5, h6, ul {
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
 }
 
 html {
@@ -429,7 +443,8 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    padding-top: 5px;
+    height: calc(100% - 5px);
     width: 0;
     display: flex;
     align-items: center;
@@ -1135,6 +1150,14 @@ circle {
     font-weight: 400;
 }
 
+.socialMediaIcons {
+    display: flex;
+}
+
+.fb-black:hover {
+    fill: #efefef !important;
+}
+
 /* PAGE MISJA */
 
 .pageHeader {
@@ -1805,6 +1828,14 @@ circle {
 }
 
 /* KONTAKT */
+
+.wpcf7-not-valid-tip {
+    opacity: 0 !important;
+}
+
+.wpcf7-response-output {
+    display: none !important;
+}
 
 .pageKontaktHeader {
     background: url("./img/hero_image_podstrona_kontakt.jpg");

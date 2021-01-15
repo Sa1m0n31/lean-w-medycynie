@@ -20,7 +20,7 @@ get_header();
     </h1>
 
     <div class="konferencjeContainer">
-        <div class="konferencjeItem">
+        <a class="konferencjeItem" href="http://futbolia.pl/?konferencje=szczuple-zarzadzanie-w-medycynie">
             <h4 class="konferencjeItemDate">
                 18.06.2020r.
             </h4>
@@ -37,7 +37,7 @@ get_header();
                 <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
                 <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
             </div>
-        </div>
+        </a>
 
         <div class="konferencjeItem">
             <h4 class="konferencjeItemDate">

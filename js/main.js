@@ -55,6 +55,56 @@ const konferencja = (n) => {
     });
 }
 
+/* Konferencja - zmiana koloru elementow menu */
+const konferencjaMenu = () => {
+    // Cisza
+}
+
+if(document.querySelector(".konferencjaContainer") !== null) {
+    konferencjaMenu();
+}
+else {
+    console.log("elo");
+}
+
+/* Walidacja formularza */
+if(document.querySelector("form") !== null) {
+    const submitBtn = document.querySelector("input[type=submit]");
+
+    submitBtn.addEventListener("click", () => {
+
+       setTimeout(() => {
+           if(document.querySelector(".your-name>.wpcf7-not-valid-tip") !== null) {
+               document.querySelector(".your-name").style.borderBottom = "2px solid red";
+               document.querySelector("input[name=your-name]").style.borderBottom = "none";
+           }
+           else {
+               document.querySelector(".your-name").style.borderBottom = "none";
+               document.querySelector("input[name=your-name]").style.borderBottom = "2px solid #BABDBC";
+           }
+
+           if(document.querySelector(".your-email>.wpcf7-not-valid-tip") !== null) {
+               document.querySelector(".your-email").style.borderBottom = "2px solid red";
+               document.querySelector("input[name=your-email]").style.borderBottom = "none";
+           }
+           else {
+               document.querySelector(".your-email").style.borderBottom = "none";
+               document.querySelector("input[name=your-email]").style.borderBottom = "2px solid #BABDBC";
+           }
+
+           if(document.querySelector(".your-subject>.wpcf7-not-valid-tip") !== null) {
+               document.querySelector(".your-subject").style.borderBottom = "2px solid red";
+               document.querySelector("input[name=your-subject]").style.borderBottom = "none";
+           }
+           else {
+               document.querySelector(".your-subject").style.borderBottom = "none";
+               document.querySelector("input[name=your-subject]").style.borderBottom = "2px solid #BABDBC";
+           }
+
+       }, 300);
+    });
+}
+
 /* Slider - progress circle */
 let circle1 = document.querySelector('#circle1');
 let circle2 = document.querySelector('#circle2');

@@ -20,11 +20,11 @@ get_header();
 
     <div class="konferencjaInner">
         <ul class="konferencjaMenu">
-            <li class="konferencjaMenuItem active" onclick="konferencja(1)">O Konferencji</li>
-            <li class="konferencjaMenuItem" onclick="konferencja(2)">Agenda</li>
-            <li class="konferencjaMenuItem" onclick="konferencja(3)">Prelegenci</li>
-            <li class="konferencjaMenuItem" onclick="konferencja(4)">Galeria</li>
-            <li class="konferencjaMenuItem" onclick="konferencja(5)">Partnerzy</li>
+            <li class="konferencjaMenuItem active" id="konfMenu1" onclick="konferencja(1)">O Konferencji</li>
+            <li class="konferencjaMenuItem" id="konfMenu2" onclick="konferencja(2)">Agenda</li>
+            <li class="konferencjaMenuItem" id="konfMenu3" onclick="konferencja(3)">Prelegenci</li>
+            <li class="konferencjaMenuItem" id="konfMenu4" onclick="konferencja(4)">Galeria</li>
+            <li class="konferencjaMenuItem" id="konfMenu5" onclick="konferencja(5)">Partnerzy</li>
         </ul>
 
         <div class="konferencjaContent">
