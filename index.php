@@ -201,24 +201,6 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        NPS - Wskaźnik oceny Klientów
-                    </h3>
-                    <h4 class="statsItemRight" id="count2">
-                        95
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
-                        Oszczędności
-                    </h3>
-                    <h4 class="statsItemRight">
-                        <span id="count3">5</span> MLN
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
                         Ilość projektów w medycynie
                     </h3>
                     <h4 class="statsItemRight" id="count4">
@@ -228,10 +210,28 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
+                        NPS - Wskaźnik oceny Klientów
+                    </h3>
+                    <h4 class="statsItemRight" id="count2">
+                        95
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
                         Ilość przeszkolonych osób
                     </h3>
                     <h4 class="statsItemRight" id="count5">
                         1100
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
+                        Oszczędności
+                    </h3>
+                    <h4 class="statsItemRight">
+                        <span id="count3">5</span> MLN
                     </h4>
                 </div>
 

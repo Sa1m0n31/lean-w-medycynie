@@ -49,14 +49,14 @@
 
         <div class="footerCol">
             <ul class="footerMenu">
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'konferencja' )->ID ); ?>">Konferencja</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
             </ul>
         </div>
     </div>
@@ -70,10 +70,18 @@
             <h5>Polityka Prywatności</h5>
             <h5>Śledź nas:</h5>
             <div class="socialMediaIcons">
+                <a href="https://facebook.com" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/facebook-black.svg'; ?>" alt="facebook" />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/youtube-black.svg'; ?>" alt="youtube" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/linkedin-black.svg'; ?>" alt="linkedin" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter-black.svg'; ?>" alt="twitter" />
+                </a>
             </div>
         </div>
     </div>

@@ -3,6 +3,18 @@
     .eksperciItem {
         padding: 0 50px;
     }
+
+    .imgToRight {
+        margin: 100px auto;
+        transform: translateX(0);
+    }
+}
+
+@media(min-width: 1800px) {
+    .menuItemBordered a {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
 }
 
 @media(max-width: 1800px) {
@@ -99,7 +111,7 @@
 
 @media(max-width: 1700px) {
     /* Top menu */
-    .socialMediaIcons {
+    .topMenu .socialMediaIcons {
         display: none;
     }
 
@@ -644,8 +656,16 @@
     }
 
     .etapyImg {
-        width: 50px !important;
-        height: 70px !important;
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .extraMargin1 {
+        transform: translate(10px, -50%);
+    }
+
+    .extraMargin2 {
+        transform: translate(3px, -50%);
     }
 
     /* SINGLE KONFERENCJA */
@@ -759,6 +779,10 @@
 }
 
 @media(max-width: 700px) {
+    .faqItem:hover .arrow {
+        transform: rotate(0);
+    }
+
     /* Top menu */
     .topMenu {
         height: 80px;
@@ -948,6 +972,53 @@
         margin-right: 0 !important;
     }
 
+    .font18, .frame .framePart .left h3 {
+        font-size: 14px !important;
+    }
+
+    .framePart::after {
+        width: 20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .frame .framePart {
+        height: 150px;
+    }
+
+    .frame .framePart .left {
+        margin-right: 25px;
+    }
+
+    .frame .framePart:first-child .left {
+        margin-right: 0;
+    }
+
+    .frame .framePart:first-child .left > * {
+        text-align: center;
+    }
+
+    .frame {
+        padding: 2px;
+    }
+
+    .frame .framePercent {
+        font-size: 18px !important;
+    }
+
+    .faqItem .arrow {
+        width: 25px;
+        height: 25px;
+    }
+
+    .faqQuestion, .faqAnswer {
+        font-size: 12px;
+    }
+
+    .dofFaq .right {
+        padding-bottom: 0;
+    }
+
     /* Global */
     .bigHeader {
         width: 100% !important;
@@ -1008,10 +1079,15 @@
 
     .person {
         flex-direction: column;
+        align-items: flex-start !important;
     }
 
     .personData {
         margin-top: 15px;
+    }
+
+    .wizytowki {
+        margin-bottom: 30px !important;
     }
 
     /* SINGLE KONFERENCJA */
@@ -1021,6 +1097,7 @@
 
     #oKonferencji p {
         width: 100%;
+        font-size: 14px;
     }
 
     .prelegenciInnerItem {
@@ -1048,6 +1125,14 @@
     .konferencjaContent section {
         margin: 0;
     }
+
+    #agenda .godziny, #agenda .event {
+        font-size: 12px;
+    }
+
+    .prelegenciText {
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -1064,6 +1149,21 @@
 
     .statsItemRight {
         font-size: 20px;
+    }
+
+    /* Footer */
+    .footerSecondRight {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .footerSecondRight h5:first-child {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .footerThird {
+        padding-top: 70px;
     }
 
     /* KONTAKT */

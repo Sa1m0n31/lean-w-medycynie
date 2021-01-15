@@ -157,7 +157,7 @@ get_header();
                 Przygotowanie wniosku
             </h4>
 
-            <img class="etapyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/umowa.svg'; ?>" alt="umowa" />
+            <img class="etapyImg extraMargin1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/umowa.svg'; ?>" alt="umowa" />
         </div>
 
         <img class="etapyArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
@@ -170,7 +170,7 @@ get_header();
                 Złożenie wniosku o dofinansowanie (oczekiwanie na wyniki 30 dni)
             </h4>
 
-            <img class="etapyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/akcept.svg'; ?>" alt="zlozenie-wniosku" />
+            <img class="etapyImg extraMargin2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/akcept.svg'; ?>" alt="zlozenie-wniosku" />
         </div>
 
         <img class="etapyArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />

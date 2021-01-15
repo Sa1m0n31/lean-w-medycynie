@@ -183,15 +183,6 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        NPS - Wskaźnik oceny Klientów
-                    </h3>
-                    <h4 class="statsItemRight" id="count2">
-                        95
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
                         Oszczędności
                     </h3>
                     <h4 class="statsItemRight">
@@ -201,37 +192,19 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość projektów w medycynie
+                        ROI
                     </h3>
                     <h4 class="statsItemRight" id="count4">
-                        11
+                        +200%
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość wykonanych transformacji
+                        NPS – Wskaźnik oceny Klientów
                     </h3>
                     <h4 class="statsItemRight" id="count1">
-                        5
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
-                        NPS - Wskaźnik oceny Klientów
-                    </h3>
-                    <h4 class="statsItemRight" id="count2">
                         95
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
-                        Oszczędności
-                    </h3>
-                    <h4 class="statsItemRight">
-                        <span id="count3">5</span> MLN
                     </h4>
                 </div>
 
@@ -239,46 +212,73 @@ get_header();
                     <h3 class="statsItemLeft">
                         Ilość projektów w medycynie
                     </h3>
-                    <h4 class="statsItemRight" id="count4">
+                    <h4 class="statsItemRight" id="count2">
                         11
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość wykonanych transformacji
+                        Ilość przeszkolonych osoób
+                    </h3>
+                    <h4 class="statsItemRight">
+                        1100
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
+                        Redukcja błędów
+                    </h3>
+                    <h4 class="statsItemRight" id="count4">
+                        -70%
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
+                        Ilość transformacji
                     </h3>
                     <h4 class="statsItemRight" id="count1">
-                        5
+                        3
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        NPS - Wskaźnik oceny Klientów
+                        Redukcja braków
                     </h3>
                     <h4 class="statsItemRight" id="count2">
-                        95
+                        -20%
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Oszczędności
+                        Zoptymalizowanych procesów
                     </h3>
                     <h4 class="statsItemRight">
-                        <span id="count3">5</span> MLN
+                        <200
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość projektów w medycynie
+                        Redukcja zapasów
                     </h3>
                     <h4 class="statsItemRight" id="count4">
-                        11
+                        +15%
                     </h4>
                 </div>
+
+            <div class="statsItem">
+                <h3 class="statsItemLeft">
+                    Efektywność obsługi pacjentów
+                </h3>
+                <h4 class="statsItemRight" id="count4">
+                    +45%
+                </h4>
+            </div>
         </div>
     </section>
 

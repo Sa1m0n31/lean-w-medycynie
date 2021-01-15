@@ -118,6 +118,7 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
     margin-left: 50px;
 }
@@ -266,6 +267,10 @@ html {
 .greenBackground {
     background: var(--lean-main);
     color: #fff !important;
+}
+
+.menuItemOrdinary {
+    height: 30px;
 }
 
 .menuItemOrdinary::after {
@@ -2211,12 +2216,10 @@ span.wpcf7-list-item {
 
 .prelegenciImage {
     display: flex;
-    align-items: center;
 }
 
 .prelegenciImage img {
     width: 182px;
-    height: 196px;
     border-radius: 4px;
 }
 
