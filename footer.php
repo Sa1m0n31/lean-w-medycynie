@@ -67,7 +67,7 @@
         </h5>
 
         <div class="footerSecondRight">
-            <h5>Polityka Prywatności</h5>
+            <h5 class="withAfter">Polityka Prywatności</h5>
             <h5>Śledź nas:</h5>
             <div class="socialMediaIcons">
                 <a href="https://facebook.com" target="_blank" rel="noreferrer">

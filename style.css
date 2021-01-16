@@ -83,7 +83,7 @@ button, button:focus, button:active {
 /* Wielkosci fontow */
 
 html {
-    font-size: 36px;
+    font-size: 37px;
     font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -242,13 +242,13 @@ html {
 
 .menuItem {
     color: var(--text);
-    font-size: .5rem;
+    font-size: 17px;
     text-transform: uppercase;
     height: 55px;
     width: fit-content;
     margin: 0 13px;
-    font-weight: 600;
-    transition: .4s all;
+    font-weight: 400;
+    transition: .2s all;
     cursor: pointer;
     position: relative;
     white-space: nowrap;
@@ -292,19 +292,18 @@ html {
     color: var(--lean-main);
 }
 
-.menuItemOrdinary:hover::after {
-    /*opacity: 1;*/
-}
-
 .menuItemBordered:hover {
     background: var(--lean-main);
     color: #fff;
+    border-color: transparent;
 }
 
 .menuItemBordered {
-    border: 2px solid var(--grey-main);
+    border: 1px solid var(--grey-main);
     font-size: calc(.5rem - 1px);
     padding: 0 12px;
+    border-radius: 4px;
+    transition: .4s all;
 }
 
 .logo {
@@ -406,7 +405,7 @@ html {
     color: #fff;
     font-weight: 600;
     font-size: 15px;
-    width: 196px;
+    width: 176px;
     height: 48px;
     border-radius: 4px;
     margin-top: 30px;
@@ -454,7 +453,7 @@ html {
     font-size: 30px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15px;
     padding-top: 5px;
     height: calc(100% - 5px);
     width: 0;
@@ -462,14 +461,18 @@ html {
     align-items: center;
     background: var(--lean-main);
     transform: translateX(95%);
-    transition: .4s width ease-in-out;
+    transition: .2s all;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    padding-left: -10px;
+    opacity: 0;
 }
 
 .landingButton:hover::after {
     transform: translateX(95%);
     width: 40px;
+    padding-left: 15px;
+    opacity: 1;
 }
 
 .dots {
@@ -550,7 +553,7 @@ circle {
 
 .naszaMisja {
     margin: 100px auto 200px;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -643,7 +646,7 @@ circle {
 
 .threeBoxes {
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -652,9 +655,9 @@ circle {
 .progressBar {
     position: absolute;
     left: 50%;
-    top: calc(90px + 0.8rem);
+    top: calc(115px + 0.8rem);
     transform: translate(-50%, -50%);
-    width: calc(1750px * 0.9 - 370px);
+    width: calc(1750px * 0.8 - 370px);
     height: 2px;
     background: var(--light-gray);
     z-index: 3;
@@ -677,6 +680,7 @@ circle {
     border: 1px solid var(--grey-main);
     color: var(--text);
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     padding: 25px 35px;
@@ -728,8 +732,10 @@ circle {
 }
 
 .boxText {
-    font-size: .45rem;
+    font-size: 15px;
     text-align: center;
+    height: 80px;
+    margin-bottom: 0 !important;
 }
 
 /* Wierzymy */
@@ -760,6 +766,7 @@ circle {
     font-size: 1rem;
     font-weight: 600;
     width: 100%;
+    line-height: 44px;
 }
 
 .landingButton2 {
@@ -797,7 +804,7 @@ circle {
 }
 
 .ofertaItem {
-    padding: 40px;
+    padding: 50px 40px 40px;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -807,6 +814,7 @@ circle {
     overflow: hidden;
     border: 1px solid var(--grey-main);
     margin-bottom: 30px;
+    border-radius: 8px;
 }
 
 .ofertaItem:hover .ofertaBackground {
@@ -845,9 +853,9 @@ circle {
 
 .ofertaNumber {
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 40px;
-    font-size: .8rem;
+    font-size: 26px;
     font-weight: 600;
 }
 
@@ -978,6 +986,7 @@ circle {
 
 .referencjeRight {
     width: 60%;
+    position: relative;
 }
 
 .referencjeItem {
@@ -988,10 +997,12 @@ circle {
     position: relative;
     opacity: 0;
     display: none;
+    border-radius: 8px;
 }
 
 .refActive {
     display: flex;
+    align-items: center;
     opacity: 1;
 }
 
@@ -1001,12 +1012,23 @@ circle {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid var(--grey-main);
     transform: translateY(50px);
+    position: relative;
+}
+
+.divider {
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    display: block;
+    background: var(--grey-main);
+    left: 30%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .referencjeImgImg {
-    width: 80%;
+    width: 70%;
     height: auto;
 }
 
@@ -1091,7 +1113,7 @@ circle {
     top: 50%;
     transform: translateY(-50%);
     height: 90%;
-    width: 2px;
+    width: 1px;
     background: var(--lean-main-110-);
 }
 
@@ -1152,7 +1174,7 @@ circle {
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
-    border: 2px solid var(--lean-main-110-);
+    border: 1px solid var(--lean-main-110-);
     border-left: none;
     border-right: none;
     height: 60px;
@@ -1160,6 +1182,7 @@ circle {
 
 .footerSecondRight {
     display: flex;
+    align-items: center;
 }
 
 .footerSecondRight h5 {
@@ -1181,6 +1204,26 @@ circle {
 
 .fb-black:hover {
     fill: #efefef !important;
+}
+
+@media(min-width: 900px) {
+    .withAfter {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 !important;
+        padding: 0 40px;
+        position: relative;
+    }
+
+    .withAfter::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 140%;
+        background: var(--lean-main-110-);
+    }
 }
 
 /* PAGE MISJA */

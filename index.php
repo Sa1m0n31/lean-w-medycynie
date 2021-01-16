@@ -12,7 +12,7 @@ get_header();
         <div class="landingSlide landingActive" id="landing1">
             <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
 
-            <div class="landingLeft">
+            <div class="landingLeft" id="left1">
                 <h1 class="landingTitle">
                     Lean Healthcare
                     <span class="big">Academy</span>
@@ -48,7 +48,7 @@ get_header();
         <div class="landingSlide" id="landing2">
             <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
 
-            <div class="landingLeft">
+            <div class="landingLeft" id="left2">
                 <h1 class="landingTitle">
                     Slide numer
                     <span class="big">Dwa</span>
@@ -84,7 +84,7 @@ get_header();
         <div class="landingSlide" id="landing3">
             <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
 
-            <div class="landingLeft">
+            <div class="landingLeft" id="left3">
                 <h1 class="landingTitle">
                     Slidzik
                     <span class="big">Trzeci</span>
@@ -120,7 +120,7 @@ get_header();
         <div class="landingSlide" id="landing4">
             <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
 
-            <div class="landingLeft">
+            <div class="landingLeft" id="left4">
                 <h1 class="landingTitle">
                     Lean Healthcare
                     <span class="big">Cztery</span>
@@ -455,6 +455,8 @@ get_header();
         </div>
 
         <div class="referencjeRight">
+            <span class="divider"></span>
+
             <div class="referencjeItem refActive" id="ref1">
                 <div class="referencjeImg">
                     <img class="referencjeImgImg"

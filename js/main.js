@@ -131,6 +131,11 @@ let slide2 = document.querySelector("#landing2");
 let slide3 = document.querySelector("#landing3");
 let slide4 = document.querySelector("#landing4");
 
+let left1 = document.querySelector("#left1");
+let left2 = document.querySelector("#left2");
+let left3 = document.querySelector("#left3");
+let left4 = document.querySelector("#left4");
+
 const circles = [circle1, circle2, circle3, circle4];
 const inners = [inner1, inner2, inner3, inner4];
 
@@ -139,6 +144,7 @@ const circlesM = [circle1M, circle2M, circle3M, circle4M];
 const innersM = [inner1M, inner2M, inner3M, inner4M];
 
 const slides = [slide1, slide2, slide3, slide4];
+const lefts = [left1, left2, left3, left4];
 
 let radius, circumference;
 
@@ -181,12 +187,17 @@ let slide = 0;
 let stopSlider = false;
 
 const goSlider = (n) => {
+    let tl = gsap.timeline();
     let i = 0, circle = n, tmp;
     circles[n].style.stroke = "#6E8A37";
     inners[n].style.fill = "#6E8A37";
 
+    gsap.set(lefts, { opacity: 0, x: -50 });
     gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-    gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+    gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 })
+        .then(() => {
+           gsap.to(lefts, { opacity: 1, x: 0, duration: .4 });
+        });
 
     let sliderInterval = setInterval(() => {
         if(i === 2) {
@@ -214,8 +225,12 @@ const goSlider = (n) => {
             if(circle === 0) tmp = 3;
             else tmp = circle - 1;
 
+            gsap.set(lefts, { opacity: 0, x: -50 });
             gsap.fromTo(slides[tmp], { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-            gsap.fromTo(slides[circle], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+            gsap.fromTo(slides[circle], { x: -2000 }, { x: 0, opacity: 1, duration: 1 })
+                .then(() => {
+                    gsap.to(lefts, { opacity: 1, x: 0, duration: .4 });
+                });
 
         }
     }, 30);

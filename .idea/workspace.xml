@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-dofinansowania.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-dofinansowania.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-misja.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-misja.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -68,7 +66,12 @@
       <workItem from="1610567891483" duration="5097000" />
       <workItem from="1610625007183" duration="15028000" />
       <workItem from="1610660438964" duration="14800000" />
-      <workItem from="1610720217636" duration="16798000" />
+      <workItem from="1610720217636" duration="17394000" />
+      <workItem from="1610743474209" duration="108000" />
+      <workItem from="1610743776733" duration="11000" />
+      <workItem from="1610744197965" duration="16000" />
+      <workItem from="1610752953113" duration="212000" />
+      <workItem from="1610828713198" duration="4509000" />
     </task>
     <servers />
   </component>
