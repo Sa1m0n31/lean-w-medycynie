@@ -124,7 +124,7 @@ get_header();
                         Ile będzie to kosztowało?
                     </h3>
                     <p class="faqAnswer">
-                        Ile to będzie kosztowało? Napisanie wniosku oraz przygotowanie dokumentów jest naszym kosztem.
+                        Napisanie wniosku oraz przygotowanie dokumentów jest naszym kosztem.
                     </p>
                 </div>
             </div>

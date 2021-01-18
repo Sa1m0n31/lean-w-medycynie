@@ -33,11 +33,11 @@ get_header();
             </div>
 
             <div class="podstronaKontaktItem">
-                <h4 class="podstronaKontaktItemHeader">
-                    <span class="green">T:</span> +48 573 171 137
+                <h4 class="podstronaKontaktItemHeader kontaktHover">
+                    <span class="green">T:</span> <a href="tel:+48573171137">+48 573 171 137</a>
                 </h4>
-                <h4 class="podstronaKontaktItemHeader">
-                    <span class="green">M:</span> biuro@leanwmedycynie.pl
+                <h4 class="podstronaKontaktItemHeader kontaktHover">
+                    <span class="green">M:</span> <a href="mailto:biuro@leanwmedycynie.pl">biuro@leanwmedycynie.pl</a>
                 </h4>
             </div>
 

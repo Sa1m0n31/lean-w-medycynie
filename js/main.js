@@ -334,7 +334,7 @@ const nextMobileSlide = (n = -1, different = true) => {
 }
 
 if(window.innerWidth > 1300) {
-    goSlider(0);
+   // goSlider(0);
 }
 else {
     goSliderMobile(0);

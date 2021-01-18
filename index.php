@@ -21,7 +21,9 @@ get_header();
                     Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
                 </p>
                 <button class="landingButton">
-                    <span class="landingButtonText">Dowiedz się więcej</span>
+                    <a href="https://www.leanhealthcareacademy.pl/">
+                        <span class="landingButtonText">Dowiedz się więcej</span>
+                    </a>
                 </button>
 
                 <div class="dots dotsMobile">
@@ -46,18 +48,20 @@ get_header();
         </div>
 
         <div class="landingSlide" id="landing2">
-            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+            <img class="sliderPhoto" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_02.jpg'; ?>" alt="landingPhoto" />
 
             <div class="landingLeft" id="left2">
                 <h1 class="landingTitle">
-                    Slide numer
-                    <span class="big">Dwa</span>
+                    Zobacz jak pozyskać
+                    <span class="big">Fundusze</span>
                 </h1>
                 <p class="landingText">
-                    Tekst 2. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
+                    Skontaktuj się z nami. Zapewniamy pełne wsparcie w zakresie realizacji projektu rozwojowego oraz pomożemy w zdobyciu dofinansowania na ten cel.
                 </p>
                 <button class="landingButton">
-                    <span class="landingButtonText">Button 2</span>
+                    <a href="<?php echo get_page_link(get_page_by_title('dofinansowania')->ID); ?>">
+                        <span class="landingButtonText">Dowiedz się więcej</span>
+                    </a>
                 </button>
 
                 <div class="dots dotsMobile">
@@ -118,7 +122,7 @@ get_header();
         </div>
 
         <div class="landingSlide" id="landing4">
-            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_02.jpg'; ?>" alt="landingPhoto" />
 
             <div class="landingLeft" id="left4">
                 <h1 class="landingTitle">
@@ -129,7 +133,9 @@ get_header();
                     Tekst 4. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
                 </p>
                 <button class="landingButton">
-                    <span class="landingButtonText">Dowiedz się</span>
+                    <a href="https://www.leanhealthcareacademy.pl/">
+                        <span class="landingButtonText">Dowiedz się</span>
+                    </a>
                 </button>
 
                 <div class="dots dotsMobile">

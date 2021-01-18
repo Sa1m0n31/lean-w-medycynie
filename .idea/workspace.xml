@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a1b282-3991-4a4f-a285-2d22951564a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/lean_slider_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_w_medycynie_sygent.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lean_slider_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/lean_slider_01.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-dofinansowania.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-dofinansowania.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-konferencje.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-konferencje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-konferencje.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-konferencje.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -71,7 +79,8 @@
       <workItem from="1610743776733" duration="11000" />
       <workItem from="1610744197965" duration="16000" />
       <workItem from="1610752953113" duration="212000" />
-      <workItem from="1610828713198" duration="4509000" />
+      <workItem from="1610828713198" duration="5670000" />
+      <workItem from="1610910145294" duration="12583000" />
     </task>
     <servers />
   </component>

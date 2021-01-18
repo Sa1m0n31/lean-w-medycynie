@@ -14,9 +14,20 @@ get_header();
     <h2 class="firstHeader">
         Nasze konferencje
     </h2>
-    <h1 class="bigHeader">
-        Szczupłe zarządzanie w medycynie
-    </h1>
+
+    <?php
+        if(have_posts()) {
+            while(have_posts()) {
+                the_post(); ?>
+
+        <h1 class="bigHeader">
+            <?php echo the_title(); ?>
+        </h1>
+    <?php
+            }
+            wp_reset_postdata();
+        }
+    ?>
 
     <div class="konferencjaInner">
         <ul class="konferencjaMenu">
@@ -29,13 +40,27 @@ get_header();
 
         <div class="konferencjaContent">
             <section id="oKonferencji">
-                <p class="oKonferencjiLeft">
-                    Konferencja poświęcona jest tematyce szczupłego zarządzania w medycynie. Podczas wykładów zostanie zaprezentowana wiedza z tego zakresu oraz praktyczne rozwiązania przedstawione przez lekarzy, managerów, ekspertów oraz osoby współpracujące ze służba zdrowia.
-                </p>
 
-                <p class="oKonferencjiRight">
-                    Konferencja skierowana jest do kadry zarządzającej, specjalistów ciągłego doskonalenia, przedstawicieli branży medycznej i usługowej oraz wszystkich osób zainteresowanych tematyką Lean.
-                </p>
+
+
+                <?php
+                if(have_posts()) {
+                    while(have_posts()) {
+                        the_post(); ?>
+
+                        <p class="oKonferencjiLeft">
+                            <?php echo get_field('opis_konferencji_-_pierwsza_kolumna'); ?>
+                        </p>
+
+                        <p class="oKonferencjiRight">
+                            <?php echo get_field('opis_konferencji_-_druga_kolumna'); ?>
+                        </p>
+
+                        <?php
+                    }
+                    wp_reset_postdata();
+                }
+                ?>
             </section>
 
             <section id="agenda">
@@ -44,69 +69,61 @@ get_header();
                 </h3>
 
                 <ul class="agendaInner">
-                    <li class="agendaInnerItem">
-                        <div class="godziny">
-                            <span class="godzinyOd">
-                                08:00
-                            </span>
-                            -
-                            <span class="godzinyDo">
-                                09:00
-                            </span>
-                        </div>
+                    <?php
+                    /* Loop through Konferencje to get the title */
+                    $title = 0;
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post(); ?>
+                    <span class="transparent"> <?php
+                        $title = the_title(); ?> </span> <?php
+                            }
+                            wp_reset_postdata();
+                    }
 
-                        <div class="event">
-                            Panel kawowy, rejestracja uczestników
-                        </div>
-                    </li>
+                        $args = array(
+                            'post_type' => 'Agenda',
+                            'title' => $title
+                        );
+                    echo $title;
+                        $agenda = new WP_Query( $args );
 
-                    <li class="agendaInnerItem">
-                        <div class="godziny">
-                            <span class="godzinyOd">
-                                08:00
-                            </span>
-                            -
-                            <span class="godzinyDo">
-                                09:00
-                            </span>
-                        </div>
+                        if($agenda->have_posts()) {
+                            while($agenda->have_posts()) {
+                                $agenda->the_post();
+                                $fields = get_fields();
 
-                        <div class="event">
-                            Panel kawowy, rejestracja uczestników
-                        </div>
-                    </li>
+                                if($fields) {
+                                    foreach( $fields as $name => $value ) {
+                                        if($value['godzina_rozpoczecia'] != '') {
+                                        ?>
+                                        <li class="agendaInnerItem">
+                                            <div class="godziny">
+                                                <span class="godzinyOd">
+                                                    <?php echo $value['godzina_rozpoczecia']; ?>
+                                                </span>
+                                                 -
+                                                 <span class="godzinyDo">
+                                                    <?php echo $value['godzina_zakonczenia']; ?>
+                                            </span>
+                                            </div>
 
-                    <li class="agendaInnerItem">
-                        <div class="godziny">
-                            <span class="godzinyOd">
-                                08:00
-                            </span>
-                            -
-                            <span class="godzinyDo">
-                                09:00
-                            </span>
-                        </div>
+                                            <div class="event">
+                                                <span class="bold block">
+                                                    <?php echo $value['nazwisko_prelegenta']; ?>
+                                                </span>
+                                                <?php echo $value['opis_wydarzenia']; ?>
+                                            </div>
+                                        </li>
 
-                        <div class="event">
-                            Panel kawowy, rejestracja uczestników
-                        </div>
-                    </li>
+                    <?php
+                                    }
+                                    }
+                                }
+                            }
+                        }
 
-                    <li class="agendaInnerItem">
-                        <div class="godziny">
-                            <span class="godzinyOd">
-                                08:00
-                            </span>
-                            -
-                            <span class="godzinyDo">
-                                09:00
-                            </span>
-                        </div>
-
-                        <div class="event">
-                            Panel kawowy, rejestracja uczestników
-                        </div>
-                    </li>
+                    ?>
                 </ul>
             </section>
 
@@ -116,69 +133,58 @@ get_header();
                 </h3>
 
                 <ul class="prelegenciInner">
-                    <li class="prelegenciInnerItem">
-                        <div class="prelegenciImage">
-                            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/grzegorz_koczor.jpg'; ?>" alt="alt" />
-                        </div>
 
-                        <div class="prelegenciInfo">
-                            <h4 class="prelegenciName">
-                                Grzegorz Koczor
-                            </h4>
+                    <?php
+                    /* Loop through Konferencje to get the title */
+                    $title = 0;
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post(); ?>
+                            <span class="transparent"> <?php
+                                $title = the_title(); ?> </span> <?php
+                        }
+                        wp_reset_postdata();
+                    }
 
-                            <p class="prelegenciText">
-                                Inicjator i właściciel brandu „ Lean w Medycynie”. Ekspert w dziedzinie optymalizacji w systemie lean managementu w sektorze podmiotów medycznych. Od kilkunastu lat doradza i trenuje zarówno personel medyczny jak i zespół zarządzający, budując przy tym efektywne procesy wdrożeniowe. Doświadczenie i innowacyjność pracy pozwala mu realizować ogólnopolskie transformacje oraz programy certyfikujące. Z wykształcenia biotechnolog oraz manager w ochronie zdrowia.
-                            </p>
-                        </div>
-                    </li>
+                    $args = array(
+                            'post_type' => 'Prelegenci',
+                            'title' => $title
+                    );
 
-                    <li class="prelegenciInnerItem">
-                        <div class="prelegenciImage">
-                            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/grzegorz_koczor.jpg'; ?>" alt="alt" />
-                        </div>
+                    $pre = new WP_Query($args);
 
-                        <div class="prelegenciInfo">
-                            <h4 class="prelegenciName">
-                                Grzegorz Koczor
-                            </h4>
+                    if($pre->have_posts()) {
+                        while($pre->have_posts()) {
+                            $pre->the_post();
+                            $fields = get_fields();
 
-                            <p class="prelegenciText">
-                                Inicjator i właściciel brandu „ Lean w Medycynie”. Ekspert w dziedzinie optymalizacji w systemie lean managementu w sektorze podmiotów medycznych. Od kilkunastu lat doradza i trenuje zarówno personel medyczny jak i zespół zarządzający, budując przy tym efektywne procesy wdrożeniowe. Doświadczenie i innowacyjność pracy pozwala mu realizować ogólnopolskie transformacje oraz programy certyfikujące. Z wykształcenia biotechnolog oraz manager w ochronie zdrowia.
-                            </p>
-                        </div>
-                    </li>
+                            foreach($fields as $name => $value) {
+                                if($value['imie_i_nazwisko'] != '') {
+                                ?>
+                                    <li class="prelegenciInnerItem">
+                                        <div class="prelegenciImage">
+                                            <img src="<?php echo $value['zdjecie']; ?>" alt="alt" />
+                                        </div>
 
-                    <li class="prelegenciInnerItem">
-                        <div class="prelegenciImage">
-                            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/grzegorz_koczor.jpg'; ?>" alt="alt" />
-                        </div>
+                                        <div class="prelegenciInfo">
+                                            <h4 class="prelegenciName">
+                                                <?php echo $value['imie_i_nazwisko']; ?>
+                                            </h4>
 
-                        <div class="prelegenciInfo">
-                            <h4 class="prelegenciName">
-                                Grzegorz Koczor
-                            </h4>
+                                            <p class="prelegenciText">
+                                                <?php echo $value['opis_prelegenta']; ?>
+                                            </p>
+                                        </div>
+                                    </li>
 
-                            <p class="prelegenciText">
-                                Inicjator i właściciel brandu „ Lean w Medycynie”. Ekspert w dziedzinie optymalizacji w systemie lean managementu w sektorze podmiotów medycznych. Od kilkunastu lat doradza i trenuje zarówno personel medyczny jak i zespół zarządzający, budując przy tym efektywne procesy wdrożeniowe. Doświadczenie i innowacyjność pracy pozwala mu realizować ogólnopolskie transformacje oraz programy certyfikujące. Z wykształcenia biotechnolog oraz manager w ochronie zdrowia.
-                            </p>
-                        </div>
-                    </li>
+                    <?php
+                                }
+                            }
+                        }
+                    }
 
-                    <li class="prelegenciInnerItem">
-                        <div class="prelegenciImage">
-                            <img src="<?php echo get_bloginfo('stylesheet_directory') . '/img/grzegorz_koczor.jpg'; ?>" alt="alt" />
-                        </div>
+                    ?>
 
-                        <div class="prelegenciInfo">
-                            <h4 class="prelegenciName">
-                                Grzegorz Koczor
-                            </h4>
-
-                            <p class="prelegenciText">
-                                Inicjator i właściciel brandu „ Lean w Medycynie”. Ekspert w dziedzinie optymalizacji w systemie lean managementu w sektorze podmiotów medycznych. Od kilkunastu lat doradza i trenuje zarówno personel medyczny jak i zespół zarządzający, budując przy tym efektywne procesy wdrożeniowe. Doświadczenie i innowacyjność pracy pozwala mu realizować ogólnopolskie transformacje oraz programy certyfikujące. Z wykształcenia biotechnolog oraz manager w ochronie zdrowia.
-                            </p>
-                        </div>
-                    </li>
                 </ul>
             </section>
 

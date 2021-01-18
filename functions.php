@@ -150,3 +150,56 @@ function lean_add_konferencje_post_type() {
 
 add_action("init", "lean_add_konferencje_post_type");
 
+// Add Prelegenci post type
+function lean_add_prelegenci_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Prelegenci'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-universal-access'
+    );
+
+    register_post_type("Prelegenci", $args);
+}
+
+add_action("init", "lean_add_prelegenci_post_type");
+
+// Add Prelegenci post type
+function lean_add_agenda_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Agenda'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-list-view'
+    );
+
+    register_post_type("Agenda", $args);
+}
+
+add_action("init", "lean_add_agenda_post_type");
+
+

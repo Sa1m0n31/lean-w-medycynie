@@ -5,11 +5,11 @@
     <title>Lean w medycynie</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0,
 maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_w_medycynie_sygnet.svg'; ?>">
 
     <?php wp_head(); ?>
 </head>
 <body>
-<div class="container">
     <!-- MENU -->
     <header class="topMenu">
         <div class="logo">
@@ -138,3 +138,4 @@ maximum-scale=1.0, user-scalable=no" />
             </a>
         </ul>
     </header>
+<div class="container">

@@ -20,81 +20,44 @@ get_header();
     </h1>
 
     <div class="konferencjeContainer">
-        <a class="konferencjeItem" href="http://futbolia.pl/?konferencje=szczuple-zarzadzanie-w-medycynie">
-            <h4 class="konferencjeItemDate">
-                18.06.2020r.
-            </h4>
+        <?php
+            $args = array(
+                    'post_type' => 'Konferencje'
+            );
 
-            <h2 class="konferencjeItemTitle">
-                Szczupłe zarządzanie w medycynie
-            </h2>
+            $konf = new WP_Query( $args );
 
-            <h3 class="konferencjeItemPlace">
-                Warszawa
-            </h3>
+            if($konf->have_posts()) {
+                while($konf->have_posts()) {
+                    $konf->the_post(); ?>
 
-            <div class="ofertaRightLeft">
-                <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
-                <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
-            </div>
-        </a>
+                    <a class="konferencjeItem" href="<?php echo the_permalink(); ?>">
+                        <h4 class="konferencjeItemDate">
+                            <?php echo get_field('data_konferencji'); ?>
+                        </h4>
 
-        <div class="konferencjeItem">
-            <h4 class="konferencjeItemDate">
-                18.06.2020r.
-            </h4>
+                        <h2 class="konferencjeItemTitle">
+                            <?php echo get_field('nazwa_konferencji'); ?>
+                        </h2>
 
-            <h2 class="konferencjeItemTitle">
-                Szczupłe zarządzanie w medycynie
-            </h2>
+                        <h3 class="konferencjeItemPlace">
+                            <?php echo get_field('miejsce_konferencji'); ?>
+                        </h3>
 
-            <h3 class="konferencjeItemPlace">
-                Warszawa
-            </h3>
+                        <div class="ofertaRightLeft">
+                            <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
+                            <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
+                        </div>
+                    </a>
 
-            <div class="ofertaRightLeft">
-                <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
-                <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
-            </div>
-        </div>
 
-        <div class="konferencjeItem">
-            <h4 class="konferencjeItemDate">
-                18.06.2020r.
-            </h4>
+                        <?php
+                }
+                wp_reset_postdata();
+            }
 
-            <h2 class="konferencjeItemTitle">
-                Szczupłe zarządzanie w medycynie
-            </h2>
+        ?>
 
-            <h3 class="konferencjeItemPlace">
-                Warszawa
-            </h3>
-
-            <div class="ofertaRightLeft">
-                <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
-                <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
-            </div>
-        </div>
-
-        <div class="konferencjeItem">
-            <h4 class="konferencjeItemDate">
-                18.06.2020r.
-            </h4>
-
-            <h2 class="konferencjeItemTitle">
-                Szczupłe zarządzanie w medycynie
-            </h2>
-
-            <h3 class="konferencjeItemPlace">
-                Warszawa
-            </h3>
-
-            <div class="ofertaRightLeft">
-                <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
-                <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
-            </div>
-        </div>
     </div>
 </main>
 
