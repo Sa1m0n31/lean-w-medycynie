@@ -340,6 +340,10 @@ html {
     margin: 0 15px;
 }
 
+.socialMediaImg {
+    fill: black !important;
+}
+
 .menuFooterItem a {
     text-decoration: none;
     color: inherit;
@@ -1211,6 +1215,81 @@ circle {
     display: flex;
 }
 
+.socialMediaIcons a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 8px;
+    transition: .4s all;
+}
+
+.socialMediaIcons #facebook {
+    background-image: url("./img/facebook.svg");
+}
+
+.socialMediaIcons #facebook:hover {
+    background-image: url("./img/facebook-green.svg");
+}
+
+.socialMediaIcons #youtube {
+    background-image: url("./img/youtube.svg");
+}
+
+.socialMediaIcons #youtube:hover {
+    background-image: url("./img/youtube-green.svg");
+}
+
+.socialMediaIcons #linkedin {
+    background-image: url("./img/linkedin.svg");
+}
+
+.socialMediaIcons #linkedin:hover {
+    background-image: url("./img/linkedin-green.svg");
+}
+
+.socialMediaIcons #twitter {
+    background-image: url("./img/twitter.svg");
+}
+
+.socialMediaIcons #twitter:hover {
+    background-image: url("./img/twitter-green.svg");
+}
+
+.socialMediaIcons #facebookF {
+    background-image: url("./img/facebook-black.svg");
+}
+
+.socialMediaIcons #facebookF:hover {
+    background-image: url("./img/facebook.svg");
+}
+
+.socialMediaIcons #youtubeF {
+    background-image: url("./img/youtube-black.svg");
+}
+
+.socialMediaIcons #youtubeF:hover {
+    background-image: url("./img/youtube.svg");
+}
+
+.socialMediaIcons #linkedinF {
+    background-image: url("./img/linkedin-black.svg");
+}
+
+.socialMediaIcons #linkedinF:hover {
+    background-image: url("./img/linkedin.svg");
+}
+
+.socialMediaIcons #twitterF {
+    background-image: url("./img/twitter-black.svg");
+}
+
+.socialMediaIcons #twitterF:hover {
+    background-image: url("./img/twitter.svg");
+}
+
 .fb-black:hover {
     fill: #efefef !important;
 }
@@ -1442,16 +1521,21 @@ circle {
 
 .eksperci .firstHeader {
     margin-top: 60px;
-    padding-left: calc((100vw - 1700px) / 2);
 }
 
-.eksperci .firstHeader::before {
-    left: calc(((100vw - 1700px) / 2) - 20px);
-}
+@media(max-width: 2000px) {
+    .eksperci .firstHeader {
+        padding-left: calc((100vw - 1700px) / 2);
+    }
 
-.eksperci .bigHeader {
-    margin-bottom: 50px;
-    padding-left: calc((100vw - 1700px) / 2);
+    .eksperci .firstHeader::before {
+        left: calc(((100vw - 1700px) / 2) - 20px);
+    }
+
+    .eksperci .bigHeader {
+        margin-bottom: 50px;
+        padding-left: calc((100vw - 1700px) / 2);
+    }
 }
 
 .eksperciItem {
@@ -2239,7 +2323,7 @@ span.wpcf7-list-item {
 }
 
 .konferencjaMenu .active {
-    color: var(--text) !important;
+    color: var(--text);
     font-weight: 700;
 }
 
@@ -2252,6 +2336,13 @@ span.wpcf7-list-item {
     transition: .4s all;
     width: fit-content;
     width: -moz-max-content;
+    position: relative;
+}
+
+.konferencjaMenuItem span {
+    position: absolute;
+    left: 0;
+    top: -150px;
 }
 
 .konferencjaMenuItem:hover {
@@ -2262,16 +2353,31 @@ span.wpcf7-list-item {
     width: 1100px;
 }
 
-#oKonferencji {
+.konferencjaContent section {
+    position: relative;
+}
+
+.konferencjaContent section > span:not(.bold) {
+    position: absolute;
+    left: 0;
+    top: -150px;
+    display: block;
+}
+
+.oKonferencji {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-#oKonferencji p {
+.oKonferencji .oKonferencjiLeft, .oKonferencji .oKonferencjiRight {
     display: block;
     font-size: 17px;
     width: 48%;
+}
+
+.oKonferencji p {
+    width: 100%;
 }
 
 .konferencjaItemHeader {
@@ -2334,6 +2440,7 @@ span.wpcf7-list-item {
 
 .prelegenciImage img {
     width: 182px;
+    height: 196px;
     border-radius: 4px;
 }
 
@@ -2356,6 +2463,7 @@ span.wpcf7-list-item {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .galeriaItemContainer {
@@ -2371,7 +2479,7 @@ span.wpcf7-list-item {
     border-radius: 8px;
 }
 
-#partnerzy {
+.partnerzy {
     margin-top: 80px;
 }
 
@@ -2383,7 +2491,12 @@ span.wpcf7-list-item {
     margin: 50px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.partnerzyInnerItem {
+    max-width: 200px;
+    height: auto;
 }
 

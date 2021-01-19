@@ -50,14 +50,133 @@ const konferencja = (n) => {
     }
 
     el.scrollIntoView({
-        top: 0,
+        top: 140,
         behavior: "smooth"
     });
 }
 
+let konfMenu1 = document.querySelector("#konfMenu1");
+let konfMenu2 = document.querySelector("#konfMenu2");
+let konfMenu3 = document.querySelector("#konfMenu3");
+let konfMenu4 = document.querySelector("#konfMenu4");
+let konfMenu5 = document.querySelector("#konfMenu5");
+
+const konfMenuArr = [konfMenu1, konfMenu2, konfMenu3, konfMenu4, konfMenu5];
+
 /* Konferencja - zmiana koloru elementow menu */
 const konferencjaMenu = () => {
-    // Cisza
+    let options1 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1
+    };
+    let options2 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .3
+    };
+    let options3 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .2
+    };
+    let options4 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .5
+    };
+    let options5 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .9
+    };
+
+    let observer1 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+               konfMenuArr.forEach(item => {
+                  if(item !== null) {
+                      item.style.fontWeight = "400";
+                      item.style.color = "#BABDBC";
+                  }
+               });
+               konfMenu1.style.fontWeight = "700";
+               konfMenu1.style.color = "#3D4543";
+            }
+        }
+    }, options1);
+    let observer2 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                konfMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                konfMenu2.style.fontWeight = "700";
+                konfMenu2.style.color = "#3D4543";
+            }
+        }
+    }, options2);
+    let observer3 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                konfMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                konfMenu3.style.fontWeight = "700";
+                konfMenu3.style.color = "#3D4543";
+            }
+        }
+    }, options3);
+    let observer4 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                konfMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                konfMenu4.style.fontWeight = "700";
+                konfMenu4.style.color = "#3D4543";
+            }
+        }
+    }, options4);
+    let observer5 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                konfMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                konfMenu5.style.fontWeight = "700";
+                konfMenu5.style.color = "#3D4543";
+            }
+        }
+    }, options5);
+
+    let sec1 = document.querySelector(".oKonferencji");
+    let sec2 = document.querySelector(".agenda");
+    let sec3 = document.querySelector(".prelegenci");
+    let sec4 = document.querySelector(".galeria");
+    let sec5 = document.querySelector(".partnerzy");
+
+    if(sec1 !== null) observer1.observe(sec1);
+    if(sec2 !== null) observer2.observe(sec2);
+    if(sec3 !== null) observer3.observe(sec3);
+    if(sec4 !== null) observer4.observe(sec4);
+    if(sec5 !== null) observer5.observe(sec5);
+}
+
+if(document.querySelector("#oKonferencji") !== null) {
+    konferencjaMenu();
 }
 
 if(document.querySelector(".konferencjaContainer") !== null) {
@@ -334,7 +453,7 @@ const nextMobileSlide = (n = -1, different = true) => {
 }
 
 if(window.innerWidth > 1300) {
-   // goSlider(0);
+    goSlider(0);
 }
 else {
     goSliderMobile(0);

@@ -202,4 +202,54 @@ function lean_add_agenda_post_type() {
 
 add_action("init", "lean_add_agenda_post_type");
 
+// Add Galeria konferencji post type
+function lean_add_galeria_konferencji_post_type() {
+    $supports = array(
+        'title',
+    );
 
+    $labels = array(
+        'name' => 'Galeria konferencji'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-format-gallery'
+    );
+
+    register_post_type("Galeria konferencji", $args);
+}
+
+add_action("init", "lean_add_galeria_konferencji_post_type");
+
+// Add Prelegenci post type
+function lean_add_sponsorzy_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Sponsorzy konferencji'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'events' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-money'
+    );
+
+    register_post_type("Sponsorzy konferencji", $args);
+}
+
+add_action("init", "lean_add_sponsorzy_post_type");

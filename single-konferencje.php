@@ -32,14 +32,61 @@ get_header();
     <div class="konferencjaInner">
         <ul class="konferencjaMenu">
             <li class="konferencjaMenuItem active" id="konfMenu1" onclick="konferencja(1)">O Konferencji</li>
-            <li class="konferencjaMenuItem" id="konfMenu2" onclick="konferencja(2)">Agenda</li>
+
+            <?php
+                $title = get_post()->post_title;
+                $args = array(
+                    'post_type' => 'Agenda'
+                );
+                $agenda = new WP_Query( $args );
+                if($agenda->have_posts()) {
+                    while($agenda->have_posts()) {
+                        $agenda->the_post();
+
+                        if($title == get_the_title()) {
+                  ?>
+                            <li class="konferencjaMenuItem" id="konfMenu2" onclick="konferencja(2)">Agenda</li>
+                                <?php
+                        }
+                    }
+                    wp_reset_postdata();
+                ?>
+                    <?php
+                }
+            ?>
             <li class="konferencjaMenuItem" id="konfMenu3" onclick="konferencja(3)">Prelegenci</li>
-            <li class="konferencjaMenuItem" id="konfMenu4" onclick="konferencja(4)">Galeria</li>
+
+            <?php
+            $title = get_post()->post_title;
+            $args = array(
+                    'post_type' => 'Galeria konferencji'
+            );
+
+            $gal = new WP_Query($args);
+
+            if($gal->have_posts()) {
+                while($gal->have_posts()) {
+                    $gal->the_post();
+
+                    if($title == get_the_title()) {
+                        ?>
+                        <li class="konferencjaMenuItem" id="konfMenu4" onclick="konferencja(4)">Galeria</li>
+            <?php
+                    }
+                }
+                wp_reset_postdata();
+            }
+
+
+            ?>
+
+
             <li class="konferencjaMenuItem" id="konfMenu5" onclick="konferencja(5)">Partnerzy</li>
         </ul>
 
         <div class="konferencjaContent">
-            <section id="oKonferencji">
+            <section class="oKonferencji">
+                <span id="oKonferencji"></span>
 
 
 
@@ -48,13 +95,14 @@ get_header();
                     while(have_posts()) {
                         the_post(); ?>
 
-                        <p class="oKonferencjiLeft">
-                            <?php echo get_field('opis_konferencji_-_pierwsza_kolumna'); ?>
-                        </p>
+                        <div class="oKonferencjiLeft">
+                            <?php
+                            echo get_field('opis_konferencji_-_pierwsza_kolumna'); ?>
+                        </div>
 
-                        <p class="oKonferencjiRight">
+                        <div class="oKonferencjiRight">
                             <?php echo get_field('opis_konferencji_-_druga_kolumna'); ?>
-                        </p>
+                        </div>
 
                         <?php
                     }
@@ -63,92 +111,95 @@ get_header();
                 ?>
             </section>
 
-            <section id="agenda">
-                <h3 class="konferencjaItemHeader">
-                    Agenda konferencji
-                </h3>
-
-                <ul class="agendaInner">
                     <?php
                     /* Loop through Konferencje to get the title */
                     $title = 0;
                     if(have_posts()) {
                         while(have_posts()) {
-                            the_post(); ?>
-                    <span class="transparent"> <?php
-                        $title = the_title(); ?> </span> <?php
+                            the_post();
+                        $title = get_the_title();
                             }
                             wp_reset_postdata();
                     }
 
                         $args = array(
-                            'post_type' => 'Agenda',
-                            'title' => $title
+                            'post_type' => 'Agenda'
                         );
-                    echo $title;
                         $agenda = new WP_Query( $args );
 
                         if($agenda->have_posts()) {
                             while($agenda->have_posts()) {
                                 $agenda->the_post();
-                                $fields = get_fields();
 
-                                if($fields) {
-                                    foreach( $fields as $name => $value ) {
-                                        if($value['godzina_rozpoczecia'] != '') {
+                                if(get_the_title() == $title) {
+                                    $fields = get_fields();
+
+                                    if($fields) {
                                         ?>
-                                        <li class="agendaInnerItem">
-                                            <div class="godziny">
-                                                <span class="godzinyOd">
-                                                    <?php echo $value['godzina_rozpoczecia']; ?>
-                                                </span>
-                                                 -
-                                                 <span class="godzinyDo">
-                                                    <?php echo $value['godzina_zakonczenia']; ?>
-                                            </span>
-                                            </div>
 
-                                            <div class="event">
-                                                <span class="bold block">
-                                                    <?php echo $value['nazwisko_prelegenta']; ?>
+            <section class="agenda">
+                <span id="agenda"></span>
+                <h3 class="konferencjaItemHeader">
+                    Agenda konferencji
+                </h3>
+
+                <ul class="agendaInner">
+
+                <?php
+
+                                        foreach( $fields as $name => $value ) {
+                                            if($value['godzina_rozpoczecia'] != '') {
+                                            ?>
+                                            <li class="agendaInnerItem">
+                                                <div class="godziny">
+                                                    <span class="godzinyOd">
+                                                        <?php echo $value['godzina_rozpoczecia']; ?>
+                                                    </span>
+                                                     -
+                                                     <span class="godzinyDo">
+                                                        <?php echo $value['godzina_zakonczenia']; ?>
                                                 </span>
-                                                <?php echo $value['opis_wydarzenia']; ?>
-                                            </div>
-                                        </li>
+                                                </div>
+
+                                                <div class="event">
+                                                    <span class="bold block">
+                                                        <?php echo $value['nazwisko_prelegenta']; ?>
+                                                    </span>
+                                                    <?php echo $value['opis_wydarzenia']; ?>
+                                                </div>
+                                            </li>
 
                     <?php
                                     }
                                     }
-                                }
-                            }
-                        }
-
-                    ?>
+                                        ?>
                 </ul>
             </section>
 
-            <section id="pregegenci">
-                <h3 class="konferencjaItemHeader">
-                    Pregegenci konferencji
-                </h3>
+                    <?php
+                                }
+                                }
+                            }
+                            wp_reset_postdata();
+                        }
 
-                <ul class="prelegenciInner">
+                    ?>
+
 
                     <?php
                     /* Loop through Konferencje to get the title */
-                    $title = 0;
+                    $title = '';
                     if(have_posts()) {
                         while(have_posts()) {
                             the_post(); ?>
                             <span class="transparent"> <?php
-                                $title = the_title(); ?> </span> <?php
+                                $title = get_the_title(); ?> </span> <?php
                         }
                         wp_reset_postdata();
                     }
 
                     $args = array(
-                            'post_type' => 'Prelegenci',
-                            'title' => $title
+                            'post_type' => 'Prelegenci'
                     );
 
                     $pre = new WP_Query($args);
@@ -156,70 +207,176 @@ get_header();
                     if($pre->have_posts()) {
                         while($pre->have_posts()) {
                             $pre->the_post();
-                            $fields = get_fields();
 
-                            foreach($fields as $name => $value) {
-                                if($value['imie_i_nazwisko'] != '') {
+                            if(get_the_title() == $title) {
+                                $fields = get_fields();
                                 ?>
-                                    <li class="prelegenciInnerItem">
-                                        <div class="prelegenciImage">
-                                            <img src="<?php echo $value['zdjecie']; ?>" alt="alt" />
-                                        </div>
 
-                                        <div class="prelegenciInfo">
-                                            <h4 class="prelegenciName">
-                                                <?php echo $value['imie_i_nazwisko']; ?>
-                                            </h4>
+            <section class="prelegenci">
+                <span id="pregegenci"></span>
+                <h3 class="konferencjaItemHeader">
+                    Prelegenci konferencji
+                </h3>
 
-                                            <p class="prelegenciText">
-                                                <?php echo $value['opis_prelegenta']; ?>
-                                            </p>
-                                        </div>
-                                    </li>
+                <ul class="prelegenciInner">
+            <?php
+
+                                foreach($fields as $name => $value) {
+                                    if($value['imie_i_nazwisko'] != '') {
+                                    ?>
+                                        <li class="prelegenciInnerItem">
+                                            <div class="prelegenciImage">
+                                                <img src="<?php echo $value['zdjecie']; ?>" alt="alt" />
+                                            </div>
+
+                                            <div class="prelegenciInfo">
+                                                <h4 class="prelegenciName">
+                                                    <?php echo $value['imie_i_nazwisko']; ?>
+                                                </h4>
+
+                                                <p class="prelegenciText">
+                                                    <?php echo $value['opis_prelegenta']; ?>
+                                                </p>
+                                            </div>
+                                        </li>
 
                     <?php
                                 }
+                            } ?>
+                </ul>
+            </section>
+
+                    <?php
                             }
                         }
+                        wp_reset_postdata();
                     }
 
                     ?>
 
-                </ul>
-            </section>
+                                <?php
+                    /* Loop through Konferencje to get the title */
+                    $title = '';
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post();
+                            $title = get_the_title();
+                        }
+                        wp_reset_postdata();
+                    }
 
-            <section id="galeria">
-                <h3 class="konferencjaItemHeader">
-                    Galeria konferencji
-                </h3>
+                    $args = array(
+                            'post_type' => 'Galeria konferencji'
+                    );
 
-                <div class="galeriaInner">
-                    <div class="galeriaItemContainer">
-                        <img class="galeriaItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/konferecja_01.png'; ?>" alt="alt" />
-                    </div>
+                    $gal = new WP_Query($args);
 
-                    <div class="galeriaItemContainer">
-                        <img class="galeriaItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/konferecja_02.png'; ?>" alt="alt" />
-                    </div>
+                    if($gal->have_posts()) {
+                        while($gal->have_posts()) {
+                            $gal->the_post();
 
-                    <div class="galeriaItemContainer">
-                        <img class="galeriaItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/konferecja_03.png'; ?>" alt="alt" />
-                    </div>
+                            if(get_the_title() == $title) {
+                                $images = acf_photo_gallery('galeria_zdjec', get_the_id());
+
+                                if(count($images)) {
+                                    ?>
+            <section class="galeria">
+                <span id="galeria"></span>
+                                    <h3 class="konferencjaItemHeader">
+                                        Galeria konferencji
+                                    </h3>
+
+                                    <div class="galeriaInner">
+                <?php
+                                    foreach($images as $image) {
+                                        ?>
+                                        <div class="galeriaItemContainer">
+                                            <img class="galeriaItem" src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+                                        </div>
+
+                <?php
+                                    } ?>
+
                 </div>
             </section>
+                    <?php
+                                }
+                            }
 
-            <section id="partnerzy">
-                <h3 class="konferencjaItemHeader konferencjaItemHeaderCenter">
-                    Sponsorzy oraz uczestnicy konferencji
-                </h3>
+                        }
+                        wp_reset_postdata();
+                    }
+                ?>
 
-                <div class="partnerzyInner">
-                    <img class="partnerzyInnerItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/haxon.svg'; ?>" alt="haxon" />
-                    <img class="partnerzyInnerItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/haxon.svg'; ?>" alt="haxon" />
-                    <img class="partnerzyInnerItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/haxon.svg'; ?>" alt="haxon" />
-                    <img class="partnerzyInnerItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/haxon.svg'; ?>" alt="haxon" />
-                    <img class="partnerzyInnerItem" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/haxon.svg'; ?>" alt="haxon" />
-                </div>
+            <section class="partnerzy">
+                <span id="partnerzy"></span>
+                <?php
+                /* Loop through Konferencje to get the title */
+                $title = '';
+                if(have_posts()) {
+                    while(have_posts()) {
+                        the_post();
+                        $title = get_the_title();
+                    }
+                    wp_reset_postdata();
+                }
+
+                $args = array(
+                    'post_type' => 'Sponsorzy konferencji'
+                );
+
+                $gal = new WP_Query($args);
+
+                if($gal->have_posts()) {
+                    while($gal->have_posts()) {
+                        $gal->the_post();
+
+                        if(get_the_title() == $title) {
+                            $images = acf_photo_gallery('sponsorzy_konferencji', get_the_id());
+
+                            if(count($images)) {
+                                ?>
+                                <h3 class="konferencjaItemHeader konferencjaItemHeaderCenter">
+                                    Sponsorzy oraz uczestnicy konferencji
+                                </h3>
+                                <div class="partnerzyInner">
+                                    <?php
+                                    foreach($images as $image) {
+                                        ?>
+                                        <img class="partnerzyInnerItem" src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+
+                                        <?php
+                                    } ?>
+
+                                </div>
+                                <?php
+                            }
+
+                            $images2 = acf_photo_gallery('patronat_honorowy', get_the_id());
+
+                            if(count($images2)) {
+                                ?>
+                                <h3 class="konferencjaItemHeader konferencjaItemHeaderCenter">
+                                    Patronat honorowy
+                                </h3>
+                                <div class="partnerzyInner">
+                                    <?php
+                                    foreach($images2 as $image) {
+                                        ?>
+                                        <img class="partnerzyInnerItem" src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
+
+                                        <?php
+                                    } ?>
+
+                                </div>
+                                <?php
+                            }
+                        }
+
+                    }
+                    wp_reset_postdata();
+                }
+                ?>
             </section>
         </div>
     </div>

@@ -70,17 +70,13 @@
             <h5 class="withAfter">Polityka Prywatności</h5>
             <h5>Śledź nas:</h5>
             <div class="socialMediaIcons">
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/facebook-black.svg'; ?>" alt="facebook" />
+                <a id="facebookF" href="https://facebook.com" target="_blank" rel="noreferrer">
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/youtube-black.svg'; ?>" alt="youtube" />
+                <a id="youtubeF" href="https://youtube.com" target="_blank" rel="noreferrer">
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/linkedin-black.svg'; ?>" alt="linkedin" />
+                <a id="linkedinF" href="https://linkedin.com" target="_blank" rel="noreferrer">
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                    <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter-black.svg'; ?>" alt="twitter" />
+                <a id="twitterF" href="https://twitter.com" target="_blank" rel="noreferrer">
                 </a>
             </div>
         </div>
