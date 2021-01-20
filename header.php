@@ -39,7 +39,7 @@ maximum-scale=1.0, user-scalable=no" />
                     <a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">
                         Lean Nawigator
                     </a></li>
-                <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
+                <li class="mobileMenuItem mobileMenuGreen"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
@@ -49,25 +49,23 @@ maximum-scale=1.0, user-scalable=no" />
             </ul>
             <div class="mobileMenuBottom">
                 <h4 class="mobileMenuBottomText">Śledź nas:</h4>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <a href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/facebook.svg'; ?>" alt="facebook" />
                 </a>
 
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <a href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/youtube.svg'; ?>" alt="youtube" />
                 </a>
 
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/linkedin.svg'; ?>" alt="linkedin" />
                 </a>
 
-                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="twitter" />
                 </a>
             </div>
         </div>
-
-
 
 
         <ul class="menu">
@@ -108,7 +106,7 @@ maximum-scale=1.0, user-scalable=no" />
             if(is_page('akademia')) {
                 echo 'greenBackground';
             }
-            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
+            ?>"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
             <li class="menuItem menuItemBordered <?php
             if(is_page('konferencje')) {
                 echo 'greenBackground';
@@ -121,19 +119,19 @@ maximum-scale=1.0, user-scalable=no" />
             ?>"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
         </ul>
         <ul class="socialMediaIcons">
-            <a id="facebook" href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a id="facebook" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
 
             </a>
 
-            <a id="youtube" href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a id="youtube" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
 
             </a>
 
-            <a id="linkedin" href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a id="linkedin" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
 
             </a>
 
-            <a id="twitter" href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a id="twitter" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
 
             </a>
         </ul>

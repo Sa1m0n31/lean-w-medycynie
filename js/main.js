@@ -227,43 +227,31 @@ if(document.querySelector("form") !== null) {
 /* Slider - progress circle */
 let circle1 = document.querySelector('#circle1');
 let circle2 = document.querySelector('#circle2');
-let circle3 = document.querySelector('#circle3');
-let circle4 = document.querySelector('#circle4');
 
 let circle1M = document.querySelectorAll('#circle1M');
 let circle2M = document.querySelectorAll('#circle2M');
-let circle3M = document.querySelectorAll('#circle3M');
-let circle4M = document.querySelectorAll('#circle4M');
 
 let inner1 = document.querySelector('#circleI1');
 let inner2 = document.querySelector('#circleI2');
-let inner3 = document.querySelector('#circleI3');
-let inner4 = document.querySelector('#circleI4');
 
 let inner1M = document.querySelectorAll('#circleI1M');
 let inner2M = document.querySelectorAll('#circleI2M');
-let inner3M = document.querySelectorAll('#circleI3M');
-let inner4M = document.querySelectorAll('#circleI4M');
 
 let slide1 = document.querySelector("#landing1");
 let slide2 = document.querySelector("#landing2");
-let slide3 = document.querySelector("#landing3");
-let slide4 = document.querySelector("#landing4");
 
 let left1 = document.querySelector("#left1");
 let left2 = document.querySelector("#left2");
-let left3 = document.querySelector("#left3");
-let left4 = document.querySelector("#left4");
 
-const circles = [circle1, circle2, circle3, circle4];
-const inners = [inner1, inner2, inner3, inner4];
+const circles = [circle1, circle2];
+const inners = [inner1, inner2];
 
 /* Array od arrays */
-const circlesM = [circle1M, circle2M, circle3M, circle4M];
-const innersM = [inner1M, inner2M, inner3M, inner4M];
+const circlesM = [circle1M, circle2M];
+const innersM = [inner1M, inner2M];
 
-const slides = [slide1, slide2, slide3, slide4];
-const lefts = [left1, left2, left3, left4];
+const slides = [slide1, slide2];
+const lefts = [left1, left2];
 
 let radius, circumference;
 
@@ -272,7 +260,7 @@ if((circle1 !== null)||(circle1M !== null)) {
         radius = circle1.r.baseVal.value;
         circumference = radius * 2 * Math.PI;
 
-        for(let i=0; i<4; i++) {
+        for(let i=0; i<2; i++) {
             circles[i].style.strokeDasharray = `${circumference} ${circumference}`;
             circles[i].style.strokeDashoffset = "0";
         }
@@ -281,7 +269,7 @@ if((circle1 !== null)||(circle1M !== null)) {
         radius = circle1M[0].r.baseVal.value;
         circumference = radius * 2 * Math.PI;
 
-        for(let i=0; i<4; i++) {
+        for(let i=0; i<2; i++) {
             circlesM[i].forEach(item => {
                 item.style.strokeDasharray = `${circumference} ${circumference}`;
                 item.style.strokeDashoffset = "0";
@@ -306,7 +294,6 @@ let slide = 0;
 let stopSlider = false;
 
 const goSlider = (n) => {
-    let tl = gsap.timeline();
     let i = 0, circle = n, tmp;
     circles[n].style.stroke = "#6E8A37";
     inners[n].style.fill = "#6E8A37";
@@ -337,11 +324,11 @@ const goSlider = (n) => {
             inners[circle].style.fill = "#cdcdcd";
             circles[circle].style.stroke = "none";
             circle++;
-            if(circle === 4) circle = 0;
+            if(circle === 2) circle = 0;
             inners[circle].style.fill = "#6E8A37";
             i = 0;
 
-            if(circle === 0) tmp = 3;
+            if(circle === 0) tmp = 1;
             else tmp = circle - 1;
 
             gsap.set(lefts, { opacity: 0, x: -50 });
@@ -356,7 +343,7 @@ const goSlider = (n) => {
 }
 
 const resetCircles = (slide) => {
-    for(let i=0; i<4; i++) {
+    for(let i=0; i<2; i++) {
         inners[i].style.fill = "#cdcdcd";
         circles[i].style.stroke = "none";
     }
@@ -366,7 +353,7 @@ const resetCircles = (slide) => {
 const nextSlide = (n = -1) => {
     if(n === -1) slide++;
     else slide = n;
-    if(slide === 4) slide = 0;
+    if(slide === 2) slide = 0;
     stopSlider = true;
     goSlider(slide);
 }
@@ -421,7 +408,7 @@ const goSliderMobile = (n, different = false) => {
             });
             i = 0;
 
-            if(circle === 0) tmp = 3;
+            if(circle === 0) tmp = 1;
             else tmp = circle - 1;
 
             gsap.fromTo(slides[tmp], { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
@@ -431,7 +418,7 @@ const goSliderMobile = (n, different = false) => {
 }
 
 const resetMobileCircles = () => {
-    for(let i=0; i<4; i++) {
+    for(let i=0; i<2; i++) {
         innersM[i].forEach(item => {
             item.style.fill = "#cdcdcd";
         });
@@ -447,7 +434,7 @@ const resetMobileCircles = () => {
 const nextMobileSlide = (n = -1, different = true) => {
     if(n === -1) slide++;
     else slide = n;
-    if(slide === 4) slide = 0;
+    if(slide === 2) slide = 0;
     stopSlider = true;
     goSliderMobile(slide, different);
 }
@@ -626,16 +613,12 @@ let refActive = 0;
 
 const refDot1 = document.querySelector("#refDot1");
 const refDot2 = document.querySelector("#refDot2");
-const refDot3 = document.querySelector("#refDot3");
-const refDot4 = document.querySelector("#refDot4");
 
 const ref1 = document.querySelector("#ref1");
 const ref2 = document.querySelector("#ref2");
-const ref3 = document.querySelector("#ref3");
-const ref4 = document.querySelector("#ref4");
 
-const refs = [ref1, ref2, ref3, ref4];
-const dotArr = [refDot1, refDot2, refDot3, refDot4];
+const refs = [ref1, ref2];
+const dotArr = [refDot1, refDot2];
 
 const refLeftClick = () => {
     let previousSlide;
@@ -643,7 +626,7 @@ const refLeftClick = () => {
     dotArr[refActive].style.background = "#F8F8F8";
     previousSlide = refActive;
     refActive--;
-    if(refActive<0) refActive = 3;
+    if(refActive<0) refActive = 1;
     dotArr[refActive].style.background = "#6E8A37";
 
     changeSlide(previousSlide, refActive);
@@ -654,7 +637,7 @@ const refRightClick = () => {
 
     dotArr[refActive].style.background = "#F8F8F8";
     refActive++;
-    if(refActive > 3) refActive = 0;
+    if(refActive > 1) refActive = 0;
     dotArr[refActive].style.background = "#6E8A37";
 
     changeSlide(previousSlide, refActive);

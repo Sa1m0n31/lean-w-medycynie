@@ -30,6 +30,8 @@
             </h4>
         </div>
 
+        <span class="mobileDivider"></span>
+
         <div class="footerCol">
             <h3 class="footerColTitle">
                 Dane kontaktowe
@@ -46,6 +48,8 @@
                 </a>
             </h4>
         </div>
+
+        <span class="mobileDivider"></span>
 
         <div class="footerCol">
             <ul class="footerMenu">
@@ -66,27 +70,29 @@
             © 2021 Lean w Medycynie | Wszystkie prawa zastrzeżone.
         </h5>
 
+        <span class="mobileDivider mobileDivider2"></span>
+
         <div class="footerSecondRight">
             <h5 class="withAfter">Polityka Prywatności</h5>
             <h5>Śledź nas:</h5>
             <div class="socialMediaIcons">
-                <a id="facebookF" href="https://facebook.com" target="_blank" rel="noreferrer">
+                <a id="facebookF" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
                 </a>
-                <a id="youtubeF" href="https://youtube.com" target="_blank" rel="noreferrer">
+                <a id="youtubeF" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
                 </a>
-                <a id="linkedinF" href="https://linkedin.com" target="_blank" rel="noreferrer">
+                <a id="linkedinF" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
                 </a>
-                <a id="twitterF" href="https://twitter.com" target="_blank" rel="noreferrer">
+                <a id="twitterF" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="footerThird">
+    <!--<div class="footerThird">
         <h5>
             Strona Lean w Medycynie, na której się znajdujesz korzysta z plików cookie. Pozostając na tej stronie wyrażasz zgodę na korzystanie z nich.
         </h5>
-    </div>
+    </div>-->
 </footer>
 
 <?php wp_footer(); ?>

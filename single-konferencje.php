@@ -287,6 +287,7 @@ get_header();
                                     </h3>
 
                                     <div class="galeriaInner">
+                                        <!--<img class="arrowLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="prev" />-->
                 <?php
                                     foreach($images as $image) {
                                         ?>
@@ -297,7 +298,9 @@ get_header();
                 <?php
                                     } ?>
 
-                </div>
+
+                                        <!--<img class="arrowLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="next" />-->
+                                    </div>
             </section>
                     <?php
                                 }

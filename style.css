@@ -108,7 +108,7 @@ html {
 /* Main menu */
 
 .topMenu {
-    width: 100%;
+    width: 90%;
     padding: 0 calc((100vw - 1700px) / 2);
     display: flex;
     align-items: center;
@@ -372,7 +372,7 @@ html {
     flex-direction: column;
     position: absolute;
     left: 100px;
-    top: 110px;
+    top: 135px;
     z-index: 2;
     width: 540px;
 }
@@ -381,8 +381,14 @@ html {
     position: relative;
     font-size: calc(1rem + 6px);
     color: var(--lean-main);
-    font-weight: 900;
+    font-weight: 700;
     user-select: none;
+}
+
+@media(min-width: 1800px) {
+    .landingTitle {
+        font-size: 36px;
+    }
 }
 
 .landingTitle .big {
@@ -534,17 +540,29 @@ circle {
     display: block;
 }
 
-.nextSlide {
+.nextSlide, .prevSlide {
     background: transparent;
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    right: 40px;
     z-index: 10;
     width: 50px;
     height: 50px;
     transition: .4s all;
+}
+
+.nextSlide {
+    transform: translateY(-50%);
+    right: 40px;
+}
+
+.prevSlide {
+    left: 40px;
+    transform: translateX(-40%);
+}
+
+.prevSlide .landingArrow {
+    transform: rotate(180deg);
 }
 
 .landingArrow {
@@ -556,6 +574,10 @@ circle {
 
 .nextSlide:hover {
     transform: translate(10px, -50%);
+}
+
+.prevSlide:hover {
+    transform: translateX(-60%);
 }
 
 #circleI1, #circleI2, #circleI3, #circleI4 {
@@ -1190,7 +1212,7 @@ circle {
     border: 1px solid var(--lean-main-110-);
     border-left: none;
     border-right: none;
-    height: 60px;
+    min-height: 60px;
 }
 
 .footerSecondRight {
@@ -1217,8 +1239,8 @@ circle {
 
 .socialMediaIcons a {
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 28px;
+    height: 28px;
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1523,7 +1545,7 @@ circle {
     margin-top: 60px;
 }
 
-@media(max-width: 2000px) {
+@media(max-width: 2000px) and (min-width: 1800px) {
     .eksperci .firstHeader {
         padding-left: calc((100vw - 1700px) / 2);
     }
@@ -2430,8 +2452,8 @@ span.wpcf7-list-item {
     margin: 90px 0;
 }
 
-.prelegenciInnerItem:nth-child(2) {
-    margin-top: 40px;
+.prelegenciInnerItem:nth-child(1) {
+    margin-top: 20px;
 }
 
 .prelegenciImage {
@@ -2467,8 +2489,9 @@ span.wpcf7-list-item {
 }
 
 .galeriaItemContainer {
-    width: 352px;
-    height: 352px;
+    width: 252px;
+    height: 252px;
+    margin: 25px 0;
     overflow: hidden;
 }
 
@@ -2498,5 +2521,31 @@ span.wpcf7-list-item {
 .partnerzyInnerItem {
     max-width: 200px;
     height: auto;
+    margin: 20px;
+}
+
+/* Prelegenci - poprawka */
+
+.prelegenciInfo p {
+    font-size: 17px !important;
+}
+
+/* Mobile divider */
+
+.mobileDivider {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .mobileDivider {
+        display: block;
+        width: 90%;
+        height: 1px;
+        background: var(--lean-main-110-);
+    }
+
+    .mobileDivider2 {
+        margin: 35px 0 0;
+    }
 }
 

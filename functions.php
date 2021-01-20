@@ -139,7 +139,6 @@ function lean_add_konferencje_post_type() {
         'supports'             => $supports,
         'public'               => true,
         'capability_type'      => 'post',
-        'rewrite'              => array( 'slug' => 'events' ),
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-calendar-alt'
@@ -165,7 +164,6 @@ function lean_add_prelegenci_post_type() {
         'supports'             => $supports,
         'public'               => true,
         'capability_type'      => 'post',
-        'rewrite'              => array( 'slug' => 'events' ),
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-universal-access'
@@ -191,7 +189,6 @@ function lean_add_agenda_post_type() {
         'supports'             => $supports,
         'public'               => true,
         'capability_type'      => 'post',
-        'rewrite'              => array( 'slug' => 'events' ),
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-list-view'
@@ -217,7 +214,6 @@ function lean_add_galeria_konferencji_post_type() {
         'supports'             => $supports,
         'public'               => true,
         'capability_type'      => 'post',
-        'rewrite'              => array( 'slug' => 'events' ),
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-format-gallery'
@@ -243,7 +239,6 @@ function lean_add_sponsorzy_post_type() {
         'supports'             => $supports,
         'public'               => true,
         'capability_type'      => 'post',
-        'rewrite'              => array( 'slug' => 'events' ),
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-money'
@@ -253,3 +248,53 @@ function lean_add_sponsorzy_post_type() {
 }
 
 add_action("init", "lean_add_sponsorzy_post_type");
+
+// Add Referencje post type
+function lean_add_referencje_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Referencje'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-welcome-add-page'
+    );
+
+    register_post_type("Referencje", $args);
+}
+
+add_action("init", "lean_add_referencje_post_type");
+
+// Add Slider post type
+function lean_add_slider_post_type() {
+    $supports = array(
+        'title',
+    );
+
+    $labels = array(
+        'name' => 'Slider'
+    );
+
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-desktop'
+    );
+
+    register_post_type("Slider", $args);
+}
+
+add_action("init", "lean_add_slider_post_type");

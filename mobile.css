@@ -15,6 +15,10 @@
         padding-left: 22px;
         padding-right: 22px;
     }
+
+    .topMenu {
+        width: 100%;
+    }
 }
 
 @media(max-width: 1800px) {
@@ -191,6 +195,15 @@
         width: 400px;
         height: 363px;
     }
+
+    /* Konferencje */
+    .agendaInnerItem .godziny {
+        width: 20%;
+    }
+
+    .agendaInnerItem .event {
+        width: 75%;
+    }
 }
 
 @media(max-width: 1300px) {
@@ -199,14 +212,14 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 52px;
-        height: 36px;
+        width: 32px;
+        height: 26px;
         padding: 0 !important;
         margin: 0 !important;
     }
 
     .hamburgerLine {
-        width: 52px;
+        width: 32px;
         height: 2px;
         background: var(--text);
         display: block;
@@ -218,6 +231,15 @@
 
     .topMenu {
         justify-content: space-between;
+    }
+
+    /* Pages */
+    .pageHeader {
+        display: none !important;
+    }
+
+    .misjaFirst, .dofinansowaniaFirst {
+        margin-top: 40px;
     }
 
     /* Landing */
@@ -252,6 +274,11 @@
     }
 
     /* KONFERENCJE */
+    .konferencjeContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .konferencjeItem {
         width: 45%;
     }
@@ -483,6 +510,7 @@
 
     .ofertaLeft {
         margin-bottom: 40px;
+        top: 30px !important;
     }
 
     /* MISJA - Stats */
@@ -499,6 +527,10 @@
 }
 
 @media(max-width: 1000px) {
+    html, body, .container {
+        overflow-x: hidden;
+    }
+
     /* Nasza misja */
     .naszaMisja {
         margin-bottom: 90px;
@@ -509,6 +541,10 @@
         flex-direction: column;
         margin-top: 50px;
         height: auto;
+    }
+
+    .referencje .ofertaText {
+        width: 75%;
     }
 
     .referencjeLeft, .referencjeRight {
@@ -568,7 +604,7 @@
 
     .big {
         font-size: 71px !important;
-        margin: 30px 0;
+        margin: 20px 0 30px;
     }
 
     .sliderPhoto {
@@ -625,6 +661,23 @@
     }
 
     /* KONFERENCJE */
+    .konferencjeContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .konferencjaInner {
+        margin-top: 0;
+    }
+
+    .oKonferencji {
+        flex-direction: column;
+    }
+
+    .oKonferencji > div {
+        width: 100% !important;
+    }
+
     .konferencjeItem {
         width: 100%;
     }
@@ -807,17 +860,22 @@
     .topMenu .hamburgerMenu {
         position: absolute;
         right: 0;
-        top: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     /* Landing */
-    .nextSlide {
+    .nextSlide, .prevSlide {
         display: none;
     }
 
     .landingText {
         margin: -20px 0 0 !important;
-        font-size: 12px;
+        font-size: 15px;
+    }
+
+    .referencjeLeft h4 {
+        font-size: 15px !important;
     }
 
     .landing .landingButton {
@@ -838,7 +896,11 @@
         width: 100%;
     }
 
-    .misjaText, .statsItemLeft {
+    .misjaText, .referencjeText {
+        font-size: 15px;
+    }
+
+    .statsItemLeft {
         font-size: 12px;
     }
 
@@ -849,7 +911,7 @@
     /* Wierzymy */
     .wierzymy {
         margin-top: 50px;
-        margin-bottom: 15px;
+        margin-bottom: 55px;
     }
 
     .wierzymyLeft {
@@ -1039,11 +1101,15 @@
 
     .referencjeImg {
         width: 80%;
-        margin-bottom: 25px;
+        margin-bottom: 55px;
     }
 
     .referencjeText {
         width: 90%;
+    }
+
+    .divider {
+        display: none;
     }
 
     /* MISJA - stats */
@@ -1065,11 +1131,18 @@
     /* MISJA - nasze wartosci */
     .naszeWartosciItem {
         flex-direction: column;
+        align-items: center;
+        margin: 20px 0 !important;
+    }
+
+    .naszeWartosciItem .naszeWartosciNumber {
+        margin-right: 0;
     }
 
     .naszeWartosciItem .naszeWartosciText {
         width: 100%;
         margin-top: 20px;
+        text-align: center;
     }
 
     /* DOFINANSOWANIA */
@@ -1132,6 +1205,15 @@
 
     .prelegenciText {
         font-size: 14px;
+    }
+
+    /* Konferencje */
+    .agendaInnerItem .godziny {
+        width: 28%;
+    }
+
+    .agendaInnerItem .event {
+        width: 65%;
     }
 }
 
@@ -1227,5 +1309,18 @@
 
     .person .personContact {
         font-size: 16px;
+    }
+
+    .referencjeAuthor {
+        right: 10px !important;
+    }
+
+    /* Konferencje */
+    .agendaInnerItem .godziny {
+        width: 35%;
+    }
+
+    .agendaInnerItem .event {
+        width: 60%;
     }
 }

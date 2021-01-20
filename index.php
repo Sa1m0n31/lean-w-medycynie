@@ -7,6 +7,9 @@ get_header();
         <button class="nextSlide" onclick="nextSlide()">
             <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next.svg'; ?>" alt="next" />
         </button>
+        <button class="prevSlide" onclick="nextSlide()">
+            <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next-grey.svg'; ?>" alt="next" />
+        </button>
 
         <!-- SLIDER -->
         <div class="landingSlide landingActive" id="landing1">
@@ -34,14 +37,6 @@ get_header();
                     <svg height="30" width="30" onclick="nextMobileSlide(1)">
                         <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
                         <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
-                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
-                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
                 </div>
             </div>
@@ -73,88 +68,6 @@ get_header();
                         <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
                         <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
                     </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
-                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
-                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="landingSlide" id="landing3">
-            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
-
-            <div class="landingLeft" id="left3">
-                <h1 class="landingTitle">
-                    Slidzik
-                    <span class="big">Trzeci</span>
-                </h1>
-                <p class="landingText">
-                    Tekst 3. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
-                </p>
-                <button class="landingButton">
-                    <span class="landingButtonText">Inny button</span>
-                </button>
-
-                <div class="dots dotsMobile">
-                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
-                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
-                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
-                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
-                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="landingSlide" id="landing4">
-            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_02.jpg'; ?>" alt="landingPhoto" />
-
-            <div class="landingLeft" id="left4">
-                <h1 class="landingTitle">
-                    Lean Healthcare
-                    <span class="big">Cztery</span>
-                </h1>
-                <p class="landingText">
-                    Tekst 4. Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
-                </p>
-                <button class="landingButton">
-                    <a href="https://www.leanhealthcareacademy.pl/">
-                        <span class="landingButtonText">Dowiedz się</span>
-                    </a>
-                </button>
-
-                <div class="dots dotsMobile">
-                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
-                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
-                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(2)">
-                        <circle id="circle3M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI3M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(3)">
-                        <circle id="circle4M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI4M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
                 </div>
             </div>
         </div>
@@ -168,14 +81,6 @@ get_header();
             <svg height="50" width="50">
                 <circle id="circle2" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
                 <circle onclick="nextSlide(1)" id="circleI2" cx="25" cy="25" r="8" fill="#cdcdcd" />
-            </svg>
-            <svg height="50" width="50">
-                <circle id="circle3" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(2)" id="circleI3" cx="25" cy="25" r="8" fill="#cdcdcd" />
-            </svg>
-            <svg height="50" width="50">
-                <circle id="circle4" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(3)" id="circleI4" cx="25" cy="25" r="8" fill="#cdcdcd" />
             </svg>
         </div>
     </main>
@@ -385,7 +290,7 @@ get_header();
 
                 <div class="ofertaRightRight">
                     <h2 class="ofertaTitle">
-                        Lean Nawigator
+                        Online Transformacje
                     </h2>
                     <h4 class="ofertaText">
                         Tutaj jeszcze trzeba wstawić brakujący tekst opisowy
@@ -463,96 +368,78 @@ get_header();
         <div class="referencjeRight">
             <span class="divider"></span>
 
-            <div class="referencjeItem refActive" id="ref1">
-                <div class="referencjeImg">
-                    <img class="referencjeImgImg"
-                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
-                         alt="company" />
-                </div>
+            <?php
+            $args = array(
+                    'post_type' => 'Referencje'
+            );
 
-                <div class="referencjeText">
-                    Profesjonalizm, podejście i doświadczenie trenerów wpłynęło na wysoką aktywność i zaangażowanie zespołu w realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
-                </div>
+            $ref = new WP_Query($args);
+            $i = 1;
 
-                <div class="referencjeAuthor">
-                    <h4 class="authorName">
-                        Adam Niedzielski
-                    </h4>
-                    <h5 class="authorFunction">
-                        Prezes NFZ
-                    </h5>
-                </div>
-            </div>
+            if($ref->have_posts()) {
+                while($ref->have_posts()) {
+                    $ref->the_post();
+                    $refId = 'ref' . $i;
+                    ?>
+                    <div class="referencjeItem <?php
+                        if($i == 1) {
+                            echo 'refActive';
+                        }
+                    ?>" id="<?php echo $refId; ?>">
+                        <div class="referencjeImg">
+                            <img class="referencjeImgImg"
+                                 src="<?php echo get_field('zdjecie_referencji'); ?>"
+                                 alt="company" />
+                        </div>
 
-            <div class="referencjeItem" id="ref2">
-                <div class="referencjeImg">
-                    <img class="referencjeImgImg"
-                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
-                         alt="company" />
-                </div>
+                        <div class="referencjeText">
+                            <?php echo get_field('tekst_referencji'); ?>
+                        </div>
 
-                <div class="referencjeText">
-                    Lorem ipsum dolor sit amet. W realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
-                </div>
+                        <div class="referencjeAuthor">
+                            <h4 class="authorName">
+                                <?php echo get_field('autor'); ?>
+                            </h4>
+                            <h5 class="authorFunction">
+                                <?php echo get_field('pozycja_autora'); ?>
+                            </h5>
+                        </div>
+                    </div>
+                        <?php
+                    $i += 1;
+                }
+                wp_reset_postdata();
+            }
 
-                <div class="referencjeAuthor">
-                    <h4 class="authorName">
-                        Adam Kowalski
-                    </h4>
-                    <h5 class="authorFunction">
-                        Minister zdrowia
-                    </h5>
-                </div>
-            </div>
+            ?>
 
-            <div class="referencjeItem" id="ref3">
-                <div class="referencjeImg">
-                    <img class="referencjeImgImg"
-                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
-                         alt="company" />
-                </div>
-
-                <div class="referencjeText">
-                    Opinia numer trzy. Zaangażowanie zespołu w realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
-                </div>
-
-                <div class="referencjeAuthor">
-                    <h4 class="authorName">
-                        Adam Niedzielski
-                    </h4>
-                    <h5 class="authorFunction">
-                        Prezes NFZ
-                    </h5>
-                </div>
-            </div>
-
-            <div class="referencjeItem" id="ref4">
-                <div class="referencjeImg">
-                    <img class="referencjeImgImg"
-                         src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nfz.png"; ?>"
-                         alt="company" />
-                </div>
-
-                <div class="referencjeText">
-                    Ostatnia referencja. Zaangażowanie zespołu w realizację celu projektu. Uczestnicy ocenili warsztaty na poziomie 9,3 (w skali 1-10). Efekt pracy przekroczyły pierwotne oczekiwania zamawiającego.
-                </div>
-
-                <div class="referencjeAuthor">
-                    <h4 class="authorName">
-                        Paweł Nowak
-                    </h4>
-                    <h5 class="authorFunction">
-                        Prezes NFZ
-                    </h5>
-                </div>
-            </div>
         </div>
 
         <div class="referencjeDots">
-            <span class="referencjeDot activeDot" id="refDot1"></span>
-            <span class="referencjeDot" id="refDot2"></span>
-            <span class="referencjeDot" id="refDot3"></span>
-            <span class="referencjeDot" id="refDot4"></span>
+            <?php
+            $args = array(
+                    'post_type' => 'Referencje'
+            );
+
+            $dots = new WP_Query($args);
+            $i = 1;
+
+            if($dots->have_posts()) {
+                while($dots->have_posts()) {
+                    $dots->the_post();
+                    $refId = 'refDot' . $i;
+                    ?>
+                    <span class="referencjeDot <?php
+                        if($i == 1) {
+                            echo 'activeDot';
+                        }
+                    ?>" id="<?php echo $refId; ?>"></span>
+                        <?php
+                    $i++;
+                }
+                wp_reset_postdata();
+            }
+            ?>
         </div>
 
         <div class="referencjeButtons referencjeButtonsMobile">
