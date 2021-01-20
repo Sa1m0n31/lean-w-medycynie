@@ -36,7 +36,7 @@ maximum-scale=1.0, user-scalable=no" />
             </div>
             <ul class="mobileMenu">
                 <li class="mobileMenuItem mobileMenuGreen">
-                    <a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">
+                    <a href="<?php echo /*get_page_link( get_page_by_title( 'lean nawigator' )->ID ); */ '#'; ?>">
                         Lean Nawigator
                     </a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
@@ -44,7 +44,7 @@ maximum-scale=1.0, user-scalable=no" />
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
-                <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
+                <!--<li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>-->
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
             </ul>
             <div class="mobileMenuBottom">
@@ -86,12 +86,12 @@ maximum-scale=1.0, user-scalable=no" />
                 ?>" href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">
                     Eksperci
                 </a></li>
-            <li class="menuItem menuItemOrdinary">
+            <!--<li class="menuItem menuItemOrdinary">
                 <a class="<?php
                 if(is_page('sklep')) {
                     echo 'green';
                 }
-                ?>" href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>-->
             <li class="menuItem menuItemOrdinary"><a class="<?php
                 if(is_page('kontakt')) {
                     echo 'green';
@@ -101,7 +101,7 @@ maximum-scale=1.0, user-scalable=no" />
             if(is_page('lean nawigator')) {
                 echo 'greenBackground';
             }
-            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+            ?>"><a href="<?php echo /*get_page_link( get_page_by_title( 'lean nawigator' )->ID ); */ '#'; ?>">Lean Nawigator</a></li>
             <li class="menuItem menuItemBordered <?php
             if(is_page('akademia')) {
                 echo 'greenBackground';

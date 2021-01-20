@@ -2549,3 +2549,26 @@ span.wpcf7-list-item {
     }
 }
 
+/* Gallery */
+
+.sl-counter {
+    display: none !important;
+}
+
+.sl-wrapper .sl-navigation button.sl-next, .sl-wrapper .sl-navigation button.sl-prev {
+    font-size: 2rem !important;
+}
+
+.ngg-gallery-thumbnail-box, .ngg-gallery-thumbnail-box *  {
+    border-radius: 6px !important;
+}
+
+.ngg-galleryoverview.default-view {
+    text-align: left !important;
+}
+
+.sl-wrapper .sl-close {
+    font-size: 2rem !important;
+    top: 65px !important;
+    right: 65px !important;
+}

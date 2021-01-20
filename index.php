@@ -293,7 +293,7 @@ get_header();
                         Online Transformacje
                     </h2>
                     <h4 class="ofertaText">
-                        Tutaj jeszcze trzeba wstawić brakujący tekst opisowy
+                        Chcesz wdrażać zmiany w nowym otoczeniu? Współpracuj stale ze swoim zespołem.
                     </h4>
                 </div>
 

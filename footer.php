@@ -53,13 +53,13 @@
 
         <div class="footerCol">
             <ul class="footerMenu">
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
+                <li class="footerMenuItem"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'konferencja' )->ID ); ?>">Konferencja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+                <!--<li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>-->
+                <!--<li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>-->
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
             </ul>
         </div>
@@ -73,7 +73,7 @@
         <span class="mobileDivider mobileDivider2"></span>
 
         <div class="footerSecondRight">
-            <h5 class="withAfter">Polityka Prywatności</h5>
+            <!--<h5 class="withAfter">Polityka Prywatności</h5>-->
             <h5>Śledź nas:</h5>
             <div class="socialMediaIcons">
                 <a id="facebookF" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">

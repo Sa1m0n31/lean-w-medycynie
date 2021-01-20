@@ -276,39 +276,22 @@ get_header();
                             $gal->the_post();
 
                             if(get_the_title() == $title) {
-                                $images = acf_photo_gallery('galeria_zdjec', get_the_id());
-
-                                if(count($images)) {
-                                    ?>
-            <section class="galeria">
-                <span id="galeria"></span>
-                                    <h3 class="konferencjaItemHeader">
-                                        Galeria konferencji
-                                    </h3>
-
-                                    <div class="galeriaInner">
-                                        <!--<img class="arrowLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="prev" />-->
-                <?php
-                                    foreach($images as $image) {
-                                        ?>
-                                        <div class="galeriaItemContainer">
-                                            <img class="galeriaItem" src="<?php echo $image['full_image_url']; ?>" alt="<?php echo $image['title']; ?>" />
-                                        </div>
-
-                <?php
-                                    } ?>
-
-
-                                        <!--<img class="arrowLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="next" />-->
-                                    </div>
-            </section>
+                                ?>
+                                    <section class="galeria">
+                                <span id="galeria"></span>
+                                <h3 class="konferencjaItemHeader">
+                                    Galeria konferencji
+                                </h3>
+            <?php echo get_field('test'); ?>
                     <?php
                                 }
                             }
+                    wp_reset_postdata();
+                        ?>
+                        </section>
 
+                        <?php
                         }
-                        wp_reset_postdata();
-                    }
                 ?>
 
             <section class="partnerzy">
