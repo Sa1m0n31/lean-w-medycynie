@@ -76,13 +76,17 @@
             <!--<h5 class="withAfter">Polityka Prywatności</h5>-->
             <h5>Śledź nas:</h5>
             <div class="socialMediaIcons">
-                <a id="facebookF" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
+                <a aria-label="Facebook" id="facebookF" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
+
                 </a>
-                <a id="youtubeF" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
+                <a aria-label="Youtube" id="youtubeF" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
+
                 </a>
-                <a id="linkedinF" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
+                <a aria-label="Linkedin" id="linkedinF" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
+
                 </a>
-                <a id="twitterF" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
+                <a aria-label="Twitter" id="twitterF" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
+
                 </a>
             </div>
         </div>

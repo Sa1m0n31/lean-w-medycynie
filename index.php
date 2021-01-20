@@ -12,67 +12,65 @@ get_header();
         </button>
 
         <!-- SLIDER -->
-        <div class="landingSlide landingActive" id="landing1">
-            <img class="sliderPhoto" id="slider1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_01.jpg'; ?>" alt="landingPhoto" />
+        <?php
+            $args = array(
+                    'post_type' => 'Slider'
+            );
 
-            <div class="landingLeft" id="left1">
-                <h1 class="landingTitle">
-                    Lean Healthcare
-                    <span class="big">Academy</span>
-                </h1>
-                <p class="landingText">
-                    Pierwsza w Polsce Akademia z zakresu Lean Management prowadzona przez praktyków w obszarze ochrony zdrowia, przeznaczona dla każdego, kto chce rozwinąć swoje kompetencje w zakresie optymalizacji procesów.
-                </p>
-                <button class="landingButton">
-                    <a href="https://www.leanhealthcareacademy.pl/">
-                        <span class="landingButtonText">Dowiedz się więcej</span>
-                    </a>
-                </button>
+            $slider = new WP_Query($args);
+            $i = 1;
 
-                <div class="dots dotsMobile">
-                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
-                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
-                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                </div>
-            </div>
-        </div>
+            if($slider->have_posts()) {
+                while($slider->have_posts()) {
+                    $slider->the_post();
+                    $sliderId = 'landing' . $i;
+                    ?>
 
-        <div class="landingSlide" id="landing2">
-            <img class="sliderPhoto" id="slider2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_slider_02.jpg'; ?>" alt="landingPhoto" />
+                    <div class="landingSlide <?php
+                        if($i == 0) {
+                            echo 'landingActive';
+                        }
+                    ?>" id="<?php echo $sliderId; ?>">
+                        <img class="sliderPhoto" id="slider1" src="<?php echo get_field('zdjecie'); ?>" alt="landingPhoto" />
 
-            <div class="landingLeft" id="left2">
-                <h1 class="landingTitle">
-                    Zobacz jak pozyskać
-                    <span class="big">Fundusze</span>
-                </h1>
-                <p class="landingText">
-                    Skontaktuj się z nami. Zapewniamy pełne wsparcie w zakresie realizacji projektu rozwojowego oraz pomożemy w zdobyciu dofinansowania na ten cel.
-                </p>
-                <button class="landingButton">
-                    <a href="<?php echo get_page_link(get_page_by_title('dofinansowania')->ID); ?>">
-                        <span class="landingButtonText">Dowiedz się więcej</span>
-                    </a>
-                </button>
+                        <div class="landingLeft" id="left1">
+                            <h1 class="landingTitle">
+                                <?php echo get_field('naglowek_na_zielono'); ?>
+                                <span class="big"><?php echo get_field('naglowek_na_czarno'); ?></span>
+                            </h1>
+                            <p class="landingText">
+                                <?php echo get_field('tekst'); ?>
+                            </p>
+                            <button class="landingButton">
+                                <a href="<?php echo get_field('link_do_buttona'); ?>">
+                                    <span class="landingButtonText"><?php echo get_field('napis_na_buttonie'); ?></span>
+                                </a>
+                            </button>
 
-                <div class="dots dotsMobile">
-                    <svg height="30" width="30" onclick="nextMobileSlide(0)">
-                        <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
-                    </svg>
-                    <svg height="30" width="30" onclick="nextMobileSlide(1)">
-                        <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                        <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <!-- END OF SLIDER -->
+                            <div class="dots dotsMobile">
+                                <svg height="30" width="30" onclick="nextMobileSlide(0)">
+                                    <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                                    <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
+                                </svg>
+                                <svg height="30" width="30" onclick="nextMobileSlide(1)">
+                                    <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                                    <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
 
+
+                        <?php
+                    $i++;
+                }
+                wp_reset_postdata();
+            }
+
+
+        ?>
+
+        <!-- DOTS DESKTOP -->
         <div class="dots dotsDesktop">
             <svg height="50" width="50">
                 <circle id="circle1" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
@@ -93,9 +91,9 @@ get_header();
             <h2 class="firstHeader">
                 Nasza misja
             </h2>
-            <h1 class="bigHeader">
+            <h2 class="bigHeader">
                 Pomagamy zobaczyć więcej i pójść dalej
-            </h1>
+            </h2>
             <p class="misjaText">
                 Jako zespół o szerokich umiejętnościach zdobywanych przez lata współpracy w sektorze medycznym, usługowym i produkcyjnym chcemy dzielić się wiedzą i pomagać pacjentom, personelowi medycznemu oraz Zarządom szpitali i innych placówek medycznych w realizacji ich misji, wizji i celów strategicznych.
             </p>
@@ -234,9 +232,9 @@ get_header();
             <h2 class="firstHeader">
                 Nasza oferta
             </h2>
-            <h1 class="bigHeader">
+            <h2 class="bigHeader">
                 Główne obszary działania Lean w Medycynie
-            </h1>
+            </h2>
             <p class="misjaText">
                 Jesteśmy w stanie, razem z Państwem, zdiagnozować, opracować i wdrożyć indywidualny, dostosowany do Państwa potrzeb strategiczny program rozwoju firmy. Zmiany które muszą zaistnieć przy wprowadzaniu takiego systemu, są bardzo czasochłonne i wymagają systematycznego, ustrukturyzowanego podejścia.
             </p>
@@ -249,12 +247,12 @@ get_header();
                 <h3 class="ofertaNumber">01</h3>
 
                 <div class="ofertaRightRight">
-                    <h2 class="ofertaTitle">
+                    <h4 class="ofertaTitle">
                         Lean Hospital
-                    </h2>
-                    <h4 class="ofertaText">
-                        Budowa strategicznych programów rozwoju
                     </h4>
+                    <h5 class="ofertaText">
+                        Budowa strategicznych programów rozwoju
+                    </h5>
                 </div>
 
                 <div class="ofertaRightLeft">
@@ -269,12 +267,12 @@ get_header();
                 <h3 class="ofertaNumber">02</h3>
 
                 <div class="ofertaRightRight">
-                    <h2 class="ofertaTitle">
+                    <h4 class="ofertaTitle">
                         Diagnoza potencjału
-                    </h2>
-                    <h4 class="ofertaText">
-                        Szybka analiza potencjału podmiotów medycznych
                     </h4>
+                    <h5 class="ofertaText">
+                        Szybka analiza potencjału podmiotów medycznych
+                    </h5>
                 </div>
 
                 <div class="ofertaRightLeft">
@@ -289,12 +287,12 @@ get_header();
                 <h3 class="ofertaNumber">03</h3>
 
                 <div class="ofertaRightRight">
-                    <h2 class="ofertaTitle">
+                    <h4 class="ofertaTitle">
                         Online Transformacje
-                    </h2>
-                    <h4 class="ofertaText">
-                        Chcesz wdrażać zmiany w nowym otoczeniu? Współpracuj stale ze swoim zespołem.
                     </h4>
+                    <h5 class="ofertaText">
+                        Chcesz wdrażać zmiany w nowym otoczeniu? Współpracuj stale ze swoim zespołem.
+                    </h5>
                 </div>
 
                 <div class="ofertaRightLeft">
@@ -309,12 +307,12 @@ get_header();
                 <h3 class="ofertaNumber">04</h3>
 
                 <div class="ofertaRightRight">
-                    <h2 class="ofertaTitle">
+                    <h4 class="ofertaTitle">
                         Akademia Healthcare
-                    </h2>
-                    <h4 class="ofertaText">
-                        Warsztaty umiejętności managerskich w metodologii lean z praktyką w miejscu pracy.
                     </h4>
+                    <h5 class="ofertaText">
+                        Warsztaty umiejętności managerskich w metodologii lean z praktyką w miejscu pracy.
+                    </h5>
                 </div>
 
                 <div class="ofertaRightLeft">
@@ -329,12 +327,12 @@ get_header();
                 <h3 class="ofertaNumber">05</h3>
 
                 <div class="ofertaRightRight">
-                    <h2 class="ofertaTitle">
+                    <h4 class="ofertaTitle">
                         Warsztaty LeanAir
-                    </h2>
-                    <h4 class="ofertaText">
-                        Szkolenia z zakresu narzędzia optymalizacji Lean
                     </h4>
+                    <h5 class="ofertaText">
+                        Szkolenia z zakresu narzędzia optymalizacji Lean
+                    </h5>
                 </div>
 
                 <div class="ofertaRightLeft">
@@ -351,9 +349,9 @@ get_header();
             <h2 class="bigHeader">
                 Nasze referencje
             </h2>
-            <h4 class="ofertaText">
+            <h3 class="ofertaText">
                 Naszym atutem jest satysfakcja naszych klientów
-            </h4>
+            </h3>
 
             <div class="referencjeButtons">
                 <button class="ofertaRightLeft referencjeLeftBtn" onclick="refLeftClick()">

@@ -5,8 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/nasza_misja_BG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/nasza_misja_BG.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oferta-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/oferta-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oferta-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/oferta-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oferta-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/oferta-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oferta-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/oferta-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/oferta-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/oferta-5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-konferencje.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-konferencje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +84,9 @@
       <workItem from="1611007216617" duration="8785000" />
       <workItem from="1611064433655" duration="888000" />
       <workItem from="1611074043755" duration="82000" />
-      <workItem from="1611083015371" duration="15054000" />
+      <workItem from="1611083015371" duration="15055000" />
+      <workItem from="1611122059008" duration="214000" />
+      <workItem from="1611147580899" duration="4553000" />
     </task>
     <servers />
   </component>
@@ -96,6 +104,17 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

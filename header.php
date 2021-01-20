@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Lean w medycynie</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0,
-maximum-scale=1.0, user-scalable=no" />
+maximum-scale=5.0, user-scalable=yes" />
+    <meta name="description" content="Eksperci i praktycy lean w ochronie zdrowia oraz obszarach wspierających. Programy rozwojowe dla pracowników ochrony zdrowia." />
     <link rel="icon" href="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_w_medycynie_sygnet.svg'; ?>">
 
     <?php wp_head(); ?>
@@ -19,7 +20,7 @@ maximum-scale=1.0, user-scalable=no" />
         </div>
 
         <!-- MOBILE -->
-        <button class="hamburgerMenu" onclick="openMenu()">
+        <button aria-label="Menu" class="hamburgerMenu" onclick="openMenu()">
             <span class="hamburgerLine"></span>
             <span class="hamburgerLine"></span>
             <span class="hamburgerLine"></span>
@@ -118,22 +119,22 @@ maximum-scale=1.0, user-scalable=no" />
             }
             ?>"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
         </ul>
-        <ul class="socialMediaIcons">
-            <a id="facebook" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
+        <div class="socialMediaIcons">
+            <a aria-label="Facebook" id="facebook" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
 
             </a>
 
-            <a id="youtube" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
+            <a aria-label="Youtube" id="youtube" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
 
             </a>
 
-            <a id="linkedin" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
+            <a aria-label="Linkedin" id="linkedin" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
 
             </a>
 
-            <a id="twitter" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
+            <a aria-label="Twitter" id="twitter" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
 
             </a>
-        </ul>
+        </div>
     </header>
 <div class="container">

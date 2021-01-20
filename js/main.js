@@ -182,9 +182,6 @@ if(document.querySelector("#oKonferencji") !== null) {
 if(document.querySelector(".konferencjaContainer") !== null) {
     konferencjaMenu();
 }
-else {
-    console.log("elo");
-}
 
 /* Walidacja formularza */
 if(document.querySelector("form") !== null) {
@@ -448,8 +445,8 @@ else {
 
 /* Slider on mobile - swipe */
 
-document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, false);
-document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, false);
+document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, { passive: true });
+document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, { passive: true });
 var xDown = null;
 var yDown = null;
 
@@ -531,7 +528,6 @@ const startCounting = () => {
     }, 100);
 
     let interval2 = setInterval(() => {
-        console.log("licze");
         if(i2 >= 0) {
             val2 = c2Value - i2;
             c2.textContent = val2.toString();
@@ -543,7 +539,6 @@ const startCounting = () => {
     }, 20);
 
     let interval3 = setInterval(() => {
-        console.log("licze");
         if(i3 >= 0) {
             val3 = c3Value - i3;
             c3.textContent = val3.toString();
@@ -555,7 +550,6 @@ const startCounting = () => {
     }, 100);
 
     let interval4 = setInterval(() => {
-        console.log("licze");
         if(i4 >= 0) {
             val4 = c4Value - i4;
             c4.textContent = val4.toString();
@@ -567,7 +561,6 @@ const startCounting = () => {
     }, 100);
 
     let interval5 = setInterval(() => {
-        console.log("licze");
         if(i5 >= 0) {
             val5 = c5Value - i5;
             c5.textContent = val5.toString();
@@ -579,7 +572,6 @@ const startCounting = () => {
     }, 5);
 
     let interval6 = setInterval(() => {
-        console.log("licze");
         if(i6 >= 0) {
             val6 = c6Value - i6;
             c6.textContent = val6.toString();

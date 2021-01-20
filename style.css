@@ -199,6 +199,8 @@ html {
 }
 
 .mobileMenuTop .logoImg {
+    width: 100%;
+    height: 100%;
     transform: scale(2.5);
 }
 
@@ -444,7 +446,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
     color: inherit;
     text-decoration: none;
     z-index: 3;
@@ -1129,6 +1130,10 @@ circle {
     position: relative;
     height: 320px;
     color: #fff;
+}
+
+.footerCol img {
+
 }
 
 .footer h4 {
