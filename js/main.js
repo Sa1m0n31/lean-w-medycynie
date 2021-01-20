@@ -282,9 +282,11 @@ const setProgress = (circle, percent) => {
 
 const setMobileProgress = (circle, percent) => {
     const offset = circumference - percent / 300 * circumference;
-    circlesM[circle].forEach((item) => {
-        item.style.strokeDashoffset = offset.toString();
-    });
+    if(circlesM[circle] !== undefined) {
+        circlesM[circle].forEach((item) => {
+            item.style.strokeDashoffset = offset.toString();
+        });
+    }
 }
 
 let slide = 0;
@@ -358,12 +360,14 @@ const nextSlide = (n = -1) => {
 /* Slider - mobile */
 const goSliderMobile = (n, different = false) => {
     let i = 0, circle = n, tmp;
-    circlesM[n].forEach(item => {
-        item.style.stroke = "#6E8A37";
-    });
-    innersM[n].forEach(item => {
-        item.style.fill = "#6E8A37";
-    });
+    if((circlesM[n] !== undefined)&&(innersM[n] !== undefined)) {
+        circlesM[n].forEach(item => {
+            item.style.stroke = "#6E8A37";
+        });
+        innersM[n].forEach(item => {
+            item.style.fill = "#6E8A37";
+        });
+    }
 
     if(different) {
         gsap.fromTo(slides, { x: 0 }, { x: -2000, opacity: 0, duration: 1 });
@@ -376,9 +380,11 @@ const goSliderMobile = (n, different = false) => {
 
     let sliderInterval = setInterval(() => {
         if(i === 2) {
-            circlesM[circle].forEach(item => {
-                item.style.stroke = "#6E8A37";
-            });
+            if(circlesM[circle] !== undefined) {
+                circlesM[circle].forEach(item => {
+                    item.style.stroke = "#6E8A37";
+                });
+            }
         }
 
         if(i <= 300) {
@@ -392,17 +398,21 @@ const goSliderMobile = (n, different = false) => {
         }
         else {
             slide++;
-            innersM[circle].forEach(item => {
-                item.style.fill = "#cdcdcd";
-            });
-            circlesM[circle].forEach(item => {
-                item.style.stroke = "none";
-            });
+            if((innersM[circle] !== undefined)&&(circlesM[circle] !== undefined)) {
+                innersM[circle].forEach(item => {
+                    item.style.fill = "#cdcdcd";
+                });
+                circlesM[circle].forEach(item => {
+                    item.style.stroke = "none";
+                });
+            }
             circle++;
             if(circle === 4) circle = 0;
-            innersM[circle].forEach(item => {
-                item.style.fill = "#6E8A37";
-            });
+            if(innersM[circle] !== undefined) {
+                innersM[circle].forEach(item => {
+                    item.style.fill = "#6E8A37";
+                });
+            }
             i = 0;
 
             if(circle === 0) tmp = 1;
@@ -416,16 +426,20 @@ const goSliderMobile = (n, different = false) => {
 
 const resetMobileCircles = () => {
     for(let i=0; i<2; i++) {
-        innersM[i].forEach(item => {
-            item.style.fill = "#cdcdcd";
-        });
-        circlesM[i].forEach(item => {
-            item.style.stroke = "none";
+        if((innersM[i] !== undefined)&&(circlesM[i] !== undefined)) {
+            innersM[i].forEach(item => {
+                item.style.fill = "#cdcdcd";
+            });
+            circlesM[i].forEach(item => {
+                item.style.stroke = "none";
+            });
+        }
+    }
+    if(innersM[slide] !== undefined) {
+        innersM[slide].forEach(item => {
+            item.style.fill = "#6E8A37";
         });
     }
-    innersM[slide].forEach(item => {
-        item.style.fill = "#6E8A37";
-    });
 }
 
 const nextMobileSlide = (n = -1, different = true) => {
@@ -465,12 +479,12 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-        if ( xDiff > 0 ) {
+        if ( xDiff > 0 ) { // W lewo
             if(slide === 3) slide = 0;
             else slide++;
             nextMobileSlide(slide);
-        } else {
-            if(slide === 0) slide = 3;
+        } else { // W prawo
+            if(slide === 0) slide = 1;
             else slide--;
             nextMobileSlide(slide, false);
         }
