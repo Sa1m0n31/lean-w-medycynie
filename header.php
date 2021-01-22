@@ -102,7 +102,7 @@ maximum-scale=5.0, user-scalable=yes" />
             if(is_page('lean nawigator')) {
                 echo 'greenBackground';
             }
-            ?>"><a href="<?php echo /*get_page_link( get_page_by_title( 'lean nawigator' )->ID ); */ '#'; ?>">Lean Nawigator</a></li>
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
             <li class="menuItem menuItemBordered <?php
             if(is_page('akademia')) {
                 echo 'greenBackground';

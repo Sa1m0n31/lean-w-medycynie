@@ -2599,7 +2599,8 @@ span.wpcf7-list-item {
 }
 
 .leanNawigator {
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    width: 90%;
 }
 
 .leanNawigator > .bigHeader {
@@ -2853,10 +2854,10 @@ span.wpcf7-list-item {
 .circleContainer::after {
     content: "";
     position: absolute;
-    right: -120px;
+    right: -100px;
     top: 50%;
     transform: translateY(-50%);
-    width: 100px;
+    width: 80px;
     height: 1px;
     background: var(--grey-main);
 }
@@ -2875,4 +2876,21 @@ span.wpcf7-list-item {
     display: block;
     width: 100%;
     background: var(--lean-main);
+}
+
+.wierzymyNawigator {
+    width: 100%;
+}
+
+.leanNawigator .progressBar {
+    width: calc(1530px * 0.8 - 370px);
+}
+
+.nawigatorGallery {
+    width: 75%;
+    margin: 100px auto;
+}
+
+.nawigatorGallery .ngg-galleryoverview.default-view {
+    text-align: center !important;
 }

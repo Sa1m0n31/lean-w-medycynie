@@ -236,8 +236,15 @@ get_header(); ?>
         </div>
     </section>
 
+    <!-- GALERIA -->
+    <section class="nawigatorGallery">
+        <?php
+            the_content();
+        ?>
+    </section>
+
     <!-- WIERZYMY -->
-    <section class="wierzymy">
+    <section class="wierzymy wierzymyNawigator">
         <img class="wierzymyLeft" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nasza_misja_bg.png"; ?>" alt="wierzymy" />
 
         <div class="wierzymyRight">

@@ -188,12 +188,14 @@ const pbPoziomo = document.querySelector(".progressGreenNawigator");
 let i = 1, tmp;
 
 window.addEventListener("scroll", () => {
-    if(window.pageYOffset < 600) {
-        pbPoziomo.style.width = (window.pageYOffset * i) + "px";
-        i+=0.02;
-    }
-    else {
-        i = 1.6;
+    if(pbPoziomo !== null) {
+        if(window.pageYOffset < 600) {
+            pbPoziomo.style.width = (window.pageYOffset * i) + "px";
+            i+=0.02;
+        }
+        else {
+            i = 1.6;
+        }
     }
 });
 
@@ -220,11 +222,6 @@ let optionsPB = {
     root: null,
     rootMargin: '0px',
     threshold: 1
-};
-
-let optionsPBLeave = {
-    root: null,
-    rootMargin: '0px 0px -100%'
 };
 
 let observerPB = new IntersectionObserver((entries) => {
@@ -273,9 +270,9 @@ let observerPB = new IntersectionObserver((entries) => {
     }
 }, optionsPB);
 
-observerPB.observe(rect1);
-observerPB.observe(rect2);
-observerPB.observe(rect3);
+if(rect1 !== null) observerPB.observe(rect1);
+if(rect2 !== null) observerPB.observe(rect2);
+if(rect3 !== null) observerPB.observe(rect3);
 
 /* Walidacja formularza */
 if(document.querySelector("form") !== null) {
