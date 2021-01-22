@@ -407,7 +407,7 @@ const goSliderMobile = (n, different = false) => {
                 });
             }
             circle++;
-            if(circle === 4) circle = 0;
+            if(circle === 2) circle = 0;
             if(innersM[circle] !== undefined) {
                 innersM[circle].forEach(item => {
                     item.style.fill = "#6E8A37";
@@ -502,6 +502,7 @@ const c3 = document.querySelector("#count3");
 const c4 = document.querySelector("#count4");
 const c5 = document.querySelector("#count5");
 const c6 = document.querySelector("#count6");
+const c7 = document.querySelector("#count7");
 
 const c1Value = c1.textContent;
 const c2Value = c2.textContent;
@@ -509,6 +510,7 @@ const c3Value = c3.textContent;
 const c4Value = c4.textContent;
 const c5Value = c5.textContent;
 const c6Value = c6.textContent;
+const c7Value = c7.textContent;
 
 let first = true;
 
@@ -527,8 +529,9 @@ const startCounting = () => {
         i3 = c3Value,
         i4 = c4Value,
         i5 = c5Value,
-        i6 = c6Value;
-    let val1, val2, val3, val4, val5, val6;
+        i6 = c6Value,
+        i7 = c7Value;
+    let val1, val2, val3, val4, val5, val6, val7;
 
     let interval1 = setInterval(() => {
         if(i1 >= 0) {
@@ -594,12 +597,22 @@ const startCounting = () => {
         else {
             clearInterval(interval6);
         }
+    }, 8);
+
+    let interval7 = setInterval(() => {
+        if(i7 >= 0) {
+            val7 = c7Value - i7;
+            c7.textContent = val7.toString();
+            i7--;
+        }
+        else {
+            clearInterval(interval7);
+        }
     }, 20);
 }
 
 /* Progress bar */
 let enableProgress = false;
-let progressCounter = 250;
 const progress = document.querySelector(".progressGreen");
 
 window.addEventListener("scroll", () => {

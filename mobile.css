@@ -430,6 +430,11 @@
         height: 50vw;
         margin: 30px 0;
     }
+
+    /* Lean nawigator */
+    .procesBoxItemHeader {
+        font-size: 20px;
+    }
 }
 
 @media(max-width: 1100px) {
@@ -523,6 +528,17 @@
     .eksperciImg {
         width: 350px;
         height: 455px;
+    }
+
+    /* Lean nawigator */
+    .procesBoxItem {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 32%;
+    }
+
+    .procesBoxContainer .etapyArrow {
+        display: none;
     }
 }
 
@@ -729,6 +745,20 @@
     .konferencjaContent {
         width: 100%;
     }
+
+    /* Lean nawigator */
+    .procesBoxContainer {
+        flex-direction: column;
+    }
+
+    .procesBoxItem {
+        width: 100%;
+        margin: 20px 0;
+        min-height: 0;
+        height: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
 }
 
 @media(max-width: 800px) {
@@ -829,6 +859,11 @@
     .dlaczegoMyItem {
         padding-left: 0 !important;
     }
+
+    /* Lean nawigator */
+    .bigHeaderNarrow, .textAfterBigHeader, .leanNawigator > .bigHeader {
+        width: 90%;
+    }
 }
 
 @media(max-width: 700px) {
@@ -888,7 +923,7 @@
     }
 
     .dots {
-        left: 160px !important;
+        left: 200px !important;
     }
 
     /* Nasza misja */
@@ -1298,6 +1333,12 @@
 
     .smallFont2 {
         font-size: 10px !important;
+    }
+
+    /* Lean nawigator */
+    .procesBoxItem {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

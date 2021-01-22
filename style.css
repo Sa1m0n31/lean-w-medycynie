@@ -476,23 +476,22 @@ html {
     right: 15px;
     padding-top: 5px;
     height: calc(100% - 5px);
-    width: 0;
+    width: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: var(--lean-main);
     transform: translateX(95%);
     transition: .2s all;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding-left: -10px;
-    opacity: 0;
 }
 
 .landingButton:hover::after {
     transform: translateX(95%);
-    width: 40px;
-    padding-left: 15px;
-    opacity: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50px;
 }
 
 .dots {
@@ -654,16 +653,27 @@ circle {
     position: relative;
     width: 45%;
     display: flex;
-    height: 52px;
+    height: 82px;
     margin: 15px 0;
+}
+
+.statsItemLeft, .statsItemRight {
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+.little {
+    display: block;
+    font-size: 17px !important;
+    text-transform: uppercase;
 }
 
 .statsItemLeft {
     font-size: .4rem;
     width: 60%;
-    height: 55px;
     font-weight: 400;
     border-bottom: 1px solid var(--grey-main);
+    padding-left: 10px;
 }
 
 .statsItemRight {
@@ -674,7 +684,6 @@ circle {
     border-bottom: 4px solid var(--lean-main);
     position: absolute;
     right: 0;
-    height: 55px;
     text-align: center;
 }
 
@@ -2576,4 +2585,243 @@ span.wpcf7-list-item {
     font-size: 2rem !important;
     top: 65px !important;
     right: 65px !important;
+}
+
+/* Lean nawigator */
+
+.leanNawigatorHeader {
+    background: url("./img/hero_image_lean_navigator.jpg");
+    background-position: 10% 30%;
+}
+
+.leanNawigator {
+    margin-top: 50px;
+}
+
+.leanNawigator > .bigHeader {
+    width: 50%;
+}
+
+.textAfterBigHeader {
+    font-size: 17px;
+    width: 35%;
+}
+
+.leanNawigator .threeBoxes {
+    margin: 70px auto;
+}
+
+.proces {
+    margin: 50px 0;
+}
+
+.procesBoxContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.procesBoxItem {
+    border: 1px solid var(--grey-main);
+    border-radius: 8px;
+    padding: 40px 35px;
+    width: 30%;
+    min-height: 690px;
+}
+
+.procesBoxItemHeader {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.procesBoxContainer .etapyArrow {
+    display: flex;
+    align-self: center;
+}
+
+.procesBoxItemHeader::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 20px;
+    height: 4px;
+    background: var(--lean-main);
+}
+
+.procesBoxItem p {
+    font-size: 17px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--grey-main);
+}
+
+.procesBoxItem p:last-child {
+    border: none;
+}
+
+.procesLittleHeader {
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.thin {
+    font-weight: 400 !important;
+}
+
+.greenList {
+    list-style-type: none;
+    margin: 20px 0 20px 0;
+}
+
+.greenList li {
+    position: relative;
+    font-size: 17px;
+    padding-left: 0;
+    margin: 7px 0;
+}
+
+.greenList li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lean-main);
+    position: absolute;
+    left: -20px;
+    top: 8px;
+}
+
+.biggerPadding .procesBoxItem {
+    padding: 40px 45px;
+}
+
+.procesLittleHeader:first-of-type {
+    margin-top: 50px;
+}
+
+.bigHeaderNarrow {
+    width: 50%;
+}
+
+.smsContainer {
+    margin: 40px auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 150px calc(90% - 150px);
+    grid-column-gap: 15%;
+    grid-row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+.rectArrow {
+    width: 133px;
+    height: 105px;
+    border-radius: 12px;
+    background: #BABDBC;
+    color: #fff;
+    font-weight: 700;
+    font-size: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.arrow-right {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #BABDBC;
+}
+
+.smsItem {
+    width: 100%;
+    height: 350px;
+    border: 1px solid var(--grey-main);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+}
+
+.smsItemLeft {
+    width: 30%;
+    position: relative;
+}
+
+.smsItemHeader {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.smsItemHeader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 20px;
+    height: 3px;
+    background: var(--lean-main);
+}
+
+.smsItemDescription {
+    font-weight: 400;
+    font-size: 17px;
+    width: 60%;
+}
+
+.smsItemCorner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 26px;
+    color: #BABDBC;
+    font-weight: 700;
+}
+
+.smsItemCorner .bold {
+    color: var(--text);
+}
+
+.smsItemRight {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 50%;
+    margin-left: 10%;
+    padding-top: 2%;
+}
+
+.smsItemRight li {
+    height: 25%;
+    display: flex;
+    align-items: flex-start;
+    font-size: 17px;
+    position: relative;
+}
+
+.smsItemRight li::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    background: var(--text);
+    border-radius: 50%;
+}
+
+.semibold {
+    font-weight: 600;
 }
