@@ -111,6 +111,12 @@
         width: 252px;
         height: 252px;
     }
+
+    /* Lean nawigator */
+    .circleContainer::after {
+        width: 70px;
+        right: -80px;
+    }
 }
 
 @media(max-width: 1700px) {
@@ -166,6 +172,19 @@
 
     .person:last-child {
         margin-right: 0;
+    }
+
+    /* Lean nawigator */
+    .line {
+        display: none;
+    }
+
+    .smsContainer {
+        grid-column-gap: 5%;
+    }
+
+    .smsItemRight {
+        width: 70%;
     }
 }
 
@@ -331,6 +350,24 @@
 
     .konferencjaContent {
         width: 78%;
+    }
+
+    /* Lean nawigator */
+    .progressBarNawigator {
+        display: none;
+    }
+
+    .smsItem {
+        height: 380px;
+    }
+
+    .smsItemRight li {
+        height: auto;
+        margin: 5px 0;
+    }
+
+    .smsItemLeft, .smsItemRight {
+        width: 50%;
     }
 }
 
@@ -596,6 +633,22 @@
 
     .dlaczegoMyItem {
         width: 80%;
+    }
+
+    /* Lean nawigator */
+    .smsContainer {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 0;
+    }
+
+    .rectArrow {
+        display: none;
+    }
+
+    .smsItem {
+        width: 100%;
+        margin: 30px 0;
     }
 }
 
@@ -1121,6 +1174,11 @@
         width: 100% !important;
         font-size: 32px;
     }
+
+    /* Lean nawigator */
+    .smsContainer {
+        width: 100%;
+    }
 }
 
 @media(max-width: 600px) {
@@ -1249,6 +1307,23 @@
 
     .agendaInnerItem .event {
         width: 65%;
+    }
+
+    /* Lean nawigator */
+
+    .smsItem {
+        flex-direction: column;
+        height: auto;
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .smsItemLeft, .smsItemRight {
+        width: 100%;
+    }
+
+    .smsItemCorner {
+        display: none;
     }
 }
 

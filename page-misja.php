@@ -222,7 +222,7 @@ get_header();
                         Ilość przeszkolonych osoób
                     </h3>
                     <h4 class="statsItemRight">
-                        1100
+                        758
                     </h4>
                 </div>
 

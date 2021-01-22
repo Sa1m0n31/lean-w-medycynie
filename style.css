@@ -651,9 +651,9 @@ circle {
 
 .statsItem {
     position: relative;
-    width: 45%;
+    width: 48%;
     display: flex;
-    height: 82px;
+    height: 58px;
     margin: 15px 0;
 }
 
@@ -673,7 +673,7 @@ circle {
     width: 60%;
     font-weight: 400;
     border-bottom: 1px solid var(--grey-main);
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .statsItemRight {
@@ -685,6 +685,10 @@ circle {
     position: absolute;
     right: 0;
     text-align: center;
+}
+
+.smaller {
+    font-size: 26px;
 }
 
 /* Three boxes */
@@ -2716,6 +2720,7 @@ span.wpcf7-list-item {
     grid-row-gap: 80px;
     justify-items: center;
     align-items: center;
+    position: relative;
 }
 
 .rectArrow {
@@ -2824,4 +2829,50 @@ span.wpcf7-list-item {
 
 .semibold {
     font-weight: 600;
+}
+
+.line {
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 350px);
+    grid-row-gap: 80px;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 0;
+    left: 150px;
+}
+
+.circleContainer {
+    position: relative;
+    z-index: 3;
+    background: #fff;
+}
+
+.circleContainer::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 1px;
+    background: var(--grey-main);
+}
+
+.progressBarPionowoContainer {
+    position: absolute;
+    z-index: 2;
+    top: 175px;
+    height: 860px;
+    width: 2px;
+    background: var(--grey-main);
+    overflow: hidden;
+}
+
+.progressBarPionowo {
+    display: block;
+    width: 100%;
+    background: var(--lean-main);
 }

@@ -21,8 +21,8 @@ get_header(); ?>
     </p>
 
     <section class="threeBoxes">
-        <span class="progressBar">
-                    <span class="progressGreen"></span>
+        <span class="progressBar progressBarNawigator">
+                    <span class="progressGreen progressGreenNawigator"></span>
                 </span>
 
         <div class="boxItem">
@@ -81,8 +81,35 @@ get_header(); ?>
         </p>
 
         <div class="smsContainer">
+            <!-- Linia -->
+            <div class="line">
+                <!-- Progress bar -->
+                <span class="progressBarPionowoContainer">
+                    <span class="progressBarPionowo"></span>
+                </span>
+
+                <!-- Kolka -->
+                <div class="circleContainer">
+                    <span class="circleOuter" id="smsCircle1">
+                        <span class="circleInner" id="smsCircleInner1"></span>
+                    </span>
+                </div>
+
+                <div class="circleContainer">
+                    <span class="circleOuter" id="smsCircle2">
+                        <span class="circleInner" id="smsCircleInner2"></span>
+                    </span>
+                </div>
+
+                <div class="circleContainer">
+                    <span class="circleOuter" id="smsCircle3">
+                        <span class="circleInner" id="smsCircleInner3"></span>
+                    </span>
+                </div>
+            </div>
+
             <!-- 1st row -->
-            <div class="rectArrow">
+            <div class="rectArrow" id="rect1">
                 S
                 <span class="arrow-right"></span>
             </div>
@@ -131,7 +158,7 @@ get_header(); ?>
 
 
             <!-- 2nd row -->
-            <div class="rectArrow">
+            <div class="rectArrow" id="rect2">
                 M
                 <span class="arrow-right"></span>
             </div>
@@ -176,7 +203,7 @@ get_header(); ?>
             </div>
 
             <!-- 3rd row -->
-            <div class="rectArrow">
+            <div class="rectArrow" id="rect3">
                 S
                 <span class="arrow-right"></span>
             </div>

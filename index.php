@@ -101,7 +101,7 @@ get_header();
             <div class="stats">
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        <span class="bold">Liczba transformacji</span> (min. 12 miesięcy pracy z klientem)
+                        Ilość wykonanych transformacji
                     </h3>
                     <h4 class="statsItemRight" id="count1">
                         5
@@ -110,17 +110,16 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        <span class="bold">Średni czas zwrotu</span> z inwestycji
+                        Średni czas zwrotu z inwestycji (m-ce)
                     </h3>
                     <h4 class="statsItemRight">
                         <span id="count4">6</span>-<span id="count5">9</span>
-                        <span class="little">miesięcy</span>
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        NPS - Wskaźnik <span class="bold">oceny Klientów</span>
+                        NPS - Wskaźnik oceny Klientów
                     </h3>
                     <h4 class="statsItemRight" id="count2">
                         95
@@ -129,17 +128,7 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        <span class="bold">Przeszkolonych osób</span><br/>
-                        W tym ponad <span class="bold">250</span> w ramach Lean Healthcare Academy
-                    </h3>
-                    <h4 class="statsItemRight" id="count6">
-                        1000
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
-                        <span class="bold">MLN</span> oszczędności
+                        Ilość oszczędności w MLN
                     </h3>
                     <h4 class="statsItemRight">
                         <span id="count3">30</span>
@@ -148,10 +137,19 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        <span class="bold">Zwrotu z inwestycji</span> (ROI)
+                        Ilość przeszkolonych osób
+                    </h3>
+                    <h4 class="statsItemRight" id="count6">
+                        758
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
+                        Wskaźnik ROI<br/>zwrotu z inwestycji
                     </h3>
                     <h4 class="statsItemRight">
-                        +<span id="count7">300</span>%
+                        <span class="smaller">+</span><span id="count7">300</span><span class="smaller">%</span>
                     </h4>
                 </div>
 

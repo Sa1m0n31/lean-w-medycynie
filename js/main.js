@@ -183,6 +183,100 @@ if(document.querySelector(".konferencjaContainer") !== null) {
     konferencjaMenu();
 }
 
+/* Lean nawigator - poziomy progressBar */
+const pbPoziomo = document.querySelector(".progressGreenNawigator");
+let i = 1, tmp;
+
+window.addEventListener("scroll", () => {
+    if(window.pageYOffset < 600) {
+        pbPoziomo.style.width = (window.pageYOffset * i) + "px";
+        i+=0.02;
+    }
+    else {
+        i = 1.6;
+    }
+});
+
+/* Lean nawigator - pionowy progressBar */
+const rect1 = document.querySelector("#rect1");
+const rect2 = document.querySelector("#rect2");
+const rect3 = document.querySelector("#rect3");
+
+const rect1Arrow = document.querySelector("#rect1>.arrow-right");
+const rect2Arrow = document.querySelector("#rect2>.arrow-right");
+const rect3Arrow = document.querySelector("#rect3>.arrow-right");
+
+const smsCircle1 = document.querySelector("#smsCircle1");
+const smsCircle2 = document.querySelector("#smsCircle2");
+const smsCircle3 = document.querySelector("#smsCircle3");
+
+const smsCircleInner1 = document.querySelector("#smsCircleInner1");
+const smsCircleInner2 = document.querySelector("#smsCircleInner2");
+const smsCircleInner3 = document.querySelector("#smsCircleInner3");
+
+const pbPionowo = document.querySelector(".progressBarPionowo");
+
+let optionsPB = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1
+};
+
+let optionsPBLeave = {
+    root: null,
+    rootMargin: '0px 0px -100%'
+};
+
+let observerPB = new IntersectionObserver((entries) => {
+    let startPoint, newPoint, first = true, top = true;
+    for (const entry of entries) {
+        if(entry.isIntersecting) {
+            if(entry.target.id === "rect1") {
+                rect1.style.background = "#6E8A37";
+                rect1Arrow.style.borderLeftColor = "#6E8A37";
+                smsCircle1.style.background = "#D4DEC0";
+                smsCircleInner1.style.background = "#6E8A37";
+
+                //if(top) {
+                    startPoint = window.pageYOffset;
+                    top = false;
+                //}
+                if(first) {
+                    /* Rozpoczynamy napelnianie linii */
+                    window.addEventListener("scroll", () => {
+                        if(window.pageYOffset > 1650) {
+                            pbPionowo.style.height = "100%";
+                        }
+                        else {
+                            newPoint = window.pageYOffset;
+                            pbPionowo.style.height = (newPoint - startPoint - 80) + "px";
+                        }
+                    });
+                    first = false;
+                }
+            }
+            else if(entry.target.id === "rect2") {
+                rect2.style.background = "#6E8A37";
+                rect2Arrow.style.borderLeftColor = "#6E8A37";
+
+                smsCircle2.style.background = "#D4DEC0";
+                smsCircleInner2.style.background = "#6E8A37";
+            }
+            else if(entry.target.id === "rect3") {
+                rect3.style.background = "#6E8A37";
+                rect3Arrow.style.borderLeftColor = "#6E8A37";
+
+                smsCircle3.style.background = "#D4DEC0";
+                smsCircleInner3.style.background = "#6E8A37";
+            }
+        }
+    }
+}, optionsPB);
+
+observerPB.observe(rect1);
+observerPB.observe(rect2);
+observerPB.observe(rect3);
+
 /* Walidacja formularza */
 if(document.querySelector("form") !== null) {
     const submitBtn = document.querySelector("input[type=submit]");
