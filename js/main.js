@@ -224,35 +224,85 @@ let optionsPB = {
     threshold: 1
 };
 
+let newPoint, startPoint, first2 = true, top2 = true;
+
+window.addEventListener("scroll", () => {
+    if(!first2) {
+        console.log(newPoint-startPoint);
+
+        /* Pierwsza baza */
+        if (newPoint - startPoint > 260) {
+            rect1.style.background = "#6E8A37";
+            rect1Arrow.style.borderLeftColor = "#6E8A37";
+
+            smsCircle1.style.background = "#D4DEC0";
+            smsCircleInner1.style.background = "#6E8A37";
+        } else {
+            rect1.style.background = "#BABDBC";
+            rect1Arrow.style.borderLeftColor = "#BABDBC";
+
+            smsCircle1.style.background = "#F8F8F8";
+            smsCircleInner1.style.background = "#BABDBC";
+        }
+
+        /* Druga baza */
+        if (newPoint - startPoint > 650) {
+            rect2.style.background = "#6E8A37";
+            rect2Arrow.style.borderLeftColor = "#6E8A37";
+
+            smsCircle2.style.background = "#D4DEC0";
+            smsCircleInner2.style.background = "#6E8A37";
+        } else {
+            rect2.style.background = "#BABDBC";
+            rect2Arrow.style.borderLeftColor = "#BABDBC";
+
+            smsCircle2.style.background = "#F8F8F8";
+            smsCircleInner2.style.background = "#BABDBC";
+        }
+
+        /* Trzecia baza */
+        if (newPoint - startPoint > 990) {
+            rect3.style.background = "#6E8A37";
+            rect3Arrow.style.borderLeftColor = "#6E8A37";
+
+            smsCircle3.style.background = "#D4DEC0";
+            smsCircleInner3.style.background = "#6E8A37";
+        } else {
+            rect3.style.background = "#BABDBC";
+            rect3Arrow.style.borderLeftColor = "#BABDBC";
+
+            smsCircle3.style.background = "#F8F8F8";
+            smsCircleInner3.style.background = "#BABDBC";
+        }
+
+        if (window.pageYOffset > 1850) {
+            pbPionowo.style.height = "100%";
+            rect3.style.background = "#6E8A37";
+            rect3Arrow.style.borderLeftColor = "#6E8A37";
+
+            smsCircle3.style.background = "#D4DEC0";
+            smsCircleInner3.style.background = "#6E8A37";
+        } else {
+            newPoint = window.pageYOffset;
+            pbPionowo.style.height = (newPoint - startPoint - 210) + "px";
+        }
+    }
+});
+
 let observerPB = new IntersectionObserver((entries) => {
-    let startPoint, newPoint, first = true, top = true;
     for (const entry of entries) {
         if(entry.isIntersecting) {
             if(entry.target.id === "rect1") {
-                rect1.style.background = "#6E8A37";
-                rect1Arrow.style.borderLeftColor = "#6E8A37";
-                smsCircle1.style.background = "#D4DEC0";
-                smsCircleInner1.style.background = "#6E8A37";
-
-                //if(top) {
+                if(top2) {
                     startPoint = window.pageYOffset;
-                    top = false;
-                //}
-                if(first) {
+                    top2 = false;
+                }
+                if(first2) {
                     /* Rozpoczynamy napelnianie linii */
-                    window.addEventListener("scroll", () => {
-                        if(window.pageYOffset > 1650) {
-                            pbPionowo.style.height = "100%";
-                        }
-                        else {
-                            newPoint = window.pageYOffset;
-                            pbPionowo.style.height = (newPoint - startPoint - 80) + "px";
-                        }
-                    });
-                    first = false;
+                    first2 = false;
                 }
             }
-            else if(entry.target.id === "rect2") {
+            /*else if(entry.target.id === "rect2") {
                 rect2.style.background = "#6E8A37";
                 rect2Arrow.style.borderLeftColor = "#6E8A37";
 
@@ -265,7 +315,7 @@ let observerPB = new IntersectionObserver((entries) => {
 
                 smsCircle3.style.background = "#D4DEC0";
                 smsCircleInner3.style.background = "#6E8A37";
-            }
+            }*/
         }
     }
 }, optionsPB);

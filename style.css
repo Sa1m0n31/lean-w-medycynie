@@ -63,9 +63,9 @@ body {
     --lean-main-110-: #2A312F;
     --lean-main-2f3634: #2F3634;
     --grey-main: #EDEDED;
-    --light-gray: #F8F8F8;
+    --light-gray: #f8f8f8;
     --button-activ: #7F9F42;
-    --button-area: #D4DEC0;
+    --button-area: #d4dec0;
     --grey-dark: #BABDBC;
     --grey-text: #898989;
 }
@@ -673,7 +673,7 @@ circle {
     width: 60%;
     font-weight: 400;
     border-bottom: 1px solid var(--grey-main);
-    padding-left: 20px;
+    padding-right: 15px;
 }
 
 .statsItemRight {
@@ -2582,7 +2582,7 @@ span.wpcf7-list-item {
 }
 
 .ngg-galleryoverview.default-view {
-    text-align: left !important;
+    /*text-align: left !important; */
 }
 
 .sl-wrapper .sl-close {
@@ -2601,6 +2601,10 @@ span.wpcf7-list-item {
 .leanNawigator {
     margin: 50px auto 0 auto;
     width: 90%;
+}
+
+.leanNawigator section {
+    margin: 150px 0;
 }
 
 .leanNawigator > .bigHeader {
@@ -2736,6 +2740,7 @@ span.wpcf7-list-item {
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: .4s all;
 }
 
 .arrow-right {
@@ -2748,6 +2753,7 @@ span.wpcf7-list-item {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 30px solid #BABDBC;
+    transition: .4s all;
 }
 
 .smsItem {
@@ -2887,10 +2893,22 @@ span.wpcf7-list-item {
 }
 
 .nawigatorGallery {
-    width: 75%;
     margin: 100px auto;
 }
 
 .nawigatorGallery .ngg-galleryoverview.default-view {
-    text-align: center !important;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nawigatorGallery .ngg-galleryoverview.default-view .ngg-gallery-thumbnail-box {
+    width: 22%;
+    height: auto;
+    margin: 2px 0;
+}
+
+.ngg-gallery-thumbnail img {
+    width: 100% !important;
 }

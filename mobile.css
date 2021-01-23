@@ -226,6 +226,11 @@
 }
 
 @media(max-width: 1300px) {
+    /* Landing */
+    .container {
+        margin-top: 100px;
+    }
+
     /* Hamburger menu */
     .hamburgerMenu {
         display: flex;
@@ -250,6 +255,15 @@
 
     .topMenu {
         justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        padding: 0 5vw;
+        margin-bottom: 100px;
+    }
+
+    .mobileMenuContainer {
+        transform: translateX(0);
     }
 
     /* Pages */
@@ -268,13 +282,6 @@
 
     .container {
         position: relative;
-    }
-
-    .topMenu {
-        position: sticky;
-        background: #fff;
-        top: 0;
-        z-index: 100;
     }
 
     /* Three boxes */
@@ -925,32 +932,6 @@
     }
 
     /* Top menu */
-    .topMenu {
-        height: 80px;
-    }
-
-    .topMenu .logo {
-        width: 140px;
-        position: absolute;
-        top: 10px;
-        left: -2px;
-    }
-
-    .logo a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .topMenu .hamburgerMenu {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
 
     /* Landing */
     .nextSlide, .prevSlide {
@@ -1179,6 +1160,10 @@
     .smsContainer {
         width: 100%;
     }
+
+    .leanNawigator .bigHeader {
+        line-height: 36px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -1325,12 +1310,22 @@
     .smsItemCorner {
         display: none;
     }
+
+    /* Stats item */
+    .mobileSmaller span {
+        font-size: 18px !important;
+    }
 }
 
 @media(max-width: 500px) {
     /* Landing */
     .dots {
         left: 200px;
+    }
+
+    /* Stats */
+    .statsItem {
+        height: 70px;
     }
 
     /* Nasza misja */

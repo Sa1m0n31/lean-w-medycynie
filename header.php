@@ -37,7 +37,7 @@ maximum-scale=5.0, user-scalable=yes" />
             </div>
             <ul class="mobileMenu">
                 <li class="mobileMenuItem mobileMenuGreen">
-                    <a href="<?php echo /*get_page_link( get_page_by_title( 'lean nawigator' )->ID ); */ '#'; ?>">
+                    <a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">
                         Lean Nawigator
                     </a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>

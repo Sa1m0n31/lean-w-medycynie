@@ -148,7 +148,7 @@ get_header();
                     <h3 class="statsItemLeft">
                         Wskaźnik ROI<br/>zwrotu z inwestycji
                     </h3>
-                    <h4 class="statsItemRight">
+                    <h4 class="statsItemRight mobileSmaller">
                         <span class="smaller">+</span><span id="count7">300</span><span class="smaller">%</span>
                     </h4>
                 </div>

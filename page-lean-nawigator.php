@@ -304,7 +304,7 @@ get_header(); ?>
                     <span class="semibold">Celem warsztatów jest wyjaśnienie wszystkim pracownikom czym jest lean management</span> oraz przeniesienie ich do fazy zmiany zwanej „testowaniem” przy jednoczesnym integrowaniu uczestników.
                 </p>
                 <p>
-                    Przykładowy zakres naszych uczestników: - Dyrektorzy NFZ,<br/>- Dyrektorzy Szpitali,<br/>- Pielęgniarki Naczelne,<br/>- Pielęgniarki Oddziałowe<br/>- Personel administracyjny,<br/>- Lekarze
+                    Przykładowy zakres naszych uczestników:<br/>- Dyrektorzy NFZ,<br/>- Dyrektorzy Szpitali,<br/>- Pielęgniarki Naczelne,<br/>- Pielęgniarki Oddziałowe<br/>- Personel administracyjny,<br/>- Lekarze
                 </p>
             </div>
 
