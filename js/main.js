@@ -187,14 +187,60 @@ if(document.querySelector(".konferencjaContainer") !== null) {
 const pbPoziomo = document.querySelector(".progressGreenNawigator");
 let i = 1, tmp;
 
+const boxItem1 = document.querySelector("#boxItem1");
+const boxItem2 = document.querySelector("#boxItem2");
+const boxItem3 = document.querySelector("#boxItem3");
+
+const boxItemCircle1 = document.querySelector("#boxItem1>.circleOuter");
+const boxItemCircle2 = document.querySelector("#boxItem2>.circleOuter");
+const boxItemCircle3 = document.querySelector("#boxItem3>.circleOuter");
+
+const boxItemInner1 = document.querySelector("#boxItem1>.circleOuter>.circleInner");
+const boxItemInner2 = document.querySelector("#boxItem2>.circleOuter>.circleInner");
+const boxItemInner3 = document.querySelector("#boxItem3>.circleOuter>.circleInner");
+
 window.addEventListener("scroll", () => {
     if(pbPoziomo !== null) {
-        if(window.pageYOffset < 600) {
-            pbPoziomo.style.width = (window.pageYOffset * i) + "px";
-            i+=0.02;
+        if(window.pageYOffset < 900) {
+            pbPoziomo.style.width = (window.pageYOffset * 1.6) + "px";
+        }
+
+        console.log(window.pageYOffset);
+
+        /* Box item 1 */
+        if((window.pageYOffset > 10)&&(window.pageYOffset < 300)) {
+            boxItem1.style.borderColor = "#6E8A37";
+            boxItemInner1.style.background = "#6E8A37";
+            boxItemCircle1.style.background = "#D4DEC0";
         }
         else {
-            i = 1.6;
+            boxItem1.style.borderColor = "#EDEDED";
+            boxItemInner1.style.background = "#BABDBC";
+            boxItemCircle1.style.background = "#f8f8f8";
+        }
+
+        /* Box item 2 */
+        if((window.pageYOffset >= 300)&&(window.pageYOffset < 600)) {
+            boxItem2.style.borderColor = "#6E8A37";
+            boxItemInner2.style.background = "#6E8A37";
+            boxItemCircle2.style.background = "#D4DEC0";
+        }
+        else {
+            boxItem2.style.borderColor = "#EDEDED";
+            boxItemInner2.style.background = "#BABDBC";
+            boxItemCircle2.style.background = "#f8f8f8";
+        }
+
+        /* Box item 3 */
+        if(window.pageYOffset >= 600) {
+            boxItem3.style.borderColor = "#6E8A37";
+            boxItemInner3.style.background = "#6E8A37";
+            boxItemCircle3.style.background = "#D4DEC0";
+        }
+        else {
+            boxItem3.style.borderColor = "#EDEDED";
+            boxItemInner3.style.background = "#BABDBC";
+            boxItemCircle3.style.background = "#f8f8f8";
         }
     }
 });

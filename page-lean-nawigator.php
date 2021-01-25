@@ -25,7 +25,7 @@ get_header(); ?>
                     <span class="progressGreen progressGreenNawigator"></span>
                 </span>
 
-        <div class="boxItem">
+        <div class="boxItem" id="boxItem1">
             <h2 class="boxHeader">
                 Analiza
             </h2>
@@ -39,7 +39,7 @@ get_header(); ?>
             </p>
         </div>
 
-        <div class="boxItem">
+        <div class="boxItem" id="boxItem2">
             <h2 class="boxHeader">
                 Inspiracja
             </h2>
@@ -53,7 +53,7 @@ get_header(); ?>
             </p>
         </div>
 
-        <div class="boxItem">
+        <div class="boxItem" id="boxItem3">
             <h2 class="boxHeader">
                 Transformacja
             </h2>

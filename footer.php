@@ -55,7 +55,7 @@
             <ul class="footerMenu">
                 <li class="footerMenuItem"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'konferencja' )->ID ); ?>">Konferencja</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <!--<li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>-->

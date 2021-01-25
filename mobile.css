@@ -931,6 +931,10 @@
         transform: rotate(0);
     }
 
+    .procesBoxContainer {
+        margin-top: 8px !important;
+    }
+
     /* Top menu */
 
     /* Landing */
