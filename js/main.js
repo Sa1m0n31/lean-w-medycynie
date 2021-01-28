@@ -440,7 +440,7 @@ const lefts = [left1, left2];
 let radius, circumference;
 
 if((circle1 !== null)||(circle1M !== null)) {
-    if(window.innerWidth > 1300) {
+    if(window.innerWidth > 1100) {
         radius = circle1.r.baseVal.value;
         circumference = radius * 2 * Math.PI;
 
@@ -637,7 +637,7 @@ const nextMobileSlide = (n = -1, different = true) => {
     goSliderMobile(slide, different);
 }
 
-if(window.innerWidth > 1300) {
+if(window.innerWidth > 1100) {
     goSlider(0);
 }
 else {

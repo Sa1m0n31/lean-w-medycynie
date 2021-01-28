@@ -1400,10 +1400,6 @@ circle {
     padding: 0 calc((100vw - 1700px) / 2);
 }
 
-.wierzymyPage {
-    flex-wrap: wrap;
-}
-
 .misjaFirst .bigHeader, .eksperci .bigHeader {
     max-width: 700px;
 }

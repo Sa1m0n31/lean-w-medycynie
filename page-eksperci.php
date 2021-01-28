@@ -15,7 +15,7 @@ get_header();
             Nasza misja
         </h2>
         <h1 class="bigHeader">
-            Pomagamy zobaczyć więcej i pójść dalej
+            Pomagamy zobaczyć więcej<br/>i pójść dalej
         </h1>
 
         <div class="eksperciItem">
