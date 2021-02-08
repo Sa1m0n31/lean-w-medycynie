@@ -55,6 +55,71 @@ const konferencja = (n) => {
     });
 }
 
+const optionsSection1 = {
+    root: null,
+    rootMargin: '500px',
+    threshold: 1
+};
+
+/* Wjezdzanie elementow na stronie glownej */
+let onPage = [false, false, false, false, false];
+const firstSection = document.querySelector("#firstSection");
+const secondSection = document.querySelector("#secondSection");
+const thirdSection = document.querySelector("#thirdSection");
+const fourthSection = document.querySelector("#fourthSection");
+const fifthSection = document.querySelector("#fifthSection");
+const misjaLeft = document.querySelector(".misjaLeft");
+const misjaRight = document.querySelector(".misjaRight");
+const threeBoxes = document.querySelector(".threeBoxes");
+const wierzymyLeft = document.querySelector(".wierzymyLeft");
+const wierzymyRight = document.querySelector(".wierzymyRight");
+const oferta = document.querySelector(".oferta");
+const referencjeLeft = document.querySelector(".referencjeLeft");
+const referencjeRight = document.querySelector(".referencjeRight");
+
+let observerSection1 = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+        if(entry.isIntersecting) {
+            if((entry.target.id === 'firstSection')&&(!onPage[0])) {
+                onPage[0] = true;
+                gsap.fromTo([misjaLeft, misjaRight], { y: 300 }, { y: 0, duration: .5, ease: Power1.easeOut });
+                gsap.fromTo([misjaLeft, misjaRight], { opacity: 0 }, { opacity: 1, duration: 1 });
+            }
+            else if((entry.target.id === 'secondSection')&&(!onPage[1])) {
+                onPage[1] = true;
+                gsap.fromTo(threeBoxes, { y: 300 }, { y: 0, duration: .5, ease: Power1.easeOut });
+                gsap.fromTo(threeBoxes, { opacity: 0 }, { opacity: 1, duration: 1 });
+            }
+            else if((entry.target.id === 'thirdSection')&&(!onPage[2])) {
+                onPage[2] = true;
+                gsap.fromTo([wierzymyLeft, wierzymyRight], { y: 300 }, { y: 0, duration: .5, ease: Power1.easeOut });
+                gsap.fromTo([wierzymyLeft, wierzymyRight], { opacity: 0 }, { opacity: 1, duration: 1 });
+            }
+            else if((entry.target.id === 'fourthSection')&&(!onPage[3])) {
+                onPage[3] = true;
+                gsap.fromTo(oferta, { y: 300 }, { y: 0, duration: .5, ease: Power1.easeOut });
+                gsap.fromTo(oferta, { opacity: 0 }, { opacity: 1, duration: 1 });
+            }
+            else if((entry.target.id === 'fifthSection')&&(!onPage[4])) {
+                onPage[4] = true;
+                gsap.fromTo([referencjeLeft, referencjeRight], { y: 300 }, { y: 0, duration: .5, ease: Power1.easeOut });
+                gsap.fromTo([referencjeLeft, referencjeRight], { opacity: 0 }, { opacity: 1, duration: 1 });
+
+            }
+        }
+    }
+}, optionsSection1);
+
+if(misjaLeft !== null) {
+    gsap.set([misjaLeft, misjaRight, wierzymyLeft, wierzymyRight, threeBoxes, oferta, referencjeLeft, referencjeRight], {y: 300, opacity: 0});
+    observerSection1.observe(firstSection);
+    observerSection1.observe(secondSection);
+    observerSection1.observe(thirdSection);
+    observerSection1.observe(fourthSection);
+    observerSection1.observe(fifthSection);
+}
+
+/* Konferencja - zmiana koloru elementow menu */
 let konfMenu1 = document.querySelector("#konfMenu1");
 let konfMenu2 = document.querySelector("#konfMenu2");
 let konfMenu3 = document.querySelector("#konfMenu3");
@@ -63,7 +128,6 @@ let konfMenu5 = document.querySelector("#konfMenu5");
 
 const konfMenuArr = [konfMenu1, konfMenu2, konfMenu3, konfMenu4, konfMenu5];
 
-/* Konferencja - zmiana koloru elementow menu */
 const konferencjaMenu = () => {
     let options1 = {
         root: null,

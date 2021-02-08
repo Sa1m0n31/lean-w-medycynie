@@ -85,6 +85,7 @@ get_header();
 
     <!-- MISJA -->
     <section class="naszaMisja">
+        <span class="observerHelper" id="firstSection"></span>
         <img class="misjaLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/nasza_misja_BG.jpg'; ?>" alt="nasza-misja" />
 
         <div class="misjaRight">
@@ -160,6 +161,7 @@ get_header();
 
     <!--THREE BOXES-->
     <section class="threeBoxes">
+        <span class="observerHelper" id="secondSection"></span>
         <span class="progressBar">
                     <span class="progressGreen"></span>
                 </span>
@@ -209,6 +211,7 @@ get_header();
 
     <!-- WIERZYMY -->
     <section class="wierzymy">
+        <span class="observerHelper" id="thirdSection"></span>
         <img class="wierzymyLeft" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/nasza_misja_bg.png"; ?>" alt="wierzymy" />
 
         <div class="wierzymyRight">
@@ -228,6 +231,7 @@ get_header();
 
     <!-- NASZA OFERTA -->
     <section class="oferta">
+        <span class="observerHelper" id="fourthSection"></span>
         <div class="ofertaLeft">
             <h2 class="firstHeader">
                 Nasza oferta
@@ -345,6 +349,7 @@ get_header();
 
     <!-- REFERENCJE -->
     <section class="referencje">
+        <span class="observerHelper" id="fifthSection"></span>
         <div class="referencjeLeft">
             <h2 class="bigHeader">
                 Nasze referencje

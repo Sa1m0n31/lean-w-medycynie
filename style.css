@@ -592,6 +592,20 @@ circle {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.observerHelper {
+    display: block;
+    position: absolute;
+    top: -300px;
+    width: 1px;
+    background: transparent;
+    height: 1000px;
+}
+
+#secondSection {
+    height: 600px;
 }
 
 .misjaLeft {

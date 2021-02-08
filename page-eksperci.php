@@ -43,11 +43,11 @@ get_header();
                         </h4>
                     </div>
                     <div class="eksperciKontaktItem">
-                        <a href="mailto:g.koczor@leanwmedycnie.pl"></a>
+                        <a href="mailto:g.koczor@leanwmedycynie.pl"></a>
                         <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
                         <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
                         <h4 class="eksperciKontaktDane">
-                                g.koczor@leanwmedycnie.pl
+                                g.koczor@leanwmedycynie.pl
                         </h4>
                     </div>
                 </div>
@@ -79,11 +79,11 @@ get_header();
                         </h4>
                     </div>
                     <div class="eksperciKontaktItem">
-                        <a href="mailto:jakub.napierala@leanwmedycnie.pl"></a>
+                        <a href="mailto:jakub.napierala@leanwmedycynie.pl"></a>
                         <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
                         <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
                         <h4 class="eksperciKontaktDane smallFont">
-                                jakub.napierala@leanwmedycnie.pl
+                                jakub.napierala@leanwmedycynie.pl
                         </h4>
                     </div>
                 </div>
