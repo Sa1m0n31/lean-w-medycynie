@@ -16,7 +16,7 @@ get_header();
             Nasza misja
         </h2>
         <h1 class="bigHeader">
-            Ponad 10 lat w środowisku medycznym
+            Pomagamy zobaczyć<br/>więcej i pójść dalej
         </h1>
 
         <div class="misjaBoxes">
@@ -174,7 +174,7 @@ get_header();
         <div class="liczbyIMyInner">
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość wykonanych transformacji
+                        Liczba wykonanych transformacji
                     </h3>
                     <h4 class="statsItemRight" id="count1">
                         5
@@ -186,7 +186,7 @@ get_header();
                         Oszczędności
                     </h3>
                     <h4 class="statsItemRight">
-                        <span id="count3">5</span> MLN
+                        <span id="count3">30</span> MLN
                     </h4>
                 </div>
 
@@ -195,7 +195,7 @@ get_header();
                         ROI
                     </h3>
                     <h4 class="statsItemRight" id="count4">
-                        +200%
+                        +300%
                     </h4>
                 </div>
 
@@ -210,19 +210,19 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość projektów w medycynie
+                        Liczba zrealizowanych projektów w medycynie
                     </h3>
                     <h4 class="statsItemRight" id="count2">
-                        11
+                        <20
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość przeszkolonych osoób
+                        Liczba przeszkolonych osoób
                     </h3>
                     <h4 class="statsItemRight">
-                        758
+                        1000
                     </h4>
                 </div>
 
@@ -237,19 +237,19 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość transformacji
+                        Średni czas zwrotu z inwestycji (m-ce)
                     </h3>
                     <h4 class="statsItemRight" id="count1">
-                        3
+                        6-9
                     </h4>
                 </div>
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Redukcja braków
+                        Wzrost efektywności procesu
                     </h3>
                     <h4 class="statsItemRight" id="count2">
-                        -20%
+                        +25%
                     </h4>
                 </div>
 

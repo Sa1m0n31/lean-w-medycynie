@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a1b282-3991-4a4f-a285-2d22951564a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/hero_image_produkty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-produkty.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-eksperci.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-eksperci.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-misja.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-misja.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -93,7 +104,18 @@
       <workItem from="1611849477272" duration="5037000" />
       <workItem from="1612114320358" duration="513000" />
       <workItem from="1612635661161" duration="600000" />
-      <workItem from="1612785927769" duration="3801000" />
+      <workItem from="1612785927769" duration="3802000" />
+      <workItem from="1612804495805" duration="596000" />
+      <workItem from="1612820695669" duration="651000" />
+      <workItem from="1612957310184" duration="15000" />
+      <workItem from="1612957915855" duration="17000" />
+      <workItem from="1612960373328" duration="27000" />
+      <workItem from="1613005872443" duration="598000" />
+      <workItem from="1613139679407" duration="961000" />
+      <workItem from="1613158914234" duration="13000" />
+      <workItem from="1613425037490" duration="656000" />
+      <workItem from="1613501168151" duration="1146000" />
+      <workItem from="1613557589897" duration="7274000" />
     </task>
     <servers />
   </component>

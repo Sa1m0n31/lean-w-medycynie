@@ -2928,3 +2928,139 @@ span.wpcf7-list-item {
     }
 
 }
+
+/* Produkty */
+
+.pageProduktyHeader {
+    background: url("./img/hero_image_produkty.png");
+    background-position: 80% 20%;
+}
+
+.produktyMain {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.pageProduktyItem {
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 0;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.pageProduktyItem:last-of-type {
+    border-bottom: none;
+}
+
+.pageProduktyItem:first-of-type {
+    padding-top: 0;
+}
+
+.pageProduktyItemLeft {
+    position: relative;
+    width: 21%;
+}
+
+.pageProduktyItemLeftNumber {
+    position: absolute;
+    top: -30px;
+    left: -35px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.pageProduktyItemLeftHeader {
+    font-size: 44px;
+    position: relative;
+}
+
+.pageProduktyItemLeftHeader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 17px;
+    height: 2px;
+    background: var(--lean-main);
+}
+
+.pageProduktyItemLeftDescription {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 30px;
+    max-width: 170px;
+}
+
+.pageProduktyItemRight {
+    font-size: 17px;
+    margin-bottom: 20px;
+    width: 1030px;
+}
+
+.pageProduktyItemImages {
+    display: flex;
+}
+
+.pageProduktyItemImg {
+    width: 313px;
+    height: 381px;
+    border-radius: 8px;
+    margin-right: 90px;
+}
+
+.pageProduktyItemImgBig {
+    width: 550px;
+    height: 308px;
+}
+
+.pageProduktyItemImgSqr {
+    width: 380px;
+    height: 312px;
+}
+
+.akademiaHealthcareBtn {
+    background-color: transparent;
+    height: 55px;
+    border: 1px solid #789C4A;
+    border-radius: 4px;
+    margin-top: 40px;
+    transition: .5s all;
+}
+
+.akademiaHealthcareBtn:hover {
+    border: none;
+    background-color: var(--lean-main);
+}
+
+.akademiaHealthcareBtn:hover a {
+    color: #fff;
+}
+
+.akademiaHealthcareBtn a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 17px;
+    transition: .5s all;
+}
+
+.pageProduktyItem {
+    position: relative;
+}
+
+.pageProduktyItem .kotwica {
+    display: block;
+    position: absolute;
+    top: -180px;
+    width: 1px;
+    height: 10px;
+}

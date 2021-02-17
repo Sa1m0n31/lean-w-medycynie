@@ -102,7 +102,7 @@ get_header();
             <div class="stats">
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość wykonanych transformacji
+                        Liczba wykonanych transformacji
                     </h3>
                     <h4 class="statsItemRight" id="count1">
                         5
@@ -120,6 +120,15 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
+                        Oszczędności w MLN
+                    </h3>
+                    <h4 class="statsItemRight">
+                        <span id="count3">30</span>
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
                         NPS - Wskaźnik oceny Klientów
                     </h3>
                     <h4 class="statsItemRight" id="count2">
@@ -129,28 +138,19 @@ get_header();
 
                 <div class="statsItem">
                     <h3 class="statsItemLeft">
-                        Ilość oszczędności w MLN
-                    </h3>
-                    <h4 class="statsItemRight">
-                        <span id="count3">30</span>
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
-                        Ilość przeszkolonych osób
-                    </h3>
-                    <h4 class="statsItemRight" id="count6">
-                        758
-                    </h4>
-                </div>
-
-                <div class="statsItem">
-                    <h3 class="statsItemLeft">
-                        Wskaźnik ROI<br/>zwrotu z inwestycji
+                        ROI<br/>zwrot z inwestycji
                     </h3>
                     <h4 class="statsItemRight mobileSmaller">
                         <span class="smaller">+</span><span id="count7">300</span><span class="smaller">%</span>
+                    </h4>
+                </div>
+
+                <div class="statsItem">
+                    <h3 class="statsItemLeft">
+                        Liczba przeszkolonych osób
+                    </h3>
+                    <h4 class="statsItemRight" id="count6">
+                        1000
                     </h4>
                 </div>
 
@@ -245,7 +245,7 @@ get_header();
         </div>
 
         <div class="ofertaRight" id="oferta1">
-            <div class="ofertaItem">
+            <a class="ofertaItem" href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ) . '/#lean-hospital'; ?>">
                 <img class="ofertaBackground" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-1.jpg"; ?>" alt="oferta-1" />
 
                 <h3 class="ofertaNumber">01</h3>
@@ -263,9 +263,9 @@ get_header();
                     <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
                     <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
                 </div>
-            </div>
+            </a>
 
-            <div class="ofertaItem" id="oferta2">
+            <a class="ofertaItem" id="oferta2" href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ) . '/#diagnoza-potencjalu'; ?>">
                 <img class="ofertaBackground" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-2.jpg"; ?>" alt="oferta-2" />
 
                 <h3 class="ofertaNumber">02</h3>
@@ -283,9 +283,9 @@ get_header();
                     <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
                     <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
                 </div>
-            </div>
+            </a>
 
-            <div class="ofertaItem">
+            <a class="ofertaItem" href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ) . '/#online-transformacje'; ?>">
                 <img class="ofertaBackground" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-3.jpg"; ?>" alt="oferta-3" />
 
                 <h3 class="ofertaNumber">03</h3>
@@ -303,9 +303,9 @@ get_header();
                     <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
                     <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
                 </div>
-            </div>
+            </a>
 
-            <div class="ofertaItem">
+            <a class="ofertaItem" href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ) . '/#akademia-healthcare'; ?>">
                 <img class="ofertaBackground" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-4.jpg"; ?>" alt="oferta-4" />
 
                 <h3 class="ofertaNumber">04</h3>
@@ -323,9 +323,9 @@ get_header();
                     <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
                     <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
                 </div>
-            </div>
+            </a>
 
-            <div class="ofertaItem">
+            <a class="ofertaItem" href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ) . '/#warsztaty-leanair'; ?>">
                 <img class="ofertaBackground" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/oferta-5.jpg"; ?>" alt="oferta-5" />
 
                 <h3 class="ofertaNumber">05</h3>
@@ -343,7 +343,7 @@ get_header();
                     <img class="ofertaNext" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next-black.svg"; ?>" alt="click" />
                     <img class="ofertaNextHover" src="<?php echo get_bloginfo('stylesheet_directory') . "/img/next.svg"; ?>" alt="click" />
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 

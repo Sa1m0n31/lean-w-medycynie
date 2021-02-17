@@ -132,6 +132,19 @@
     .leanNawigator .progressBar {
         width: 55vw;
     }
+
+    .produktyMain {
+        width: 100%;
+    }
+
+    .pageProduktyItemLeft {
+        padding-right: 50px;
+        width: 35%;
+    }
+
+    .pageProduktyItemRight {
+        width: 65%;
+    }
 }
 
 @media(max-width: 1600px) {
@@ -457,6 +470,20 @@
     .progressBar {
         top: calc(132px + 0.8rem)
     }
+
+    .pageProduktyItemImages {
+        justify-content: space-between;
+    }
+
+    .pageProduktyItemImg {
+        width: 45%;
+        height: auto;
+        margin: 0;
+    }
+
+    .pageProduktyItemImgSqr2, .pageProduktyItemImgBig {
+        width: 90%;
+    }
 }
 
 @media(max-width: 1250px) {
@@ -650,7 +677,20 @@
 
 @media(max-width: 1000px) {
     html, body, .container {
+        /*overflow-x: hidden;*/
+    }
+
+    html, body {
         overflow-x: hidden;
+    }
+
+    .akademiaHealthcareBtn {
+        transform: translateX(-30px);
+        background: var(--lean-main);
+    }
+
+    .akademiaHealthcareBtn a {
+        color: #fff;
     }
 
     /* Nasza misja */
@@ -718,6 +758,25 @@
     .smsItem {
         width: 100%;
         margin: 30px 0;
+    }
+
+    .pageProduktyItem {
+        flex-direction: column;
+    }
+
+    .pageProduktyItemLeft {
+        margin-bottom: 40px;
+        padding-right: 0;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .pageProduktyItemLeftNumber {
+        transform: translateX(30px);
+    }
+
+    .pageProduktyItemRight {
+        width: 100%;
     }
 }
 
@@ -990,6 +1049,18 @@
 }
 
 @media(max-width: 700px) {
+    .pageProduktyItemLeftHeader {
+        font-size: 24px;
+    }
+
+    .pageProduktyItemLeftNumber {
+        font-size: 18px;
+    }
+
+    .pageProduktyItemLeftDescription, .pageProduktyItemRightP, .akademiaHealthcareBtn a {
+        font-size: 14px;
+    }
+
     .faqItem:hover .arrow {
         transform: rotate(0);
     }
@@ -1051,9 +1122,9 @@
     }
 
     .wierzymyLeft {
-        width: 100%;
-        height: auto;
-        margin-bottom: 5px;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 5px !important;
     }
 
     .wierzymy .bigHeader2 {
