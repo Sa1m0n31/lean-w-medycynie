@@ -3253,4 +3253,5 @@ span#cookieconsent\:desc {
     left: 40px;
     z-index: 9999999;
     transform: translateY(50%);
+    opacity: 0;
 }

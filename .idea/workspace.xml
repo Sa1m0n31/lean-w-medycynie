@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a1b282-3991-4a4f-a285-2d22951564a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/cookies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-polityka-prywatnosci.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/lean_photo_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/lean_photo_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-produkty.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-produkty.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +102,7 @@
       <workItem from="1613425037490" duration="656000" />
       <workItem from="1613501168151" duration="1146000" />
       <workItem from="1613557589897" duration="7274000" />
-      <workItem from="1613639026389" duration="13112000" />
+      <workItem from="1613639026389" duration="13530000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,7 @@ setTimeout(() => {
             cookiesImg.style.display = "none";
         }
         cookiesImg.style.bottom = cookiesHeight / 2 + "px";
+        cookiesImg.style.opacity = 1;
     }
     else {
         cookiesImg.style.display = "none";
