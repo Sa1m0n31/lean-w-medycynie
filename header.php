@@ -11,6 +11,8 @@ maximum-scale=5.0, user-scalable=yes" />
     <?php wp_head(); ?>
 </head>
 <body>
+    <!-- Cookies img -->
+    <img class="cookiesImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/cookies.png'?>" alt="ciasteczka" />
     <!-- MENU -->
     <header class="topMenu">
         <div class="logo">
@@ -45,7 +47,7 @@ maximum-scale=5.0, user-scalable=yes" />
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
-                <!--<li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'sklep' )->ID ); ?>">Sklep</a></li>-->
+                <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ); ?>">Produkty</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
             </ul>
             <div class="mobileMenuBottom">
@@ -77,6 +79,15 @@ maximum-scale=5.0, user-scalable=yes" />
                     }
                 ?>" href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">
                     Misja
+                </a>
+            </li>
+            <li class="menuItem menuItemOrdinary">
+                <a class="<?php
+                if(is_page('produkty')) {
+                    echo 'green';
+                }
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ); ?>">
+                    Produkty
                 </a>
             </li>
             <li class="menuItem menuItemOrdinary">

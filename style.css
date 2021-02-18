@@ -3053,6 +3053,10 @@ span.wpcf7-list-item {
     transition: .5s all;
 }
 
+.pageProduktyItemImages {
+    margin-top: 30px;
+}
+
 .pageProduktyItem {
     position: relative;
 }
@@ -3063,4 +3067,190 @@ span.wpcf7-list-item {
     top: -180px;
     width: 1px;
     height: 10px;
+}
+
+/* Polityka prywatnosci */
+
+.politykaPrywatnosci {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.politykaLeft {
+    position: sticky;
+    top: 180px;
+    left: 0;
+    width: 40%;
+    height: fit-content;
+}
+
+.politykaRight {
+    width: 55%;
+}
+
+.politykaSection {
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.politykaSection:first-of-type {
+    padding-top: 0;
+}
+
+.politykaHeader {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.politykaSection p {
+    font-size: 17px;
+}
+
+.politykaSection a {
+    color: inherit;
+    font-weight: 700;
+    transition: .4s color;
+}
+
+.politykaSection a:hover {
+    color: var(--lean-main);
+}
+
+.politykaSection:last-of-type {
+    border-bottom: none;
+}
+
+.footerSecond {
+    height: 60px;
+}
+
+.footerSecondRight {
+    height: 80%;
+}
+
+.politykaLink {
+    color: #fff;
+    text-decoration: none;
+    padding-right: 40px;
+    transition: .2s color;
+    font-size: 14px;
+    border-right: 1px solid #2A312F;
+    display: flex;
+    height: 80%;
+    align-items: center;
+}
+
+.politykaLink:hover {
+    color: var(--lean-main);
+}
+
+/* 404 */
+
+.page404 {
+    margin: 50px auto;
+    width: 85%;
+}
+
+.page404Top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page404TopLeftHeader {
+    font-size: 90px;
+    position: relative;
+}
+
+.page404TopLeft {
+    padding-top: 80px;
+}
+
+.page404TopLeftHeader::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 41px;
+    height: 4px;
+    background: var(--lean-main);
+}
+
+.page404TopLeftText {
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.page404TopRight {
+    font-size: 400px;
+    color: #E9E9E9;
+    font-weight: 900;
+}
+
+.socialMediaIcons404 {
+    margin-top: 90px;
+    position: relative;
+}
+
+.socialMediaIcons404::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 41px;
+    height: 4px;
+    background: var(--lean-main);
+}
+
+.page404Hint {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.page404Menu {
+    list-style-type: none;
+    display: flex;
+    margin-top: 30px;
+}
+
+.page404Menu li:first-of-type {
+    margin-left: 0;
+}
+
+/* Cookies */
+
+span#cookieconsent\:desc {
+    font-size: 17px;
+    padding: 30px 30px 30px 120px;
+}
+
+.cc-link {
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    transition: .4s all;
+}
+
+.cc-link:active, .cc-link:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.cc-link:hover {
+    color: var(--lean-main) !important;
+}
+
+.cc-revoke {
+    display: none !important;
+}
+
+.cookiesImg {
+    position: fixed;
+    bottom: 20px;
+    left: 40px;
+    z-index: 9999999;
+    transform: translateY(50%);
 }

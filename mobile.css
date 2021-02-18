@@ -176,6 +176,10 @@
         width: 60%;
     }
 
+    .page404 {
+        width: 100%;
+    }
+
     /* DOFINANSOWANIA */
     .frame .icon {
         width: 50px;
@@ -284,6 +288,12 @@
 
     .landingButton {
         margin-top: 10px;
+    }
+
+    /* 404 */
+    .page404TopRight {
+        font-size: calc(100px + 240 * ((100vw - 320px) / 900));
+        padding-left: 40px;
     }
 
     /* Wierzymy */
@@ -502,6 +512,14 @@
         display: none;
     }
 
+    .politykaPrywatnosci {
+        width: 100%;
+    }
+
+    .politykaLeft {
+        top: 150px;
+    }
+
     /* Pages */
     .pageHeader {
         display: none !important;
@@ -676,12 +694,28 @@
 }
 
 @media(max-width: 1000px) {
-    html, body, .container {
-        /*overflow-x: hidden;*/
-    }
-
     html, body {
         overflow-x: hidden;
+    }
+
+    .page404TopLeftHeader {
+        font-size: 50px;
+    }
+
+    .page404TopLeftText, .page404Hint {
+        font-size: 18px;
+    }
+
+    .politykaPrywatnosci {
+        flex-direction: column;
+    }
+
+    .politykaLeft, .politykaRight {
+        width: 100%;
+    }
+
+    .politykaLeft {
+        margin-bottom: 50px;
     }
 
     .akademiaHealthcareBtn {
@@ -941,6 +975,16 @@
         padding-left: 35px;
         padding-right: 35px;
     }
+
+    /* Cookies */
+    .cookiesImg {
+        display: none !important;
+    }
+
+    span#cookieconsent\:desc {
+        font-size: 14px;
+        padding: 0 !important;
+    }
 }
 
 @media(max-width: 800px) {
@@ -1045,6 +1089,11 @@
     /* Lean nawigator */
     .bigHeaderNarrow, .textAfterBigHeader, .leanNawigator > .bigHeader {
         width: 90%;
+    }
+
+    /* 404 */
+    .page404TopLeft {
+        padding-top: 0;
     }
 }
 
@@ -1302,9 +1351,27 @@
     .leanNawigator .bigHeader {
         line-height: 36px;
     }
+
+    /* 404 */
+    .page404Top {
+        flex-direction: column;
+    }
+
+    .page404Top > * {
+        width: 100%;
+    }
+
+    .page404 .menuItem {
+        margin-bottom: 25px;
+    }
 }
 
 @media(max-width: 600px) {
+    /* TMP */
+    .footerSecondRight {
+        display: none;
+    }
+
     /* Three boxes */
     .boxItem {
         width: 100%;
@@ -1453,6 +1520,11 @@
     .mobileSmaller span {
         font-size: 18px !important;
     }
+
+    /* 404 */
+    .page404Menu {
+        flex-direction: column;
+    }
 }
 
 @media(max-width: 500px) {
@@ -1547,6 +1619,11 @@
     .procesBoxItem {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    span#cookieconsent\:desc {
+        font-size: 12px;
+        line-height: 14px;
     }
 }
 

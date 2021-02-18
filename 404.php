@@ -1,60 +1,64 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package Lean
- */
-
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main class="page404">
+    <div class="page404Top">
+        <div class="page404TopLeft">
+            <h1 class="page404TopLeftHeader">Upsss...</h1>
+            <h2 class="page404TopLeftText">
+                Chyba nie możemy znaleźć
+                strony, której szukasz.
+            </h2>
+        </div>
+        <div class="page404TopRight">
+            404
+        </div>
+    </div>
+    <div class="page404Bottom">
+        <h3 class="page404Hint">
+            W zamian proponujemy odwiedzić<br/>kilka innych miejsc
+        </h3>
+        <ul class="page404Menu">
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('lean nawigator')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('akademia')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('konferencje')) {
+                echo 'greenBackground';
+            }
+            ?>" ><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
+            <li class="menuItem menuItemBordered <?php
+            if(is_page('dofinansowania')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
+        </ul>
+        <div class="socialMediaIcons socialMediaIcons404">
+            <a aria-label="Facebook" id="facebook" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'lean' ); ?></h1>
-			</header><!-- .page-header -->
+            </a>
+            <a aria-label="Youtube" id="youtube" href="https://www.youtube.com/channel/UCnn9QMd7UEPmusGA_8pzCNA" target="_blank" rel="noreferrer">
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'lean' ); ?></p>
+            </a>
+            <a aria-label="Linkedin" id="linkedin" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
 
-					<?php
-					get_search_form();
+            </a>
+            <a aria-label="Twitter" id="twitter" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'lean' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$lean_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'lean' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$lean_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+            </a>
+        </div>
+    </div>
+</main>
+</div>
 
 <?php
 get_footer();
+?>

@@ -1,3 +1,30 @@
+/* Cookies popup */
+setTimeout(() => {
+    let btn = document.querySelector(".cc-dismiss");
+    let cookiesWindow = document.querySelector(".cc-window");
+    const cookiesImg = document.querySelector(".cookiesImg");
+    setTimeout(() => {
+
+    }, 1000);
+    if(cookiesWindow) {
+        let cookiesHeight = cookiesWindow.clientHeight;
+        console.log(cookiesHeight / 2);
+        if(cookiesHeight === 0) {
+            cookiesImg.style.display = "none";
+        }
+        cookiesImg.style.bottom = cookiesHeight / 2 + "px";
+    }
+    else {
+        cookiesImg.style.display = "none";
+    }
+    if(btn) {
+        btn.addEventListener("click", () => {
+            cookiesImg.style.display = "none";
+            console.log("click!");
+        });
+    }
+}, 1000);
+
 /* Hamburger menu */
 
 const openMenu = () => {

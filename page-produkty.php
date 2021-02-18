@@ -76,6 +76,7 @@ get_header();
                 <div class="pageProduktyItemImages">
                     <img class="pageProduktyItemImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_photo_3.jpg'; ?>" alt="diagnoza-potencjalu" />
                     <img class="pageProduktyItemImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_photo_4.jpg'; ?>" alt="diagnoza-potencjalu" />
+
                 </div>
             </div>
         </section>
