@@ -129,7 +129,7 @@ get_header();
                     w miejscu pracy.
                 </h3>
                 <button class="akademiaHealthcareBtn">
-                    <a href="https://www.leanhealthcareacademy.pl/" rel="noreferrer">
+                    <a href="<?php echo get_page_link(get_page_by_title('akademia')->ID); ?>">
                         Przejdź do Akademii Healthcare
                     </a>
                 </button>

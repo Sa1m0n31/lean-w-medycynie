@@ -53,7 +53,7 @@
 
         <div class="footerCol">
             <ul class="footerMenu">
-                <li class="footerMenuItem"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
@@ -93,12 +93,6 @@
             </div>
         </div>
     </div>
-
-    <!--<div class="footerThird">
-        <h5>
-            Strona Lean w Medycynie, na której się znajdujesz korzysta z plików cookie. Pozostając na tej stronie wyrażasz zgodę na korzystanie z nich.
-        </h5>
-    </div>-->
 </footer>
 
 <?php wp_footer(); ?>

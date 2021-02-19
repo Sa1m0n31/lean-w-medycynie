@@ -38,11 +38,8 @@ maximum-scale=5.0, user-scalable=yes" />
                 </button>
             </div>
             <ul class="mobileMenu">
-                <li class="mobileMenuItem mobileMenuGreen">
-                    <a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">
-                        Lean Nawigator
-                    </a></li>
-                <li class="mobileMenuItem mobileMenuGreen"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
+                <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+                <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link(get_page_by_title('akademia')->ID); ?>">Akademia</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
@@ -118,7 +115,7 @@ maximum-scale=5.0, user-scalable=yes" />
             if(is_page('akademia')) {
                 echo 'greenBackground';
             }
-            ?>"><a href="https://leanhealthcareacademy.pl">Akademia</a></li>
+            ?>"><a href="<?php echo get_page_link(get_page_by_title('akademia')->ID); ?>">Akademia</a></li>
             <li class="menuItem menuItemBordered <?php
             if(is_page('konferencje')) {
                 echo 'greenBackground';

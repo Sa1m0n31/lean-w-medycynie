@@ -3155,6 +3155,11 @@ span.wpcf7-list-item {
     width: 85%;
 }
 
+.page404 .socialMediaIcons a {
+    width: 38px;
+    height: 38px;
+}
+
 .page404Top {
     display: flex;
     justify-content: space-between;
@@ -3254,4 +3259,376 @@ span#cookieconsent\:desc {
     z-index: 9999999;
     transform: translateY(50%);
     opacity: 0;
+}
+
+/* Akademia */
+
+.pageAkademiaHeader {
+    background: url("./img/lean_nawigator_hero_akademia.png");
+}
+
+.pageAkademiaMain ul li, .pageAkademiaMain p {
+    font-size: 17px;
+}
+
+.pageAkademiaMain ul li {
+    margin-left: 40px;
+}
+
+.akademiaDivider {
+    display: block;
+    width: 2000px;
+    height: 1px;
+    background: #D4D4D4;
+    margin: 20px 0;
+}
+
+.addAfter {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.addAfter::after {
+    content: "";
+    position: relative;
+    bottom: -12px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background: var(--lean-main);
+}
+
+.akademiaImg {
+    margin-top: 40px;
+}
+
+.akademiaLeft {
+    width: 33%;
+}
+
+.akademiaRight {
+    width: 60%;
+}
+
+.pageAkademiaMain {
+    margin-bottom: 50px;
+}
+
+.maszPytaniaFrame {
+    border: 1px solid #D4D4D4;
+    border-radius: 8px;
+    margin: 25px 0;
+    width: 453px;
+    height: 153px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.maszPytaniaFrame h2 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.maszPytaniaBtn {
+    width: 204px;
+    height: 55px;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+    font-weight: 700;
+    margin-left: 30px;
+    background: #89A861;
+    transition: .4s all;
+}
+
+.maszPytaniaBtn a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    transition: .4s all;
+    padding: 0 20px;
+}
+
+.nextSmall {
+    margin-left: 20px;
+}
+
+.maszPytaniaBtn:hover {
+    background: var(--lean-main);
+}
+
+.poziomyWeryfikacji {
+    display: flex;
+}
+
+.poziomyWeryfikacjiItem {
+    width: 153px;
+    height: 153px;
+    margin-right: 30px;
+    border: 1px solid #D4D4D4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.poziomyWeryfykacjiTop {
+    text-transform: uppercase;
+    color: #D4D4D4;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.poziomyWeryfykacjiTop::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 4px;
+    background: #E9B73F;
+}
+
+.poziomyWeryfikacjiItem:nth-of-type(2) .poziomyWeryfykacjiTop::after {
+    background: #FD782F;
+}
+
+.poziomyWeryfikacjiItem:nth-of-type(3) .poziomyWeryfykacjiTop::after {
+    background: #BBD95E;
+}
+
+.poziomyWeryfikacjiItem:last-of-type .poziomyWeryfykacjiTop::after {
+    background: #BDBDBD;
+}
+
+.poziomyWeryfykacjiBottom {
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-align: center;
+}
+
+.akademiaH4 {
+    font-size: 21px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.akademiaH4::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background: var(--lean-main);
+}
+
+.inspirator {
+    color: #E9B73F;
+}
+
+.leader {
+    color: #FD782F;
+}
+
+.expert {
+    color: #BBD95E;
+}
+
+.master {
+    color: #BDBDBD;
+}
+
+.akademiaThreeFrames {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.akademiaThreeFramesItem {
+    border: 1px solid #E9E9E9;
+    margin: 0 20px 20px 0;
+    border-radius: 8px;
+    padding: 20px 10px;
+}
+
+.akademiaThreeFramesItem:last-of-type {
+    width: 370px;
+}
+
+.pageAkademiaMain ul {
+    list-style-type: none;
+}
+
+.pageAkademiaMain ul li {
+    position: relative;
+    margin-left: 18px;
+}
+
+.pageAkademiaMain ul li::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #2A312F;
+    position: absolute;
+    left: -12px;
+    top: 11px;
+}
+
+.akademiaNumber {
+    color: var(--lean-main);
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.akademiaNumber::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background: var(--lean-main);
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+.akademiaNumberCaption {
+    margin: 15px auto 0;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 75%;
+}
+
+.fontSmall {
+    font-size: 25px;
+}
+
+.sesjaHeader {
+    position: relative;
+    margin: 40px 0 20px;
+}
+
+.sesjaHeader::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background: #E9B73F;
+}
+
+.pageAkademiaSection4 .poziomyWeryfikacjiItem:first-of-type {
+    margin-top: 0 !important;
+}
+
+.pageAkademiaSection4 .poziomyWeryfikacjiItem {
+    margin-top: 50px !important;
+}
+
+.certifykatyGrid {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 750px;
+}
+
+.certyfikatyItem {
+    position: relative;
+    width: 322px;
+    height: 227px;
+    margin: 20px 40px 20px 0;
+}
+
+.warunkiCenoweFrame {
+    margin-top: 50px;
+    border: 1px solid #D4D4D4;
+    width: 689px;
+    height: 333px;
+    border-radius: 8px;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.warunkiCenoweHeader {
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.warunkiCenoweHeader::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 2px;
+    background: var(--lean-main);
+}
+
+.napiszDoNasBtn {
+    margin: 40px auto 0 auto;
+}
+
+.warunkiCenoweText {
+    font-size: 17px;
+    text-align: center;
+}
+
+.endQuote {
+    text-align: center;
+    font-size: 37px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.quoteAuthor {
+    margin: 40px auto 0 auto;
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 600px;
+}
+
+.quoteAuthor::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 2px;
+    background: var(--lean-main);
+}
+
+.pageAkademiaMain {
+    width: 90%;
+    margin-left: 0;
+}
+
+.liMargin {
+    display: block;
+    margin-bottom: 10px;
 }

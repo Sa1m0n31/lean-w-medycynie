@@ -180,6 +180,34 @@
         width: 100%;
     }
 
+    /* Akademia */
+    .akademiaImg {
+        width: 140%;
+        height: auto;
+    }
+
+    .certifykatyGrid {
+        justify-content: space-between;
+    }
+
+    .certyfikatyItem {
+        width: 45%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .poziomyWeryfikacji {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .poziomyWeryfikacjiItem {
+        width: 45%;
+        margin-right: 0;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
     /* DOFINANSOWANIA */
     .frame .icon {
         width: 50px;
@@ -273,6 +301,17 @@
 }
 
 @media(max-width: 1300px) {
+    /* Akademia */
+    .akademiaThreeFramesItem {
+        padding: 10px;
+    }
+
+    .akademiaNumber {
+        font-size: 50px;
+    }
+
+
+
     /* Landing */
     .dots {
         bottom: 140px;
@@ -370,6 +409,13 @@
 }
 
 @media(max-width: 1200px) {
+    /* Akademia */
+    .warunkiCenoweFrame {
+        width: auto;
+        height: auto;
+        padding: 20px 30px;
+    }
+
     /* Oferta */
     .naszaMisja, .wierzymy {
         flex-direction: column;
@@ -694,6 +740,14 @@
 }
 
 @media(max-width: 1000px) {
+    /* Akademia */
+    .akademiaImg {
+        width: 90%;
+        height: auto;
+        margin: 40px auto 0 auto;
+        display: block;
+    }
+
     html, body {
         overflow-x: hidden;
     }
@@ -1525,9 +1579,57 @@
     .page404Menu {
         flex-direction: column;
     }
+
+    /* Akademia */
+    .maszPytaniaFrame {
+        width: 100%;
+        padding: 20px;
+    }
 }
 
 @media(max-width: 500px) {
+    /* Akademia */
+    .pageAkademiaMain p, .pageAkademiaMain ul li, .akademiaNumberCaption, .poziomyWeryfykacjiTop, .poziomyWeryfykacjiBottom {
+        font-size: 14px;
+    }
+
+    .pageAkademiaMain:nth-of-type(2) .politykaLeft, .pageAkademiaMain:nth-of-type(3) .politykaLeft  {
+        margin-bottom: 0px
+    }
+
+    .endQuote {
+        font-size: 25px;
+    }
+
+    .certifykatyGrid {
+        justify-content: center;
+    }
+
+    .certyfikatyItem {
+        width: 90%;
+    }
+
+    .akademiaNumber {
+        font-size: 30px;
+    }
+
+    .maszPytaniaFrame {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .akademiaThreeFrames {
+        justify-content: center;
+    }
+
+    .maszPytaniaBtn {
+        margin: 25px 0 0 0;
+    }
+
+    .pageAkademiaMain ul li::before {
+        top: 7px;
+    }
+
     /* Landing */
     .dots {
         left: 200px;
