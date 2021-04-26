@@ -1,0 +1,1817 @@
+@media(min-width: 2000px) {
+    .misjaFirst, .wierzymyPage, .naszeWartosci, .liczbyIMy, .dlaczegoMy,
+    .eksperciItem {
+        padding: 0 50px;
+    }
+
+    .imgToRight {
+        margin: 100px auto;
+        transform: translateX(0);
+    }
+}
+
+@media(min-width: 1800px) {
+    .menuItemBordered a {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .topMenu {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1800px) {
+    .container {
+        width: 90%;
+    }
+
+    section {
+        width: 100% !important;
+    }
+
+    /* Top menu */
+    .menuItem {
+        margin: 0 3px;
+    }
+
+    /* Three boxes */
+    .progressBar {
+        width: calc(90vw - 370px);
+    }
+
+    /* Wierzymy */
+    .wierzymyRight {
+        padding-left: 40px;
+    }
+
+    .wierzymyPage .wierzymyRight {
+        padding-left: 40px !important;
+    }
+
+    /* MISJA */
+    .naszaMisjaHeader {
+        background-position-x: 80%;
+    }
+
+    /* img to right */
+    .imgToRight {
+        transform: translateX(calc(90vw * 0.4));
+    }
+
+    /* KONTAKT */
+    .kontaktContainer {
+        width: 100%;
+    }
+
+    /* DOFINANSOWANIA */
+    .dofinansowaniaContainer {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    .dofinansowaniaTopImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .dofFaq .left {
+        width: 60%;
+    }
+
+    .dofFaq .right {
+        width: 38%;
+        display: flex;
+        align-items: center;
+    }
+
+    .faqImg {
+        width: 100%;
+        height: auto;
+    }
+
+    /* SINGLE KONFERENCJA */
+    .konferencjaContainer {
+        width: 100%;
+    }
+
+    .konferencjaInner {
+        justify-content: space-between;
+    }
+
+    .konferencjaMenu {
+        width: 25%;
+    }
+
+    .konferencjaContent {
+        width: 70%;
+    }
+
+    .galeriaItemContainer {
+        width: 252px;
+        height: 252px;
+    }
+
+    /* Lean nawigator */
+    .circleContainer::after {
+        width: 70px;
+        right: -80px;
+    }
+}
+
+@media(max-width: 1700px) {
+    /* Top menu */
+    .topMenu .socialMediaIcons {
+        display: none;
+    }
+
+    .menu {
+        justify-content: space-between;
+    }
+
+    .leanNawigator .progressBar {
+        width: 55vw;
+    }
+
+    .produktyMain {
+        width: 100%;
+    }
+
+    .pageProduktyItemLeft {
+        padding-right: 50px;
+        width: 35%;
+    }
+
+    .pageProduktyItemRight {
+        width: 65%;
+    }
+}
+
+@media(max-width: 1600px) {
+    /* DOFINANSOWANIA */
+    .frame {
+        padding: 15px;
+    }
+
+    .framePart {
+        width: 40% !important;
+    }
+
+    .framePart:first-child {
+        width: 20% !important;
+    }
+
+    .bigHeader {
+        font-size: 1rem !important;
+    }
+}
+
+@media(max-width: 1500px) {
+    /* Oferta */
+    .ofertaLeft {
+        width: 35%;
+    }
+
+    .ofertaRight {
+        width: 60%;
+    }
+
+    .page404 {
+        width: 100%;
+    }
+
+    /* Akademia */
+    .certifykatyGrid {
+        justify-content: space-between;
+    }
+
+    .certyfikatyItem {
+        width: 45%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .poziomyWeryfikacji {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .poziomyWeryfikacjiItem {
+        width: 45%;
+        margin-right: 0;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* DOFINANSOWANIA */
+    .frame .icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .frame .framePercent {
+        margin-left: 30px;
+    }
+
+    .person {
+        margin-right: 80px;
+    }
+
+    .person:last-child {
+        margin-right: 0;
+    }
+
+    /* Lean nawigator */
+    .line {
+        display: none;
+    }
+
+    .smsContainer {
+        grid-column-gap: 5%;
+    }
+
+    .smsItemRight {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .menu {
+        margin-left: 20px;
+    }
+
+    .menuItemBordered {
+        padding: 0 15px;
+    }
+
+    .paoc-popup-modal img {
+        width: 90vw !important;
+        height: auto !important;
+    }
+
+    /* EKSPERCI */
+    .eksperciKontakt {
+        flex-direction: column;
+    }
+
+    .eksperciKontakt .eksperciKontaktItem {
+        margin-bottom: 25px;
+        height: 50px;
+    }
+
+    .eksperciItemRight {
+        margin-right: 40px;
+    }
+
+    /* Wierzymy */
+    .wierzymyRight {
+        margin-top: 30px;
+    }
+
+    .wierzymy .landingButton {
+        margin-top: 30px !important;
+    }
+
+
+    .wierzymy .wierzymyLeft {
+        width: 500px;
+        height: 301px;
+    }
+
+    /* Oferta */
+    .misjaLeft {
+        width: 450px;
+        height: 346px;
+    }
+
+    /* Konferencje */
+    .agendaInnerItem .godziny {
+        width: 20%;
+    }
+
+    .agendaInnerItem .event {
+        width: 75%;
+    }
+
+    .naszaMisjaHeader {
+        background-position-x: 65%;
+    }
+
+    .pageDofinansowaniaHeader, .leanNawigatorHeader {
+        background-position-x: 60%;
+    }
+
+    /* Three boxes */
+    .boxItem {
+        width: 30%;
+    }
+}
+
+@media(max-width: 1300px) {
+    /* Akademia */
+    .akademiaThreeFramesItem {
+        padding: 10px;
+    }
+
+    .akademiaNumber {
+        font-size: 50px;
+    }
+
+    .akademiaImg {
+        width: 80%;
+        height: auto;
+    }
+
+    /* Landing */
+    .dots {
+        bottom: 140px;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .landingText {
+        width: 60%;
+    }
+
+    .landingButton {
+        margin-top: 10px;
+    }
+
+    /* 404 */
+    .page404TopRight {
+        font-size: calc(100px + 240 * ((100vw - 320px) / 900));
+        padding-left: 40px;
+    }
+
+    /* Wierzymy */
+    .wierzymyRight .bigHeader {
+        font-size: 25px;
+    }
+
+    .imgToRight {
+        display: none;
+    }
+
+    /* KONFERENCJE */
+    .konferencjeContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .konferencjeItem {
+        width: 45%;
+    }
+
+    /* DOFINANSOWANIA */
+    .frame {
+        padding: 15px 30px;
+    }
+
+    .frame .framePart:first-child::after, .frame .framePart:nth-child(2)::after {
+        right: -50px;
+    }
+
+    .etapyArrow {
+        margin: 0 10px;
+    }
+
+    .etapyImg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .steps > * {
+        margin: 0 8px;
+    }
+
+   .wizytowki .person {
+       margin-right: 50px;
+   }
+
+   .wizytowki .person:nth-child(2) {
+       margin-right: 0;
+   }
+
+    /* SINGLE KONFERENCJA */
+    .konferencjaMenu {
+        width: 20%;
+    }
+
+    .konferencjaContent {
+        width: 78%;
+    }
+
+    /* Lean nawigator */
+    .smsItem {
+        height: 380px;
+    }
+
+    .smsItemRight li {
+        height: auto;
+        margin: 5px 0;
+    }
+
+    .smsItemRight3x3 li {
+        margin: 3px 0;
+    }
+
+    .smsItemLeft, .smsItemRight {
+        width: 50%;
+    }
+
+    .smsItemRight {
+        width: 100% !important;
+    }
+
+    .statsItemRight {
+        font-size: .8rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .menuItemBordered {
+        padding: 0 12px;
+    }
+
+    .footerCertyfikat--mobile {
+        display: block;
+    }
+
+    /* Akademia */
+    .warunkiCenoweFrame {
+        width: auto;
+        height: auto;
+        padding: 20px 30px;
+    }
+
+    /* Oferta */
+    .naszaMisja, .wierzymy {
+        flex-direction: column;
+    }
+
+    .misjaLeft, .wierzymyLeft {
+        margin-bottom: 40px;
+    }
+
+    /* Footer */
+    .footer .footerCol:last-child {
+        display: none;
+    }
+
+    .footer .footerCol {
+        width: 33%;
+    }
+
+    /* MISJA - nasze wartosci */
+    .naszeWartosciItem {
+        margin-bottom: 30px;
+    }
+
+    /* EKSPERCI */
+    .eksperciItemRight {
+        margin-left: 40px;
+    }
+
+    /* KONTAKT */
+    .kontaktContainer {
+        flex-direction: column;
+    }
+
+    .kontaktContainer > * {
+        width: 100%;
+    }
+
+    .wpcf7-form {
+        margin-top: 0 !important;
+    }
+
+    /* DOFINANSOWANIA */
+    .dofinansowaniaFirst {
+        flex-direction: column;
+    }
+
+    .dofinansowaniaLeft, .dofinansowaniaRight {
+        width: 100%;
+    }
+
+    .dofinansowaniaLeft {
+        margin-bottom: 40px;
+    }
+
+    .dofinansowaniaAbsoluteBox {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dofFaq {
+        flex-direction: column;
+    }
+
+    .dofFaq .left, .dofFaq .right {
+        width: 100%;
+    }
+
+    .dofFaq .right {
+        order: 1;
+    }
+
+    .dofFaq .left {
+        order: 2;
+    }
+
+    .etapHeader {
+        font-size: .8rem;
+    }
+
+    .etapyArrow {
+        width: 30px;
+        height: 45px;
+    }
+
+    /* SINGLE KONFERENCJA */
+    .galeriaInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeriaItemContainer {
+        width: 50vw;
+        height: 50vw;
+        margin: 30px 0;
+    }
+
+    /* Lean nawigator */
+    .procesBoxItemHeader {
+        font-size: 20px;
+    }
+
+    /* Box items */
+    .boxItem {
+        height: 400px;
+        padding-bottom: 55px;
+    }
+
+    .progressBar {
+        top: calc(132px + 0.8rem)
+    }
+
+    .pageProduktyItemImages {
+        justify-content: space-between;
+    }
+
+    .pageProduktyItemImg {
+        width: 45%;
+        height: auto;
+        margin: 0;
+    }
+
+    .pageProduktyItemImgSqr2 {
+        width: 90%;
+    }
+}
+
+@media(max-width: 1250px) {
+    .wizytowki {
+        flex-direction: column;
+    }
+
+    .person {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .progressBarNawigator {
+        display: none;
+    }
+
+    .politykaPrywatnosci {
+        width: 100%;
+    }
+
+    .politykaLeft {
+        top: 150px;
+    }
+
+    /* Pages */
+    .pageHeader {
+        display: none !important;
+    }
+
+    .misjaFirst, .dofinansowaniaFirst {
+        margin-top: 40px;
+    }
+
+    /* Dofinansowania */
+    .frame {
+        flex-direction: column;
+    }
+
+    .framePart:first-child, .framePart {
+        width: 80% !important;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0 !important;
+    }
+
+    .framePart::after {
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 2px !important;
+    }
+
+
+    /* Landing */
+    .container {
+        margin-top: 100px;
+    }
+
+    /* Hamburger menu */
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 26px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .hamburgerLine {
+        width: 32px;
+        height: 2px;
+        background: var(--text);
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .topMenu {
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        padding: 0 5vw;
+        margin-bottom: 100px;
+    }
+
+    .mobileMenuContainer {
+        transform: translateX(0);
+    }
+
+    /* Landing */
+    .sliderPhoto, .dots {
+        /*position: relative; */
+    }
+
+    .dots {
+        display: none;
+        bottom: 55px;
+        left: 30%;
+        transform: translateY(-20%);
+    }
+
+    .dotsMobile {
+        display: flex;
+    }
+
+    .landingLeft {
+        position: relative;
+        left: 30px;
+        top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 55%;
+    }
+
+    .landingTitle, .landingText {
+        width: 100%;
+    }
+
+    .landing {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        height: 500px !important;
+    }
+
+    .landingSlide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .landing .landingButton {
+        width: 40%;
+    }
+
+    .dots {
+        position: absolute !important;
+        align-items: center;
+        left: 50% !important;
+        bottom: 0 !important;
+        width: 50%;
+        transform: translateY(-12px);
+    }
+
+    .ofertaLeft {
+        position: relative;
+    }
+
+    .landingButton:hover::after {
+        display: none !important;
+    }
+
+    /* Oferta */
+    .oferta {
+        flex-direction: column;
+    }
+
+    .ofertaLeft, .ofertaRight {
+        width: 100%;
+    }
+
+    .ofertaLeft {
+        margin-bottom: 40px;
+        top: 30px !important;
+    }
+
+    /* MISJA - Stats */
+    .liczbyIMy .statsItem {
+        width: 45%;
+        margin-right: 5%;
+    }
+
+    /* EKSPERCI */
+    .eksperciImg {
+        width: 350px;
+        height: 455px;
+    }
+
+    /* Lean nawigator */
+    .procesBoxItem {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 32%;
+    }
+
+    .procesBoxContainer .etapyArrow {
+        display: none;
+    }
+}
+
+@media(max-width: 1000px) {
+    /* Akademia */
+    .akademiaImg {
+        width: 90%;
+        height: auto;
+        margin: 40px auto 0 auto;
+        display: block;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .page404TopLeftHeader {
+        font-size: 50px;
+    }
+
+    .page404TopLeftText, .page404Hint {
+        font-size: 18px;
+    }
+
+    .politykaPrywatnosci {
+        flex-direction: column;
+    }
+
+    .politykaLeft, .politykaRight {
+        width: 100%;
+    }
+
+    .politykaLeft {
+        margin-bottom: 50px;
+    }
+
+    .akademiaHealthcareBtn {
+        transform: translateX(-30px);
+        background: var(--lean-main);
+    }
+
+    .akademiaHealthcareBtn a {
+        color: #fff;
+    }
+
+    /* Nasza misja */
+    .naszaMisja {
+        margin-bottom: 90px;
+    }
+
+    /* Referencje */
+    .referencje {
+        flex-direction: column;
+        margin-top: 50px;
+        height: auto;
+    }
+
+    .referencje .ofertaText {
+        width: 75%;
+    }
+
+    .referencjeLeft, .referencjeRight {
+        width: 100%;
+    }
+
+    .referencjeLeft {
+        margin-bottom: 0;
+    }
+
+    .referencjeButtons {
+        display: none;
+    }
+
+    .referencjeButtonsMobile {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: -65px;
+    }
+
+    /* Footer */
+    .footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* MISJA - Dlaczego my */
+    .dlaczegoMyInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dlaczegoMyItem {
+        width: 80%;
+    }
+
+    /* Lean nawigator */
+    .smsContainer {
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 0;
+    }
+
+    .rectArrow {
+        display: none;
+    }
+
+    .smsItem {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .pageProduktyItem {
+        flex-direction: column;
+    }
+
+    .pageProduktyItemLeft {
+        margin-bottom: 40px;
+        padding-right: 0;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .pageProduktyItemLeftNumber {
+        transform: translateX(30px);
+    }
+
+    .pageProduktyItemRight {
+        width: 100%;
+    }
+}
+
+/* Test */
+@media(min-width: 900px) {
+    /* Landing */
+    .landing {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    /* Landing */
+    .landing {
+        min-height: 80vh;
+    }
+
+    .landingLeft {
+        width: 100%;
+        top: 10px;
+        left: 0;
+    }
+
+    .big {
+        font-size: 71px !important;
+        margin: 20px 0 30px;
+    }
+
+    .sliderPhoto {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .landingLeft {
+        height: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .landingButton, .dotsMobile {
+        z-index: 5;
+    }
+
+    .landingTitle {
+        font-size: 24px;
+    }
+
+    .landingTitle .big {
+        font-size: 71px;
+    }
+
+    .landingText {
+        font-size: 12px;
+    }
+
+    .landingTitle::after {
+        bottom: 50px;
+    }
+
+    .landingText {
+        margin-top: -10px;
+    }
+
+    /* EKSPERCI */
+    .eksperciItem {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .eksperciImg {
+        margin-bottom: 25px;
+    }
+
+    .eksperciItemRight {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* KONFERENCJE */
+    .konferencjeContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .konferencjaInner {
+        margin-top: 0;
+    }
+
+    .oKonferencji {
+        flex-direction: column;
+    }
+
+    .oKonferencji > div {
+        width: 100% !important;
+    }
+
+    .konferencjeItem {
+        width: 100%;
+    }
+
+    .konferencjeItemDate, .konferencjeItemPlace {
+        font-size: .6rem;
+    }
+
+    .konferencjeItemTitle {
+        font-size: 1rem;
+    }
+
+    /* DOFINANSOWAANIA */
+    .dofinansowaniaFirst {
+        margin-bottom: 90px;
+    }
+
+    .dofFaq {
+        margin-top: 0;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .etapyArrow {
+        transform: rotate(90deg);
+        margin: 20px 0;
+    }
+
+    .etapyImg {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .extraMargin1 {
+        transform: translate(10px, -50%);
+    }
+
+    .extraMargin2 {
+        transform: translate(3px, -50%);
+    }
+
+    /* SINGLE KONFERENCJA */
+    .konferencjaMenu {
+        display: none;
+    }
+
+    .konferencjaContent {
+        width: 100%;
+    }
+
+    /* Lean nawigator */
+    .procesBoxContainer {
+        flex-direction: column;
+    }
+
+    .procesBoxItem {
+        width: 100%;
+        margin: 20px 0;
+        min-height: 0;
+        height: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    /* Cookies */
+    .cookiesImg {
+        display: none !important;
+    }
+
+    span#cookieconsent\:desc {
+        font-size: 14px;
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .popupaoc-image-popup {
+        width: 45% !important;
+    }
+
+    .popupaoc-img {
+        width: 100% !important;
+    }
+
+    /* Three boxes */
+    .threeBoxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progressBar {
+        display: none;
+    }
+
+    .boxItem {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    /* Wierzymy */
+    .wierzymyRight {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* Footer */
+    .footerFirst, .footerSecond {
+        flex-direction: column;
+    }
+
+    .footerCol {
+        margin-bottom: 30px;
+        height: auto;
+        width: 100% !important;
+    }
+
+    .footerCol::after {
+        display: none;
+    }
+
+    .footerSecond, .footerThird {
+        border: none;
+    }
+
+    .footerSecond {
+        align-items: flex-start;
+    }
+
+    .footerSecondRight h5 {
+        margin: 0 30px 0 0;
+    }
+
+    /* MISJA - Misja first */
+    .misjaBoxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .misjaBoxItem {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* MISJA - wierzymy */
+    .wierzymyPage .wierzymyRight {
+        width: auto;
+    }
+
+    /* MISJA - nasze wartosci */
+    .naszeWartosci {
+        flex-direction: column;
+    }
+
+    .naszeWartosciLeft, .naszeWartosciRight {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MISJA - stats */
+    .statsItemRight {
+        font-size: .8rem;
+    }
+
+    /* Referencje */
+    .referencjeLeftBtn:hover, .referencjeRightBtn:hover {
+        transform: translateX(0);
+    }
+
+    .wierzymyPage .wierzymyRight {
+        padding-left: 0 !important;
+    }
+
+    .wierzymyPage .wierzymyLeft {
+        width: 100%;
+        height: calc(90vw / (500/301));
+    }
+
+    .dlaczegoMyItem {
+        padding-left: 0 !important;
+    }
+
+    /* Lean nawigator */
+    .bigHeaderNarrow, .textAfterBigHeader, .leanNawigator > .bigHeader {
+        width: 90%;
+    }
+
+    /* 404 */
+    .page404TopLeft {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 700px) {
+    .pageProduktyItemLeftHeader {
+        font-size: 24px;
+    }
+
+    .pageProduktyItemLeftNumber {
+        font-size: 18px;
+    }
+
+    .pageProduktyItemLeftDescription, .pageProduktyItemRightP, .akademiaHealthcareBtn a {
+        font-size: 14px;
+    }
+
+    .faqItem:hover .arrow {
+        transform: rotate(0);
+    }
+
+    .procesBoxContainer {
+        margin-top: 8px !important;
+    }
+
+    /* Top menu */
+
+    /* Landing */
+    .nextSlide, .prevSlide {
+        display: none;
+    }
+
+    .landingText {
+        margin: -20px 0 0 !important;
+        font-size: 15px;
+    }
+
+    .referencjeLeft h4 {
+        font-size: 15px !important;
+    }
+
+    .landing .landingButton {
+        width: 140px;
+        font-weight: 600;
+    }
+
+    .landingButtonText {
+        font-size: 12px !important;
+    }
+
+    .dots {
+        left: 200px !important;
+    }
+
+    /* Nasza misja */
+    .misjaRight {
+        width: 100%;
+    }
+
+    .misjaText, .referencjeText {
+        font-size: 15px;
+    }
+
+    .statsItemLeft {
+        font-size: 12px;
+    }
+
+    .extraMargin {
+        margin-top: 90px;
+    }
+
+    /* Wierzymy */
+    .wierzymy {
+        margin-top: 50px;
+        margin-bottom: 55px;
+    }
+
+    .wierzymyLeft {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 5px !important;
+    }
+
+    .wierzymy .bigHeader2 {
+        font-size: 25px !important;
+    }
+
+    .landingButton a {
+        font-size: 12px;
+    }
+
+    /* Oferta */
+    .oferta {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .ofertaTitle, .ofertaText {
+        width: 55%;
+        font-size: 20px;
+    }
+
+    .ofertaItem {
+        padding: 0;
+        height: 200px;
+    }
+
+    .oferta .misjaText {
+        margin-bottom: 40px;
+    }
+
+    .ofertaText {
+        font-size: 12px;
+    }
+
+    .ofertaNumber {
+        left: 10px;
+        top: 10px;
+    }
+
+    .ofertaRightRight {
+        transform: translateX(65px);
+        width: calc(100% - 65px);
+    }
+
+    .oferta .ofertaRightLeft {
+        background: var(--lean-main);
+        transform: translateX(-40px);
+    }
+
+    .oferta .ofertaItem:hover .ofertaRightLeft {
+        transform: translateX(-40px);
+    }
+
+    .ofertaBackground {
+        opacity: .1;
+        display: block;
+        height: 100%;
+    }
+
+    .ofertaRightLeft {
+        width: 40px;
+        height: 40px;
+    }
+
+    .oferta .ofertaNextHover {
+        opacity: 1;
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    .oferta .ofertaNext {
+        display: none;
+    }
+
+    /* MISJA - wierzymy */
+
+    .wierzymyRight .bigHeader {
+        font-size: 20px;
+    }
+
+    /* MISJA - nasze wartosci */
+    .naszeWartosci .bigHeader {
+        margin-bottom: 30px;
+    }
+
+    /* DOFINANSOWANIA */
+    .dofinansowaniaAbsoluteBox {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .faqItem {
+        height: auto;
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    .faqAnswer {
+        display: block;
+        opacity: 1;
+    }
+
+    .faqItem .arrow {
+        margin-right: 25px;
+    }
+
+    .steps .etap {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .etap {
+        margin-right: 0 !important;
+    }
+
+    .font18, .frame .framePart .left h3 {
+        font-size: 14px !important;
+    }
+
+    .framePart::after {
+        width: 20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .frame .framePart {
+        height: 150px;
+    }
+
+    .frame .framePart .left {
+        margin-right: 25px;
+    }
+
+    .frame .framePart:first-child .left {
+        margin-right: 0;
+    }
+
+    .frame .framePart:first-child .left > * {
+        text-align: center;
+    }
+
+    .frame {
+        padding: 2px;
+    }
+
+    .frame .framePercent {
+        font-size: 18px !important;
+    }
+
+    .faqItem .arrow {
+        width: 25px;
+        height: 25px;
+    }
+
+    .faqQuestion, .faqAnswer {
+        font-size: 12px;
+    }
+
+    .dofFaq .right {
+        padding-bottom: 0;
+    }
+
+    /* Global */
+    .bigHeader {
+        width: 100% !important;
+        font-size: 32px;
+    }
+
+    /* Lean nawigator */
+    .smsContainer {
+        width: 100%;
+    }
+
+    .leanNawigator .bigHeader {
+        line-height: 36px;
+    }
+
+    /* 404 */
+    .page404Top {
+        flex-direction: column;
+    }
+
+    .page404Top > * {
+        width: 100%;
+    }
+
+    .page404 .menuItem {
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 600px) {
+    /* TMP */
+    .footerSecondRight {
+        display: none;
+    }
+
+    .person .personData {
+        margin-left: 0;
+    }
+
+    /* Three boxes */
+    .boxItem {
+        width: 100%;
+    }
+
+    /* Referencje */
+    .referencjeItem {
+        flex-direction: column;
+    }
+
+    .referencjeImg {
+        width: 80%;
+        margin-bottom: 55px;
+    }
+
+    .referencjeText {
+        width: 90%;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    /* MISJA - stats */
+    .liczbyIMyInner {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .liczbyIMy .statsItem {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* MISJA - dlaczego my */
+    .dlaczegoMyItem {
+        width: 100%;
+    }
+
+    /* MISJA - nasze wartosci */
+    .naszeWartosciItem {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 !important;
+    }
+
+    .naszeWartosciItem .naszeWartosciNumber {
+        margin-right: 0;
+    }
+
+    .naszeWartosciItem .naszeWartosciText {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* DOFINANSOWANIA */
+    .framePart .icon {
+        display: none;
+    }
+
+    .person {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .personData {
+        margin-top: 15px;
+    }
+
+    .wizytowki {
+        margin-bottom: 30px !important;
+    }
+
+    /* SINGLE KONFERENCJA */
+    #oKonferencji {
+        flex-direction: column;
+    }
+
+    #oKonferencji p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .prelegenciInnerItem {
+        flex-direction: column;
+    }
+
+    .prelegenciInfo {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    .galeriaInner {
+        align-items: flex-start;
+    }
+
+    .galeriaItemContainer {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .konferencjaInner {
+        margin-top: 25px;
+    }
+
+    .konferencjaContent section {
+        margin: 0;
+    }
+
+    #agenda .godziny, #agenda .event {
+        font-size: 12px;
+    }
+
+    .prelegenciText {
+        font-size: 14px;
+    }
+
+    /* Konferencje */
+    .agendaInnerItem .godziny {
+        width: 28%;
+    }
+
+    .agendaInnerItem .event {
+        width: 65%;
+    }
+
+    /* Lean nawigator */
+
+    .smsItem {
+        flex-direction: column;
+        height: auto;
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .smsItemLeft {
+        width: 100%;
+    }
+
+    .smsItemCorner {
+        display: none;
+    }
+
+    /* Stats item */
+    .mobileSmaller span {
+        font-size: 18px !important;
+    }
+
+    /* 404 */
+    .page404Menu {
+        flex-direction: column;
+    }
+
+    /* Akademia */
+    .maszPytaniaFrame {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media(max-width: 500px) {
+    .over500 {
+        display: none;
+    }
+
+    .moveUpBtn {
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .moveUpBtnImg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .moveUpBtn:hover .moveUpBtnImg {
+        transform: rotate(180deg);
+    }
+
+    /* Akademia */
+    .pageAkademiaMain p, .pageAkademiaMain ul li, .akademiaNumberCaption, .poziomyWeryfykacjiTop, .poziomyWeryfykacjiBottom {
+        font-size: 14px;
+    }
+
+    .pageAkademiaMain:nth-of-type(2) .politykaLeft, .pageAkademiaMain:nth-of-type(3) .politykaLeft  {
+        margin-bottom: 0px
+    }
+
+    .endQuote {
+        font-size: 25px;
+    }
+
+    .certifykatyGrid {
+        justify-content: center;
+    }
+
+    .certyfikatyItem {
+        width: 90%;
+    }
+
+    .akademiaNumber {
+        font-size: 30px;
+    }
+
+    .maszPytaniaFrame {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .akademiaThreeFrames {
+        justify-content: center;
+    }
+
+    .maszPytaniaBtn {
+        margin: 25px 0 0 0;
+    }
+
+    .pageAkademiaMain ul li::before {
+        top: 7px;
+    }
+
+    /* Landing */
+    .dots {
+        left: 200px;
+    }
+
+    /* Stats */
+    .statsItem {
+        height: 70px;
+    }
+
+    /* Nasza misja */
+    .misjaLeft {
+        width: 90%;
+        height: auto;
+    }
+
+    .statsItemRight {
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footerSecondRight {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .footerSecondRight h5:first-child {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .footerThird {
+        padding-top: 70px;
+    }
+
+    /* KONTAKT */
+    .podstronaKontaktItem {
+        width: 100%;
+    }
+
+    .podstronaKontakt {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* KONFERENCJE */
+    .konferencjeItem {
+        padding: 20px;
+    }
+
+    /* DOFINANSOWANIA */
+    .dofinansowaniaAbsoluteBox {
+        width: 90%;
+        padding: 15px;
+        bottom: -100px;
+    }
+
+    .dofinansowaniaFirst {
+        margin-bottom: 150px;
+    }
+
+    .frame .framePart, .framepart:first-child {
+        width: 100% !important;
+    }
+
+    .frame .framePart .left {
+        width: 65%;
+    }
+
+    .frame .framePercent {
+        margin-left: 0;
+    }
+
+    /* Logo */
+    .logoImg {
+        transform: translateX(-20px);
+    }
+
+    /* EKSPERCI */
+    .smallFont {
+        font-size: 12px !important;
+    }
+
+    .smallFont2 {
+        font-size: 10px !important;
+    }
+
+    /* Lean nawigator */
+    .procesBoxItem {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    span#cookieconsent\:desc {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+@media(max-width: 400px) {
+    .eksperciImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .person .personContact {
+        font-size: 16px;
+    }
+
+    .referencjeAuthor {
+        right: 10px !important;
+    }
+
+    /* Konferencje */
+    .agendaInnerItem .godziny {
+        width: 35%;
+    }
+
+    .agendaInnerItem .event {
+        width: 60%;
+    }
+}
