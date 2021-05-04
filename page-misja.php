@@ -281,6 +281,120 @@ get_header();
         </div>
     </section>
 
+    <!-- CASE STUDY -->
+    <section class="naszeWartosci">
+        <div class="naszeWartosciLeft">
+            <h2 class="firstHeader">
+                Case Study
+            </h2>
+            <h1 class="bigHeader">
+                Punkt wymazowy
+            </h1>
+        </div>
+
+        <div class="naszeWartosciRight">
+            <section  class="caseStudySection">
+                <h3 class="caseStudySectionHeader">
+                    <?php echo get_field('case_study_-_header_1'); ?>
+                </h3>
+
+                <div class="caseStudySectionText">
+                    <?php echo get_field('case_study_-_tekst_1'); ?>
+                </div>
+            </section>
+
+            <section class="caseStudySection">
+                <h3 class="caseStudySectionHeader">
+                    <?php echo get_field('case_study_-_header_2'); ?>
+                </h3>
+
+                <div class="caseStudyStep">
+                    <div class="caseStudyStepFrame">
+                        <span class="caseStudyStepNumber">
+                            1
+                        </span>
+                        <span class="caseStudyStepStep">
+                            Krok
+                        </span>
+                    </div>
+                    <p class="caseStudyStepText">
+                        <?php echo get_field('case_study_-_krok_1'); ?>
+                    </p>
+                </div>
+                <div class="caseStudyStep">
+                    <div class="caseStudyStepFrame">
+                        <span class="caseStudyStepNumber">
+                            2
+                        </span>
+                        <span class="caseStudyStepStep">
+                            Krok
+                        </span>
+                    </div>
+                    <p class="caseStudyStepText">
+                        <?php echo get_field('case_study_-_krok_2'); ?>
+                    </p>
+                </div>
+                <div class="caseStudyStep">
+                    <div class="caseStudyStepFrame">
+                        <span class="caseStudyStepNumber">
+                            3
+                        </span>
+                        <span class="caseStudyStepStep">
+                            Krok
+                        </span>
+                    </div>
+                    <p class="caseStudyStepText">
+                        <?php echo get_field('case_study_-_krok_3'); ?>
+                    </p>
+                </div>
+            </section>
+
+            <section class="caseStudySection">
+                <h3 class="caseStudySectionHeader">
+                    <?php echo get_field('case_study_-_header_3'); ?>
+                </h3>
+
+                <img class="caseStudyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/wymaz.png'; ?>" alt="wymaz" />
+
+                <p class="caseStudySectionText">
+                    <?php echo get_field('case_study_-_tekst_3'); ?>
+                </p>
+
+                <div class="caseStudySectionStats">
+                    <div class="caseStudySectionStatsItem">
+                        <span class="caseStudySectionStatsValue">
+                            <?php echo get_field('case_study_-_statystyki_wynik_1'); ?>
+                        </span>
+                        <span class="caseStudySectionStatsKey">
+                            <?php echo get_field('case_study_-_statystyki_opis_1'); ?>
+                        </span>
+                    </div>
+
+                    <div class="caseStudySectionStatsItem">
+                        <span class="caseStudySectionStatsValue">
+                            <?php echo get_field('case_study_-_statystyki_wynik_2'); ?>
+                        </span>
+                        <span class="caseStudySectionStatsKey">
+                            <?php echo get_field('case_study_-_statystyki_opis_2'); ?>
+                        </span>
+                    </div>
+
+                    <div class="caseStudySectionStatsItem">
+                        <span class="caseStudySectionStatsValue">
+                            <?php echo get_field('case_study_-_statystyki_wynik_3'); ?>
+                        </span>
+                        <span class="caseStudySectionStatsKey">
+                            <?php echo get_field('case_study_-_statystyki_opis_3'); ?>
+                        </span>
+                    </div>
+                </div>
+
+                <?php echo the_content(); ?>
+
+            </section>
+        </div>
+    </section>
+
     <!-- DLACZEGO MY -->
     <section class="dlaczegoMy">
         <h2 class="firstHeader">

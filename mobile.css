@@ -21,6 +21,12 @@
     }
 }
 
+@media(min-width: 700px) {
+    .misjaText {
+        width: 104%;
+    }
+}
+
 @media(max-width: 1800px) {
     .container {
         width: 90%;
@@ -306,6 +312,20 @@
     .boxItem {
         width: 30%;
     }
+
+    /* Case study */
+    .caseStudySectionStatsItem {
+        padding: 0 15px;
+        height: 200px;
+    }
+
+    .caseStudySectionStatsItem:last-of-type {
+        margin-right: 0;
+    }
+
+    .caseStudySection p {
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 1300px) {
@@ -438,6 +458,12 @@
 
     .footerCertyfikat--mobile {
         display: block;
+    }
+
+    /* Case study */
+    .caseStudyStepFrame {
+        flex-basis: 11%;
+        margin-right: 15px;
     }
 
     /* Akademia */
@@ -1081,6 +1107,11 @@
         width: 100% !important;
     }
 
+    /* Case study */
+    .caseStudySection::after {
+        width: 100%;
+    }
+
     /* Three boxes */
     .threeBoxes {
         flex-direction: column;
@@ -1631,6 +1662,19 @@
 }
 
 @media(max-width: 500px) {
+    /* Case study */
+    .caseStudyStepFrame {
+        flex-basis: 15%;
+    }
+
+    .caseStudySectionStats {
+        flex-direction: column;
+    }
+
+    .caseStudySectionStatsItem {
+        margin: 0 0 25px 0;
+    }
+
     .over500 {
         display: none;
     }

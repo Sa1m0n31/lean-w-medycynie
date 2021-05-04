@@ -113,8 +113,8 @@ add_action( 'after_setup_theme', 'lean_setup' );
  * Enqueue scripts and styles.
  */
 function lean_scripts() {
-	wp_enqueue_style( 'lean-style', get_stylesheet_uri() . '?n=12', array(), _S_VERSION );
-	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css?n=3', array(), _S_VERSION);
+	wp_enqueue_style( 'lean-style', get_stylesheet_uri() . '?n=14', array(), _S_VERSION );
+	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css?n=6', array(), _S_VERSION);
 
 	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js?n=2', array('gsap'), _S_VERSION, true);
 
