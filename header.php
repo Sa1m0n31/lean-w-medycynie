@@ -46,7 +46,7 @@ maximum-scale=5.0, user-scalable=yes" />
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link(get_page_by_title('akademia')->ID); ?>">Akademia</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
-                <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">O nas</a></li>
+                <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'o nas' )->ID ); ?>">O nas</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ); ?>">Produkty</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
@@ -78,7 +78,7 @@ maximum-scale=5.0, user-scalable=yes" />
                     if(is_page('misja')) {
                         echo 'green';
                     }
-                ?>" href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'o nas' )->ID ); ?>">
                     O nas
                 </a>
             </li>

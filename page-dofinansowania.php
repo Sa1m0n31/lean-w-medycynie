@@ -168,6 +168,11 @@ get_header();
 
     <!-- WIZYTOWKI -->
     <section class="wizytowki">
+        <header class="wizytowkiHeader">
+            <h2 class="wizytowkiHeaderH">
+                Skontaktuj się z naszymi przedstawicielami
+            </h2>
+        </header>
         <div class="person">
             <img class="personImg" src="<?php echo get_field('kontakt_1_-_zdjecie'); ?>" alt="agnieszka-zdeba-mozola" />
             <div class="personData">

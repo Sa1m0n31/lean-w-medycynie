@@ -4,8 +4,7 @@ get_header();
 
 <!-- PAGE HEADER -->
 <header class="pageHeader naszaMisjaHeader">
-    <!--<img class="pageHeaderImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/hero_image_podstrona_misja.jpg'; ?>" alt="nasza-misja" />
-        --><h1 class="pageHeaderHeader">
+    <h1 class="pageHeaderHeader">
         Konferencje
     </h1>
 </header>
@@ -82,6 +81,15 @@ get_header();
 
 
             <li class="konferencjaMenuItem" id="konfMenu5" onclick="konferencja(5)">Partnerzy</li>
+
+
+            <button class="konferencjaComeBackBtn">
+                <a href="https://leanwmedycynie.pl/konferencje">
+                    <span class="konferencjaComeBackBtnEntity">&lsaquo;</span>
+                    <span>Wstecz</span>
+                </a>
+            </button>
+
         </ul>
 
         <div class="konferencjaContent">

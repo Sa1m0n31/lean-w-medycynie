@@ -243,6 +243,10 @@
 }
 
 @media only screen and (max-width: 1400px) {
+    .partnerzyInnerItem {
+        max-width: 200px;
+    }
+
     .menu {
         margin-left: 20px;
     }
@@ -1105,6 +1109,10 @@
 
     .popupaoc-img {
         width: 100% !important;
+    }
+
+    .wizytowkiHeaderH {
+        font-size: 28px;
     }
 
     /* Case study */

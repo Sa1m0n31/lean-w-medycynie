@@ -603,6 +603,10 @@ circle {
     height: 1000px;
 }
 
+#fourthSection {
+    top: -600px;
+}
+
 #secondSection {
     height: 600px;
 }
@@ -2385,6 +2389,30 @@ circle {
     margin: 100px 0;
     width: 100%;
     display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.wizytowkiHeader {
+    display: block;
+    width: 100%;
+}
+
+.wizytowkiHeaderH {
+    max-width: 500px;
+    position: relative;
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+.wizytowkiHeaderH::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 30px;
+    height: 5px;
+    background: #6E8A37;
 }
 
 .wizytowki .person {
@@ -2781,6 +2809,44 @@ span.wpcf7-list-item {
     color: var(--text);
 }
 
+.konferencjaComeBackBtnEntity {
+    font-size: 20px;
+    color: #BABDBC;
+    font-weight: 700;
+    transition: .2s all;
+    margin-right: 5px;
+}
+
+.konferencjaComeBackBtn {
+    margin-top: 400px;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px;
+    background: transparent;
+    transition: .2s all;
+}
+
+.konferencjaComeBackBtn:hover, .konferencjaComeBackBtn:focus, .konferencjaComeBackBtn:active {
+    border-color: #6E8A37;
+}
+
+.konferencjaComeBackBtn:hover *, .konferencjaComeBackBtn:focus *, .konferencjaComeBackBtn:active * {
+    color: #6E8A37 !important;
+}
+
+.konferencjaComeBackBtn a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 25px;
+    color: #BABDBC;
+    font-weight: 700;
+    transition: .2s all;
+}
+
 .konferencjaContent {
     width: 1100px;
 }
@@ -2922,16 +2988,11 @@ span.wpcf7-list-item {
 
 .partnerzyInner {
     margin: 50px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .partnerzyInnerItem {
-    max-width: 200px;
-    height: auto;
-    margin: 20px;
+    display: block;
+    margin: auto;
 }
 
 /* Prelegenci - poprawka */
@@ -3374,7 +3435,7 @@ span.wpcf7-list-item {
     font-size: 17px;
     font-weight: 400;
     margin-top: 30px;
-    max-width: 170px;
+    max-width: 250px;
 }
 
 .pageProduktyItemRight {
@@ -4015,4 +4076,21 @@ span#cookieconsent\:desc {
 .liMargin {
     display: block;
     margin-bottom: 10px;
+}
+
+/* NEXT GEN Gallery hover effect */
+.ngg-galleryoverview.default-view .ngg-gallery-thumbnail img:hover {
+    opacity: 1 !important;
+}
+
+.ngg-gallery-thumbnail a {
+    overflow: hidden;
+}
+
+.ngg-gallery-thumbnail a img {
+    transition: .4s all ease-in-out;
+}
+
+.ngg-gallery-thumbnail a:hover img {
+    transform: scale(1.2);
 }

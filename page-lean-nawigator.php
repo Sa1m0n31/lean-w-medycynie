@@ -13,7 +13,7 @@ get_header(); ?>
         Lean w medycynie
     </h2>
     <h1 class="bigHeader">
-        Jak odnaleźć się w procesie budowania kultury lean?
+        Jak odnaleźć się w procesie budowania kultury Lean?
     </h1>
 
     <p class="textAfterBigHeader">

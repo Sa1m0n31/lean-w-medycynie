@@ -1,4 +1,22 @@
-/* Clear cache */
+
+
+/* Add Siema.js carousel in single-konferencje.php */
+const partnerzyInner = document.querySelector(".partnerzyInner");
+if(partnerzyInner) {
+    const siema = new Siema({
+        selector: ".partnerzyInner",
+        perPage: {
+            100: 1,
+            1000: 2,
+            1200: 3
+        },
+        loop: true
+    });
+
+    setInterval(() => {
+        siema.next();
+    }, 3000);
+}
 
 /* Cookies popup */
 setTimeout(() => {
