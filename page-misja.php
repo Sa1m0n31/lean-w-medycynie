@@ -5,14 +5,14 @@ get_header();
     <!-- PAGE HEADER -->
     <header class="pageHeader naszaMisjaHeader">
        <h1 class="pageHeaderHeader">
-            Nasza misja
+            O nas
         </h1>
     </header>
 
     <!-- MISJA FIRST SECTION -->
     <section class="misjaFirst">
         <h2 class="firstHeader">
-            Nasza misja
+            Lean w medycynie
         </h2>
         <h1 class="bigHeader">
             <?php echo get_field('header'); ?>

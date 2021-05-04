@@ -55,6 +55,7 @@ get_header();
                 <div class="pageProduktyItemImages">
                     <?php echo do_shortcode('[popup_anything id="328"]'); ?>
                     <?php echo do_shortcode('[popup_anything id="331"]'); ?>
+
                 </div>
             </div>
         </section>

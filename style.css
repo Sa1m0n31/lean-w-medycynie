@@ -433,6 +433,7 @@ html {
     align-items: center;
     padding: 15px;
     cursor: pointer;
+	white-space: nowrap;
 }
 
 .landingButton a {
@@ -797,6 +798,7 @@ circle {
     text-align: center;
     height: 80px;
     margin-bottom: 0 !important;
+	transform: translateY(-30px);
 }
 
 /* Wierzymy */
