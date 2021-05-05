@@ -8,7 +8,8 @@ if(partnerzyInner) {
         perPage: {
             100: 1,
             1000: 2,
-            1200: 3
+            1200: 3,
+            1500: 4
         },
         loop: true
     });
