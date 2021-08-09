@@ -96,7 +96,7 @@ get_header();
                 Pomagamy zobaczyć więcej i pójść dalej
             </h2>
             <p class="misjaText">
-                Jako zespół o szerokich umiejętnościach zdobywanych przez lata współpracy w sektorze medycznym, usługowym i produkcyjnym chcemy dzielić się wiedzą i pomagać pacjentom, personelowi medycznemu oraz Zarządom szpitali i innych placówek medycznych w realizacji ich misji, wizji i celów strategicznych.
+                Od wielu lat współpracujemy z sektorami: medycznym, usługowym i produkcyjnym. W tym czasie zdobyliśmy wiedzę oraz umiejętności, dzięki którym możemy dobrze doradzać innym. Dziś skutecznie pomagamy pacjentom, personelowi medycznemu oraz zarządom szpitali i innych placówek medycznych. Dzięki naszym kompetencjom mogą one realizować swoją misję, wizję oraz cele strategiczne.
             </p>
 
             <div class="stats">
@@ -176,7 +176,7 @@ get_header();
             </span>
 
             <p class="boxText">
-                Analiza to kompleksowa weryfikacja procesów zachodzących w danym obszarze, wykonana z udziałem pracowników klienta.
+                Najpierw, w porozumieniu z pracownikami instytucji, której pomagamy, kompleksowo weryfikujemy procesy zachodzące w danym obszarze.
             </p>
         </div>
 
@@ -190,7 +190,7 @@ get_header();
             </span>
 
             <p class="boxText">
-                Inspiracja to warsztaty w formie gry edukacyjno-warsztatowej Lean Air, pokazującej bezpośredni wpływ lean managementu w codziennej pracy.
+                Mając już wiedzę na temat funkcjonowania instytucji, organizujemy warsztaty w formie gry edukacyjnej Lean Air. W ich trakcie pokazujemy bezpośredni wpływ lean managementu na efekty codziennej pracy.
             </p>
         </div>
 
@@ -204,7 +204,7 @@ get_header();
             </span>
 
             <p class="boxText">
-                Transformacja to proces ciągłej zmiany organizacji w procesie zarządzania, opartym na metodyce lean management.
+                Inicjujemy proces ciągłej zmiany organizacji, która obejmuje sferę zarządzania. Jest on oparty na metodyce lean management.
             </p>
         </div>
     </section>
@@ -219,7 +219,7 @@ get_header();
                 Wierzymy, że
             </h2>
             <h1 class="bigHeader bigHeader2">
-                Każdego można zainspirować do zbudowania organizacji dającej maksymalną wartość dodaną jej Klientom.
+               Każdego możemy zainspirować do zbudowania samodoskonalącej się organizacji.
             </h1>
             <button class="landingButton landingButton2">
                 <a href="<?php echo get_page_link(get_page_by_title('Kontakt')->ID); ?>">
@@ -240,7 +240,7 @@ get_header();
                 Główne obszary działania Lean w Medycynie
             </h2>
             <p class="misjaText">
-                Jesteśmy w stanie, razem z Państwem, zdiagnozować, opracować i wdrożyć indywidualny, dostosowany do Państwa potrzeb strategiczny program rozwoju firmy. Zmiany które muszą zaistnieć przy wprowadzaniu takiego systemu, są bardzo czasochłonne i wymagają systematycznego, ustrukturyzowanego podejścia.
+                We współpracy z naszymi klientami, diagnozujemy problemy, a następnie opracowujemy i wdrażamy, dostosowany do potrzeb organizacji, strategiczny program rozwoju. Sam proces wprowadzenia zmian jest czasochłonny i wymaga systematycznego, ustrukturyzowanego podejścia.
             </p>
         </div>
 
@@ -255,7 +255,7 @@ get_header();
                         Lean Hospital
                     </h4>
                     <h5 class="ofertaText">
-                        Budowa strategicznych programów rozwoju
+                        Budowa strategicznych programów rozwoju.
                     </h5>
                 </div>
 
@@ -275,7 +275,7 @@ get_header();
                         Diagnoza potencjału
                     </h4>
                     <h5 class="ofertaText">
-                        Szybka analiza potencjału podmiotów medycznych
+                        Szybka analiza możliwości podmiotów medycznych.
                     </h5>
                 </div>
 
@@ -295,7 +295,7 @@ get_header();
                         Online Transformacje
                     </h4>
                     <h5 class="ofertaText">
-                        Chcesz wdrażać zmiany w nowym otoczeniu? Współpracuj stale ze swoim zespołem.
+                        Narzędzia, które umożliwiają dokonywanie zmian w trybie zdalnym.
                     </h5>
                 </div>
 
@@ -315,7 +315,7 @@ get_header();
                         Akademia Healthcare
                     </h4>
                     <h5 class="ofertaText">
-                        Warsztaty umiejętności managerskich w metodologii lean z praktyką w miejscu pracy.
+                        Warsztaty umiejętności managerskich w metodologii lean, z praktyką w miejscu pracy.
                     </h5>
                 </div>
 
@@ -335,7 +335,7 @@ get_header();
                         Warsztaty LeanAir
                     </h4>
                     <h5 class="ofertaText">
-                        Szkolenia z zakresu narzędzia optymalizacji Lean
+                        Szkolenia z zakresu narzędzia optymalizacji Lean.
                     </h5>
                 </div>
 
@@ -436,7 +436,7 @@ get_header();
                         if($i == 1) {
                             echo 'activeDot';
                         }
-                    ?>" id="<?php echo $refId; ?>"></span>
+                    ?>" id="<?php echo $refId; ?>" onclick="goToReferencje(<?php echo $i; ?>)"></span>
                         <?php
                     $i++;
                 }

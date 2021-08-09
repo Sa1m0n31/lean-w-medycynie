@@ -1,3 +1,29 @@
+/* Acceptance texts */
+const acceptance = (n) => {
+    const klazule = document.querySelectorAll(".klauzula");
+    const arrows = document.querySelectorAll(".formArrow");
+    if(n === 1) {
+        if(window.getComputedStyle(klazule[0]).getPropertyValue("display") === "none") {
+            klazule[0].style.display = "block";
+            arrows[0].style.transform = "rotate(-90deg)";
+        }
+        else {
+            klazule[0].style.display = "none";
+            arrows[0].style.transform = "rotate(0)";
+        }
+    }
+    else {
+        if(window.getComputedStyle(klazule[1]).getPropertyValue("display") === "none") {
+            klazule[1].style.display = "block";
+            arrows[1].style.transform = "rotate(-90deg)";
+        }
+        else {
+            klazule[1].style.display = "none";
+            arrows[1].style.transform = "rotate(0)";
+        }
+    }
+}
+
 /* Cookies popup */
 setTimeout(() => {
     let btn = document.querySelector(".cc-dismiss");
@@ -25,6 +51,44 @@ setTimeout(() => {
         });
     }
 }, 1000);
+
+/* To top of the website */
+
+const toTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+const moveUpBtn = document.querySelector(".moveUpBtn");
+let flag = true;
+
+window.addEventListener("scroll", () => {
+    const footerHeight = document.querySelector(".footer").clientHeight;
+    if(window.pageYOffset > 150) {
+        moveUpBtn.style.opacity = "1";
+    }
+    else {
+        moveUpBtn.style.opacity = "0";
+    }
+
+    if(window.pageYOffset + window.innerHeight < document.body.clientHeight - footerHeight) {
+        flag = true;
+        moveUpBtn.style.bottom = "40px";
+        moveUpBtn.style.position = "fixed";
+    }
+
+    if(flag) {
+        if(window.pageYOffset + window.innerHeight > document.body.clientHeight - footerHeight) {
+            moveUpBtn.style.bottom = (footerHeight + 35) + "px";
+            moveUpBtn.style.position = "absolute";
+            flag = false;
+        }
+    }
+});
+
+/* Stop moveUpBtn before footer */
 
 /* Hamburger menu */
 
@@ -79,6 +143,35 @@ const konferencja = (n) => {
 
     el.scrollIntoView({
         top: 140,
+        behavior: "smooth"
+    });
+}
+
+const ksiegaZnaku = (n) => {
+    let el;
+    switch(n) {
+        case 1:
+            el = document.querySelector("#kz1");
+            break;
+        case 2:
+            el = document.querySelector("#kz2");
+            break;
+        case 3:
+            el = document.querySelector("#kz3");
+            break;
+        case 4:
+            el = document.querySelector("#kz4");
+            break;
+        case 5:
+            el = document.querySelector("#kz5");
+            break
+        default:
+            el = document.querySelector("#kz6");
+            break;
+    }
+
+    el.scrollIntoView({
+        top: 0,
         behavior: "smooth"
     });
 }
@@ -273,6 +366,152 @@ if(document.querySelector("#oKonferencji") !== null) {
 
 if(document.querySelector(".konferencjaContainer") !== null) {
     konferencjaMenu();
+}
+
+/* Ksiega znaku - zmiana koloru elementow menu */
+let ksiegaMenu1 = document.querySelector("#logoMenu1");
+let ksiegaMenu2 = document.querySelector("#logoMenu2");
+let ksiegaMenu3 = document.querySelector("#logoMenu3");
+let ksiegaMenu4 = document.querySelector("#logoMenu4");
+let ksiegaMenu5 = document.querySelector("#logoMenu5");
+let ksiegaMenu6 = document.querySelector("#logoMenu6");
+
+const ksiegaMenuArr = [ksiegaMenu1, ksiegaMenu2, ksiegaMenu3, ksiegaMenu4, ksiegaMenu5, ksiegaMenu6];
+
+const ksiegaMenu = () => {
+    let options1 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1
+    };
+    let options2 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .3
+    };
+    let options3 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .5
+    };
+    let options4 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .5
+    };
+    let options5 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .4
+    };
+    let options6 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: .5
+    };
+
+    let observer1 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                ksiegaMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                ksiegaMenu1.style.fontWeight = "700";
+                ksiegaMenu1.style.color = "#3D4543";
+            }
+        }
+    }, options1);
+    let observer2 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                ksiegaMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                ksiegaMenu2.style.fontWeight = "700";
+                ksiegaMenu2.style.color = "#3D4543";
+            }
+        }
+    }, options2);
+    let observer3 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                ksiegaMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                ksiegaMenu3.style.fontWeight = "700";
+                ksiegaMenu3.style.color = "#3D4543";
+            }
+        }
+    }, options3);
+    let observer4 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                ksiegaMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                ksiegaMenu4.style.fontWeight = "700";
+                ksiegaMenu4.style.color = "#3D4543";
+            }
+        }
+    }, options4);
+    let observer5 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                ksiegaMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                ksiegaMenu5.style.fontWeight = "700";
+                ksiegaMenu5.style.color = "#3D4543";
+            }
+        }
+    }, options5);
+    let observer6 = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if(entry.isIntersecting) {
+                ksiegaMenuArr.forEach(item => {
+                    if(item !== null) {
+                        item.style.fontWeight = "400";
+                        item.style.color = "#BABDBC";
+                    }
+                });
+                ksiegaMenu6.style.fontWeight = "700";
+                ksiegaMenu6.style.color = "#3D4543";
+            }
+        }
+    }, options6);
+
+    let sec1 = document.querySelector(".logo1");
+    let sec2 = document.querySelector(".logo2");
+    let sec3 = document.querySelector(".logo3");
+    let sec4 = document.querySelector(".logo4");
+    let sec5 = document.querySelector(".logo5");
+    let sec6 = document.querySelector(".logo6");
+
+    if(sec1 !== null) observer1.observe(sec1);
+    if(sec2 !== null) observer2.observe(sec2);
+    if(sec3 !== null) observer3.observe(sec3);
+    if(sec4 !== null) observer4.observe(sec4);
+    if(sec5 !== null) observer5.observe(sec5);
+    if(sec6 !== null) observer6.observe(sec6);
+}
+
+if(document.querySelector("#kz1") !== null) {
+    ksiegaMenu();
 }
 
 /* Lean nawigator - poziomy progressBar */
@@ -533,12 +772,14 @@ let radius, circumference;
 
 if((circle1 !== null)||(circle1M !== null)) {
     if(window.innerWidth > 1100) {
-        radius = circle1.r.baseVal.value;
-        circumference = radius * 2 * Math.PI;
+        if(circle1) {
+            radius = circle1.r.baseVal.value;
+            circumference = radius * 2 * Math.PI;
 
-        for(let i=0; i<2; i++) {
-            circles[i].style.strokeDasharray = `${circumference} ${circumference}`;
-            circles[i].style.strokeDashoffset = "0";
+            for(let i=0; i<2; i++) {
+                circles[i].style.strokeDasharray = `${circumference} ${circumference}`;
+                circles[i].style.strokeDashoffset = "0";
+            }
         }
     }
     else {
@@ -573,51 +814,52 @@ let stopSlider = false;
 
 const goSlider = (n) => {
     let i = 0, circle = n, tmp;
-    circles[n].style.stroke = "#6E8A37";
-    inners[n].style.fill = "#6E8A37";
+    if(circles[0]) {
+        circles[n].style.stroke = "#6E8A37";
+        inners[n].style.fill = "#6E8A37";
 
-    gsap.set(lefts, { opacity: 0, x: -50 });
-    gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-    gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 })
-        .then(() => {
-           gsap.to(lefts, { opacity: 1, x: 0, duration: .4 });
-        });
+        gsap.set(lefts, {opacity: 0, x: -50});
+        gsap.fromTo(slides, {x: 0}, {x: 2000, opacity: 0, duration: 1});
+        gsap.fromTo(slides[n], {x: -2000}, {x: 0, opacity: 1, duration: 1})
+            .then(() => {
+                gsap.to(lefts, {opacity: 1, x: 0, duration: .4});
+            });
 
-    let sliderInterval = setInterval(() => {
-        if(i === 2) {
-            circles[circle].style.stroke = "#6E8A37";
-        }
-
-        if(i <= 300) {
-            if(stopSlider) {
-                stopSlider = false;
-                resetCircles(slide); /* Wysylamy slide, ktory bedzie naszym nowym slidem */
-                clearInterval(sliderInterval);
+        let sliderInterval = setInterval(() => {
+            if (i === 2) {
+                circles[circle].style.stroke = "#6E8A37";
             }
-            setProgress(circle, i);
-            i++;
-        }
-        else {
-            slide++;
-            inners[circle].style.fill = "#cdcdcd";
-            circles[circle].style.stroke = "none";
-            circle++;
-            if(circle === 2) circle = 0;
-            inners[circle].style.fill = "#6E8A37";
-            i = 0;
 
-            if(circle === 0) tmp = 1;
-            else tmp = circle - 1;
+            if (i <= 300) {
+                if (stopSlider) {
+                    stopSlider = false;
+                    resetCircles(slide); /* Wysylamy slide, ktory bedzie naszym nowym slidem */
+                    clearInterval(sliderInterval);
+                }
+                setProgress(circle, i);
+                i++;
+            } else {
+                slide++;
+                inners[circle].style.fill = "#cdcdcd";
+                circles[circle].style.stroke = "none";
+                circle++;
+                if (circle === 2) circle = 0;
+                inners[circle].style.fill = "#6E8A37";
+                i = 0;
 
-            gsap.set(lefts, { opacity: 0, x: -50 });
-            gsap.fromTo(slides[tmp], { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-            gsap.fromTo(slides[circle], { x: -2000 }, { x: 0, opacity: 1, duration: 1 })
-                .then(() => {
-                    gsap.to(lefts, { opacity: 1, x: 0, duration: .4 });
-                });
+                if (circle === 0) tmp = 1;
+                else tmp = circle - 1;
 
-        }
-    }, 30);
+                gsap.set(lefts, {opacity: 0, x: -50});
+                gsap.fromTo(slides[tmp], {x: 0}, {x: 2000, opacity: 0, duration: 1});
+                gsap.fromTo(slides[circle], {x: -2000}, {x: 0, opacity: 1, duration: 1})
+                    .then(() => {
+                        gsap.to(lefts, {opacity: 1, x: 0, duration: .4});
+                    });
+
+            }
+        }, 30);
+    }
 }
 
 const resetCircles = (slide) => {
@@ -738,8 +980,8 @@ else {
 
 /* Slider on mobile - swipe */
 
-document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, { passive: true });
-document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, { passive: true });
+if(document.querySelector(".landing")) document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, { passive: true });
+if(document.querySelector(".landing")) document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, { passive: true });
 var xDown = null;
 var yDown = null;
 
@@ -783,13 +1025,17 @@ const c5 = document.querySelector("#count5");
 const c6 = document.querySelector("#count6");
 const c7 = document.querySelector("#count7");
 
-const c1Value = c1.textContent;
-const c2Value = c2.textContent;
-const c3Value = c3.textContent;
-const c4Value = c4.textContent;
-const c5Value = c5.textContent;
-const c6Value = c6.textContent;
-const c7Value = c7.textContent;
+let c1Value, c2Value, c3Value, c4Value, c5Value, c6Value, c7Value;
+
+if(c1) {
+    c1Value = c1.textContent;
+    c2Value = c2.textContent;
+    c3Value = c3.textContent;
+    c4Value = c4.textContent;
+    c5Value = c5.textContent;
+    c6Value = c6.textContent;
+    c7Value = c7.textContent;
+}
 
 let first = true;
 
@@ -900,7 +1146,7 @@ window.addEventListener("scroll", () => {
     }
 
     if(enableProgress) {
-        progress.style.width = (window.pageYOffset - 800) + "px";
+        if(progress) progress.style.width = (window.pageYOffset - 800) + "px";
     }
 });
 
@@ -911,20 +1157,40 @@ let refActive = 0;
 
 const refDot1 = document.querySelector("#refDot1");
 const refDot2 = document.querySelector("#refDot2");
+const refDot3 = document.querySelector("#refDot3");
+const refDot4 = document.querySelector("#refDot4");
 
 const ref1 = document.querySelector("#ref1");
 const ref2 = document.querySelector("#ref2");
+const ref3 = document.querySelector("#ref3");
+const ref4 = document.querySelector("#ref4");
 
-const refs = [ref1, ref2];
-const dotArr = [refDot1, refDot2];
+const refs = [ref1, ref2, ref3, ref4];
+const dotArr = [refDot1, refDot2, refDot3, refDot4];
 
-const refLeftClick = () => {
+/* Start referencje slider */
+const referencjeIntervalFunction = () => {
     let previousSlide;
 
     dotArr[refActive].style.background = "#F8F8F8";
     previousSlide = refActive;
+    refActive++;
+    if(refActive>3) refActive = 0;
+    dotArr[refActive].style.background = "#6E8A37";
+
+    changeSlide(previousSlide, refActive);
+}
+
+let referencjeInterval = setInterval(referencjeIntervalFunction, 5000);
+
+const refLeftClick = () => {
+    let previousSlide;
+    clearInterval(referencjeInterval);
+
+    dotArr[refActive].style.background = "#F8F8F8";
+    previousSlide = refActive;
     refActive--;
-    if(refActive<0) refActive = 1;
+    if(refActive<0) refActive = 3;
     dotArr[refActive].style.background = "#6E8A37";
 
     changeSlide(previousSlide, refActive);
@@ -932,10 +1198,11 @@ const refLeftClick = () => {
 
 const refRightClick = () => {
     let previousSlide = refActive;
+    clearInterval(referencjeInterval);
 
     dotArr[refActive].style.background = "#F8F8F8";
     refActive++;
-    if(refActive > 1) refActive = 0;
+    if(refActive > 3) refActive = 0;
     dotArr[refActive].style.background = "#6E8A37";
 
     changeSlide(previousSlide, refActive);
@@ -948,4 +1215,67 @@ const changeSlide = (prev, next) => {
         .set(refs[prev], { display: "none" })
         .set(refs[next], { display: "flex" })
         .to(refs[next], { opacity: 1, duration: .5 })
+}
+
+const goToReferencje = (n) => {
+    let previousSlide;
+    clearInterval(referencjeInterval);
+
+    dotArr[refActive].style.background = "#F8F8F8";
+    previousSlide = refActive;
+    refActive = n-1;
+    dotArr[refActive].style.background = "#6E8A37";
+
+    changeSlide(previousSlide, refActive);
+}
+
+/* Contact form submission */
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    const contactForm = document.querySelector(".kontaktRight>.wpcf7");
+    const contactDisclaimer = document.querySelector(".kontaktDisclaimer");
+    const confirmation = document.querySelector(".kontaktMsg");
+
+    contactForm.style.height = "0";
+    contactForm.style.opacity = "0";
+    confirmation.style.opacity = "1";
+    confirmation.style.display = "block";
+    confirmation.style.marginTop = "30px";
+    contactDisclaimer.style.display = "none";
+
+}, false );
+
+/* Add Siema.js carousel in single-konferencje.php */
+const partnerzyInner = document.querySelector(".partnerzySiema");
+const patronatInner = document.querySelector(".patroniSiema");
+if(partnerzyInner) {
+    const siema = new Siema({
+        selector: ".partnerzySiema",
+        perPage: {
+            100: 1,
+            1000: 2,
+            1200: 3,
+            1500: 4
+        },
+        loop: true
+    });
+
+    setInterval(() => {
+        siema.next();
+    }, 3000);
+}
+if(patronatInner) {
+    const siema2 = new Siema({
+        selector: ".patroniSiema",
+        perPage: {
+            100: 1,
+            1000: 2,
+            1200: 3,
+            1500: 4
+        },
+        loop: true
+    });
+
+    setInterval(() => {
+        siema2.next();
+    }, 3000);
 }

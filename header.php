@@ -11,6 +11,10 @@ maximum-scale=5.0, user-scalable=yes" />
     <?php wp_head(); ?>
 </head>
 <body>
+    <!-- Move to top of the page button -->
+    <button class="moveUpBtn" onclick="toTop()">
+        <img class="moveUpBtnImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/black-arrow.png'; ?>" alt="do-gory" />
+    </button>
     <!-- Cookies img -->
     <img class="cookiesImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/cookies.png'?>" alt="ciasteczka" />
     <!-- MENU -->
@@ -42,7 +46,7 @@ maximum-scale=5.0, user-scalable=yes" />
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link(get_page_by_title('akademia')->ID); ?>">Akademia</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="mobileMenuItem mobileMenuGreen"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
-                <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
+                <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'o nas' )->ID ); ?>">O nas</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ); ?>">Produkty</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
@@ -61,7 +65,7 @@ maximum-scale=5.0, user-scalable=yes" />
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/linkedin.svg'; ?>" alt="linkedin" />
                 </a>
 
-                <a href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/_leanwmedycynie" target="_blank" rel="noreferrer">
                     <img class="socialMediaImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/twitter.svg'; ?>" alt="twitter" />
                 </a>
             </div>
@@ -74,8 +78,8 @@ maximum-scale=5.0, user-scalable=yes" />
                     if(is_page('misja')) {
                         echo 'green';
                     }
-                ?>" href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">
-                    Misja
+                ?>" href="<?php echo get_page_link( get_page_by_title( 'o nas' )->ID ); ?>">
+                    O nas
                 </a>
             </li>
             <li class="menuItem menuItemOrdinary">
@@ -107,7 +111,7 @@ maximum-scale=5.0, user-scalable=yes" />
                 }
                 ?>" href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
             <li class="menuItem menuItemBordered <?php
-            if(is_page('lean nawigator')) {
+            if(is_page('lean-nawigator')) {
                 echo 'greenBackground';
             }
             ?>"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
@@ -140,7 +144,7 @@ maximum-scale=5.0, user-scalable=yes" />
 
             </a>
 
-            <a aria-label="Twitter" id="twitter" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
+            <a aria-label="Twitter" id="twitter" href="https://twitter.com/_leanwmedycynie" target="_blank" rel="noreferrer">
 
             </a>
         </div>

@@ -13,11 +13,11 @@ get_header(); ?>
         Lean w medycynie
     </h2>
     <h1 class="bigHeader">
-        Potrzebujesz kompasu do budowania kultury lean?
+        Jak odnaleźć się w procesie budowania kultury Lean?
     </h1>
 
     <p class="textAfterBigHeader">
-        Lean nawigator to Twój kompas oparty na sprawdzonych narzędziach lean oraz fazach zmian w budowaniu efektywnych i trwałych zespołów.
+        Pomoże Ci w tym Lean Nawigator - specjalny “kompas”, oparty na sprawdzonych narzędziach lean oraz fazach zmian, występujących w procesie budowania efektywnych i trwałych zespołów.
     </p>
 
     <section class="threeBoxes">
@@ -35,7 +35,7 @@ get_header(); ?>
             </span>
 
             <p class="boxText">
-                Analiza to kompleksowa weryfikacja procesów zachodzących w danym obszarze, wykonana z udziałem pracowników klienta.
+                Najpierw, w porozumieniu z pracownikami instytucji, której pomagamy, kompleksowo weryfikujemy procesy zachodzące w danym obszarze.
             </p>
         </div>
 
@@ -49,7 +49,7 @@ get_header(); ?>
             </span>
 
             <p class="boxText">
-                Inspiracja to warsztaty w formie gry edukacyjno-warsztatowej Lean Air, pokazującej bezpośredni wpływ lean managementu w codziennej pracy.
+                Mając już wiedzę na temat funkcjonowania instytucji, organizujemy warsztaty w formie gry edukacyjnej Lean Air. W ich trakcie pokazujemy bezpośredni wpływ lean managementu na efekty codziennej pracy.
             </p>
         </div>
 
@@ -63,7 +63,7 @@ get_header(); ?>
             </span>
 
             <p class="boxText">
-                Transformacja to proces ciągłej zmiany organizacji w procesie zarządzania, opartym na metodyce lean management.
+                Inicjujemy proces ciągłej zmiany organizacji, która obejmuje sferę zarządzania. Jest on oparty na metodyce lean management.
             </p>
         </div>
     </section>
@@ -73,12 +73,12 @@ get_header(); ?>
             Model SMS
         </h2>
         <h1 class="bigHeader bigHeaderNarrow">
-            Zobacz jak działa nasz autorski model pracy w środowisku medycznym
+            Poznaj SMS - nasz autorski model pracy w środowisku medycznym
         </h1>
 
         <p class="textAfterBigHeader">
-            Od kilkudziesięciu lat doskonalimy swoje metody pracy z Klientami. Nasza autorska metoda zbudowana na bazie naszych doświadczeń w ochronie zdrowia oraz obszarach wspierających zawiera elementy kluczowe do wprowadzenia trwałej i efektywnej zmiany w organizacjach.
-        </p>
+            Od kilkudziesięciu lat doskonalimy własne metody pracy z klientami. Na bazie doświadczeń, związanych z sektorem ochrony zdrowia oraz obszarami go wspierającymi, stworzyliśmy autorski model SMS. Zawiera on elementy, które mają kluczowe znaczenie podczas wprowadzania trwałej i efektywnej zmiany w organizacjach.
+		</p>
 
         <div class="smsContainer">
             <!-- Linia -->
@@ -127,18 +127,21 @@ get_header(); ?>
                     </h3>
                 </div>
 
-                <ul class="smsItemRight">
+                <ul class="smsItemRight smsItemRight3x3">
                     <li>
-                        VISUAL MANGEMENT<br/>(TABLICE ODPRAW,FLOW)
+                        VISUAL MANGEMENT<br/>(TABLICE ODPRAW, FLOW)
                     </li>
                     <li>
                         PROBLEM SOLVING
                     </li>
                     <li>
-                        PROCES FLOW
+                        PROCESS FLOW
                     </li>
                     <li>
-                        MUDO VSM
+                        MUDA
+                    </li>
+                    <li>
+                        VSM
                     </li>
 
                     <li>
@@ -277,16 +280,16 @@ get_header(); ?>
                 </h2>
 
                 <p>
-                    <span class="semibold">Analiza to kompleksowa weryfikacja procesów</span> zachodzących w danym obszarze, wykonana z udziałem pracowników klienta.
+                    <span class="semibold">To kompleksowa weryfikacja procesów</span> zachodzących w danym obszarze, w której udział biorą także pracownicy firmy naszego klienta.
                 </p>
                 <p>
-                    <span class="semibold">Celem analizy jest wskazanie potencjału rozwoju</span> danego obszaru dzięki eliminacji zdefiniowanych marnotrawstw i aktywnemu podejściu do rekomendacji zbudowanych wraz z zespołem.
+                    Jej celem jest wskazanie potencjału rozwoju danego obszaru. Jest to możliwe dzięki eliminacji zdefiniowanych marnotrawstw i aktywnemu podejściu do rekomendacji zbudowanych wraz z zespołem.
                 </p>
                 <p>
-                    <span class="semibold">Przykładowe obszary naszych analiz</span>: bloki operacyjne, poradnie, Izba Przyjęć, Rejestracje, Działy księgowe, HR, sprzedaż, centra stomatologiczne etc.
+                   <span class="semibold">Przykładowe obszary naszych analiz to</span>: bloki operacyjne, poradnie, izba przyjęć, rejestracje, działy księgowe, HR, sprzedaż, centra stomatologiczne etc.
                 </p>
                 <p>
-                    <span class="semibold">Przykładowe efekty</span>: redukcja czasu pielęgniarki w zakresie dokumentacji medycznej o 40%, ograniczenie czasu oczekiwania na operatora o 20%
+                    <span class="semibold">Przykładowe efekty</span> to: redukcja o 40% czasu poświęcanego przez pielęgniarki na sporządzenie dokumentacji medycznej, ograniczenie o 20% czasu oczekiwania na operatora.
                 </p>
             </div>
 
@@ -297,14 +300,15 @@ get_header(); ?>
                     Inspiracja
                 </h2>
 
+
                 <p>
-                    <span class="semibold">Inspiracja to warsztaty w formie gry edukacyjno-warsztatowej Lean Air</span>, pokazującej bezpośredni wpływ lean managementu w codziennej pracy.
+                    Na tym etapie organizujemy warsztaty w formie gry edukacyjnej Lean Air, pokazującej bezpośredni wpływ lean managementu na codzienną pracę.
                 </p>
                 <p>
-                    <span class="semibold">Celem warsztatów jest wyjaśnienie wszystkim pracownikom czym jest lean management</span> oraz przeniesienie ich do fazy zmiany zwanej „testowaniem” przy jednoczesnym integrowaniu uczestników.
-                </p>
+                    W ich trakcie pracownicy dowiadują się co konkretnie kryje się pod wspomnianym pojęciem. Celem jest także przeniesienie uczestników do fazy zmiany, zwanej „testowaniem”. Warsztaty są także doskonałą okazją do integracji uczestników.
+				</p>
                 <p>
-                    Przykładowy zakres naszych uczestników:<br/>- Dyrektorzy NFZ,<br/>- Dyrektorzy Szpitali,<br/>- Pielęgniarki Naczelne,<br/>- Pielęgniarki Oddziałowe<br/>- Personel administracyjny,<br/>- Lekarze
+                    Przykładowe stanowiska, piastowane przez uczestników takich warsztatów:<br/>- Dyrektorzy NFZ,<br/>- Dyrektorzy Szpitali,<br/>- Pielęgniarki Naczelne,<br/>- Pielęgniarki Oddziałowe,<br/>- Personel administracyjny,<br/>- Lekarze.
                 </p>
             </div>
 
@@ -316,14 +320,14 @@ get_header(); ?>
                 </h2>
 
                 <p>
-                    <span class="semibold">Transformacja to proces ciągłej zmiany organizacji w procesie zarządzania</span>, opartym na metodyce lean management dzięki wprowadzeniu całej metody Simple Management System w organizacji.
-                </p>
+<span class="semibold">To proces zmiany organizacji</span>, wynikający z zarządzania opartego na metodyce lean management. Jest ona możliwa dzięki wprowadzeniu do organizacji całej metody Simple Management System.
+                   </p>
                 <p>
-                    <span class="semibold">Celem transformacji jest zmiana kultury pracy organizacji</span> poprzez aktywne rozbudowywanie wiedzy, wdrożenie nowych narzędzi zarządczych i pomiarowych, wzrost satysfakcji z pracy i integracji personelu w realizacji wyznaczonych zadań.
-                </p>
+                   Celem jest zmiana kultury pracy, poprzez aktywne rozbudowywanie wiedzy, wdrożenie nowych narzędzi zarządczych i pomiarowych oraz wzrost satysfakcji z pracy i podniesienie poziomu integracji personelu w trakcie realizacji wyznaczonych zadań.
+				</p>
                 <p>
-                    <span class="semibold">Przykładowe efekty naszych działań</span>: 7 mln oszczędności dla organizacji, wzrost o 50% efektywności w pobieraniu badań COVID.
-                </p>
+                    Przykładowe efekty naszych działań to: 7 mln oszczędności dla organizacji, wzrost o 50% efektywności w pobieraniu próbek do testów na COVID.
+				</p>
             </div>
         </div>
     </section>
@@ -409,7 +413,7 @@ get_header(); ?>
                         Platforma edukacyjna
                     </li>
                     <li>
-                        Sesje indywidulanie
+                        Sesje indywidualne
                     </li>
                 </ul>
             </div>

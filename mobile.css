@@ -21,6 +21,12 @@
     }
 }
 
+@media(min-width: 700px) {
+    .misjaText {
+        width: 104%;
+    }
+}
+
 @media(max-width: 1800px) {
     .container {
         width: 90%;
@@ -181,11 +187,6 @@
     }
 
     /* Akademia */
-    .akademiaImg {
-        width: 140%;
-        height: auto;
-    }
-
     .certifykatyGrid {
         justify-content: space-between;
     }
@@ -241,7 +242,24 @@
     }
 }
 
-@media(max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
+    .partnerzyInnerItem {
+        max-width: 200px;
+    }
+
+    .menu {
+        margin-left: 20px;
+    }
+
+    .menuItemBordered {
+        padding: 0 15px;
+    }
+
+    .paoc-popup-modal img {
+        width: 90vw !important;
+        height: auto !important;
+    }
+
     /* EKSPERCI */
     .eksperciKontakt {
         flex-direction: column;
@@ -274,7 +292,7 @@
     /* Oferta */
     .misjaLeft {
         width: 450px;
-        height: 363px;
+        height: 346px;
     }
 
     /* Konferencje */
@@ -298,6 +316,20 @@
     .boxItem {
         width: 30%;
     }
+
+    /* Case study */
+    .caseStudySectionStatsItem {
+        padding: 0 15px;
+        height: 200px;
+    }
+
+    .caseStudySectionStatsItem:last-of-type {
+        margin-right: 0;
+    }
+
+    .caseStudySection p {
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 1300px) {
@@ -310,12 +342,25 @@
         font-size: 50px;
     }
 
-
+    .akademiaImg {
+        width: 80%;
+        height: auto;
+    }
 
     /* Landing */
-    .dots {
-        bottom: 140px;
+  
+  	.dotsMobile {
+        position: absolute !important;
+        align-items: center;
+        left: 50% !important;
+        bottom: 0 !important;
+        width: 50%;
+        transform: translateY(-12px);
     }
+  
+  	.dotsDesktop {
+  		display: none;
+  }
 
     .container {
         position: relative;
@@ -403,12 +448,38 @@
         margin: 5px 0;
     }
 
+    .smsItemRight3x3 li {
+        margin: 3px 0;
+    }
+
     .smsItemLeft, .smsItemRight {
         width: 50%;
+    }
+
+    .smsItemRight {
+        width: 100% !important;
+    }
+
+    .statsItemRight {
+        font-size: .8rem;
     }
 }
 
 @media(max-width: 1200px) {
+    .menuItemBordered {
+        padding: 0 12px;
+    }
+
+    .footerCertyfikat--mobile {
+        display: block;
+    }
+
+    /* Case study */
+    .caseStudyStepFrame {
+        flex-basis: 11%;
+        margin-right: 15px;
+    }
+
     /* Akademia */
     .warunkiCenoweFrame {
         width: auto;
@@ -537,7 +608,7 @@
         margin: 0;
     }
 
-    .pageProduktyItemImgSqr2, .pageProduktyItemImgBig {
+    .pageProduktyItemImgSqr2 {
         width: 90%;
     }
 }
@@ -640,13 +711,6 @@
         /*position: relative; */
     }
 
-    .dots {
-        display: none;
-        bottom: 55px;
-        left: 30%;
-        transform: translateY(-20%);
-    }
-
     .dotsMobile {
         display: flex;
     }
@@ -682,15 +746,6 @@
 
     .landing .landingButton {
         width: 40%;
-    }
-
-    .dots {
-        position: absolute !important;
-        align-items: center;
-        left: 50% !important;
-        bottom: 0 !important;
-        width: 50%;
-        transform: translateY(-12px);
     }
 
     .ofertaLeft {
@@ -876,7 +931,7 @@
     }
 }
 
-@media(max-width: 900px) {
+@media only screen and (max-width: 900px) {
     /* Landing */
     .landing {
         min-height: 80vh;
@@ -1041,7 +1096,24 @@
     }
 }
 
-@media(max-width: 800px) {
+@media only screen and (max-width: 800px) {
+    .popupaoc-image-popup {
+        width: 45% !important;
+    }
+
+    .popupaoc-img {
+        width: 100% !important;
+    }
+
+    .wizytowkiHeaderH {
+        font-size: 28px;
+    }
+
+    /* Case study */
+    .caseStudySection::after {
+        width: 100%;
+    }
+
     /* Three boxes */
     .threeBoxes {
         flex-direction: column;
@@ -1426,6 +1498,10 @@
         display: none;
     }
 
+    .person .personData {
+        margin-left: 0;
+    }
+
     /* Three boxes */
     .boxItem {
         width: 100%;
@@ -1562,7 +1638,7 @@
         padding: 15px;
     }
 
-    .smsItemLeft, .smsItemRight {
+    .smsItemLeft {
         width: 100%;
     }
 
@@ -1585,9 +1661,47 @@
         width: 100%;
         padding: 20px;
     }
+
+    /* Changes made on 09.08.2021 */
+    .wpcf7-form .klauzula {
+        width: 100% !important;
+    }
 }
 
 @media(max-width: 500px) {
+    /* Case study */
+    .caseStudyStepFrame {
+        flex-basis: 15%;
+    }
+
+    .caseStudySectionStats {
+        flex-direction: column;
+    }
+
+    .caseStudySectionStatsItem {
+        margin: 0 0 25px 0;
+    }
+
+    .over500 {
+        display: none;
+    }
+
+    .moveUpBtn {
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .moveUpBtnImg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .moveUpBtn:hover .moveUpBtnImg {
+        transform: rotate(180deg);
+    }
+
     /* Akademia */
     .pageAkademiaMain p, .pageAkademiaMain ul li, .akademiaNumberCaption, .poziomyWeryfykacjiTop, .poziomyWeryfykacjiBottom {
         font-size: 14px;

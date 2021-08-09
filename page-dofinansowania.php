@@ -17,30 +17,24 @@ get_header();
                 Dofinansowania
             </h2>
             <h1 class="bigHeader">
-                Chcesz inwestować w rozwój pracowników?
+                <?php echo get_field('header'); ?>
             </h1>
             <h3 class="smallHeader">
-                Zobacz jak pozyskać fundusze
+                <?php echo get_field('subheader'); ?>
             </h3>
 
             <div class="dofinansowaniaLeftInfo">
                 <h2 class="dofinansowaniaGreen">
-                    Jesteś Pracodawcą?
+                    <?php echo get_field('zielony_naglowek'); ?>
                 </h2>
 
                 <h3 class="dofinansowaniaBold">
-                    Wystarczy, że zatrudnisz jednego pracownika!
+                    <?php echo get_field('pogrubiony_naglowek'); ?>
                 </h3>
 
-                <h4 class="dofinansowaniaText">
-                    Możesz otrzymać dofinansowanie na:
-                </h4>
-                <h4 class="dofinansowaniaText">
-                    - określenie potrzeb rozwojowych organizacji i pracowników
-                </h4>
-                <h4 class="dofinansowaniaText">
-                    - rozwój kompetencji pracowników (szkolenia, programy rozwojowe, egzaminy)
-                </h4>
+                <div class="dofinansowaniaText">
+                    <?php echo get_field('tekst_pod_naglowkami'); ?>
+                </div>
             </div>
         </div>
 
@@ -49,10 +43,10 @@ get_header();
 
             <div class="dofinansowaniaAbsoluteBox">
                 <h3 class="absoluteBoxPercent">
-                    300%
+                    <?php echo get_field('pogrubiona_liczba_w_ramce'); ?>
                 </h3>
                 <p class="absoluteBoxText">
-                    <span class="bold">Przeciętnego wynagrodzenia w danym roku</span> to maksymalna wysokość dofinansowania na jednego pracownika rocznie.
+                    <?php echo get_field('tekst_w_ramce'); ?>
                 </p>
             </div>
         </div>
@@ -62,42 +56,27 @@ get_header();
     <section class="frame">
         <div class="framePart">
             <div class="left">
-                <h3 class="green bold procentDofinansowania">
-                    PROCENT DOFINANSOWANIA
-                </h3>
-                <h3 class="regular font18">
-                    zależy od wielkości przedsiębiorstwa:
-                </h3>
+                <?php echo get_field('ramka_-_pierwszy_tekst'); ?>
             </div>
         </div>
 
         <div class="framePart">
-            <img class="icon icon-1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/corpo.svg'; ?>" alt="biuro" />
+            <img class="icon icon-1" src="<?php echo get_field('ramka_-_pierwsza_ikonka'); ?>" alt="biuro" />
             <div class="left">
-                <h3 class="bold">
-                    Duże i średnie przedsiębiorstwa
-                </h3>
-                <h3 class="regular font18">
-                    do 80% kosztów kształcenia
-                </h3>
+                <?php echo get_field('ramka_-_drugi_tekst'); ?>
             </div>
             <h3 class="percent green bold framePercent">
-                80%
+                <?php echo get_field('ramka_-_pierwszy_procent'); ?>
             </h3>
         </div>
 
         <div class="framePart">
-            <img class="icon icon-2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/zespol.svg'; ?>" alt="druzyna" />
+            <img class="icon icon-2" src="<?php echo get_field('ramka_-_druga_ikonka'); ?>" alt="druzyna" />
             <div class="left">
-                <h3 class="bold">
-                    Mikroprzedsiębiorcy
-                </h3>
-                <h3 class="regular font18">
-                    do 100% kosztów kształcenia
-                </h3>
+                <?php echo get_field('ramka_-_trzeci_tekst'); ?>
             </div>
             <h3 class="percent green bold framePercent">
-                100%
+                <?php echo get_field('ramka_-_drugi_procent'); ?>
             </h3>
         </div>
     </section>
@@ -109,10 +88,10 @@ get_header();
                 <img class="arrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
                 <div class="faqItemContent">
                     <h3 class="faqQuestion">
-                        Jak uzyskac dofinansowanie
+                        <?php echo get_field('pytanie_1_-_header'); ?>
                     </h3>
                     <p class="faqAnswer">
-                        Skontaktuj się z nami. Zapewniamy pełne wsparcie w zakresie realizacji projektu rozwojowego oraz pomożemy w zdobyciu dofinansowania na ten cel.
+                        <?php echo get_field('pytanie_1_-_tekst'); ?>
                     </p>
                 </div>
             </div>
@@ -121,10 +100,10 @@ get_header();
                 <img class="arrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
                 <div class="faqItemContent">
                     <h3 class="faqQuestion">
-                        Ile będzie to kosztowało?
+                        <?php echo get_field('pytanie_2_-_header'); ?>
                     </h3>
                     <p class="faqAnswer">
-                        Napisanie wniosku oraz przygotowanie dokumentów jest naszym kosztem.
+                        <?php echo get_field('pytanie_2_-_tekst'); ?>
                     </p>
                 </div>
             </div>
@@ -133,10 +112,10 @@ get_header();
                 <img class="arrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
                 <div class="faqItemContent">
                     <h3 class="faqQuestion">
-                        Jak Ci pomożemy?
+                        <?php echo get_field('pytanie_3_-_header'); ?>
                     </h3>
                     <p class="faqAnswer">
-                        Po analizie potrzeb szkoleniowych i możliwości dofinansowania.
+                        <?php echo get_field('pytanie_3_-_tekst'); ?>
                     </p>
                 </div>
             </div>
@@ -154,10 +133,10 @@ get_header();
                 Etap 1
             </h3>
             <h4 class="etapDescription">
-                Przygotowanie wniosku
+                <?php echo get_field('etap_1_-_tekst'); ?>
             </h4>
 
-            <img class="etapyImg extraMargin1" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/umowa.svg'; ?>" alt="umowa" />
+            <img class="etapyImg extraMargin1" src=" <?php echo get_field('etap_1_-_ikonka'); ?>" alt="umowa" />
         </div>
 
         <img class="etapyArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
@@ -167,10 +146,10 @@ get_header();
                 Etap 2
             </h3>
             <h4 class="etapDescription">
-                Złożenie wniosku o dofinansowanie (oczekiwanie na wyniki 30 dni)
+                <?php echo get_field('etap_2_-_tekst'); ?>
             </h4>
 
-            <img class="etapyImg extraMargin2" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/akcept.svg'; ?>" alt="zlozenie-wniosku" />
+            <img class="etapyImg extraMargin2" src=" <?php echo get_field('etap_2_-_ikonka'); ?>" alt="zlozenie-wniosku" />
         </div>
 
         <img class="etapyArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
@@ -180,49 +159,62 @@ get_header();
                 Etap 3
             </h3>
             <h4 class="etapDescription">
-                Realizacja
+                <?php echo get_field('etap_3_-_tekst'); ?>
             </h4>
 
-            <img class="etapyImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/realizacja.svg'; ?>" alt="realizacja" />
+            <img class="etapyImg" src=" <?php echo get_field('etap_3_-_ikonka'); ?>" alt="realizacja" />
         </div>
     </section>
 
     <!-- WIZYTOWKI -->
     <section class="wizytowki">
+        <header class="wizytowkiHeader">
+            <h2 class="wizytowkiHeaderH">
+                Skontaktuj się z naszymi przedstawicielami
+            </h2>
+        </header>
         <div class="person">
-            <img class="personImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/agnieszka_zdeba.png'; ?>" alt="agnieszka-zdeba-mozola" />
+            <img class="personImg" src="<?php echo get_field('kontakt_1_-_zdjecie'); ?>" alt="agnieszka-zdeba-mozola" />
             <div class="personData">
-                <h2 class="personName green">Agnieszka Zdęba-Mozoła</h2>
-                <h3 class="personFunction regular">Specjalista ds. dofinansowań</h3>
+                <h2 class="personName green">
+                    <?php echo get_field('kontakt_1_-_imie_i_nazwisko'); ?>
+                </h2>
+                <h3 class="personFunction regular">
+                    <?php echo get_field('kontakt_1_-_tytul'); ?>
+                </h3>
 
                 <h4 class="personContact regular link">
-                    <a href="mailto:agnieszka.zdeba@leanwmedycynie.pl"></a>
+                    <a href="mailto:<?php echo get_field('kontakt_1_-_mail'); ?>"></a>
                     <span class="green bold">E:</span>
-                    agnieszka.zdeba@leanwmedycynie.pl
+                    <?php echo get_field('kontakt_1_-_mail'); ?>
                 </h4>
                 <h3 class="personContact regular link">
-                    <a href="tel:+48728956864"></a>
+                    <a href="tel:<?php echo str_replace(' ', '', get_field('kontakt_1_-_telefon')); ?>"></a>
                     <span class="green bold">T:</span>
-                    +48 728 956 864
+                    <?php echo get_field('kontakt_1_-_telefon'); ?>
                 </h3>
             </div>
         </div>
 
         <div class="person">
-            <img class="personImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/jakub_napierala.png'; ?>" alt="jakub-napierala" />
+            <img class="personImg" src="<?php echo get_field('kontakt_2_-_zdjecie'); ?>" alt="jakub-napierala" />
             <div class="personData">
-                <h2 class="personName green">Jakub Napierała</h2>
-                <h3 class="personFunction regular">CFO / Członek Zarządu</h3>
+                <h2 class="personName green">
+                    <?php echo get_field('kontakt_2_-_imie_i_nazwisko'); ?>
+                </h2>
+                <h3 class="personFunction regular">
+                    <?php echo get_field('kontakt_2_-_tytul'); ?>
+                </h3>
 
                 <h4 class="personContact regular link">
-                    <a href="mailto:jakub.napierala@leanwmedycynie.pl"></a>
+                    <a href="mailto:<?php echo get_field('kontakt_2_-_mail'); ?>"></a>
                     <span class="green bold">E:</span>
-                    jakub.napierala@leanwmedycynie.pl
+                    <?php echo get_field('kontakt_2_-_mail'); ?>
                 </h4>
                 <h3 class="personContact regular link">
-                    <a href="tel:+48602509538"></a>
+                    <a href="tel:<?php echo str_replace(' ', '', get_field('kontakt_2_-_mail')); ?>"></a>
                     <span class="green bold">T:</span>
-                    +48 602 509 538
+                    <?php echo get_field('kontakt_2_-_telefon'); ?>
                 </h3>
             </div>
         </div>

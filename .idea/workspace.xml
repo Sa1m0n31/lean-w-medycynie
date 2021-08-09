@@ -2,23 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a1b282-3991-4a4f-a285-2d22951564a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/Lean_w_medycynie_certyfikat_expert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Lean_w_medycynie_certyfikat_inspirer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Lean_w_medycynie_certyfikat_leader.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Lean_w_medycynie_certyfikat_master.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/akademia-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/akademia-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/akademia-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/akademia-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/akademia-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/lean_nawigator_hero_akademia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-akademia.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/agnieszka_zdeba.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/black-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/jakub_napierala.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lean_photo_5a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/siema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/comments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Biogen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/Biogen.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Lean_w_medycynie_logo_01.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/Lean_w_medycynie_logo_01.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/akcept.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/akcept.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/arrow-green.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/arrow-green.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/corpo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/corpo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/doswiadczenie.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/doswiadczenie.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/facebook-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/facebook-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/facebook-green.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/facebook-green.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/facebook.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/facebook.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/haxon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/haxon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/konsultanci.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/konsultanci.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lean_logo_kontra.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/lean_logo_kontra.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lean_photo_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/lean_photo_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lean_w_medycynie_sygent.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/lean_w_medycynie_sygent.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/letter-hover.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/letter-hover.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/letter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/letter.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/linkedin-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/linkedin-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/linkedin-green.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/linkedin-green.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/linkedin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/linkedin.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/medicover.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/medicover.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/next-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/next-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/next-small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/next-small.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/next.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/next.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/organizacja.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/organizacja.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/phone-call-hover.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/phone-call-hover.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/phone-call.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/phone-call.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/potencjal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/potencjal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/profesjonalizm.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/profesjonalizm.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/projekt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/projekt.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pzu_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/pzu_logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/realizacja.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/realizacja.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/rozwoj.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/rozwoj.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sms.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/sms.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/system.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/system.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/transformacje.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/transformacje.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/twitter-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/twitter-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/twitter-green.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/twitter-green.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/twitter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/twitter.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/umowa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/umowa.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/wspolpraca.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/wspolpraca.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/youtube-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/youtube-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/youtube-green.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/youtube-green.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/youtube.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/youtube.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/zespol.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/zespol.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/custom-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/custom-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/customizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/customizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/jetpack.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/jetpack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/template-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/template-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/template-tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/template-tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/lean.pot" beforeDir="false" afterPath="$PROJECT_DIR$/languages/lean.pot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/languages/readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-akademia.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-akademia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-dofinansowania.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-dofinansowania.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page-eksperci.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-eksperci.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-konferencje.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-konferencje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-kontakt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-lean-nawigator.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-lean-nawigator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-misja.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-misja.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-polityka-prywatnosci.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-polityka-prywatnosci.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page-produkty.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-produkty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-konferencje.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-konferencje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,15 +111,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\lean\img" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\lean" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\lean\img" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\lean\js" />
     </key>
   </component>
@@ -121,7 +184,23 @@
       <workItem from="1613639026389" duration="14732000" />
       <workItem from="1613699560415" duration="172000" />
       <workItem from="1613729169578" duration="5946000" />
-      <workItem from="1613740297467" duration="8357000" />
+      <workItem from="1613740297467" duration="8647000" />
+      <workItem from="1613987961613" duration="1870000" />
+      <workItem from="1614165423868" duration="1949000" />
+      <workItem from="1614262454488" duration="8316000" />
+      <workItem from="1614287920445" duration="3740000" />
+      <workItem from="1614301258960" duration="3840000" />
+      <workItem from="1614342145109" duration="208000" />
+      <workItem from="1614350915468" duration="372000" />
+      <workItem from="1614456818493" duration="7940000" />
+      <workItem from="1614589215700" duration="36000" />
+      <workItem from="1623706859274" duration="3446000" />
+      <workItem from="1623711118604" duration="11000" />
+      <workItem from="1624293201667" duration="831000" />
+      <workItem from="1624407066530" duration="30000" />
+      <workItem from="1628284594033" duration="11000" />
+      <workItem from="1628545703540" duration="273000" />
+      <workItem from="1628546019538" duration="4026000" />
     </task>
     <servers />
   </component>
@@ -139,6 +218,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1628545721495">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628545721495" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

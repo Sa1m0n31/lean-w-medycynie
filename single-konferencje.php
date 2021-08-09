@@ -3,9 +3,8 @@ get_header();
 ?>
 
 <!-- PAGE HEADER -->
-<header class="pageHeader naszaMisjaHeader">
-    <!--<img class="pageHeaderImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/hero_image_podstrona_misja.jpg'; ?>" alt="nasza-misja" />
-        --><h1 class="pageHeaderHeader">
+<header class="pageHeader konferencjeHeader">
+    <h1 class="pageHeaderHeader">
         Konferencje
     </h1>
 </header>
@@ -82,6 +81,15 @@ get_header();
 
 
             <li class="konferencjaMenuItem" id="konfMenu5" onclick="konferencja(5)">Partnerzy</li>
+
+
+            <button class="konferencjaComeBackBtn">
+                <a href="https://leanwmedycynie.pl/konferencje">
+                    <span class="konferencjaComeBackBtnEntity">&lsaquo;</span>
+                    <span>Wstecz</span>
+                </a>
+            </button>
+
         </ul>
 
         <div class="konferencjaContent">
@@ -325,7 +333,7 @@ get_header();
                                 <h3 class="konferencjaItemHeader konferencjaItemHeaderCenter">
                                     Sponsorzy oraz uczestnicy konferencji
                                 </h3>
-                                <div class="partnerzyInner">
+                                <div class="partnerzyInner partnerzySiema">
                                     <?php
                                     foreach($images as $image) {
                                         ?>
@@ -345,7 +353,7 @@ get_header();
                                 <h3 class="konferencjaItemHeader konferencjaItemHeaderCenter">
                                     Patronat honorowy
                                 </h3>
-                                <div class="partnerzyInner">
+                                <div class="partnerzyInner patroniSiema">
                                     <?php
                                     foreach($images2 as $image) {
                                         ?>
@@ -369,8 +377,10 @@ get_header();
 </main>
 
 
-
 </div>
-<?php
-get_footer();
-?>
+<!-- FOOTER -->
+
+<?php get_footer(); ?>
+
+</body>
+</html>

@@ -27,13 +27,11 @@ a {
     text-decoration: none;
 }
 
+.moveUpBtn {
+    display: none;
+}
+
 * {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -401,6 +399,20 @@ html {
     transform: translateY(-30px);
 }
 
+@media(min-width: 900px) {
+   
+  .landingTitle {
+  	line-height: 100px;
+    white-space: nowrap;
+  }
+  
+  .landingTitle .big {
+  	white-space: normal;
+    line-height: 120px;
+  }
+
+}
+
 .landingTitle::after {
     content: "";
     position: absolute;
@@ -435,6 +447,7 @@ html {
     align-items: center;
     padding: 15px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .landingButton a {
@@ -602,6 +615,10 @@ circle {
     width: 1px;
     background: transparent;
     height: 1000px;
+}
+
+#fourthSection {
+    top: -600px;
 }
 
 #secondSection {
@@ -799,6 +816,7 @@ circle {
     text-align: center;
     height: 80px;
     margin-bottom: 0 !important;
+    transform: translateY(-30px);
 }
 
 /* Wierzymy */
@@ -949,7 +967,13 @@ circle {
     transform: translateX(50px);
 }
 
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
 .ofertaRightLeft {
+    flex-grow: 0;
+    flex-shrink: 0;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -1144,6 +1168,17 @@ circle {
     padding: 3% 80px;
     color: #fff;
     font-size: .4rem;
+}
+
+.footerCertyfikat {
+    width: 150px !important;
+    height: auto !important;
+    margin-top: 40px;
+    transform: none !important;
+}
+
+.footerCertyfikat--mobile {
+    display: none;
 }
 
 .footerFirst {
@@ -1383,6 +1418,11 @@ circle {
     background-position: 10% 30%;
 }
 
+.konferencjeHeader {
+    background: url("./img/hero_image_konferencja.jpg");
+    background-position: 10% 30%;
+}
+
 .pageHeaderImg {
     position: absolute;
     top: 0;
@@ -1414,7 +1454,11 @@ circle {
     padding: 0 calc((100vw - 1700px) / 2);
 }
 
-.misjaFirst .bigHeader, .eksperci .bigHeader {
+.misjaFirst .bigHeader {
+    max-width: 600px;
+}
+
+.eksperci .bigHeader {
     max-width: 700px;
 }
 
@@ -1558,6 +1602,326 @@ circle {
     height: 150px;
 }
 
+/* Misja - case study */
+.caseStudySection {
+    padding: 30px 0;
+    position: relative;
+}
+
+.caseStudySection::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3000px;
+    height: 1px;
+    background: #D4D4D4;
+}
+
+.caseStudySection:last-of-type::after {
+    display: none;
+}
+
+.caseStudySection p {
+    font-size: 17px;
+}
+
+.caseStudySectionHeader {
+    font-size: 24px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.caseStudySectionHeader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 23px;
+    height: 3px;
+    background: #789C4A;
+}
+
+.caseStudyStep {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.caseStudyStepFrame {
+    border: 1px solid #7F9F42;
+    width: 65px;
+    height: 61px;
+    border-radius: 4px;
+    margin-right: 30px;
+    flex-basis: 8%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.caseStudyStepNumber {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    color: #7F9F42;
+}
+
+.caseStudyStepStep {
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+.caseStudyImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+.caseStudySectionStats {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.caseStudySectionStatsItem {
+    border: 1px solid #7F9F42;
+    border-radius: 4px;
+    width: 185px;
+    height: 155px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caseStudySectionStatsValue {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    color: #7F9F42;
+}
+
+.caseStudySectionStatsValue::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 3px;
+    background: #DEDEDE;
+}
+
+.caseStudySectionStatsKey {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    max-width: 150px;
+}
+
+/* Warsztaty analityczne */
+
+.pageWarsztatyHeader {
+    background: url("./img/hero_image_podstrona_warsztaty.jpg");
+}
+
+.warsztatyMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.warsztatyLeft, .warsztatyRight {
+    width: 45%;
+}
+
+.warsztatyRight {
+    margin-top: 100px;
+}
+
+.warsztatyRight p, .warsztatyLeft p {
+    font-size: 16px;
+}
+
+/* Ksiega znaku */
+@media(min-width: 1800px) {
+    .logoInner {
+        padding-left: calc((100vw - 1700px) / 2);
+    }
+}
+
+.ksiegaHeader {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.ksiegaHeader::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #789C4A;
+}
+
+.ksiegaText {
+    font-size: 17px;
+}
+
+.logoFrameHeader {
+    font-size: 24px;
+}
+
+.ksiegaText, .logoSectionBottom {
+    max-width: 780px;
+}
+
+.logoSectionBottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoKsiegaImg1 {
+    margin: 70px 0 30px;
+}
+
+.pobierzPaczkeBtn {
+    background: #7F9F42;
+    color: #fff;
+    display: flex;
+    padding: 15px 32px;
+    border-radius: 4px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 17px;
+    transition: .2s all;
+}
+
+.pobierzPaczkeBtn:hover {
+    background: #6E8A37;
+}
+
+.pobierzPaczkeBtn a {
+    color: #fff !important;
+}
+
+.logoFrame {
+    width: 550px;
+    height: 123px;
+    border: 1px solid #E9E9E9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.logoFrameHeader {
+    font-size: 19px;
+}
+
+.pobierzPaczkeBtnImg {
+    margin-right: 20px;
+}
+
+.logoSection {
+    margin: 0 auto 100px !important;
+    position: relative;
+}
+
+.logoSection::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: #D4D4D4;
+}
+
+.logoSection:last-of-type::after {
+    display: none;
+}
+
+.logoSectionBottomImg2 {
+    margin: 30px 0;
+}
+
+.logoSectionBottomImg3 {
+    margin: 80px 0 30px;
+}
+
+#kz1, #kz2, #kz3, #kz4, #kz5, #kz6 {
+    position: absolute;
+    top: -150px;
+}
+
+.logoSection:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+.logoInner .firstHeader, .logoInner .bigHeader {
+    padding-left: 0 !important;
+}
+
+.logoInner .firstHeader::before {
+    left: -20px !important;
+}
+
+.logoContent {
+    margin-top: 90px;
+}
+
+@media(max-width: 900px) {
+    .logoInner .konferencjaContent {
+        margin-top: 50px;
+    }
+
+    .logoSection::after {
+        width: 100%;
+    }
+}
+
+@media(max-width: 700px) {
+    .logoSectionBottom > img {
+        width: 80%;
+        height: auto;
+    }
+
+    .logoFrame {
+        width: 95%;
+        height: auto;
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .logoFrameHeader {
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    .ksiegaText {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 500px) {
+    .logoInner .konferencjaContent {
+        margin-top: 0;
+    }
+}
+
 /* NASI EKSPERCI */
 
 .pageEksperciHeader {
@@ -1573,6 +1937,26 @@ circle {
     margin-top: 60px;
 }
 
+@media(min-width: 1500px) {
+    .warsztatyRight {
+        margin-right: 50px;
+    }
+}
+
+@media(max-width: 900px) {
+    .warsztatyMain {
+        flex-direction: column;
+    }
+
+    .warsztatyLeft, .warsztatyRight {
+        width: 100%;
+    }
+
+    .warsztatyRight {
+        margin-top: 40px;
+    }
+}
+
 @media(max-width: 2000px) and (min-width: 1800px) {
     .eksperci .firstHeader {
         padding-left: calc((100vw - 1700px) / 2);
@@ -1584,6 +1968,10 @@ circle {
 
     .eksperci .bigHeader {
         margin-bottom: 50px;
+        padding-left: calc((100vw - 1700px) / 2);
+    }
+
+    .warsztatyLeft p {
         padding-left: calc((100vw - 1700px) / 2);
     }
 }
@@ -1603,17 +1991,27 @@ circle {
     margin-left: 130px;
 }
 
+.popupaoc-image-popup:first-of-type {
+    margin-right: 20px;
+}
+
+.paoc-popup-modal {
+    flex-basis: auto !important;
+    width: fit-content !important;
+    width: -moz-max-content !important;
+}
+
 .eksperciItemName {
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
 }
 
 .eksperciItemFunction {
-    color: var(--lean-main);
-    font-size: .5rem;
-    position: relative;
-    font-weight: 400;
-    margin: 15px 0;
+    color: var(--lean-main) !important;
+    font-size: .5rem !important;
+    position: relative !important;
+    font-weight: 400 !important;
+    margin: 15px 0 !important;
 }
 
 .eksperciItemFunction::after {
@@ -1627,8 +2025,8 @@ circle {
 }
 
 .eksperciItemText {
-    font-size: .45rem;
-    margin-top: 50px;
+    font-size: .45rem !important;
+    margin-top: 50px !important;
 }
 
 .eksperciItemTextList {
@@ -1792,6 +2190,7 @@ circle {
     border: 1px solid var(--grey-dark);
     border-radius: 5px;
     padding: 40px;
+    font-size: 17px;
 }
 
 .absoluteBoxPercent {
@@ -1839,6 +2238,7 @@ circle {
     align-items: center;
     position: relative;
     width: 40%;
+    font-size: 17px;
 }
 
 .frame .framePart:first-child {
@@ -2008,6 +2408,30 @@ circle {
     margin: 100px 0;
     width: 100%;
     display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.wizytowkiHeader {
+    display: block;
+    width: 100%;
+}
+
+.wizytowkiHeaderH {
+    max-width: 500px;
+    position: relative;
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+.wizytowkiHeaderH::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 30px;
+    height: 5px;
+    background: #6E8A37;
 }
 
 .wizytowki .person {
@@ -2101,6 +2525,11 @@ circle {
 .podstronaKontaktItem {
     width: 45%;
     margin: 50px 5% 0 0;
+    font-size: .55rem;
+}
+
+.podstronaKontaktItem p {
+    margin-top: 0 !important;
 }
 
 .podstronaKontaktItemHeader {
@@ -2129,7 +2558,7 @@ circle {
 }
 
 .wpcf7-form p {
-    display: flex !important;
+    display: flex;
     width: 100%;
     justify-content: flex-end;
 }
@@ -2164,7 +2593,7 @@ circle {
     margin-right: 5%;
 }*/
 
-.wpcf7-form p:nth-child(3), .wpcf7-form p:nth-child(6) {
+.wpcf7-form p:nth-child(3) {
     width: 47%;
     margin-right: 6%;
 }
@@ -2399,6 +2828,44 @@ span.wpcf7-list-item {
     color: var(--text);
 }
 
+.konferencjaComeBackBtnEntity {
+    font-size: 20px;
+    color: #BABDBC;
+    font-weight: 700;
+    transition: .2s all;
+    margin-right: 5px;
+}
+
+.konferencjaComeBackBtn {
+    margin-top: 400px;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px;
+    background: transparent;
+    transition: .2s all;
+}
+
+.konferencjaComeBackBtn:hover, .konferencjaComeBackBtn:focus, .konferencjaComeBackBtn:active {
+    border-color: #6E8A37;
+}
+
+.konferencjaComeBackBtn:hover *, .konferencjaComeBackBtn:focus *, .konferencjaComeBackBtn:active * {
+    color: #6E8A37 !important;
+}
+
+.konferencjaComeBackBtn a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 25px;
+    color: #BABDBC;
+    font-weight: 700;
+    transition: .2s all;
+}
+
 .konferencjaContent {
     width: 1100px;
 }
@@ -2540,16 +3007,18 @@ span.wpcf7-list-item {
 
 .partnerzyInner {
     margin: 50px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+}
+
+.patroniSiema {
+   display: flex;
+   justify-content: center;
+  align-items: center;
 }
 
 .partnerzyInnerItem {
-    max-width: 200px;
-    height: auto;
-    margin: 20px;
+    display: block;
+    margin: auto;
+    max-width: 300px;
 }
 
 /* Prelegenci - poprawka */
@@ -2992,7 +3461,7 @@ span.wpcf7-list-item {
     font-size: 17px;
     font-weight: 400;
     margin-top: 30px;
-    max-width: 170px;
+    max-width: 250px;
 }
 
 .pageProduktyItemRight {
@@ -3095,6 +3564,7 @@ span.wpcf7-list-item {
     width: 100%;
     padding: 30px 0;
     border-bottom: 1px solid #D4D4D4;
+    font-size: 17px;
 }
 
 .politykaSection:first-of-type {
@@ -3299,6 +3769,7 @@ span#cookieconsent\:desc {
 }
 
 .akademiaImg {
+    margin-left: 36%;
     margin-top: 40px;
 }
 
@@ -3631,4 +4102,84 @@ span#cookieconsent\:desc {
 .liMargin {
     display: block;
     margin-bottom: 10px;
+}
+
+/* NEXT GEN Gallery hover effect */
+.ngg-galleryoverview.default-view .ngg-gallery-thumbnail img:hover {
+    opacity: 1 !important;
+}
+
+.ngg-gallery-thumbnail a {
+    overflow: hidden;
+}
+
+.ngg-gallery-thumbnail a img {
+    transition: .4s all ease-in-out;
+}
+
+.ngg-gallery-thumbnail a:hover img {
+    transform: scale(1.2);
+}
+
+/* Changes made on 14.06.2021 */
+.kontaktRight {
+    position: relative;
+}
+
+.kontaktDisclaimer {
+    color: var(--grey-dark);
+    position: absolute;
+    right: 0;
+    font-size: 17px;
+}
+
+.kontaktMsg {
+    opacity: 0;
+    display: none;
+    transition: .4s all;
+}
+
+.kontaktMsg__header {
+    text-align: center;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* Changes made on 09.08.2021 */
+.formArrow {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+}
+
+@media(min-width: 1500px) {
+    .wpcf7-acceptance .wpcf7-list-item-label {
+        white-space: nowrap;
+    }
+
+    .submitButton {
+        margin-top: -140px;
+    }
+
+    .kontaktDisclaimer {
+        margin-top: -170px;
+    }
+}
+
+.wpcf7-form p:nth-last-of-type(5) {
+    margin-bottom: 10px;
+}
+
+.wpcf7-form p:nth-last-of-type(3) {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.wpcf7-form .klauzula {
+    font-size: 13px !important;
+    width: 55% !important;
+    margin: 0 0 10px;
+    display: none;
 }

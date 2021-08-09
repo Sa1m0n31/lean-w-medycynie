@@ -7,6 +7,10 @@
  * @package Lean
  */
 
+@ini_set( 'upload_max_size' , '300M' );
+@ini_set( 'post_max_size', '300M');
+@ini_set( 'max_execution_time', '300' );
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -109,10 +113,11 @@ add_action( 'after_setup_theme', 'lean_setup' );
  * Enqueue scripts and styles.
  */
 function lean_scripts() {
-	wp_enqueue_style( 'lean-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css', array(), _S_VERSION);
+	wp_enqueue_style( 'lean-style', get_stylesheet_uri() . '?n=27', array(), _S_VERSION );
+	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css?n=11', array(), _S_VERSION);
 
-	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js', array('gsap'), _S_VERSION, true);
+	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js?n=7', array('gsap', 'siema'), _S_VERSION, true);
+	wp_enqueue_script('siema', get_template_directory_uri() . '/js/siema.js', array(), _S_VERSION, true);
 
     wp_enqueue_script( 'scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array('gsap'), null, true );
     wp_register_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js', null, null, true );
@@ -298,3 +303,30 @@ function lean_add_slider_post_type() {
 }
 
 add_action("init", "lean_add_slider_post_type");
+
+/* Remove editor from specific pages */
+function remove_editor() {
+    if (isset($_GET['post'])) {
+        $id = $_GET['post'];
+        $template = get_post_meta($id, '_wp_page_template', true);
+        switch ($template) {
+            case 'misja.php':
+            case 'page-dofinansowania.php':
+            case 'page-eksperci.php':
+            case 'page-produkty.php':
+                // the below removes 'editor' support for 'pages'
+                // if you want to remove for posts or custom post types as well
+                // add this line for posts:
+                // remove_post_type_support('post', 'editor');
+                // add this line for custom post types and replace
+                // custom-post-type-name with the name of post type:
+                // remove_post_type_support('custom-post-type-name', 'editor');
+                remove_post_type_support('page', 'editor');
+                break;
+            default :
+                // Don't remove any other template.
+                break;
+        }
+    }
+}
+add_action('init', 'remove_editor');

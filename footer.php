@@ -47,6 +47,8 @@
                     M: biuro@leanwmedycynie.pl
                 </a>
             </h4>
+
+            <img class="footerCertyfikat footerCertyfikat--mobile" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/iso_9001.jpg'; ?>" alt="certyfikat" />
         </div>
 
         <span class="mobileDivider"></span>
@@ -54,14 +56,16 @@
         <div class="footerCol">
             <ul class="footerMenu">
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'akademia' )->ID ); ?>">Akademia</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'misja' )->ID ); ?>">Misja</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'o nas' )->ID ); ?>">O nas</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'konferencje' )->ID ); ?>">Konferencja</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ); ?>">Produkty</a></li>
-                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean-nawigator' )->ID ); ?>">Lean Nawigator</a></li>
+                <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'lean nawigator' )->ID ); ?>">Lean Nawigator</a></li>
                 <li class="footerMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
             </ul>
+
+            <img class="footerCertyfikat" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/iso_9001.jpg'; ?>" alt="certyfikat" />
         </div>
     </div>
 
@@ -87,7 +91,7 @@
                 <a aria-label="Linkedin" id="linkedinF" href="https://www.linkedin.com/company/lean-w-medycynie/" target="_blank" rel="noreferrer">
 
                 </a>
-                <a aria-label="Twitter" id="twitterF" href="https://twitter.com/leanwmedycynie" target="_blank" rel="noreferrer">
+                <a aria-label="Twitter" id="twitterF" href="https://twitter.com/_leanwmedycynie" target="_blank" rel="noreferrer">
 
                 </a>
             </div>
