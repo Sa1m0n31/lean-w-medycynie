@@ -766,9 +766,19 @@ let radius, circumference;
 
 const circles = document.querySelectorAll(".circle");
 const circlesOuter = document.querySelectorAll(".circle-outer");
-const circlesM = document.querySelectorAll(".circle-mobile");
-const circlesOuterM = document.querySelectorAll(".circle-mobile-outer");
+let circlesM = [], circlesOuterM = [];
 const numberOfSlides = circles.length;
+
+for(let i=0; i<numberOfSlides; i++) {
+    const newEl = document.querySelector(`.landingSlide:nth-child(${i+1}) svg:nth-of-type(${i+1}) > .circle-mobile`);
+    const newOuter = document.querySelector(`.landingSlide:nth-child(${i+1}) svg:nth-of-type(${i+1}) > .circle-mobile-outer`);
+
+    console.log(newEl);
+    console.log(newOuter);
+
+    circlesM.push(newEl);
+    circlesOuterM.push(newOuter);
+}
 
 if((circle1 !== null)||(circle1M !== null)) {
     if(window.innerWidth > 1100) {
@@ -786,7 +796,7 @@ if((circle1 !== null)||(circle1M !== null)) {
         radius = circle1M[0].r.baseVal.value;
         circumference = radius * 2 * Math.PI;
 
-        for(let i=0; i<circles.length; i++) {
+        for(let i=0; i<circlesOuterM.length; i++) {
                 circlesOuterM[i].style.strokeDasharray = `${circumference} ${circumference}`;
                 circlesOuterM[i].style.strokeDashoffset = "0";
         }
@@ -903,17 +913,16 @@ if(circles.length) {
 if(circlesM.length) {
     circlesM.forEach((item, index) => {
         item.addEventListener("click", () => {
-            heroSlider.goTo(index);
             stopSlider = true;
             slide = index;
-            goSliderMobile(index);
+            heroSlider.goTo(index);
         });
     });
 }
 
 /* Slider - mobile */
 const goSliderMobile = (n) => {
-    let i = 0, circle = n, tmp;
+    let i = 0, circle = n;
     if((circlesOuterM[n] !== undefined)&&(circlesM[n] !== undefined)) {
         circlesOuterM[n].style.stroke = "#6E8A37";
         circlesM[n].style.fill = "#6E8A37";
@@ -943,9 +952,6 @@ const goSliderMobile = (n) => {
             if(circle === numberOfSlides) circle = 0;
             circlesM[circle].style.fill = "#6E8A37";
             i = 0;
-
-            if(circle === 0) tmp = 1;
-            else tmp = circle - 1;
         }
     }, 30);
 }
@@ -964,7 +970,6 @@ const nextMobileSlide = (n = -1) => {
     if(slide === numberOfSlides) slide = 0;
     stopSlider = true;
     heroSlider.next();
-    goSliderMobile(slide);
 }
 
 if(window.innerWidth > 1100) {

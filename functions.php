@@ -113,10 +113,10 @@ add_action( 'after_setup_theme', 'lean_setup' );
  * Enqueue scripts and styles.
  */
 function lean_scripts() {
-	wp_enqueue_style( 'lean-style', get_stylesheet_uri() . '?n=27', array(), _S_VERSION );
-	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css?n=11', array(), _S_VERSION);
+	wp_enqueue_style( 'lean-style', get_stylesheet_uri() . '?n=28', array(), _S_VERSION );
+	wp_enqueue_style('lean-mobile', get_template_directory_uri() . '/mobile.css?n=12', array(), _S_VERSION);
 
-	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js?n=7', array('gsap', 'siema'), _S_VERSION, true);
+	wp_enqueue_script('lean-main', get_template_directory_uri() . '/js/main.js?n=8', array('gsap', 'siema'), _S_VERSION, true);
 	wp_enqueue_script('siema', get_template_directory_uri() . '/js/siema.js', array(), _S_VERSION, true);
 
     wp_enqueue_script( 'scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array('gsap'), null, true );
