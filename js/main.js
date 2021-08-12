@@ -758,27 +758,27 @@ let slide2 = document.querySelector("#landing2");
 let left1 = document.querySelector("#left1");
 let left2 = document.querySelector("#left2");
 
-const circles = [circle1, circle2];
-const inners = [inner1, inner2];
-
 /* Array od arrays */
-const circlesM = [circle1M, circle2M];
-const innersM = [inner1M, inner2M];
-
 const slides = [slide1, slide2];
 const lefts = [left1, left2];
 
 let radius, circumference;
 
+const circles = document.querySelectorAll(".circle");
+const circlesOuter = document.querySelectorAll(".circle-outer");
+const circlesM = document.querySelectorAll(".circle-mobile");
+const circlesOuterM = document.querySelectorAll(".circle-mobile-outer");
+const numberOfSlides = circles.length;
+
 if((circle1 !== null)||(circle1M !== null)) {
     if(window.innerWidth > 1100) {
         if(circle1) {
-            radius = circle1.r.baseVal.value;
+            radius = circlesOuter[0].r.baseVal.value;
             circumference = radius * 2 * Math.PI;
 
-            for(let i=0; i<2; i++) {
-                circles[i].style.strokeDasharray = `${circumference} ${circumference}`;
-                circles[i].style.strokeDashoffset = "0";
+            for(let i=0; i<circlesOuter.length; i++) {
+                circlesOuter[i].style.strokeDasharray = `${circumference} ${circumference}`;
+                circlesOuter[i].style.strokeDashoffset = "0";
             }
         }
     }
@@ -786,26 +786,22 @@ if((circle1 !== null)||(circle1M !== null)) {
         radius = circle1M[0].r.baseVal.value;
         circumference = radius * 2 * Math.PI;
 
-        for(let i=0; i<2; i++) {
-            circlesM[i].forEach(item => {
-                item.style.strokeDasharray = `${circumference} ${circumference}`;
-                item.style.strokeDashoffset = "0";
-            });
+        for(let i=0; i<circles.length; i++) {
+                circlesOuterM[i].style.strokeDasharray = `${circumference} ${circumference}`;
+                circlesOuterM[i].style.strokeDashoffset = "0";
         }
     }
 }
 
 const setProgress = (circle, percent) => {
     const offset = circumference - percent / 300 * circumference;
-    circles[circle].style.strokeDashoffset = offset.toString();
+    circlesOuter[circle].style.strokeDashoffset = offset.toString();
 }
 
 const setMobileProgress = (circle, percent) => {
     const offset = circumference - percent / 300 * circumference;
-    if(circlesM[circle] !== undefined) {
-        circlesM[circle].forEach((item) => {
-            item.style.strokeDashoffset = offset.toString();
-        });
+    if(circlesOuterM[circle] !== undefined) {
+        circlesOuterM[circle].style.strokeDashoffset = offset.toString();
     }
 }
 
@@ -813,21 +809,17 @@ let slide = 0;
 let stopSlider = false;
 
 const goSlider = (n) => {
-    let i = 0, circle = n, tmp;
+    let i = 0, circle = n;
     if(circles[0]) {
-        circles[n].style.stroke = "#6E8A37";
-        inners[n].style.fill = "#6E8A37";
+        circlesOuter[n].style.stroke = "#6E8A37";
+        circles[n].style.fill = "#6E8A37";
 
         gsap.set(lefts, {opacity: 0, x: -50});
-        gsap.fromTo(slides, {x: 0}, {x: 2000, opacity: 0, duration: 1});
-        gsap.fromTo(slides[n], {x: -2000}, {x: 0, opacity: 1, duration: 1})
-            .then(() => {
-                gsap.to(lefts, {opacity: 1, x: 0, duration: .4});
-            });
+        gsap.to(lefts, {opacity: 1, x: 0, duration: .4});
 
         let sliderInterval = setInterval(() => {
             if (i === 2) {
-                circles[circle].style.stroke = "#6E8A37";
+                circlesOuter[circle].style.stroke = "#6E8A37";
             }
 
             if (i <= 300) {
@@ -839,23 +831,16 @@ const goSlider = (n) => {
                 setProgress(circle, i);
                 i++;
             } else {
-                slide++;
-                inners[circle].style.fill = "#cdcdcd";
-                circles[circle].style.stroke = "none";
+                nextSlide();
+                circles[circle].style.fill = "#cdcdcd";
+                circlesOuter[circle].style.stroke = "none";
                 circle++;
-                if (circle === 2) circle = 0;
-                inners[circle].style.fill = "#6E8A37";
+                if (circle === numberOfSlides) circle = 0;
+                circles[circle].style.fill = "#6E8A37";
                 i = 0;
 
-                if (circle === 0) tmp = 1;
-                else tmp = circle - 1;
-
                 gsap.set(lefts, {opacity: 0, x: -50});
-                gsap.fromTo(slides[tmp], {x: 0}, {x: 2000, opacity: 0, duration: 1});
-                gsap.fromTo(slides[circle], {x: -2000}, {x: 0, opacity: 1, duration: 1})
-                    .then(() => {
-                        gsap.to(lefts, {opacity: 1, x: 0, duration: .4});
-                    });
+                gsap.to(lefts, {opacity: 1, x: 0, duration: .4});
 
             }
         }, 30);
@@ -863,49 +848,80 @@ const goSlider = (n) => {
 }
 
 const resetCircles = (slide) => {
-    for(let i=0; i<2; i++) {
-        inners[i].style.fill = "#cdcdcd";
-        circles[i].style.stroke = "none";
+    for(let i=0; i<numberOfSlides; i++) {
+        circles[i].style.fill = "#cdcdcd";
+        circlesOuter[i].style.stroke = "none";
     }
-    inners[slide].style.fill = "#6E8A37";
+    circles[slide].style.fill = "#6E8A37";
 }
+
+/* Siema.js slider */
+let heroSlider;
+if(document.querySelector(".landing__inner")) {
+    heroSlider = new Siema({
+        selector: ".landing__inner",
+        perPage: 1,
+        loop: true,
+        onChange: () => {
+            stopSlider = true;
+            slide = heroSlider.currentSlide;
+            if(window.innerWidth > 1100) goSlider(heroSlider.currentSlide);
+            else goSliderMobile(heroSlider.currentSlide);
+        }
+    });
+}
+
 
 const nextSlide = (n = -1) => {
     if(n === -1) slide++;
     else slide = n;
-    if(slide === 2) slide = 0;
+
+    if(slide >= numberOfSlides) slide = 0;
+
     stopSlider = true;
-    goSlider(slide);
+    heroSlider.next();
+}
+
+const prevSlide = () => {
+    slide--;
+    if(slide === -1) slide = numberOfSlides-1;
+    stopSlider = true;
+    heroSlider.prev();
+}
+
+
+if(circles.length) {
+    circles.forEach((item, index) => {
+       item.addEventListener("click", () => {
+            stopSlider = true;
+            slide = index;
+            heroSlider.goTo(index);
+       });
+    });
+}
+
+if(circlesM.length) {
+    circlesM.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            heroSlider.goTo(index);
+            stopSlider = true;
+            slide = index;
+            goSliderMobile(index);
+        });
+    });
 }
 
 /* Slider - mobile */
-const goSliderMobile = (n, different = false) => {
+const goSliderMobile = (n) => {
     let i = 0, circle = n, tmp;
-    if((circlesM[n] !== undefined)&&(innersM[n] !== undefined)) {
-        circlesM[n].forEach(item => {
-            item.style.stroke = "#6E8A37";
-        });
-        innersM[n].forEach(item => {
-            item.style.fill = "#6E8A37";
-        });
-    }
-
-    if(different) {
-        gsap.fromTo(slides, { x: 0 }, { x: -2000, opacity: 0, duration: 1 });
-        gsap.fromTo(slides[n], { x: 2000 }, { x: 0, opacity: 1, duration: 1 });
-    }
-    else {
-        gsap.fromTo(slides, { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-        gsap.fromTo(slides[n], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
+    if((circlesOuterM[n] !== undefined)&&(circlesM[n] !== undefined)) {
+        circlesOuterM[n].style.stroke = "#6E8A37";
+        circlesM[n].style.fill = "#6E8A37";
     }
 
     let sliderInterval = setInterval(() => {
         if(i === 2) {
-            if(circlesM[circle] !== undefined) {
-                circlesM[circle].forEach(item => {
-                    item.style.stroke = "#6E8A37";
-                });
-            }
+            circlesOuterM[circle].style.stroke = "#6E8A37";
         }
 
         if(i <= 300) {
@@ -918,57 +934,37 @@ const goSliderMobile = (n, different = false) => {
             i++;
         }
         else {
-            slide++;
-            if((innersM[circle] !== undefined)&&(circlesM[circle] !== undefined)) {
-                innersM[circle].forEach(item => {
-                    item.style.fill = "#cdcdcd";
-                });
-                circlesM[circle].forEach(item => {
-                    item.style.stroke = "none";
-                });
+            nextMobileSlide();
+            if((circlesM[circle] !== undefined)&&(circlesOuterM[circle] !== undefined)) {
+                circlesM[circle].style.fill = "#cdcdcd";
+                circlesOuterM[circle].style.stroke = "none";
             }
             circle++;
-            if(circle === 2) circle = 0;
-            if(innersM[circle] !== undefined) {
-                innersM[circle].forEach(item => {
-                    item.style.fill = "#6E8A37";
-                });
-            }
+            if(circle === numberOfSlides) circle = 0;
+            circlesM[circle].style.fill = "#6E8A37";
             i = 0;
 
             if(circle === 0) tmp = 1;
             else tmp = circle - 1;
-
-            gsap.fromTo(slides[tmp], { x: 0 }, { x: 2000, opacity: 0, duration: 1 });
-            gsap.fromTo(slides[circle], { x: -2000 }, { x: 0, opacity: 1, duration: 1 });
         }
     }, 30);
 }
 
 const resetMobileCircles = () => {
-    for(let i=0; i<2; i++) {
-        if((innersM[i] !== undefined)&&(circlesM[i] !== undefined)) {
-            innersM[i].forEach(item => {
-                item.style.fill = "#cdcdcd";
-            });
-            circlesM[i].forEach(item => {
-                item.style.stroke = "none";
-            });
-        }
+    for(let i=0; i<numberOfSlides; i++) {
+        circlesM[i].style.fill = "#cdcdcd";
+        circlesOuterM[i].style.stroke = "none";
     }
-    if(innersM[slide] !== undefined) {
-        innersM[slide].forEach(item => {
-            item.style.fill = "#6E8A37";
-        });
-    }
+    circlesM[slide].style.fill = "#6E8A37";
 }
 
-const nextMobileSlide = (n = -1, different = true) => {
+const nextMobileSlide = (n = -1) => {
     if(n === -1) slide++;
     else slide = n;
-    if(slide === 2) slide = 0;
+    if(slide === numberOfSlides) slide = 0;
     stopSlider = true;
-    goSliderMobile(slide, different);
+    heroSlider.next();
+    goSliderMobile(slide);
 }
 
 if(window.innerWidth > 1100) {
@@ -980,41 +976,41 @@ else {
 
 /* Slider on mobile - swipe */
 
-if(document.querySelector(".landing")) document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, { passive: true });
-if(document.querySelector(".landing")) document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, { passive: true });
-var xDown = null;
-var yDown = null;
-
-function handleTouchStart(evt) {
-    xDown = evt.touches[0].clientX;
-    yDown = evt.touches[0].clientY;
-}
-
-function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-        if ( xDiff > 0 ) { // W lewo
-            if(slide === 3) slide = 0;
-            else slide++;
-            nextMobileSlide(slide);
-        } else { // W prawo
-            if(slide === 0) slide = 1;
-            else slide--;
-            nextMobileSlide(slide, false);
-        }
-    }
-
-    /* reset values */
-    xDown = null;
-    yDown = null;
-}
+// if(document.querySelector(".landing")) document.querySelector(".landing").addEventListener('touchstart', handleTouchStart, { passive: true });
+// if(document.querySelector(".landing")) document.querySelector(".landing").addEventListener('touchmove', handleTouchMove, { passive: true });
+// var xDown = null;
+// var yDown = null;
+//
+// function handleTouchStart(evt) {
+//     xDown = evt.touches[0].clientX;
+//     yDown = evt.touches[0].clientY;
+// }
+//
+// function handleTouchMove(evt) {
+//     if ( ! xDown || ! yDown ) {
+//         return;
+//     }
+//     var xUp = evt.touches[0].clientX;
+//     var yUp = evt.touches[0].clientY;
+//     var xDiff = xDown - xUp;
+//     var yDiff = yDown - yUp;
+//
+//     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+//         if ( xDiff > 0 ) { // W lewo
+//             if(slide === 3) slide = 0;
+//             else slide++;
+//             nextMobileSlide(slide);
+//         } else { // W prawo
+//             if(slide === 0) slide = 1;
+//             else slide--;
+//             nextMobileSlide(slide, false);
+//         }
+//     }
+//
+//     /* reset values */
+//     xDown = null;
+//     yDown = null;
+// }
 
 /* Licznik */
 const c1 = document.querySelector("#count1");

@@ -471,13 +471,27 @@ html {
     font-weight: 600;
 }
 
-.landingSlide {
-    opacity: 0;
+.landing__inner {
+    height: 100%;
+    width: 100%;
 }
 
-.landingActive {
-    opacity: 1;
+.landing__inner > div,
+.landing__inner > div > div {
+    height: 100%;
 }
+
+.landing__inner > div > div {
+    position: relative;
+}
+
+/*.landingSlide {*/
+/*    opacity: 0;*/
+/*}*/
+
+/*.landingActive {*/
+/*    opacity: 1;*/
+/*}*/
 
 .landingButton::after {
     content: url("./img/next-small.svg");

@@ -7,10 +7,11 @@ get_header();
         <button class="nextSlide" onclick="nextSlide()">
             <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next.svg'; ?>" alt="next" />
         </button>
-        <button class="prevSlide" onclick="nextSlide()">
+        <button class="prevSlide" onclick="prevSlide()">
             <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next-grey.svg'; ?>" alt="next" />
         </button>
 
+        <main class="landing__inner">
         <!-- SLIDER -->
         <?php
             $args = array(
@@ -26,11 +27,7 @@ get_header();
                     $sliderId = 'landing' . $i;
                     ?>
 
-                    <div class="landingSlide <?php
-                        if($i == 0) {
-                            echo 'landingActive';
-                        }
-                    ?>" id="<?php echo $sliderId; ?>">
+                    <div class="landingSlide" id="<?php echo $sliderId; ?>">
                         <img class="sliderPhoto" id="slider1" src="<?php echo get_field('zdjecie'); ?>" alt="landingPhoto" />
 
                         <div class="landingLeft" id="left1">
@@ -48,14 +45,27 @@ get_header();
                             </button>
 
                             <div class="dots dotsMobile">
-                                <svg height="30" width="30" onclick="nextMobileSlide(0)">
-                                    <circle id="circle1M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                                    <circle id="circleI1M" cx="15" cy="15" r="5" fill="#6E8A37" />
-                                </svg>
-                                <svg height="30" width="30" onclick="nextMobileSlide(1)">
-                                    <circle id="circle2M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                                    <circle id="circleI2M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                                </svg>
+                                <?php
+                                $args = array(
+                                    'post_type' => 'Slider'
+                                );
+                                $query = new WP_Query($args);
+
+                                if($query->have_posts()) {
+                                    $i = 1;
+                                    while($query->have_posts()) {
+                                        $query->the_post();
+                                        ?>
+                                        <svg height="30" width="30">
+                                            <circle class="circle-mobile-outer" id="circle<?php echo $i; ?>M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
+                                            <circle class="circle-mobile" id="circleI<?php echo $i; ?>M" cx="15" cy="15" r="5" fill="#cdcdcd" />
+                                        </svg>
+                                        <?php
+                                        $i++;
+                                    }
+                                }
+                                ?>
+
                             </div>
                         </div>
                     </div>
@@ -66,20 +76,31 @@ get_header();
                 }
                 wp_reset_postdata();
             }
-
-
         ?>
+        </main>
 
         <!-- DOTS DESKTOP -->
         <div class="dots dotsDesktop">
-            <svg height="50" width="50">
-                <circle id="circle1" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(0)" id="circleI1" cx="25" cy="25" r="8" fill="#6E8A37" />
-            </svg>
-            <svg height="50" width="50">
-                <circle id="circle2" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                <circle onclick="nextSlide(1)" id="circleI2" cx="25" cy="25" r="8" fill="#cdcdcd" />
-            </svg>
+            <?php
+                $args = array(
+                        'post_type' => 'Slider'
+                );
+                $query = new WP_Query($args);
+
+                if($query->have_posts()) {
+                    $i = 1;
+                    while($query->have_posts()) {
+                        $query->the_post();
+                        ?>
+                        <svg height="50" width="50">
+                            <circle class="circle-outer" id="circle<?php echo $i; ?>" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
+                            <circle class="circle" id="circleI<?php echo $i; ?>" cx="25" cy="25" r="8" fill="#cdcdcd" />
+                        </svg>
+                            <?php
+                        $i++;
+                    }
+                }
+            ?>
         </div>
     </main>
 
