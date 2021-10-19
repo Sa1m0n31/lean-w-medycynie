@@ -372,6 +372,24 @@ get_header();
                 }
                 ?>
             </section>
+
+ <?php
+        if(have_posts()) {
+            while(have_posts()) {
+                the_post();
+              if(get_the_title() === "Inspirowanie do samodoskonalenia w ochronie zdrowia") {
+              	?>
+      				<section style="margin: auto; display: flex; justify-content: center; align-items: center; max-width: 90%; width: 400px !important; height: 200px; border: 1px solid #D4D4D4; border-radius: 8px;">
+			<span style="position: relative; font-size: 15px; font-style: italic; top: 0; text-align: center; padding: 20px;">
+                Ze względu na ograniczoną ilość miejsc zapisy zostały zakończone 
+                </span>
+</section>          
+                <?php
+              }
+            }
+            wp_reset_postdata();
+        }
+    ?>
         </div>
     </div>
 </main>

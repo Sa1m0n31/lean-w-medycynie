@@ -8,6 +8,18 @@ maximum-scale=5.0, user-scalable=yes" />
     <meta name="description" content="Eksperci i praktycy lean w ochronie zdrowia oraz obszarach wspierających. Programy rozwojowe dla pracowników ochrony zdrowia." />
     <link rel="icon" href="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean_w_medycynie_sygnet.svg'; ?>">
 
+<!-- MailerLite Universal -->
+<script>
+(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+var ml_account = ml('accounts', '3405070', 'j2e3t7n9g4', 'load');
+</script>
+<!-- End MailerLite Universal -->
+
     <?php wp_head(); ?>
 </head>
 <body>
@@ -50,7 +62,8 @@ maximum-scale=5.0, user-scalable=yes" />
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'eksperci' )->ID ); ?>">Eksperci</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'produkty' )->ID ); ?>">Produkty</a></li>
                 <li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'kontakt' )->ID ); ?>">Kontakt</a></li>
-            </ul>
+				<li class="mobileMenuItem"><a href="<?php echo get_page_link( get_page_by_title( 'książka lean w medycynie' )->ID ); ?>">Książka</a></li>            
+</ul>
             <div class="mobileMenuBottom">
                 <h4 class="mobileMenuBottomText">Śledź nas:</h4>
                 <a href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">
@@ -130,6 +143,11 @@ maximum-scale=5.0, user-scalable=yes" />
                 echo 'greenBackground';
             }
             ?>"><a href="<?php echo get_page_link( get_page_by_title( 'dofinansowania' )->ID ); ?>">Dofinansowania</a></li>
+           <li class="menuItem menuItemBordered menuItem--book <?php
+            if(is_page('ksiazka-lean-w-medycynie')) {
+                echo 'greenBackground';
+            }
+            ?>"><a href="<?php echo get_page_link( get_page_by_title( 'Książka Lean w medycynie' )->ID ); ?>">Książka</a></li>
         </ul>
         <div class="socialMediaIcons">
             <a aria-label="Facebook" id="facebook" href="https://www.facebook.com/leanwmedycynie" target="_blank" rel="noreferrer">

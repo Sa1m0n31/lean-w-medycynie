@@ -23,6 +23,10 @@ html, body, .container, h1, h2, h3, h4, h5, h6, ul {
     color: var(--text);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
@@ -248,7 +252,7 @@ html {
 
 .menuItem {
     color: var(--text);
-    font-size: 17px;
+    font-size: 16px;
     text-transform: uppercase;
     height: 55px;
     width: fit-content;
@@ -268,6 +272,11 @@ html {
     height: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.menuItem--book {
+	border-color: var(--lean-main) !important;
+    color: var(--lean-main) !important;
 }
 
 .greenBackground {
@@ -314,13 +323,17 @@ html {
 }
 
 .logo {
-    width: 200px;
+    width: 150px;
 }
 
 .logoImg {
-    width: 200px;
+    width: 150px;
     height: 60px;
     margin-right: 50px;
+}
+
+.menuItem--book:hover {
+   color: #fff !important;
 }
 
 .socialMediaIcons {
@@ -400,16 +413,16 @@ html {
 }
 
 @media(min-width: 900px) {
-   
-  .landingTitle {
-  	line-height: 100px;
-    white-space: nowrap;
-  }
-  
-  .landingTitle .big {
-  	white-space: normal;
-    line-height: 120px;
-  }
+
+    .landingTitle {
+        line-height: 100px;
+        white-space: nowrap;
+    }
+
+    .landingTitle .big {
+        white-space: normal;
+        line-height: 120px;
+    }
 
 }
 
@@ -1153,6 +1166,7 @@ circle {
 .authorFunction {
     font-size: .4rem;
     font-weight: 400;
+    max-width: 350px;
 }
 
 .referencjeDots {
@@ -1325,7 +1339,7 @@ circle {
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0 8px;
+    margin: 0 4px;
     transition: .4s all;
 }
 
@@ -1433,8 +1447,8 @@ circle {
 }
 
 .konferencjeHeader {
-    background: url("./img/hero_image_konferencja.jpg");
-    background-position: 10% 30%;
+    background: url("./img/hero_image_podstrona_konferencja-2209.png");
+    background-position: 60% 30%;
 }
 
 .pageHeaderImg {
@@ -3024,9 +3038,9 @@ span.wpcf7-list-item {
 }
 
 .patroniSiema {
-   display: flex;
-   justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .partnerzyInnerItem {
@@ -4196,4 +4210,305 @@ span#cookieconsent\:desc {
     width: 55% !important;
     margin: 0 0 10px;
     display: none;
+}
+
+/* Ksiazka - landing page */
+.book {
+    margin: 50px auto;
+    width: 80%;
+}
+
+#dlaczego {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.book__section {
+    position: relative;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book__section__header {
+    color: var(--text);
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.book__section__subheader {
+    font-size: 68px;
+    color: var(--lean-main);
+    position: relative;
+}
+
+.book__section__subheader::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 33px;
+    height: 5px;
+    background: #c4c4c4;
+}
+
+.book__section__subsection--11 {
+    width: 45%;
+}
+
+.book__section__text {
+    margin: 50px 0;
+    font-size: 20px;
+}
+
+.book__section__text b {
+    display: block;
+    margin: 15px 0;
+}
+
+.book__section__frame {
+    width: 80%;
+    border-radius: 4px;
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid var(--lean-main);
+}
+
+.book__section__frame__header {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.book__section__frame__text {
+    font-size: 17px;
+    margin: 0;
+}
+
+.book__section__subsection--12 {
+    width: 55%;
+}
+
+.book__section__img {
+    width: 100%;
+}
+
+.landingButton--book {
+    width: 200px;
+    margin-top: 0 !important;
+}
+
+.landingButton--book .landingButtonText {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.book__section__buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button--bookMore {
+    background: transparent;
+    border: 1px solid #D4D4D4;
+    border-radius: 4px;
+    margin-left: 70px;
+    width: 200px;
+    height: 48px;
+    font-size: 17px;
+}
+
+.button--bookMore a {
+    color: var(--text);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book__section--2 {
+    justify-content: flex-start;
+}
+
+.book__section__subsection--21 {
+    width: 35%;
+}
+
+.book__section__subsection--22 {
+    width: 45%;
+    margin-left: 8vw;
+}
+
+.book__section__author__header {
+    font-size: 36px;
+    color: var(--text);
+    position: relative;
+}
+
+.book__section__author__header::after {
+    content: "";
+    background: var(--lean-main);
+    width: 33px;
+    height: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+
+.book__section__author__text {
+    margin: 60px 0 15px;
+}
+
+.book__section__author__text p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.book__section__author__signWrapper {
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.book__section__author__sign {
+    margin-left: 20px;
+}
+
+.book__section__main__header {
+    font-size: 36px;
+    color: var(--text);
+    position: relative;
+}
+
+.book__section__main__header::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 33px;
+    height: 5px;
+    background: var(--lean-main);
+}
+
+.book__section__table {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.book__section__main {
+    width: 100%;
+}
+
+.book__section__table__section {
+    width: 48%;
+}
+
+.book__section__table__header {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.book__section__table__header--green {
+    color: var(--lean-main);
+}
+
+.book__section__table__list {
+    list-style-type: none;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.book__section__table__list li {
+    position: relative;
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.book__section__table__list li::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background: var(--lean-main);
+}
+
+.book__section__table__header--summary {
+    margin-top: 25px;
+}
+
+.book__section__bigFrame {
+    border: 1px solid #E9E9E9;
+    border-radius: 4px;
+    margin: 30px auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 0 0;
+    height: 295px;
+}
+
+.book__section__bigFrame__header {
+    font-size: 28px;
+    color: var(--text);
+    margin-bottom: 35px;
+    max-width: 300px;
+}
+
+.book__section__bigFrame__content {
+
+}
+
+.book__section__bigFrame__img {
+    max-width: 600px;
+}
+
+#review1 {
+    display: flex;
+    opacity: 1;
+}
+
+.book .authorName, .book .authorFunction {
+    text-align: right;
+}
+
+.book .referencjeAuthor  {
+    bottom: 20px;
+}
+
+.politykaRight * {
+	font-size: 17px !important;
+}
+
+.politykaRight h1, .politykaRight h1 *, .politykaHeader {
+  font-size: 24px !important;
+}
+
+.politykaRight ul {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+/* tmp - video in hero section */
+.landing {
+    height: auto !important;
+    min-height: auto !important;
 }

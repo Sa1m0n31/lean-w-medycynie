@@ -4,110 +4,118 @@ get_header();
 
     <!-- LANDING -->
     <main class="landing">
-        <button class="nextSlide" onclick="nextSlide()">
-            <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next.svg'; ?>" alt="next" />
-        </button>
-        <button class="prevSlide" onclick="prevSlide()">
-            <img class="landingArrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/next-grey.svg'; ?>" alt="next" />
-        </button>
+        <video style="width: 100%;" onloadeddata="this.play()" playsinline loop muted>
+            <source src="<?php echo get_bloginfo('stylesheet_directory') . '/video/promo.mp4'; ?>" type="video/mp4">
+        </video>
 
-        <main class="landing__inner">
+
+
+
+
+<!--        <button class="nextSlide" onclick="nextSlide()">-->
+<!--            <img class="landingArrow" src="--><?php //echo get_bloginfo('stylesheet_directory') . '/img/next.svg'; ?><!--" alt="next" />-->
+<!--        </button>-->
+<!--        <button class="prevSlide" onclick="prevSlide()">-->
+<!--            <img class="landingArrow" src="--><?php //echo get_bloginfo('stylesheet_directory') . '/img/next-grey.svg'; ?><!--" alt="next" />-->
+<!--        </button>-->
+<!---->
+<!--        <main class="landing__inner">-->
         <!-- SLIDER -->
-        <?php
-            $args = array(
-                    'post_type' => 'Slider'
-            );
-
-            $slider = new WP_Query($args);
-            $i = 1;
-
-            if($slider->have_posts()) {
-                while($slider->have_posts()) {
-                    $slider->the_post();
-                    $sliderId = 'landing' . $i;
-                    ?>
-
-                    <div class="landingSlide" id="<?php echo $sliderId; ?>">
-                        <img class="sliderPhoto" id="slider1" src="<?php echo get_field('zdjecie'); ?>" alt="landingPhoto" />
-
-                        <div class="landingLeft" id="left1">
-                            <h1 class="landingTitle">
-                                <?php echo get_field('naglowek_na_zielono'); ?>
-                                <span class="big"><?php echo get_field('naglowek_na_czarno'); ?></span>
-                            </h1>
-                            <p class="landingText">
-                                <?php echo get_field('tekst'); ?>
-                            </p>
-                            <button class="landingButton">
-                                <a href="<?php echo get_field('link_do_buttona'); ?>">
-                                    <span class="landingButtonText"><?php echo get_field('napis_na_buttonie'); ?></span>
-                                </a>
-                            </button>
-
-                            <div class="dots dotsMobile">
-                                <?php
-                                $args = array(
-                                    'post_type' => 'Slider'
-                                );
-                                $query = new WP_Query($args);
-
-                                if($query->have_posts()) {
-                                    $i = 1;
-                                    while($query->have_posts()) {
-                                        $query->the_post();
-                                        ?>
-                                        <svg height="30" width="30">
-                                            <circle class="circle-mobile-outer" id="circle<?php echo $i; ?>M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />
-                                            <circle class="circle-mobile" id="circleI<?php echo $i; ?>M" cx="15" cy="15" r="5" fill="#cdcdcd" />
-                                        </svg>
-                                        <?php
-                                        $i++;
-                                    }
-                                }
-                                ?>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                        <?php
-                    $i++;
-                }
-                wp_reset_postdata();
-            }
-        ?>
+<!--        --><?php
+//            $args = array(
+//                    'post_type' => 'Slider'
+//            );
+//
+//            $slider = new WP_Query($args);
+//            $i = 1;
+//
+//            if($slider->have_posts()) {
+//                while($slider->have_posts()) {
+//                    $slider->the_post();
+//                    $sliderId = 'landing' . $i;
+//                    ?>
+<!---->
+<!--                    <div class="landingSlide" id="--><?php //echo $sliderId; ?><!--">-->
+<!--                        <img class="sliderPhoto" id="slider1" src="--><?php //echo get_field('zdjecie'); ?><!--" alt="landingPhoto" />-->
+<!---->
+<!--                        <div class="landingLeft" id="left1">-->
+<!--                            <h1 class="landingTitle">-->
+<!--                                --><?php //echo get_field('naglowek_na_zielono'); ?>
+<!--                                <span class="big">--><?php //echo get_field('naglowek_na_czarno'); ?><!--</span>-->
+<!--                            </h1>-->
+<!--                            <p class="landingText">-->
+<!--                                --><?php //echo get_field('tekst'); ?>
+<!--                            </p>-->
+<!--                            <button class="landingButton">-->
+<!--                                <a href="--><?php //echo get_field('link_do_buttona'); ?><!--">-->
+<!--                                    <span class="landingButtonText">--><?php //echo get_field('napis_na_buttonie'); ?><!--</span>-->
+<!--                                </a>-->
+<!--                            </button>-->
+<!---->
+<!--                            <div class="dots dotsMobile">-->
+<!--                                --><?php
+//                                $args = array(
+//                                    'post_type' => 'Slider'
+//                                );
+//                                $query = new WP_Query($args);
+//
+//                                if($query->have_posts()) {
+//                                    $i = 1;
+//                                    while($query->have_posts()) {
+//                                        $query->the_post();
+//                                        ?>
+<!--                                        <svg height="30" width="30">-->
+<!--                                            <circle class="circle-mobile-outer" id="circle--><?php //echo $i; ?><!--M" cx="15" cy="15" r="10" stroke="none" stroke-width="3" fill="none" />-->
+<!--                                            <circle class="circle-mobile" id="circleI--><?php //echo $i; ?><!--M" cx="15" cy="15" r="5" fill="#cdcdcd" />-->
+<!--                                        </svg>-->
+<!--                                        --><?php
+//                                        $i++;
+//                                    }
+//                                }
+//                                ?>
+<!---->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!---->
+<!---->
+<!--                        --><?php
+//                    $i++;
+//                }
+//                wp_reset_postdata();
+//            }
+//        ?>
         </main>
 
         <!-- DOTS DESKTOP -->
-        <div class="dots dotsDesktop">
-            <?php
-                $args = array(
-                        'post_type' => 'Slider'
-                );
-                $query = new WP_Query($args);
-
-                if($query->have_posts()) {
-                    $i = 1;
-                    while($query->have_posts()) {
-                        $query->the_post();
-                        ?>
-                        <svg height="50" width="50">
-                            <circle class="circle-outer" id="circle<?php echo $i; ?>" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />
-                            <circle class="circle" id="circleI<?php echo $i; ?>" cx="25" cy="25" r="8" fill="#cdcdcd" />
-                        </svg>
-                            <?php
-                        $i++;
-                    }
-                }
-            ?>
-        </div>
+<!--        <div class="dots dotsDesktop">-->
+<!--            --><?php
+//                $args = array(
+//                        'post_type' => 'Slider'
+//                );
+//                $query = new WP_Query($args);
+//
+//                if($query->have_posts()) {
+//                    $i = 1;
+//                    while($query->have_posts()) {
+//                        $query->the_post();
+//                        ?>
+<!--                        <svg height="50" width="50">-->
+<!--                            <circle class="circle-outer" id="circle--><?php //echo $i; ?><!--" cx="25" cy="25" r="20" stroke="none" stroke-width="3" fill="none" />-->
+<!--                            <circle class="circle" id="circleI--><?php //echo $i; ?><!--" cx="25" cy="25" r="8" fill="#cdcdcd" />-->
+<!--                        </svg>-->
+<!--                            --><?php
+//                        $i++;
+//                    }
+//                }
+//            ?>
+<!--        </div>-->
     </main>
 
     <!-- MISJA -->
     <section class="naszaMisja">
         <span class="observerHelper" id="firstSection"></span>
-        <img class="misjaLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/nasza_misja_BG.jpg'; ?>" alt="nasza-misja" />
+        <img class="misjaLeft" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/lean-pod-sliderem.jpg'; ?>" alt="nasza-misja" />
 
         <div class="misjaRight">
             <h2 class="firstHeader">

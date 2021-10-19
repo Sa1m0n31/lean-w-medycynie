@@ -348,8 +348,8 @@
     }
 
     /* Landing */
-  
-  	.dotsMobile {
+
+    .dotsMobile {
         position: absolute !important;
         align-items: center;
         left: 50% !important;
@@ -357,10 +357,10 @@
         width: 50%;
         transform: translateY(-12px);
     }
-  
-  	.dotsDesktop {
-  		display: none;
-  }
+
+    .dotsDesktop {
+        display: none;
+    }
 
     .container {
         position: relative;
@@ -421,13 +421,13 @@
         margin: 0 8px;
     }
 
-   .wizytowki .person {
-       margin-right: 50px;
-   }
+    .wizytowki .person {
+        margin-right: 50px;
+    }
 
-   .wizytowki .person:nth-child(2) {
-       margin-right: 0;
-   }
+    .wizytowki .person:nth-child(2) {
+        margin-right: 0;
+    }
 
     /* SINGLE KONFERENCJA */
     .konferencjaMenu {
@@ -734,7 +734,7 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        height: 500px !important;
+        /*height: 500px !important;*/ /* tmp - video */
     }
 
     .landingSlide {
@@ -1817,11 +1817,6 @@
         margin-left: 0;
     }
 
-    /* Logo */
-    .logoImg {
-        transform: translateX(-20px);
-    }
-
     /* EKSPERCI */
     .smallFont {
         font-size: 12px !important;
@@ -1864,5 +1859,133 @@
 
     .agendaInnerItem .event {
         width: 60%;
+    }
+}
+
+/* Ksiazka - landing page */
+@media(max-width: 1200px) {
+    .book {
+        width: 100%;
+    }
+
+    .book__section__bigFrame {
+        max-width: clamp(200px, 100%, 1000px);
+        padding: 20px;
+    }
+
+    .book__section__bigFrame__img {
+        max-width: 300px;
+    }
+
+    .book__section__bigFrame__header {
+        font-size: 21px;
+    }
+
+    .book__section__header {
+        font-size: 24px;
+    }
+
+    .book__section__subheader {
+        font-size: 48px;
+    }
+
+    .book__section__text, .book__section__frame__header, .book__section__frame__text {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 996px) {
+    .book__section, .book__section__table {
+        flex-direction: column;
+    }
+
+    .book__section__subsection, .book__section__table__section {
+        width: 100%;
+    }
+
+    .book__section__subsection--21 {
+        margin-bottom: 30px;
+    }
+
+    .book__section__subsection--22 {
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 776px) {
+    .book__section--3 {
+        margin-bottom: 0;
+    }
+
+    .book__section__bigFrame {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .book__section__bigFrame .landingButton {
+        margin-left: -40px;
+    }
+
+    .book__section__bigFrame__header {
+        text-align: center;
+    }
+
+    .book__section__bigFrame__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .book__section__frame {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .button--bookMore *, .landingButton * {
+        font-size: 14px !important;
+    }
+
+    .button--bookMore {
+        margin-left: 40px;
+    }
+
+    .landingButton:hover::after {
+        transform: translateX(95%);
+        padding-left: 0;
+        padding-right: 0;
+        width: 40px;
+    }
+
+    .book__section__author__signWrapper {
+        padding-right: 10%;
+    }
+}
+
+@media(max-width: 576px) {
+    .book__section__author__signWrapper {
+        margin-top: 30px;
+    }
+
+    .book__section__header {
+        font-size: 17px;
+    }
+
+    .book__section__subheader {
+        font-size: 36px;
+    }
+
+    .book__section {
+        margin-bottom: 50px;
+    }
+
+    .book__section__table__header, .book__section__table__list li {
+        font-size: 14px;
+    }
+
+    .book .authorFunction {
+        max-width: 250px;
     }
 }

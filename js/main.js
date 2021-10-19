@@ -793,12 +793,14 @@ if((circle1 !== null)||(circle1M !== null)) {
         }
     }
     else {
-        radius = circle1M[0].r.baseVal.value;
-        circumference = radius * 2 * Math.PI;
+        if(circle1) {
+            radius = circle1M[0].r.baseVal.value;
+            circumference = radius * 2 * Math.PI;
 
-        for(let i=0; i<circlesOuterM.length; i++) {
+            for(let i=0; i<circlesOuterM.length; i++) {
                 circlesOuterM[i].style.strokeDasharray = `${circumference} ${circumference}`;
                 circlesOuterM[i].style.strokeDashoffset = "0";
+            }
         }
     }
 }
@@ -889,14 +891,14 @@ const nextSlide = (n = -1) => {
     if(slide >= numberOfSlides) slide = 0;
 
     stopSlider = true;
-    heroSlider.next();
+    if(heroSlider) heroSlider.next();
 }
 
 const prevSlide = () => {
     slide--;
     if(slide === -1) slide = numberOfSlides-1;
     stopSlider = true;
-    heroSlider.prev();
+    if(heroSlider) heroSlider.prev();
 }
 
 
@@ -930,7 +932,7 @@ const goSliderMobile = (n) => {
 
     let sliderInterval = setInterval(() => {
         if(i === 2) {
-            circlesOuterM[circle].style.stroke = "#6E8A37";
+            if(circlesOuterM[circle]) circlesOuterM[circle].style.stroke = "#6E8A37";
         }
 
         if(i <= 300) {
@@ -1279,4 +1281,40 @@ if(patronatInner) {
     setInterval(() => {
         siema2.next();
     }, 3000);
+}
+
+const review1 = document.getElementById("review1");
+const review2 = document.getElementById("review2");
+const review3 = document.getElementById("review3");
+
+const reviews = [review1, review2, review3];
+let currentReview = 0;
+
+const changeReview = (reviewBefore, currentReview) => {
+    let tl = gsap.timeline();
+
+    tl.to(reviews[reviewBefore], { opacity: 0, duration: .5 })
+        .set(reviews[reviewBefore], { display: "none" })
+        .set(reviews[currentReview], { display: "flex" })
+        .to(reviews[currentReview], { opacity: 1, duration: .5 })
+}
+
+const nextReview = () => {
+    const reviewBefore = currentReview;
+    if(currentReview === 2) currentReview = 0;
+    else currentReview++;
+
+    if(review1) {
+        changeReview(reviewBefore, currentReview);
+    }
+}
+
+const prevReview = () => {
+    const reviewBefore = currentReview;
+    if(currentReview === 0) currentReview = 2;
+    else currentReview--;
+
+    if(review1) {
+        changeReview(reviewBefore, currentReview);
+    }
 }
