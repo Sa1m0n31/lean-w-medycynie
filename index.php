@@ -4,7 +4,7 @@ get_header();
 
     <!-- LANDING -->
     <main class="landing">
-        <video style="width: 100%;" onloadeddata="this.play()" playsinline loop muted>
+        <video style="width: 100%;" type="video/mp4" autoplay loop muted playsinline>
             <source src="<?php echo get_bloginfo('stylesheet_directory') . '/video/promo.mp4'; ?>" type="video/mp4">
         </video>
 

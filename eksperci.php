@@ -21,7 +21,7 @@ get_header();
 
 
         <div class="eksperciItem">
-            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/grzegorz_koczor.jpg'; ?>" alt="grzegorz-koczor" />
+            <img class="eksperciImg" src="<?php echo get_field('zdjecie_eksperta_1'); ?>" alt="grzegorz-koczor" />
 
             <div class="eksperciItemRight">
                 <h2 class="eksperciItemName">
@@ -57,7 +57,7 @@ get_header();
         </div>
 
         <div class="eksperciItem">
-            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/jakub_napierala.png'; ?>" alt="jakub-napierala" />
+            <img class="eksperciImg" src="<?php echo get_field('zdjecie_eksperta_2'); ?>" alt="jakub-napierala" />
 
             <div class="eksperciItemRight">
                 <h2 class="eksperciItemName">
@@ -93,7 +93,7 @@ get_header();
         </div>
 
         <div class="eksperciItem">
-            <img class="eksperciImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/magda.jpg'; ?>" alt="magdalena-gałwa-gruszka" />
+            <img class="eksperciImg" src="<?php echo get_field('zdjecie_eksperta_3'); ?>" alt="magdalena-gałwa-gruszka" />
 
             <div class="eksperciItemRight">
                 <h2 class="eksperciItemName">
@@ -127,6 +127,90 @@ get_header();
                 </div>
             </div>
         </div>
+
+		<?php
+if(get_field('zdjecie_eksperta_4')) {
+		?>
+  		        <div class="eksperciItem">
+            <img class="eksperciImg" src="<?php echo get_field('zdjecie_eksperta_4'); ?>" alt="magdalena-gałwa-gruszka" />
+
+            <div class="eksperciItemRight">
+                <h2 class="eksperciItemName">
+                    <?php echo get_field('imie_i_nazwisko_eksperta_4'); ?>
+                </h2>
+                <h3 class="eksperciItemFunction">
+                    <?php echo get_field('tytul_eksperta_4'); ?>
+                </h3>
+
+                <div class="eksperciItemText">
+                    <?php echo get_field('bionotka_eksperta_4'); ?>
+                </div>
+
+                <div class="eksperciKontakt">
+                    <div class="eksperciKontaktItem">
+                        <a href="tel:<?php echo str_replace(" ", "", get_field('telefon_eksperta_4')); ?>"></a>
+                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
+                        <h4 class="eksperciKontaktDane">
+                            <?php echo get_field('telefon_eksperta_4'); ?>
+                        </h4>
+                    </div>
+                    <div class="eksperciKontaktItem">
+                        <a href="mailto:<?php echo get_field('mail_eksperta_4'); ?>"></a>
+                        <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
+                        <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
+                        <h4 class="eksperciKontaktDane smallFont2">
+                            <?php echo get_field('mail_eksperta_4'); ?>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <?php
+	}
+		?>
+
+		<?php
+if(get_field('zdjecie_eksperta_5')) {
+		?>
+  		        <div class="eksperciItem">
+            <img class="eksperciImg" src="<?php echo get_field('zdjecie_eksperta_5'); ?>" alt="magdalena-gałwa-gruszka" />
+
+            <div class="eksperciItemRight">
+                <h2 class="eksperciItemName">
+                    <?php echo get_field('imie_i_nazwisko_eksperta_5'); ?>
+                </h2>
+                <h3 class="eksperciItemFunction">
+                    <?php echo get_field('tytul_eksperta_5'); ?>
+                </h3>
+
+                <div class="eksperciItemText">
+                    <?php echo get_field('bionotka_eksperta_5'); ?>
+                </div>
+
+                <div class="eksperciKontakt">
+                    <div class="eksperciKontaktItem">
+                        <a href="tel:<?php echo str_replace(" ", "", get_field('telefon_eksperta_5')); ?>"></a>
+                        <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
+                        <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
+                        <h4 class="eksperciKontaktDane">
+                            <?php echo get_field('telefon_eksperta_5'); ?>
+                        </h4>
+                    </div>
+                    <div class="eksperciKontaktItem">
+                        <a href="mailto:<?php echo get_field('mail_eksperta_5'); ?>"></a>
+                        <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
+                        <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
+                        <h4 class="eksperciKontaktDane smallFont2">
+                            <?php echo get_field('mail_eksperta_5'); ?>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <?php
+	}
+		?>
     </main>
 
     </div>

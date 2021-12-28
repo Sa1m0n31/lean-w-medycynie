@@ -88,7 +88,7 @@ var ml_account = ml('accounts', '3405070', 'j2e3t7n9g4', 'load');
         <ul class="menu">
             <li class="menuItem menuItemOrdinary">
                 <a class="<?php
-                    if(is_page('misja')) {
+                    if(is_page('o-nas')) {
                         echo 'green';
                     }
                 ?>" href="<?php echo get_page_link( get_page_by_title( 'o nas' )->ID ); ?>">

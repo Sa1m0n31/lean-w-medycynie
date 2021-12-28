@@ -2011,7 +2011,7 @@ circle {
 
 .eksperciImg {
     width: 477px;
-    height: 616px;
+    height: auto !important;
     border-radius: 8px;
 }
 
@@ -2164,7 +2164,7 @@ circle {
     display: flex;
     justify-content: space-between;
     color: var(--text);
-    margin: 90px 0 200px;
+    margin: 90px 0;
     width: 100%;
 }
 
@@ -2202,7 +2202,7 @@ circle {
 
 .dofinansowaniaTopImg {
     width: 687px;
-    height: 440px;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -2312,17 +2312,19 @@ circle {
 
 .dofFaq {
     color: var(--text);
-    margin: 100px 0;
+    margin: 40px 0 50px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .dofFaq .left {
-    width: 65%;
+    /*width: 65%;*/
+    width: 100% !important;
 }
 
 .dofFaq .right {
-    width: 30%;
+    /*width: 30%;*/
 }
 
 .faqItem {
@@ -2330,9 +2332,10 @@ circle {
     border-radius: 8px;
     width: 100%;
     height: 120px;
-    padding: 20px 100px;
+    min-height: 120px;
+    padding: 50px 100px 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 50px 0;
 }
 
@@ -2358,6 +2361,10 @@ circle {
 
 .faqItem .arrow {
     transition: .4s all;
+}
+
+.faqItem:hover {
+    height: auto;
 }
 
 .faqItem:hover .faqAnswer {
@@ -3396,6 +3403,7 @@ span.wpcf7-list-item {
 
 .wierzymyNawigator {
     width: 100%;
+  	margin-top: 100px;
 }
 
 .leanNawigator .progressBar {
@@ -4511,4 +4519,102 @@ span#cookieconsent\:desc {
 .landing {
     height: auto !important;
     min-height: auto !important;
+}
+
+.flex {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex p {
+	width: calc(40% - 10px);
+  	margin-bottom: 0;
+}
+
+.flex iframe {
+	max-width: 100%;
+}
+
+.flex p:first-of-type, .flex p:nth-of-type(3) {
+	margin-right: 20px;
+}
+
+@media(max-width: 996px) {
+  .flex p {
+  	width: 100%;
+    margin-right: 0 !important;
+  }
+}
+
+.ngg-imagebrowser > h3 {
+  display: none !important;
+}
+
+.oKonferencjiLeft .ngg-imagebrowser.default-view {
+  width: 50vw;
+  min-width: 300px;
+  margin-top: 60px !important;
+}
+
+.oKonferencjiLeft .ngg-imagebrowser.default-view img {
+	max-width: none !important;
+  width: 100% !important;
+  max-height: none !important;
+}
+
+.ngg-imagebrowser > div > a {
+	text-align: left !important;
+}
+
+/* .sl-navigation {
+	display: block !important;
+    height: 50px !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 20px !important;
+}
+
+.sl-wrapper {
+    height: 100vh !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
+    left: 0 !important;
+}
+
+.sl-prev, .sl-next {
+	display: block !important;
+} */
+
+.sl-wrapper .sl-close {
+	top: 30px !important;
+  	right: 30px !important;
+}
+
+.pageHeader {
+	display: none !important;
+}
+
+.paoc-popup-content > p {
+   margin-top: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paoc-image-popup {
+   margin-right: 20px;
+}
+
+.dofinansowaniaContainer .wizytowki {
+    flex-direction: column;
+    margin: 50px 0 90px;
+}
+
+.dofinansowaniaContainer .wizytowki .eksperciKontaktItem {
+    width: 320px;
+    margin-bottom: 25px;
+    max-width: 95%;
 }

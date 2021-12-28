@@ -1798,7 +1798,11 @@
     .dofinansowaniaAbsoluteBox {
         width: 90%;
         padding: 15px;
-        bottom: -100px;
+        bottom: -150px;
+    }
+
+    .dofinansowaniaContainer .frame {
+        margin-top: 200px;
     }
 
     .dofinansowaniaFirst {
@@ -1915,6 +1919,10 @@
 @media(max-width: 776px) {
     .book__section--3 {
         margin-bottom: 0;
+    }
+
+    .landing {
+        max-height: 350px !important;
     }
 
     .book__section__bigFrame {

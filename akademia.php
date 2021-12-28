@@ -429,7 +429,7 @@ get_header();
 
         <p>
         SPOTKANIA OPERACYJNE DZIENNE - podstawy teoretyczne + ćwiczenia
-            <br/>KONTRAKT EFEKTYWNEGO ZESPOŁU (5R) - podstawy teoretyczne + ćwiczenia
+            <br/>KONTRAKT EFEKTYWNEGO ZESPOŁU (PCR4+) - podstawy teoretyczne + ćwiczenia
             <br/>BUDOWANIE MATRYC KOMPETENCJI ZESPOŁU - podstawy teoretyczne + ćwiczenia
         </p>
 

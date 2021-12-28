@@ -120,11 +120,23 @@ get_header();
                     </p>
                 </div>
             </div>
+
+            <div class="faqItem">
+                <img class="arrow" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/arrow-green.svg'; ?>" alt="arrow" />
+                <div class="faqItemContent">
+                    <h3 class="faqQuestion">
+                        <?php echo get_field('pytanie_4_-_header'); ?>
+                    </h3>
+                    <div class="faqAnswer">
+                        <?php echo get_field('pytanie_4_-_tekst'); ?>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="right">
-            <img class="faqImg" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/dofinansowania_02.jpg'; ?>" alt="dofinansowania-faq" />
-        </div>
+<!--        <div class="right">-->
+<!--            <img class="faqImg" src="--><?php //echo get_bloginfo('stylesheet_directory') . '/img/dofinansowania_02.jpg'; ?><!--" alt="dofinansowania-faq" />-->
+<!--        </div>-->
     </section>
 
     <!-- ETAPY -->
@@ -171,54 +183,74 @@ get_header();
     <section class="wizytowki">
         <header class="wizytowkiHeader">
             <h2 class="wizytowkiHeaderH">
-                Skontaktuj się z naszymi przedstawicielami
+                Kontakt do naszego <br/>konsultanta
             </h2>
         </header>
-        <div class="person">
-            <img class="personImg" src="<?php echo get_field('kontakt_1_-_zdjecie'); ?>" alt="agnieszka-zdeba-mozola" />
-            <div class="personData">
-                <h2 class="personName green">
-                    <?php echo get_field('kontakt_1_-_imie_i_nazwisko'); ?>
-                </h2>
-                <h3 class="personFunction regular">
-                    <?php echo get_field('kontakt_1_-_tytul'); ?>
-                </h3>
 
-                <h4 class="personContact regular link">
-                    <a href="mailto:<?php echo get_field('kontakt_1_-_mail'); ?>"></a>
-                    <span class="green bold">E:</span>
-                    <?php echo get_field('kontakt_1_-_mail'); ?>
-                </h4>
-                <h3 class="personContact regular link">
-                    <a href="tel:<?php echo str_replace(' ', '', get_field('kontakt_1_-_telefon')); ?>"></a>
-                    <span class="green bold">T:</span>
-                    <?php echo get_field('kontakt_1_-_telefon'); ?>
-                </h3>
-            </div>
+
+        <div class="eksperciKontaktItem">
+            <a href="tel:+48573171137"></a>
+            <img class="eksperciKontaktIcon" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call.svg'; ?>" alt="telefon" />
+            <img class="eksperciKontaktIcon eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/phone-call-hover.svg'; ?>" alt="telefon" />
+            <h4 class="eksperciKontaktDane">
+                +48 573 171 137
+            </h4>
+        </div>
+        <div class="eksperciKontaktItem">
+            <a href="mailto:kfs@leanwmedycynie.pl"></a>
+            <img class="eksperciKontaktIcon iconMargin" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter.svg'; ?>" alt="email" />
+            <img class="eksperciKontaktIcon iconMargin eksperciKontaktIconHover" src="<?php echo get_bloginfo('stylesheet_directory') . '/img/letter-hover.svg'; ?>" alt="email" />
+            <h4 class="eksperciKontaktDane">
+                kfs@leanwmedycynie.pl
+            </h4>
         </div>
 
-        <div class="person">
-            <img class="personImg" src="<?php echo get_field('kontakt_2_-_zdjecie'); ?>" alt="jakub-napierala" />
-            <div class="personData">
-                <h2 class="personName green">
-                    <?php echo get_field('kontakt_2_-_imie_i_nazwisko'); ?>
-                </h2>
-                <h3 class="personFunction regular">
-                    <?php echo get_field('kontakt_2_-_tytul'); ?>
-                </h3>
 
-                <h4 class="personContact regular link">
-                    <a href="mailto:<?php echo get_field('kontakt_2_-_mail'); ?>"></a>
-                    <span class="green bold">E:</span>
-                    <?php echo get_field('kontakt_2_-_mail'); ?>
-                </h4>
-                <h3 class="personContact regular link">
-                    <a href="tel:<?php echo str_replace(' ', '', get_field('kontakt_2_-_mail')); ?>"></a>
-                    <span class="green bold">T:</span>
-                    <?php echo get_field('kontakt_2_-_telefon'); ?>
-                </h3>
-            </div>
-        </div>
+<!--        <div class="person">-->
+<!--            <img class="personImg" src="--><?php //echo get_field('kontakt_1_-_zdjecie'); ?><!--" alt="agnieszka-zdeba-mozola" />-->
+<!--            <div class="personData">-->
+<!--                <h2 class="personName green">-->
+<!--                    --><?php //echo get_field('kontakt_1_-_imie_i_nazwisko'); ?>
+<!--                </h2>-->
+<!--                <h3 class="personFunction regular">-->
+<!--                    --><?php //echo get_field('kontakt_1_-_tytul'); ?>
+<!--                </h3>-->
+<!---->
+<!--                <h4 class="personContact regular link">-->
+<!--                    <a href="mailto:--><?php //echo get_field('kontakt_1_-_mail'); ?><!--"></a>-->
+<!--                    <span class="green bold">E:</span>-->
+<!--                    --><?php //echo get_field('kontakt_1_-_mail'); ?>
+<!--                </h4>-->
+<!--                <h3 class="personContact regular link">-->
+<!--                    <a href="tel:--><?php //echo str_replace(' ', '', get_field('kontakt_1_-_telefon')); ?><!--"></a>-->
+<!--                    <span class="green bold">T:</span>-->
+<!--                    --><?php //echo get_field('kontakt_1_-_telefon'); ?>
+<!--                </h3>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="person">-->
+<!--            <img class="personImg" src="--><?php //echo get_field('kontakt_2_-_zdjecie'); ?><!--" alt="jakub-napierala" />-->
+<!--            <div class="personData">-->
+<!--                <h2 class="personName green">-->
+<!--                    --><?php //echo get_field('kontakt_2_-_imie_i_nazwisko'); ?>
+<!--                </h2>-->
+<!--                <h3 class="personFunction regular">-->
+<!--                    --><?php //echo get_field('kontakt_2_-_tytul'); ?>
+<!--                </h3>-->
+<!---->
+<!--                <h4 class="personContact regular link">-->
+<!--                    <a href="mailto:--><?php //echo get_field('kontakt_2_-_mail'); ?><!--"></a>-->
+<!--                    <span class="green bold">E:</span>-->
+<!--                    --><?php //echo get_field('kontakt_2_-_mail'); ?>
+<!--                </h4>-->
+<!--                <h3 class="personContact regular link">-->
+<!--                    <a href="tel:--><?php //echo str_replace(' ', '', get_field('kontakt_2_-_mail')); ?><!--"></a>-->
+<!--                    <span class="green bold">T:</span>-->
+<!--                    --><?php //echo get_field('kontakt_2_-_telefon'); ?>
+<!--                </h3>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
 
 </div>
